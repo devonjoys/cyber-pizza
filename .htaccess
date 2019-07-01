@@ -1,0 +1,4 @@
+AuthType Basic
+Authname "Cyber Pizza Hub"
+AuthUserFile /Users/Devon/Sites/cyber-pizza/all/secret/.htpasswd
+require valid-user

@@ -72,7 +72,10 @@ table {
 */
 
 .row {
-  background: #012169;
+  background: #C84E00;
+  text-align: center;
+  height: 150px;
+  vertical-align: middle;
 }
 
 /*.row,
@@ -106,6 +109,8 @@ table {
   margin: 0;
   padding-left: 25px;
   padding-right: 25px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /*
@@ -131,10 +136,7 @@ table {
   display: inline-block;
   font-weight: 400;
   letter-spacing: .5px;
-  padding-top: 65px;
-  margin: 10px;
-  margin-left: 15px; 
-  text-align: right;
+  margin: 0;
 }
 .btn:hover {
   text-decoration: underline;
@@ -198,43 +200,26 @@ table {
 */
 
 .logo {
+  border: 4px solid #fff;
+  border-radius: 100px;
   float: left;
-  font-family: 'EB Garamond', "Helvetica Neue", Arial, sans-serif;
+  font: 20px "Courier", serif;
   font-weight: 400;
-  letter-spacing: 2px;
   color: #fff;
-  padding-top: 45px;
-  font-size: 60px;
+  line-height: 20px;
+  padding: 20px 13px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background: #ff9b42;
   text-transform: uppercase;
 }
 
-.v-line {
-  background: #fff;
-  float: left;
-  display: inline-block;
-  width: 1px;
-  margin: 25px;
-  height: 60px;
-}
-
-.page {
-  float: left;
-}
-
-header.container {
-/*  box-shadow: 0px 3px 12px grey;*/
-/*  border-bottom: 3px solid #fff;
-  border-top: 3px solid #fff;*/
-}
 
 .user-in {
   text-align: right;
   text-align: bottom;
+  margin-top: 70px;
   font: italic 300 20px/22px Arial, sans-serif;
-}
-
-.nav {
-
 }
 
 
@@ -246,6 +231,7 @@ header.container {
 
 .int-face {
   display: table;
+  padding: 30px;
   height: 100%;
   width: 100%;
 
@@ -253,64 +239,25 @@ header.container {
 
 .feed {
   display: table-cell;
-  width: 40%;
-  min-width: 350px;
-/*  vertical-align: top;*/
-}
-
-.feed-title {
-  background: #0577B1;
-  line-height: 40px;
-  padding-top: 25px;
-}
-
-.feed-body {
-  background: #0577B1;
-  width: 100%;
-  min-width: 350px;
-  border-left: 30px solid #0577B1;
-  border-right: 30px solid #0577B1;
-  padding-top: 20px;
-  height: 850px;
-  padding-bottom: 50px;
-}
-
-.feed-twitter {
+  height: 500px;
+  width: 33%;
+  min-width: 250px;
   background: #fff;
-  height: 800px;
-  text-align: center;
-/*  border-right: 1000px;*/
-  box-shadow: 0px 2px 12px black;
 }
 
 .dash {
   display: table-cell;
-  vertical-align: top;
-  padding-left: 5%;
-  padding-right: 3%;
-  padding-top: 25px;
-  text-align: left;
+  padding-left: 35px;
   width: auto;
   height: 250px;
 
 }
 
-.app-wrap {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 22%;
-  min-width: 90px;
-  margin-right: 20px;
-  margin-left: 5%;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
 .app {
   position: relative;
   display: inline-block;
-  width: 90%;
+  width: 20%;
+  margin: 20px;
   min-width: 90px;
   background: #fff;
   border-radius: 20%;
@@ -340,12 +287,6 @@ header.container {
   text-align: center;
   height: 100%
   width: 100%;
-}
-
-.icon {
-  width: 90%;
-  height: auto;
-  padding: 5%;
 }
 
 /*.square {
@@ -467,7 +408,7 @@ header.container {
   ========================================
 */
 body {
-  background: #F3F2F1;
+  background: #fff;
   color: #393939;
   font: 300 16px/22px "Helvetica Neue", Arial, sans-serif;
 }
@@ -480,27 +421,15 @@ h1, h2, h3, h4 {
 h2 {
   font-weight: 100;
   color: #fff;
-  font-size: 35px;
+  font-size: 50px;
   letter-spacing: 2px;
-  float: left;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  line-height: 200px;
 }
 
 h3 {
   font-weight: 900;
-  font-size: 25px;
+  font-size: 2vw;
   text-align: center;
-  color: #fff;
-  line-height: 40px;
-}
-
-h4 {
-  text-align: center;
-  color: #393939;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 40px;
 }
 
 
@@ -518,32 +447,25 @@ cite, em {
 }
 
 img {
-  text-align: center;
+  width: 90%;
+  height: auto;
+  padding: 5%;
 }
 
 
 
 /*
   ========================================
-Mockups
+  Links
   ========================================
 */
 
-.wrt {
-  width: 100%;
-  min-width: 1000px;
-  height: auto;
-  padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
 
-
-a {
-  color: #fff;
+/*a {
+  color: #648880;
   text-decoration: none;
 }
-/*a:hover {
+a:hover {
   color: #a9b2b9;
 }
 p a {
@@ -558,9 +480,9 @@ p a {
 .primary-footer a:hover {
   color: #648880;
 }
+
+
 */
-
-
 
 
 
