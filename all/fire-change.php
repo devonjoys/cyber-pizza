@@ -11,10 +11,10 @@
   <body>
 
     <header class="row group container">
-        <a href="dash.html">
+
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
            <div class="v-line"></div>
-        </a> 
+ 
         <h2>Firewall Settings</h2>
 
         
