@@ -413,13 +413,15 @@ header.container {
   margin: 80px;
 }
 
-.fire-li {
+.tcell {
   display: table-cell;
-  position:relative;
-  padding-top: 5px;
-  height: 450px;
-  width: 300px;
   border: 6px solid black;
+}
+
+.fire-li {
+  padding-top: 5px;
+  min-height: 250px;
+  min-width: 350px;
 }
 
 .good-ip {
@@ -437,15 +439,11 @@ header.container {
   background: #f6bbbb; 
 }
 
-.bottum {
+/*.bottum {
   height: 100%;
-}
+}*/
 
 .add-ip {
-  position:absolute;    
-  padding: 3px;              
-  bottom:0;                          
-  left:0;
 }
 
 

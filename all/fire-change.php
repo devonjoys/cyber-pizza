@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Firewall Settings</title>
-		<link rel="stylesheet" href="assets/stylesheets/main.css">
+  <head>
+    <meta charset="utf-8">
+    <title>Firewall Settings</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-	</head>
-	<body>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+  </head>
+  <body>
 
     <header class="row group container">
         <a href="dash.html">
@@ -29,25 +29,14 @@
 
     </header>
 
-      <?php 
-      if (! empty($_POST['save'])){
-        exec('rm ./assets/data/allowed-ips.txt');
-        exec('cp ./assets/data/allowed-ips-temp.txt ./assets/data/allowed-ips.txt');
-        exec('rm ./assets/data/blocked-ips.txt');
-        exec('cp ./assets/data/blocked-ips-temp.txt ./assets/data/blocked-ips.txt');
-      }
-      if (! empty($_POST['cancel'])){
-        exec('rm ./assets/data/allowed-ips-temp.txt');
-        exec('cp ./assets/data/allowed-ips.txt ./assets/data/allowed-ips-temp.txt');
-        exec('rm ./assets/data/blocked-ips-temp.txt');
-        exec('cp ./assets/data/blocked-ips.txt ./assets/data/blocked-ips-temp.txt');
-      }
-
+      <?php  
       $aname = './assets/data/allowed-ips.txt';
+      $atemp = './assets/data/allowed-ips-temp.txt';
       $bname = './assets/data/blocked-ips.txt';
+      $btemp = './assets/data/blocked-ips-temp.txt';
 
-      $af = fopen($aname, 'r');
-      $bf = fopen($bname, 'r');
+      $af = fopen($atemp, 'r');
+      $bf = fopen($btemp, 'r');
 
       $allowed = array();
       while(! feof($af)) {
@@ -76,43 +65,66 @@
               <?php  
               foreach ($allowed as $ip) {
                 echo "<li class='good-ip'>
+                <form method='post' action='./actions/edit-ip.php'> 
+                  <input type='hidden' name='ip' value={$ip}>
+                  <input type='hidden' name='gorb' value='g'>
+                  <input type='submit' name='submit' value='X'>
+                </form>
                 {$ip}
                 </li>";
               } ?>
             </ul>
             </div>
+
+             <form class="add-ip" action='./actions/edit-ip.php' method="post">
+               <input type="txt" name="wl-ip">
+               <input type="submit" name="wl-update" value="Add IP to white-list">
+             </form>
           </div>
 
           <div class="tcell">
             <h4>Blocked IPs</h4>
+
             <div class="fire-li">
             <ul>
               <?php  
               foreach ($blocked as $ip) {
                 echo "<li class='bad-ip'>
+                <form method='post' action='./actions/edit-ip.php'> 
+                  <input type='hidden' name='ip' value={$ip}>
+                  <input type='hidden' name='gorb' value='b'>
+                  <input type='submit' name='submit' value='X' >
+                </form>
                 {$ip}
                 </li>";
               } ?>
             </ul>
             </div>
-          </div>
 
+            <form class="add-ip" action='./actions/edit-ip.php' method="post">
+               <input type="txt" name="bl-ip">
+               <input type="submit" name="bl-update" value="Add IP to black-list">
+             </form>
+          </div>
         </section>
 
-        <a href="fire-change.php">
-          <h4>EDIT FIREWALL</h4>
-        </a>
+        <form method='post' action='firewall.php'> 
+            <input type="hidden" name="save" value="save">
+            <input type='submit' name='submit' value='Save Changes'>
+        </form>
+        <form method='post' action='firewall.php'> 
+            <input type="hidden" name="cancel" value="cancel">
+            <input type='submit' name='submit' value='Cancel'>
+        </form>
 
-        <footer class="row footer">
-
+    <footer class="row footer">
       <a class="footnote" href="dash.html">Home</a>
       <a class="footnote" href="">FAQ</a>
       <a class="footnote" href="">Contact DukeOIT</a>
-
     </footer>
 
     <iframe name="votar" style="display:none;"></iframe>
 
-	</body>
+  </body>
 
 </html>

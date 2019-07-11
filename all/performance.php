@@ -11,7 +11,6 @@
 	<body>
 
     <?php  
-
       $fname = './assets/settings/performance.txt';
 
       $fp = fopen($fname, 'r');
@@ -55,14 +54,11 @@
           <p> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
 
 
-          <form action="speed-test.php" method="post" target="speedy">
+          <form action="./actions/speed-test.php" method="post" target="speedy">
             <input class="submit" type="submit" value="Run Speed Test">
           </form>
 
           <iframe name="speedy"></iframe>
-
-
-          
 
 
       </section>
