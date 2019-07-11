@@ -18,14 +18,6 @@
         <h2>Firewall Settings</h2>
 
         
-        <nav class="user-in">
-          <a href="help.html">
-            <h5 class="btn">Help</h5>
-          </a>
-          <a href="dash.html">
-            <h5 class="btn">Options</h5>
-          </a>
-        </nav>
 
     </header>
 
@@ -118,12 +110,7 @@
         </form>
 
     <footer class="row footer">
-      <a class="footnote" href="dash.html">Home</a>
-      <a class="footnote" href="">FAQ</a>
-      <a class="footnote" href="">Contact DukeOIT</a>
     </footer>
-
-    <iframe name="votar" style="display:none;"></iframe>
 
   </body>
 
