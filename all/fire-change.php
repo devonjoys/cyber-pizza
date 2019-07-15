@@ -65,13 +65,12 @@
                 {$ip}
                 </li>";
               } ?>
-            </ul>
-            </div>
-
-             <form class="add-ip" action='./actions/edit-ip.php' method="post">
+              <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="wl-ip">
                <input type="submit" name="wl-update" value="Add IP to white-list">
              </form>
+            </ul>
+            </div>
           </div>
 
           <div class="tcell">
@@ -82,7 +81,7 @@
               <?php  
               foreach ($blocked as $ip) {
                 echo "<li class='bad-ip'>
-                <form method='post' action='./actions/edit-ip.php'> 
+                <form class='X' method='post' action='./actions/edit-ip.php'> 
                   <input type='hidden' name='ip' value={$ip}>
                   <input type='hidden' name='gorb' value='b'>
                   <input type='submit' name='submit' value='X' >
@@ -90,14 +89,38 @@
                 {$ip}
                 </li>";
               } ?>
-            </ul>
-            </div>
-
-            <form class="add-ip" action='./actions/edit-ip.php' method="post">
+              <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="bl-ip">
                <input type="submit" name="bl-update" value="Add IP to black-list">
-             </form>
+              </form>
+            </ul>
+            </div>
           </div>
+
+          <div class="tcell">
+            <h4>Bad IP Feed URLs</h4>
+
+            <div class="fire-li">
+            <ul>
+              <?php  
+              foreach ($blocked as $ip) {
+                echo "<li class='bad-ip'>
+                <form class='X' method='post' action='./actions/edit-ip.php'> 
+                  <input type='hidden' name='ip' value={$ip}>
+                  <input type='hidden' name='gorb' value='b'>
+                  <input type='submit' name='submit' value='X' >
+                </form>
+                {$ip}
+                </li>";
+              } ?>
+              <form class="add-ip" action='./actions/edit-ip.php' method="post">
+               <input type="txt" name="bl-ip">
+               <input type="submit" name="bl-update" value="Add IP to black-list">
+              </form>
+            </ul>
+            </div>
+          </div>
+
         </section>
 
         <form method='post' action='firewall.php'> 

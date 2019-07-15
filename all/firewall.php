@@ -18,13 +18,15 @@
         <h2>Firewall Settings</h2>
 
         
-        <nav class="user-in">
-          <a href="help.html">
-            <h5 class="btn">Help</h5>
-          </a>
-          <a href="dash.html">
-            <h5 class="btn">Options</h5>
-          </a>
+        <nav class="set-btns">
+        <ul>
+          <li>
+            <a href="help.html"><h5 class="btn">Help</h5></a>
+          </li>
+          <li>
+            <a href="dash.html"><h5 class="btn">Options</h5></a>
+          </li>
+        </ul>
         </nav>
 
     </header>
@@ -45,9 +47,11 @@
 
       $aname = './assets/data/allowed-ips.txt';
       $bname = './assets/data/blocked-ips.txt';
+      $urlname = './assets/data/blocklists.txt';
 
       $af = fopen($aname, 'r');
       $bf = fopen($bname, 'r');
+      $urlf = fopen($urlname, 'r');
 
       $allowed = array();
       while(! feof($af)) {
@@ -61,8 +65,15 @@
         $blocked[] = $ip;
       }
 
+      $urls = array();
+      while(! feof($urlf)) {
+        $url = fgets($urlf);
+        $urls[] = $url;
+      }
+
       fclose($af);
       fclose($bf);
+      fclose($urlf);
       ?>
 
 
@@ -96,12 +107,28 @@
             </ul>
             </div>
           </div>
+          <div class="tcell">
+            <h4>Bad IP Feed URLs</h4>
+            <div class="fire-li">
+            <ul>
+              <?php  
+              foreach ($urls as $url) {
+                echo "<li class='bad-ip'>
+                {$url}
+                </li>";
+              } ?>
+            </ul>
+            </div>
+          </div>
 
         </section>
 
+
+        <section class="editor">
         <a href="fire-change.php">
           <h4>EDIT FIREWALL</h4>
         </a>
+        </section>
 
         <footer class="row footer">
 

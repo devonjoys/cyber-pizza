@@ -24,13 +24,17 @@
            <div class="v-line"></div>
         </a> 
         <h2>Network Performance</h2>
-        <nav class="user-in">
-          <a href="help.html">
-            <h5 class="btn">Help</h5>
-          </a>
-          <a href="dash.html">
-            <h5 class="btn">Options</h5>
-          </a>
+
+        
+        <nav class="set-btns">
+        <ul>
+          <li>
+            <a href="help.html"><h5 class="btn">Help</h5></a>
+          </li>
+          <li>
+            <a href="dash.html"><h5 class="btn">Options</h5></a>
+          </li>
+        </ul>
         </nav>
     </header>
 
