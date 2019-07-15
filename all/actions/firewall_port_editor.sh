@@ -13,12 +13,13 @@ line_of_port=$(grep -n -e "option name 'port $1'" "$firewall_path/firewall" | cu
 if [[ -z "$line_of_port" ]]; then
 	echo "this IP was not already on the list"
 	if [[ "$2" = "a" ]]; then
-		#if empty and allow, open port to outside world ############
-		echo -3 "config rule \n\toption name 'port $1'\n\toption dest_port '$1'\n\toption dest 'lan'\n\toption src 'wan'\n\toption target ACCEPT" >> "firewall_path/firewall"	#verify this works
-		echo "This port has been opened"
+		##if empty and allow, open port to outside world ############
+		#echo -e "config rule \n\toption name 'port $1'\n\toption dest_port '$1'\n\toption dest 'lan'\n\toption src 'lan'\n\toption target ACCEPT" >> "firewall_path/firewall"	#verify this works
+		#echo "This port has been opened"
+		echo "This feature is currently not implemented for security reasons. Please add any custom port accept rules to the file in /etc/config"
 	else
-		#if empty and block
-		echo -3 "config rule \n\toption name 'port $1'\n\toption dest_port '$1'\n\toption dest 'lan'\n\toption src '*'\n\toption target REJECT" >> "firewall_path/firewall"	#verify this works
+		#if empty and block, don't let traffic go outbound
+		echo -e "config rule \n\toption name 'port $1'\n\toption dest_port '$1'\n\toption dest 'wan'\n\toption src '*'\n\toption target REJECT" >> "firewall_path/firewall"	#verify this works
 		echo "I have blocked this port"
 	fi
 else
