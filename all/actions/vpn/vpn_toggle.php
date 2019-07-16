@@ -5,7 +5,7 @@
                 <title>Network Performance</title>
                 <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-                <meta http-equiv="refresh" content="0;URL='/cyber-pizza/all/vpn.php'"/>
+                <meta http-equiv="refresh" content="0;URL='../../vpn.php'"/>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="styles>        </head>
         </head>
 
@@ -30,7 +30,7 @@ if (!empty($_POST['vpn'])) {
 exec("uci commit openvpn");
 exec("service openvpn restart");
 exec("service network restart");
-
+exec("./my-ip.sh");
 
 ?>
 
