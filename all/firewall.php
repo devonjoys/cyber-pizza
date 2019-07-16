@@ -104,6 +104,7 @@
       ?>
 
 
+      <div class="main">
       <div class="full">
 
         <section class="fire">
@@ -152,9 +153,9 @@
           </div>
 
           </section>
-          <section class='fire'>
+          <section class='fire-url'>
 
-          <div class="tcell">
+          <div>
             <h4>Bad IP Feed URLs</h4>
             <div class="url-li">
             <ul>
@@ -178,6 +179,7 @@
         <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='to-edit'>Advanced Settings</h4></a>
         </section>
 
+      </div>
       </div>
 
         <footer class="row footer">
