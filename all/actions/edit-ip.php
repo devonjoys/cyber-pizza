@@ -97,26 +97,30 @@
     if (validIPa($_POST['wl-ip'])) {
 
         $add_ip = $_POST['wl-ip'];
+	exec("/www/cyber-pizza/all/actions/firewall/firewall_editor.sh $add_ip a");
         $f = fopen($atemp, 'a+');
-        fwrite($f, "\n".$add_ip);
+        fwrite($f, "\n"."$add_ip");
         fclose($f);
     }
     if (validIPb($_POST['bl-ip'])) {
-        $add_ip = $_POST['bl-ip'];
+        exec("/www/cyber-pizza/all/actions/firewall/firewall_editor.sh $add_ip b");
+	$add_ip = $_POST['bl-ip'];
         $f = fopen($btemp, 'a+');
-        fwrite($f, "\n".$add_ip);
+        fwrite($f, "\n"."$add_ip");
         fclose($f);
     }
     if (validURL($_POST['url-add'])) {
+	exec("/www/cyber-pizza/all/actions/firewall/new_blocklist.sh $add_url"); //MAY NEED TO FIX THIS EVENTUALLY FOR RUNTIME'S SAKE--KINDA BOTHERSOME
         $add_url = $_POST['url-add'];
         $f = fopen($urltemp, 'a+');
-        fwrite($f, "\n".$add_url);
+        fwrite($f, "\n"."$add_url");
         fclose($f);
     }
     if (validPORT($_POST['port-add'])) {
-        $add_port = $_POST['port-add'];
+        exec("/www/cyber-pizza/all/actions/firewall/firewall_port_editor.sh $add_port b");
+	$add_port = $_POST['port-add'];
         $f = fopen($ptemp, 'a+');
-        fwrite($f, "\n".$add_port);
+        fwrite($f, "\n"."$add_port");
         fclose($f);
     }
 
@@ -133,14 +137,18 @@
       	foreach($ips as $line) {
     		    if(trim($line) != $ip) {
          		   $out[] = trim($line); 
-         		}
+         		} else {
+				exec("/www/cyber-pizza/all/actions/firewall/block_allow_helper.sh");
+				echo("block allow helper just ran");
+				// MAY NEED TO FIX THIS EVENTUALLY FOR RUNTIME'S SAKE--KINDA BOTHERSOME
+			}
         }
 
       	$f = fopen($atemp, 'w+');
       	flock($f, LOCK_EX);
       	$firstline = 1;
- 			  foreach($out as $line) {
- 			      if ($firstline) {
+ 			foreach($out as $line) {
+ 	      			if ($firstline) {
  					      fwrite($f, $line);
  					      $firstline = 0;
  				    } else {
@@ -149,7 +157,7 @@
  			  }
 
  			  fclose($f);     	
-		}
+	}
 
 		if ($ip_type == 'b') {
       		$ips = file($btemp);
@@ -158,7 +166,9 @@
       		foreach($ips as $line) {
     			if(trim($line) != $ip) {
          			$out[] = trim($line); 
-         		}
+         		} else {
+				exec("/www/cyber-pizza/all/actions/firewall/firewall_editor.sh $ip allow");
+			}
          	}
          	
       		$f = fopen($btemp, 'w+');
@@ -184,7 +194,9 @@
           foreach($urls as $line) {
           if(trim($line) != $del) {
               $out[] = trim($line); 
-            }
+            } else {
+		exec("/www/cyber-pizza/all/actions/firewall/block_allow_helper.sh");
+	    }
           }
           
           $f = fopen($urltemp, 'w+');
@@ -209,7 +221,9 @@
           foreach($ports as $line) {
           if(trim($line) != $del) {
               $out[] = trim($line); 
-            }
+            } else {
+		exec("/www/cyber-pizza/all/actions/firewall/firewall_port_remover $del");
+	    }
           }
           
           $f = fopen($ptemp, 'w+');

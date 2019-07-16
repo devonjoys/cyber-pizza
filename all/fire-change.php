@@ -168,7 +168,12 @@
           </div>
 
         </section>
-
+	
+	<section>
+		<p class="caption">Do not add blocklists with more than 1000 IPs, as it may slow down the device.</p>
+		<p class="caption">Your changes may require several minutes to take effect.</p>
+	</section>
+	
         <form method='post' action='firewall.php'> 
             <input type="hidden" name="save" value="save">
             <input type='submit' name='submit' value='Save Changes'>
