@@ -41,6 +41,12 @@
         exec('cp ./assets/data/blocklists-temp.txt ./assets/data/blocklists.txt');
         exec('rm ./assets/data/blocked-ports.txt');
         exec('cp ./assets/data/blocked-ports-temp.txt ./assets/data/blocked-ports.txt');
+	exec('/www/cyber-pizza/all/actions/firewall/block_allow_helper.sh');
+	exec('www/cyber-pizza/all/actions/firewall/block_allow_port_helper.sh');
+	exec('/www/cyber-pizza/all/actions/firewall/firewall_restore.sh');
+	exec('echo I did it');
+	exec('uci commit firewall');
+	exec('service firewall restart');
       }
       if (! empty($_POST['cancel'])){
         exec('rm ./assets/data/allowed-ips-temp.txt');
@@ -51,6 +57,10 @@
         exec('cp ./assets/data/blocklists.txt ./assets/data/blocklists-temp.txt');
         exec('rm ./assets/data/blocked-ports-temp.txt');
         exec('cp ./assets/data/blocked-ports.txt ./assets/data/blocked-ports-temp.txt');
+	exec('/www/cyber-pizza/all/actions/firewall/block_allow_helper.sh');
+	exec('/www/cyber-pizza/all/actions/firewall/block_allow_port_helper.sh');
+	#exec('uci commit firewall');
+	#exec('service firewall restart);
       }
 
       $aname = './assets/data/allowed-ips.txt';
@@ -93,7 +103,16 @@
       fclose($pf);
       ?>
 
+<<<<<<< HEAD
       <div class="full">
+=======
+	<section>
+	<p><font color="red">
+		<a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables">Advanced Settings</a>
+	</font></p>
+	</section>
+
+>>>>>>> 18b26e9af64d8705d9a97b050bf34b14985490be
         <section class="fire">
 
           <div class="tcell">
