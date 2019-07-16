@@ -103,16 +103,9 @@
       fclose($pf);
       ?>
 
-<<<<<<< HEAD
-      <div class="full">
-=======
-	<section>
-	<p><font color="red">
-		<a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables">Advanced Settings</a>
-	</font></p>
-	</section>
 
->>>>>>> 18b26e9af64d8705d9a97b050bf34b14985490be
+      <div class="full">
+
         <section class="fire">
 
           <div class="tcell">
@@ -182,6 +175,7 @@
 
         <section class="editor">
         <a href="fire-change.php"><h4 class="to-edit">EDIT FIREWALL</h4></a>
+        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='to-edit'>Advanced Settings</h4></a>
         </section>
 
       </div>
