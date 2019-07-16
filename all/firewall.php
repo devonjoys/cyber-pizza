@@ -93,7 +93,7 @@
       fclose($pf);
       ?>
 
-
+      <div class="full">
         <section class="fire">
 
           <div class="tcell">
@@ -126,20 +126,6 @@
           </div>
 
           <div class="tcell">
-            <h4>Bad IP Feed URLs</h4>
-            <div class="fire-li">
-            <ul>
-              <?php  
-              foreach ($urls as $url) {
-                echo "<li class='bad-ip'>
-                {$url}
-                </li>";
-              } ?>
-            </ul>
-            </div>
-          </div>
-
-          <div class="tcell">
             <h4>Blocked Ports</h4>
             <div class="fire-li">
             <ul>
@@ -153,14 +139,33 @@
             </div>
           </div>
 
+          </section>
+          <section class='fire'>
+
+          <div class="tcell">
+            <h4>Bad IP Feed URLs</h4>
+            <div class="url-li">
+            <ul>
+              <?php  
+              foreach ($urls as $url) {
+                echo "<li class='bad-ip'>
+                {$url}
+                </li>";
+              } ?>
+            </ul>
+            </div>
+          </div>
+
+          
+
         </section>
 
 
         <section class="editor">
-        <a href="fire-change.php">
-          <h4>EDIT FIREWALL</h4>
-        </a>
+        <a href="fire-change.php"><h4 class="to-edit">EDIT FIREWALL</h4></a>
         </section>
+
+      </div>
 
         <footer class="row footer">
 

@@ -85,12 +85,12 @@
                 {$ip}
                 </li>";
               } ?>
-              <form class="add-ip" action='./actions/edit-ip.php' method="post">
+            </ul>
+            </div>
+            <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="wl-ip">
                <input type="submit" name="wl-update" value="Add IP to white-list">
              </form>
-            </ul>
-            </div>
           </div>
 
           <div class="tcell">
@@ -109,37 +109,12 @@
                 {$ip}
                 </li>";
               } ?>
-              <form class="add-ip" action='./actions/edit-ip.php' method="post">
+            </ul>
+            </div>
+            <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="bl-ip">
                <input type="submit" name="bl-update" value="Add IP to black-list">
-              </form>
-            </ul>
-            </div>
-          </div>
-
-          <div class="tcell">
-            <h4>Bad IP Feed URLs</h4>
-
-            <div class="fire-li">
-            <ul>
-              <?php  
-              foreach ($urls as $url) {
-                echo "<li class='bad-ip'>
-                <form class='X' method='post' action='./actions/edit-ip.php'> 
-                  <input type='hidden' name='ip' value={$url}>
-                  <input type='hidden' name='gorb' value='url'>
-                  <input type='submit' name='submit' value='X' >
-                </form>
-                {$url}
-                </li>";
-              } ?>
-
-              <form class="add-ip" action='./actions/edit-ip.php' method="post">
-               <input type="txt" name="url-add">
-               <input type="submit" name="url-update" value="Add URL to black-list feed">
-              </form>
-            </ul>
-            </div>
+            </form>
           </div>
 
           <div class="tcell">
@@ -158,14 +133,42 @@
                 {$port}
                 </li>";
               } ?>
-
-              <form class="add-ip" action='./actions/edit-ip.php' method="post">
+            </ul>
+            </div>
+            <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="port-add">
                <input type="submit" name="url-update" value="Block Port">
               </form>
+          </div>
+
+          </section>
+          <section class='fire'>
+
+          <div class="tcell">
+            <h4>Bad IP Feed URLs</h4>
+
+            <div class="url-li">
+            <ul>
+              <?php  
+              foreach ($urls as $url) {
+                echo "<li class='bad-ip'>
+                <form class='X' method='post' action='./actions/edit-ip.php'> 
+                  <input type='hidden' name='ip' value={$url}>
+                  <input type='hidden' name='gorb' value='url'>
+                  <input type='submit' name='submit' value='X' >
+                </form>
+                {$url}
+                </li>";
+              } ?>
             </ul>
             </div>
+            <form class="add-ip" action='./actions/edit-ip.php' method="post">
+               <input type="txt" name="url-add">
+               <input type="submit" name="url-update" value="Add URL to black-list feed">
+              </form>
           </div>
+
+
 
         </section>
 
