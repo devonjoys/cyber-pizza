@@ -4,8 +4,8 @@
 #If this is done via a cron or a blockLIST, make sure the relevant blocklist scripts are called first
 
 
-allowed='../assets/data/allowed-ips.txt'
-blocked='../assets/data/blocked-ips.txt'
+allowed='/www/cyber-pizza/all/assets/data/allowed-ips.txt'
+blocked='/www/cyber-pizza/all/assets/data/blocked-ips.txt'
 
 while IFS= read -r line
 do
@@ -19,5 +19,5 @@ done < "$blocked"
 
 
 #may remove these lines as all pieces come together
-uci commit firewall
-service network restart
+#uci commit firewall
+#service network restart

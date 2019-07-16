@@ -2,8 +2,8 @@
 
 #This script updates the firewall using the allowed and blocked ports inputed by the user
 
-allowed='../assets/data/allowed-ports.txt'
-blocked='../assets/data/blocked-ports.txt'
+allowed='/www/cyber-pizza/all/assets/data/allowed-ports.txt'
+blocked='/www/cyber-pizza/all/assets/data/blocked-ports.txt'
 
 while IFS= read -r line
 do
@@ -17,5 +17,5 @@ done < "$blocked"
 
 
 #may remove these lines as all pieces come together
-uci commit firewall
-service network restart
+#uci commit firewall
+#service network restart

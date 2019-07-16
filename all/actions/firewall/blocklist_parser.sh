@@ -2,12 +2,10 @@
 
 #This script grabs the lists from blocklists.txt and adds them to blocklist_ips.txt
 
-mv ../assets/data/blocklist_ips.txt ../assets/data/blocklist_ips.prev.txt
-touch ../assets/data/blocklist_ips.txt
+mv /www/cyber-pizza/all/assets/data/blocklist_ips.txt /www/cyber-pizza/all/assets/data/blocklist_ips.prev.txt
+touch /www/cyber-pizza/all/assets/data/blocklist_ips.txt
 
-#all_lists='cat $../assets/data/blocklists.txt'
-
-blocklists='../assets/data/blocklists.txt'
+blocklists='/www/cyber-pizza/all/assets/data/blocklists.txt'
 counter=0
 while IFS= read -r line
 do
@@ -24,9 +22,9 @@ do
     #do
 #	valid_ip=$(php-cgi ./validate_ip.php "${ip[0]}" | tail -n 1)
 #	if [[ $valid_ip == "1" ]]; then
-#	    echo $ip >> ../assets/data/blocklist_ips.txt
+#	    echo $ip >> /www/cyber-pizza/all/assets/data/blocklist_ips.txt
 #	    #echo $ip
-#	    ./firewall_editor.sh $ip b
+#	    ./firewall_editor.sh $ip b 0
 #	fi
  #   done
 ##########################################################Implementation using wget
@@ -38,11 +36,11 @@ do
 	    #echo $line
 	if [[ $valid_ip == "1" ]]; then
 	    #echo $line
-	    $counter=$(($counter+1))
-	    echo $line_short >> ../assets/data/blocklist_ips.txt
-	    ./firewall_editor.sh $line_short b
+	    (( counter++ ))
+	    echo $line_short >> /www/cyber-pizza/all/assets/data/blocklist_ips.txt
+	    ./firewall_editor.sh $line_short b 0
 	fi
     done < "$input"
 done
 
-echo '$counter Malicious IPs attained from blocklists and added to blocklist_ips.txt'
+echo "$counter Malicious IPs attained from blocklists and added to blocklist_ips.txt"

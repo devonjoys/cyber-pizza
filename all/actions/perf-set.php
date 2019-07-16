@@ -15,7 +15,7 @@
 		$info = $_POST["freq"];
 		echo($info);
 
-		$fp = fopen("./assets/settings/performance.txt", 'w+');
+		$fp = fopen("../assets/settings/performance.txt", 'w+');
 		fwrite($fp, $info);
 		fclose($fp);
 		?>
