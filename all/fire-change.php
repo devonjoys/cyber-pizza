@@ -26,9 +26,15 @@
       $atemp = './assets/data/allowed-ips-temp.txt';
       $bname = './assets/data/blocked-ips.txt';
       $btemp = './assets/data/blocked-ips-temp.txt';
+      $urlname = './assets/data/blocklists.txt';
+      $urltemp = './assets/data/blocklists-temp.txt';
+      $pname = './assets/data/blocked-ports.txt';
+      $ptemp = './assets/data/blocked-ports-temp.txt';
 
       $af = fopen($atemp, 'r');
       $bf = fopen($btemp, 'r');
+      $urlf = fopen($urltemp, 'r');
+      $pf = fopen($ptemp, 'r');
 
       $allowed = array();
       while(! feof($af)) {
@@ -42,8 +48,22 @@
         $blocked[] = $ip;
       }
 
+      $urls = array();
+      while(! feof($urlf)) {
+        $url = fgets($urlf);
+        $urls[] = $url;
+      }
+
+      $ports = array();
+      while(! feof($pf)) {
+        $port = fgets($pf);
+        $ports[] = $port;
+      }
+
       fclose($af);
       fclose($bf);
+      fclose($urlf);
+      fclose($pf);
       ?>
 
 
@@ -103,19 +123,45 @@
             <div class="fire-li">
             <ul>
               <?php  
-              foreach ($blocked as $ip) {
+              foreach ($urls as $url) {
                 echo "<li class='bad-ip'>
                 <form class='X' method='post' action='./actions/edit-ip.php'> 
-                  <input type='hidden' name='ip' value={$ip}>
-                  <input type='hidden' name='gorb' value='b'>
+                  <input type='hidden' name='ip' value={$url}>
+                  <input type='hidden' name='gorb' value='url'>
                   <input type='submit' name='submit' value='X' >
                 </form>
-                {$ip}
+                {$url}
                 </li>";
               } ?>
+
               <form class="add-ip" action='./actions/edit-ip.php' method="post">
-               <input type="txt" name="bl-ip">
-               <input type="submit" name="bl-update" value="Add IP to black-list">
+               <input type="txt" name="url-add">
+               <input type="submit" name="url-update" value="Add URL to black-list feed">
+              </form>
+            </ul>
+            </div>
+          </div>
+
+          <div class="tcell">
+            <h4>Blocked Ports</h4>
+
+            <div class="fire-li">
+            <ul>
+              <?php  
+              foreach ($ports as $port) {
+                echo "<li class='bad-ip'>
+                <form class='X' method='post' action='./actions/edit-ip.php'> 
+                  <input type='hidden' name='ip' value={$port}>
+                  <input type='hidden' name='gorb' value='port'>
+                  <input type='submit' name='submit' value='X' >
+                </form>
+                {$port}
+                </li>";
+              } ?>
+
+              <form class="add-ip" action='./actions/edit-ip.php' method="post">
+               <input type="txt" name="port-add">
+               <input type="submit" name="url-update" value="Block Port">
               </form>
             </ul>
             </div>

@@ -37,21 +37,31 @@
         exec('cp ./assets/data/allowed-ips-temp.txt ./assets/data/allowed-ips.txt');
         exec('rm ./assets/data/blocked-ips.txt');
         exec('cp ./assets/data/blocked-ips-temp.txt ./assets/data/blocked-ips.txt');
+        exec('rm ./assets/data/blocklists.txt');
+        exec('cp ./assets/data/blocklists-temp.txt ./assets/data/blocklists.txt');
+        exec('rm ./assets/data/blocked-ports.txt');
+        exec('cp ./assets/data/blocked-ports-temp.txt ./assets/data/blocked-ports.txt');
       }
       if (! empty($_POST['cancel'])){
         exec('rm ./assets/data/allowed-ips-temp.txt');
         exec('cp ./assets/data/allowed-ips.txt ./assets/data/allowed-ips-temp.txt');
         exec('rm ./assets/data/blocked-ips-temp.txt');
         exec('cp ./assets/data/blocked-ips.txt ./assets/data/blocked-ips-temp.txt');
+        exec('rm ./assets/data/blocklists-temp.txt');
+        exec('cp ./assets/data/blocklists.txt ./assets/data/blocklists-temp.txt');
+        exec('rm ./assets/data/blocked-ports-temp.txt');
+        exec('cp ./assets/data/blocked-ports.txt ./assets/data/blocked-ports-temp.txt');
       }
 
       $aname = './assets/data/allowed-ips.txt';
       $bname = './assets/data/blocked-ips.txt';
       $urlname = './assets/data/blocklists.txt';
+      $pname = './assets/data/blocked-ports.txt';
 
       $af = fopen($aname, 'r');
       $bf = fopen($bname, 'r');
       $urlf = fopen($urlname, 'r');
+      $pf = fopen($pname, 'r');
 
       $allowed = array();
       while(! feof($af)) {
@@ -71,9 +81,16 @@
         $urls[] = $url;
       }
 
+      $ports = array();
+      while(! feof($pf)) {
+        $port = fgets($pf);
+        $ports[] = $port;
+      }
+
       fclose($af);
       fclose($bf);
       fclose($urlf);
+      fclose($pf);
       ?>
 
 
@@ -107,6 +124,7 @@
             </ul>
             </div>
           </div>
+
           <div class="tcell">
             <h4>Bad IP Feed URLs</h4>
             <div class="fire-li">
@@ -115,6 +133,20 @@
               foreach ($urls as $url) {
                 echo "<li class='bad-ip'>
                 {$url}
+                </li>";
+              } ?>
+            </ul>
+            </div>
+          </div>
+
+          <div class="tcell">
+            <h4>Blocked Ports</h4>
+            <div class="fire-li">
+            <ul>
+              <?php  
+              foreach ($ports as $port) {
+                echo "<li class='bad-ip'>
+                {$port}
                 </li>";
               } ?>
             </ul>

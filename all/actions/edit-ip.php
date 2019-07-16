@@ -5,8 +5,8 @@
 		<title>Network Performance</title>
 		<meta http-equiv="refresh" content="0;URL='../fire-change.php'" />
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
-    	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-    	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 	</head>
 	</head>
@@ -19,6 +19,10 @@
     $atemp = '../assets/data/allowed-ips-temp.txt';
     $bname = '../assets/data/blocked-ips.txt';
     $btemp = '../assets/data/blocked-ips-temp.txt';
+    $urlname = '../assets/data/blocklists.txt';
+    $urltemp = '../assets/data/blocklists-temp.txt';
+    $pname = '../assets/data/blocked-ports.txt';
+    $ptemp = '../assets/data/blocked-ports-temp.txt';
 
 
     function validIPa($input) {
@@ -49,6 +53,47 @@
       return 0;
     }
 
+
+    function validURL($input) {
+      $urltemp = '../assets/data/blocklists-temp.txt';
+      $urls = file($urltemp);
+      foreach($urls as $line) {
+        if(trim($line) == $input) {
+          return 0;
+        } 
+      }
+      $protocal = 'http://'.$input;
+      if (filter_var($input, FILTER_VALIDATE_URL) || filter_var($protocal, FILTER_VALIDATE_URL)) {
+        echo 'valid url';
+        return 1;
+      }
+      return 0;
+    }
+
+    function validPORT($input) {
+      $ptemp = '../assets/data/blocked-ports-temp.txt';
+      $ports = file($ptemp);
+      foreach($ports as $port) {
+        if(trim($line) == $port) {
+          return 0;
+        } 
+      }
+      echo "checking";
+      $bad_ports = array(22, 53, 67, 68, 80, 123, 443);
+      foreach ($bad_ports as $prt) {
+        if ($input == $prt) {
+          return 0;
+        }
+      }
+
+      if ($input >= 0 and $input <= 65535) {
+        echo "valid port";
+        return 1;
+      }
+      return 0;
+    }
+
+
     if (validIPa($_POST['wl-ip'])) {
 
         $add_ip = $_POST['wl-ip'];
@@ -60,6 +105,18 @@
         $add_ip = $_POST['bl-ip'];
         $f = fopen($btemp, 'a+');
         fwrite($f, "\n".$add_ip);
+        fclose($f);
+    }
+    if (validURL($_POST['url-add'])) {
+        $add_url = $_POST['url-add'];
+        $f = fopen($urltemp, 'a+');
+        fwrite($f, "\n".$add_url);
+        fclose($f);
+    }
+    if (validPORT($_POST['port-add'])) {
+        $add_port = $_POST['port-add'];
+        $f = fopen($ptemp, 'a+');
+        fwrite($f, "\n".$add_port);
         fclose($f);
     }
 
@@ -118,6 +175,57 @@
 
  			fclose($f);     	
 		}
+
+    $del = $_POST['ip'];
+    if ($ip_type == 'url') {
+          $urls = file($urltemp);
+          $out = array();
+
+          foreach($urls as $line) {
+          if(trim($line) != $del) {
+              $out[] = trim($line); 
+            }
+          }
+          
+          $f = fopen($urltemp, 'w+');
+          flock($f, LOCK_EX);
+          $firstline = 1;
+      foreach($out as $line) {
+        if ($firstline) {
+          fwrite($f, $line);
+          $firstline = 0;
+        } else {
+          fwrite($f, "\n".$line); 
+        } 
+      }
+
+      fclose($f);       
+    }
+
+    if ($ip_type == 'port') {
+          $ports = file($ptemp);
+          $out = array();
+
+          foreach($ports as $line) {
+          if(trim($line) != $del) {
+              $out[] = trim($line); 
+            }
+          }
+          
+          $f = fopen($ptemp, 'w+');
+          flock($f, LOCK_EX);
+          $firstline = 1;
+      foreach($out as $line) {
+        if ($firstline) {
+          fwrite($f, $line);
+          $firstline = 0;
+        } else {
+          fwrite($f, "\n".$line); 
+        } 
+      }
+
+      fclose($f);       
+    }
 
 		?>
 
