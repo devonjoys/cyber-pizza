@@ -10,17 +10,21 @@
 	
 <?php
       $fname = "./actions/vpn/vpn_status.txt";
-
+      $fname2 = "./actions/vpn/my-ip.txt";
       $fp = fopen($fname, 'r');
-      $freq = trim(fread($fp, filesize($fname)));
+      $fp2 = fopen($fname2, 'r');
+      $vpn_on = trim(fread($fp, filesize($fname)));
+      $vpn_ip = trim(fread($fp2, filesize($fname2)));
       fclose($fp);
-	echo $freq;
+      fclose($fp2);
+	//echo $vpn_on;
         $out="checked";
-	if ($freq == "false") {
+	if ($vpn_on == "false") {
 		$out="";
 	} else {
 		$out="checked";
 	}
+	
     ?>
 	</head>
 	<body>
@@ -30,13 +34,6 @@
            <div class="v-line"></div>
         </a> 
         <h2>VPN Access</h2>
-	
-	<form class="vpn-toggle" action="./actions/vpn/vpn_toggle.php" method="post">
-	<label class="switch">
-	   <input type="checkbox" name="vpn" value="on" onchange="this.form.submit()" <?php echo $out ?>>
-	   <span class="slider round"></span>
-	</label>
-	</form>
 	
         <nav class="set-btns">
         <ul>
@@ -51,7 +48,19 @@
 
     </header>
 
+    <div>
+	<p class="caption">Turn VPN On/Off</p>
+	<form class="vpn-toggle" action="./actions/vpn/vpn_toggle.php" method="post">
+        	<label class="switch">
+           	<input type="checkbox" name="vpn" value="on" onchange="this.form.submit()" <?php echo $out ?>>
+           	<span class="slider round"></span>
+        	</label>
+    	</form>
+    
+    <p class="caption">Your VPN IP is: <?php echo $vpn_ip ?></p>
+    <p class="caption">For more information on OpenVPN, visit <a href="help.html">Help-VPN</a></p>
 
+    </div>
 
     <footer class="row footer">
 
