@@ -18,6 +18,8 @@
       fclose($fp);
       shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/net_speed_plot1.png /www/cyber-pizza/all/assets/images/net_speed_plot1.png");
       shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/net_speed_plot2.png /www/cyber-pizza/all/assets/images/net_speed_plot2.png");
+      shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/all_speed_tests.txt /www/cyber-pizza/all/assets/data/all_speed_tests.txt");
+      shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/last_speed_test.txt /www/cyber-pizza/all/assets/data/last_speed_test.txt");
 
     ?>
 
@@ -50,7 +52,7 @@
         <div class = "feed-title"><h3>Network Performance Summary</h3></div>
         <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
 	<img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
-        <a href="./assets/data/test.txt" download="iperform.txt"><br>Download Performance Data</a>
+        <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><br>Download Performance Data</a>
       </section>
 
       <section class="inputs">
