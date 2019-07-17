@@ -1,0 +1,1 @@
+/mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/jsonparse.sh
