@@ -181,6 +181,7 @@ table {
 
 .int-face {
   display: table;
+  min-width: 800px;
   height: 100%;
   width: 100%;
 
@@ -189,7 +190,7 @@ table {
 .feed {
   display: table-cell;
   width: 40%;
-  min-width: 350px;
+  min-width: 450px;
 /*  vertical-align: top;*/
 }
 
@@ -206,7 +207,7 @@ table {
   border-left: 30px solid #0577B1;
   border-right: 30px solid #0577B1;
   padding-top: 20px;
-  height: 550px;
+  height: 700px;
   padding-bottom: 50px;
 }
 
@@ -262,7 +263,7 @@ table {
 .app:hover {
   padding: 0px;
   border: 0px solid #fff;
-  box-shadow: 0px 1px 10px black;
+  box-shadow: 0px 0px 15px #012169;
 }
 
 
@@ -567,36 +568,57 @@ input:checked + .slider:before {
 
 /*
   ========================================
-  Columns
+  Help Pages
   ========================================
 */
 
+.help-sec {
+  text-align: center;
+  margin: 40px;
 
-/*.col-1-3 {
-  margin: 10%;
-  width: 23.3%;
-}
-.col-2-3 {
-  width: 66.66%;
 }
 
-.col-1-3,
-.col-2-3 {
+.help-ul {
+  background: #f8f7f7;
   display: inline-block;
-  vertical-align: top;
-}*/
-
-
-
-
-/*.container {
-  padding-left: 30px;
-  padding-right: 30px;
+  text-align: center;
+  width: 500px;
+  border-left:  1px solid #B5B5B5;
+  border-right: 1px solid #B5B5B5;
+  border-top: 1px solid #B5B5B5;
+  margin-bottom: 40px;
 }
 
-.teaser a:hover h3 {
-  color: #a9b2b9;
-}*/
+.help-li {
+  padding: 5px;
+  border-bottom: 1px solid #B5B5B5;
+}
+.help-li:hover {
+  background: #e8e8e8;
+  border-bottom: 1px solid #B5B5B5;
+  text-decoration: none;
+}
+
+.help-btn {
+  color: #393939;
+}
+
+.help-caption {
+  display: inline-block;
+/*  padding-left: 120px;
+  padding-right: 120px;*/
+  font-size: 16px;
+  width: 600px;
+/*  margin-left: 200px;
+  margin-right: 200px;*/
+  margin-bottom: 40px;
+}
+
+.bar {
+  color: #393939;
+  background: #B5B5B5;
+  margin-bottom: 40px;
+}
 
 
 /*

@@ -32,7 +32,7 @@
         <nav class="set-btns">
         <ul>
           <li>
-            <a href="help.html"><h5 class="btn">Help</h5></a>
+            <a href="./help/help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
             <a href="dash.html"><h5 class="btn">Options</h5></a>
