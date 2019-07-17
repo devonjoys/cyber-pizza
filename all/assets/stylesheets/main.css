@@ -328,6 +328,14 @@ table {
   color: #393939;
 }
 
+.speed_output {
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  margin-top: 12px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 16px;
+}
+
 .caption {
   margin-top: 5px;
   padding-left: 60px;

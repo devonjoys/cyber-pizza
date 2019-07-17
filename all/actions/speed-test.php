@@ -14,7 +14,6 @@
 
 		<div class="speed-result">
 		<?php  
-		echo("This may take a moment...");
 		shell_exec("/www/cyber-pizza/all/actions/performance/jsonparse.sh 1");
 		sleep(20); //if time, add in an automatic grabber and wait here
 		shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/last_speed_test.txt /www/cyber-pizza/all/assets/data/last_speed_test.txt");
