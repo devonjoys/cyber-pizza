@@ -16,6 +16,9 @@
       $fp = fopen($fname, 'r');
       $freq = fread($fp, filesize($fname));
       fclose($fp);
+      shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/net_speed_plot1.png /www/cyber-pizza/all/assets/images/net_speed_plot1.png");
+      shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/net_speed_plot2.png /www/cyber-pizza/all/assets/images/net_speed_plot2.png");
+
     ?>
 
     <header class="row group container">
@@ -44,8 +47,9 @@
     <section class="int-face">
 
       <section class="last-week">
-        <div class = "feed-title"><h3>Network Performance<br>Over Past Week</h3></div>
-        <img class="graph" src="./assets/images/week-plot.png" width="400px" height=auto>
+        <div class = "feed-title"><h3>Network Performance Summary</h3></div>
+        <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
+	<img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
         <a href="./assets/data/test.txt" download="iperform.txt"><br>Download Performance Data</a>
       </section>
 
