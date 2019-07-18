@@ -545,6 +545,21 @@ input:checked + .slider:before {
 
 .footnote {
   padding-right: 20px;
+  margin-top: 50px: 
+  color: #FFF;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.footie {
+  color: #FFF;
+  font-style: italic;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footie:hover {
+  text-decoration: underline;
 }
 
 /*.primary-footer small {
@@ -711,6 +726,10 @@ body {
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
+a {
+  color: #393939;
+}
+
 h1, h2, h3, h4 {
   color: #393939;
 }
@@ -762,6 +781,7 @@ cite, em {
 img {
   text-align: center;
 }
+
 
 
 
