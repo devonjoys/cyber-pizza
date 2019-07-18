@@ -5,8 +5,9 @@
 		<title>Network Performance</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -84,11 +85,12 @@
 	</section>
     </section>
    </section>
-    <footer class="row footer">
+   
+    <footer class="row group container footer">
 
-      <a class="footnote" href="dash.html">Home</a>
-      <a class="footnote" href="">FAQ</a>
-      <a class="footnote" href="">Contact DukeOIT</a>
+      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
