@@ -150,6 +150,9 @@ table {
 
 .page {
   float: left;
+  letter-spacing: 2px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .set-btns {
@@ -572,8 +575,21 @@ input:checked + .slider:before {
   ========================================
 */
 
+.help-tit {
+  text-align: center;
+  color: #393939;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 50px;
+}
+
+#help-welc {
+  font-weight: 400;
+}
+
 .help-sec {
   text-align: center;
+  min-width: 700px;
   margin: 40px;
 
 }
@@ -608,7 +624,7 @@ input:checked + .slider:before {
 /*  padding-left: 120px;
   padding-right: 120px;*/
   font-size: 16px;
-  width: 600px;
+  max-width: 600px;
 /*  margin-left: 200px;
   margin-right: 200px;*/
   margin-bottom: 40px;
@@ -618,6 +634,17 @@ input:checked + .slider:before {
   color: #393939;
   background: #B5B5B5;
   margin-bottom: 40px;
+}
+
+.faq {
+  text-align: left;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.q {
+  text-align: left;
+  margin-bottom: 30px;
 }
 
 
@@ -647,10 +674,7 @@ h2 {
   font-weight: 100;
   color: #fff;
   font-size: 35px;
-  letter-spacing: 2px;
-  float: left;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  
 }
 
 h3 {
@@ -662,7 +686,7 @@ h3 {
 }
 
 h4 {
-  text-align: center;
+/*  text-align: center;*/
   color: #393939;
   font-size: 20px;
   font-weight: 400;
