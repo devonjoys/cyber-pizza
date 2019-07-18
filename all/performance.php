@@ -22,6 +22,9 @@
       shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/last_speed_test.txt /www/cyber-pizza/all/assets/data/last_speed_test.txt");
 
     ?>
+    <script>
+	var test_initiated=false;
+    </script>
 
     <header class="row group container">
         <a href="dash.html">
@@ -64,19 +67,23 @@
           <p> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
 
 
-          <form action="./actions/speed-test.php" method="post" target="speedy">
-            <input class="submit" type="submit" value="Run Speed Test">
+          <form class="speed_output" action="./actions/speed-test.php" method="post" target="speedy">
+            <input class="submit" type="submit" value="Run Speed Test" onclick="initiation();">
           </form>
-
+	  <p class="notice" id="notice"></p>
+		<script>
+		function initiation() {
+		document.getElementById("notice").innerHTML = "This may take a moment...";
+		}
+		</script>
           <iframe name="speedy"></iframe>
 
 
-      </section>
-
-
+      	<section class="bottom-link">
+	  <p class="caption"><a href="https://10.42.0.1/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
+	</section>
     </section>
-
-
+   </section>
     <footer class="row footer">
 
       <a class="footnote" href="dash.html">Home</a>
