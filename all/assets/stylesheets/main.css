@@ -335,11 +335,11 @@ table {
   color: #393939;
 }
 
-.speed_output {
+.speed-output {
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Arial, sans-serif;
   margin-top: 12px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 16px;
 }
 

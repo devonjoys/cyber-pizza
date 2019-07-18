@@ -17,8 +17,6 @@
            <div class="v-line"></div>
         </a> 
         <h2 class="page">Device Scanning</h2>
-
-        
         <nav class="set-btns">
         <ul>
           <li>
@@ -35,12 +33,15 @@
     <section class="int-face">
       <section class="scan">
         <p>
-          <b>Get started below to do a port scan on all of your connected devices.</b>
+          <b>Get started below to do a <i>port scan</i> on all of your connected devices.</b>
         </p>
 
-        
+        <form class="portscan_output" action="./actions/portscan.php" method="post" target="speedy">
+            <input class="submit" id="submit" type="submit" value="Run Device Scan" onclick="initiation();">
+        </form>
 
-        
+        <iframe name="speedy"></iframe>
+
       </section>
     </section>
 

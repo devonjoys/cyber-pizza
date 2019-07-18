@@ -26,8 +26,9 @@ def main():
     lat=float(my_input_list[7])
     
     #Print "Last Speed Test" too in bold
-    #print("Date: \t\t\t%s\nTime: \t\t\t%s\nServer Location: \t%s\nDownload Speed: \t%0.3f Mbps\nUpload Speed: \t\t%0.3f Mbps\nLatency: \t\t%0.1f" % (date, time, loc, download, upload, lat))
-    print("Date: tttttttttttttttttt%sqqqTime:tttttttttttttttttt%sqqqServer Location:  ttt     %sqqqDownload Speed:ttt   %0.3f MbpsqqqUpload Speed:  tttttt      %0.3f MbpsqqqLatency:ttttttttttttttt%0.1f" % (date, time, loc, download, upload, lat))
+    #For correct font#print("Date: \t\t\t\t\t\t %s\nTime: \t\t\t\t\t\t%s\nServer Location: \t   %s\nDownload Speed:\t %0.3f Mbps\nUpload Speed: \t\t %0.3f Mbps\nLatency: \t\t\t\t\t%0.1f" % (date, time, loc, download, upload, lat))
+    #For Times New Roman#print("Date: tttttttttttttttttt%sqqqTime:tttttttttttttttttt%sqqqServer Location:  ttt     %sqqqDownload Speed:ttt   %0.3f MbpsqqqUpload Speed:  tttttt      %0.3f MbpsqqqLatency:ttttttttttttttt%0.1f" % (date, time, loc, download, upload, lat))
+    print("Date:&Time:&Server Location:&Download Speed:&Upload Speed:&Latency:@%s&%s&%s&%0.3f&%0.3f&%0.1f" % (date, time, loc, download, upload, lat))
 if __name__ == "__main__":
     main()
 

@@ -1,0 +1,8 @@
+# Nmap 7.70 scan initiated Thu Jul 18 15:36:30 2019 as: nmap -oG device_ports_status.grep -iL /etc/nmapscripts/devicelog.txt
+Host: 10.42.0.209 (Devons-MBP-2.lan)	Status: Up
+Host: 10.42.0.209 (Devons-MBP-2.lan)	Ports: 53/open/tcp//domain///, 80/open/tcp//http///, 443/open/tcp//https///, 1947/open/tcp//sentinelsrm///, 8080/open/tcp//http-proxy///	Ignored State: closed (995)
+Host: 10.42.0.106 (DESKTOP-CMJ612M.lan)	Status: Up
+Host: 10.42.0.106 (DESKTOP-CMJ612M.lan)	Ports: 28201/open/tcp//unknown///	Ignored State: filtered (999)
+Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Status: Up
+Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 28201/open/tcp//unknown///	Ignored State: filtered (997)
+# Nmap done at Thu Jul 18 15:39:30 2019 -- 4 IP addresses (3 hosts up) scanned in 180.28 seconds
