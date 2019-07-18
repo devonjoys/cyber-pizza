@@ -150,6 +150,9 @@ table {
 
 .page {
   float: left;
+  letter-spacing: 2px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .set-btns {
@@ -163,6 +166,9 @@ table {
   color: #FFF;
   cursor: pointer;
   margin-top: 50px: 
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -580,8 +586,30 @@ input:checked + .slider:before {
   ========================================
 */
 
+.help-tit {
+  text-align: center;
+  color: #393939;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 50px;
+}
+
+#help-welc {
+  font-weight: 400;
+}
+
+.help-head {
+  font-size: 60px;
+  color: #393939;
+  font-weight: 300;
+  line-height: 70px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+
 .help-sec {
   text-align: center;
+  min-width: 700px;
   margin: 40px;
 
 }
@@ -616,7 +644,7 @@ input:checked + .slider:before {
 /*  padding-left: 120px;
   padding-right: 120px;*/
   font-size: 16px;
-  width: 600px;
+  max-width: 600px;
 /*  margin-left: 200px;
   margin-right: 200px;*/
   margin-bottom: 40px;
@@ -626,6 +654,49 @@ input:checked + .slider:before {
   color: #393939;
   background: #B5B5B5;
   margin-bottom: 40px;
+}
+
+.help-h {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.help-content {
+  text-align: left;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.q {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.back {
+  position: absolute;
+  top: 130px;
+  left: 60px;
+  font: 300 55px "Montserrat", "Helvetica Neue", sans-serif;
+  line-height: 65px;
+  border-left: 3px solid transparent;
+  padding: 20px;
+  text-decoration: none;
+  color: #393939;
+}
+
+.back:hover {
+  font-size: 60px;
+  border-left: 0px solid transparent;
+}
+
+.inline-link {
+  color: #0577B1;
+  text-decoration: none;
+  font: 400 16px/22px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
 }
 
 
@@ -655,10 +726,7 @@ h2 {
   font-weight: 100;
   color: #fff;
   font-size: 35px;
-  letter-spacing: 2px;
-  float: left;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  
 }
 
 h3 {
@@ -670,7 +738,7 @@ h3 {
 }
 
 h4 {
-  text-align: center;
+/*  text-align: center;*/
   color: #393939;
   font-size: 20px;
   font-weight: 400;
@@ -713,15 +781,6 @@ Mockups
 }
 
 
-a {
-  color: #fff;
-  font-style: italic;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 
 /*
   ========================================

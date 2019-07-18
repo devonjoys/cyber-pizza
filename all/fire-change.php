@@ -15,7 +15,7 @@
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
            <div class="v-line"></div>
  
-        <h2>Firewall Settings</h2>
+        <h2 class="page">Firewall Settings</h2>
 
         
 
