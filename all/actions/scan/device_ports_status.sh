@@ -25,12 +25,20 @@ port_detail() {
 	awk '{print "Host: " $1 " Ports: " NF-1; $1=""; for(i=2; i<=NF; i++) { a=a" "$i; }; split(a,s,","); for(e in s) { split(s[e],v,"/"); printf "%-8s %s/%-7s %s\n" , v[2], v[3], v[1], v[5]}; a="" }'
 }
 
+all_() {
+	echo "------ top ports ------"
+	top_ports
+	echo "------ port information ------"
+	port_detail
+}
+
 option=$1
 case $option
 in 
 	openports) open_ports ;;
     topports) top_ports ;;
 	portdetail) port_detail ;; 
+ 	all) all_;
 	*) echo "please specify an option, like: 'openports', 'topports', or 'portdetail'"
 		exit ;;
 esac
