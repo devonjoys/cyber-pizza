@@ -24,7 +24,12 @@
 		//echo nl2br(shell_exec("./performance/last_test_parser.py"));
 		$return1=shell_exec("./performance/last_test_parser.py");
 		$return2=str_replace("ttt", "\t", str_replace("qqq", "\n", $return1));
-		echo tab2nbsp(nl2br($return2));
+		$output=tab2nbsp(nl2br($return2));
+		echo "
+			<div>
+				{$output}
+			</div>";
+
 		//echo(shell_exec("cat /www/cyber-pizza/all/assets/data/last_speed_test.txt"));
 
 		?>
