@@ -10,9 +10,11 @@ if [[ -z "$1" ]]; then
 			echo "Your password is too long"
 		else
 			if [[ "$1" == "$2" ]]; then
-				echo "Your admin password has been successfully changed"
-				echo -e "$1\n$1" | passwd devil
-				service uhttpd restart
+				echo "Your network password has been successfully changed"
+				uci set wireless.@wifi-iface[0].key="$1"
+				uci commit wireless
+				wifi
+				service network restart
 			else
 				echo "Your passwords do not match"
 			fi
