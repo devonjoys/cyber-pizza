@@ -1,5 +1,0 @@
-#!/bin/bash
-
-#/etc/speedtestparser.jsonparse.sh | chroot /mnt/mmcblk0p3/ubuntu /bin/bash
-chroot /mnt/mmcblk0p3/ubuntu /etc/speedtestparser/jsonparse.sh
-

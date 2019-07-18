@@ -27,7 +27,7 @@ def main():
     
     #Print "Last Speed Test" too in bold
     #print("Date: \t\t\t%s\nTime: \t\t\t%s\nServer Location: \t%s\nDownload Speed: \t%0.3f Mbps\nUpload Speed: \t\t%0.3f Mbps\nLatency: \t\t%0.1f" % (date, time, loc, download, upload, lat))
-    print("Date: ttttttttt%sqqqTime: ttttttttt%sqqqServer Location: ttt%sqqqDownload Speed: ttt%0.3f MbpsqqqUpload Speed: tttttt%0.3f MbpsqqqLatency: tttttt%0.1f" % (date, time, loc, download, upload, lat))
+    print("Date: tttttttttttttttttt%sqqqTime:tttttttttttttttttt%sqqqServer Location:  ttt     %sqqqDownload Speed:ttt   %0.3f MbpsqqqUpload Speed:  tttttt      %0.3f MbpsqqqLatency:ttttttttttttttt%0.1f" % (date, time, loc, download, upload, lat))
 if __name__ == "__main__":
     main()
 

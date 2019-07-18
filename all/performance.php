@@ -67,9 +67,9 @@
           <p> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
 
 
-          <form class="speed_output" action="./actions/speed-test.php" method="post" target="speedy">
+         <pre><form class="speed_output" action="./actions/speed-test.php" method="post" target="speedy">
             <input class="submit" type="submit" value="Run Speed Test" onclick="initiation();">
-          </form>
+          </form></pre>
 	  <p class="notice" id="notice"></p>
 		<script>
 		function initiation() {
