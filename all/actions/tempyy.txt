@@ -1,0 +1,50 @@
+7
+9
+HOME=/root
+LOGNAME=root
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+LANG=en_US.UTF-8
+SHELL=/bin/bash
+PWD=/root
+*/1 * * * * bash /etc/nmapscripts/connected_devices.sh newdevicecheck 
+0 3,15 * * * bash /www/cyber-pizza/all/actions/performance/json_chrooter.sh 5
+7
+9
+HOME=/root
+LOGNAME=root
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+LANG=en_US.UTF-8
+SHELL=/bin/bash
+PWD=/root
+*/1 * * * * bash /etc/nmapscripts/connected_devices.sh newdevicecheck 
+0 */4 * * * bash /www/cyber-pizza/all/actions/performance/json_chrooter.sh 5
+7
+9
+HOME=/root
+LOGNAME=root
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+LANG=en_US.UTF-8
+SHELL=/bin/bash
+PWD=/root
+*/1 * * * * bash /etc/nmapscripts/connected_devices.sh newdevicecheck 
+0 */2 * * * bash /www/cyber-pizza/all/actions/performance/json_chrooter.sh 5
+7
+9
+HOME=/root
+LOGNAME=root
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+LANG=en_US.UTF-8
+SHELL=/bin/bash
+PWD=/root
+*/1 * * * * bash /etc/nmapscripts/connected_devices.sh newdevicecheck 
+#0 0 * * * bash /www/cyber-pizza/all/actions/performance/json_chrooter.sh 5
+7
+9
+HOME=/root
+LOGNAME=root
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+LANG=en_US.UTF-8
+SHELL=/bin/bash
+PWD=/root
+*/1 * * * * bash /etc/nmapscripts/connected_devices.sh newdevicecheck 
+0 */2 * * * bash /www/cyber-pizza/all/actions/performance/json_chrooter.sh 5
