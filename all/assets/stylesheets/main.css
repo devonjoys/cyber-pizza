@@ -166,6 +166,9 @@ table {
   color: #FFF;
   cursor: pointer;
   margin-top: 50px: 
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -595,6 +598,15 @@ input:checked + .slider:before {
   font-weight: 400;
 }
 
+.help-head {
+  font-size: 60px;
+  color: #393939;
+  font-weight: 300;
+  line-height: 70px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+
 .help-sec {
   text-align: center;
   min-width: 700px;
@@ -644,7 +656,12 @@ input:checked + .slider:before {
   margin-bottom: 40px;
 }
 
-.faq {
+.help-h {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.help-content {
   text-align: left;
   padding-left: 30px;
   padding-bottom: 30px;
@@ -653,6 +670,33 @@ input:checked + .slider:before {
 .q {
   text-align: left;
   margin-bottom: 30px;
+}
+
+.back {
+  position: absolute;
+  top: 130px;
+  left: 60px;
+  font: 300 55px "Montserrat", "Helvetica Neue", sans-serif;
+  line-height: 65px;
+  border-left: 3px solid transparent;
+  padding: 20px;
+  text-decoration: none;
+  color: #393939;
+}
+
+.back:hover {
+  font-size: 60px;
+  border-left: 0px solid transparent;
+}
+
+.inline-link {
+  color: #0577B1;
+  text-decoration: none;
+  font: 400 16px/22px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
 }
 
 
@@ -737,15 +781,6 @@ Mockups
 }
 
 
-a {
-  color: #fff;
-  font-style: italic;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 
 /*
   ========================================

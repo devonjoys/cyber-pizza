@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="../assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
 	</head>
 	<body>
@@ -40,28 +41,28 @@
 	</div>
     <ul class="help-ul">
           <li class="help-li">
-            <a class="help-btn" href="help-home.php"><h5 class="help-btn">Help Page One</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Help Page One</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="../dash.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="../dash.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="../dash.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="../dash.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="../dash.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="../dash.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="../dash.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
           </li>
     </ul>
 
@@ -73,7 +74,7 @@
     	<h3 class="help-tit">Frequently Asked Questions</h3>
 	</div>
 
-	<div class="faq">
+	<div class="help-content">
 		<div class="q">
 			<h4 class="qestion">What is updog?</h4>
 			<p class="answer">Nothing much, what's up with you? hahahahahahaha gottem</p>
