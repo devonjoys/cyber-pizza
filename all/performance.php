@@ -31,7 +31,7 @@
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
            <div class="v-line"></div>
         </a> 
-        <h2>Network Performance</h2>
+        <h2 class="page">Network Performance</h2>
 
         
         <nav class="set-btns">
