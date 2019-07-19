@@ -50,10 +50,10 @@
 
     
 
-    <section class="int-face">
+    <section class="perf-int">
 
       <section class="last-week">
-        <div class = "feed-title"><h3>Network Performance Summary</h3></div>
+        <div class = "lw-tit"><h3>Network Performance Summary</h3></div>
         <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
 	<img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
         <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><br>Download Performance Data</a>
@@ -61,11 +61,11 @@
 
       <section class="inputs">
 
-          <h1>Periodic Performance Testing</h1>
+          <h1 class="perf-tit">Periodic Performance Testing</h1>
 
           <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
 
-          <p> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
+          <p class="caption"> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
 
 
          <pre><form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">

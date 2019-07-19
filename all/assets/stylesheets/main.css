@@ -166,7 +166,8 @@ table {
 .btn {
   color: #FFF;
   cursor: pointer;
-  margin-top: 50px: 
+  margin-top: 80px: 
+  line-height: 80px;
   color: #fff;
   font-style: italic;
   text-decoration: none;
@@ -197,22 +198,24 @@ table {
 .feed {
   display: table-cell;
   width: 40%;
-  min-width: 450px;
+  min-width: 400px;
 /*  vertical-align: top;*/
 }
 
 .feed-title {
   background: #0577B1;
   line-height: 20px;
+  text-align: center;
+  font-weight: 400;
   padding-top: 25px;
 }
 
 .feed-body {
   background: #0577B1;
   width: 100%;
-  min-width: 350px;
-  border-left: 30px solid #0577B1;
-  border-right: 30px solid #0577B1;
+  min-width: 100px;
+  border-left: 45px solid #0577B1;
+  border-right: 45px solid #0577B1;
   padding-top: 20px;
   height: 700px;
   padding-bottom: 50px;
@@ -314,18 +317,40 @@ table {
   ========================================
 */
 
+.perf-int {
+  display: table;
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+}
+
 .last-week {
   display: table-cell;
   width: 30%;
+  min-width: 350px;
   text-align: center;
-  background: #0577B1;
+  padding-top: 10px;
+  background: #B5B5B5;
   height: 700px;
+}
+
+.lw-tit {
+  margin-bottom: 15px;
+}
+
+.space {
+  height: 40px;
+}
+
+.perf-tit {
+  margin: 20px;
+  line-height: 50px;
 }
 
 .graph {
   border: 10px;
-  border-radius: 20px;
-  margin-top: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 .inputs {
@@ -348,12 +373,13 @@ table {
   padding-left: 60px;
   padding-right: 60px;
   font-size: 14px;
+/*  max-width: 400px;*/
 }
 
 .speed-result {
   height: 80px;
   width: 120px;
-  background: #0577B1;
+  background: #B5B5B5;
 }
 
 /*
@@ -411,11 +437,11 @@ table {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #0577B1;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #0577B1;
 }
 
 input:checked + .slider:before {
@@ -706,6 +732,14 @@ input:checked + .slider:before {
   border-left: 0px solid transparent;
 }
 
+.question {
+  color: #393939;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 900;
+  line-height: 40px;
+}
+
 .inline-link {
   color: #0577B1;
   text-decoration: none;
@@ -762,9 +796,8 @@ h2 {
 }
 
 h3 {
-  font-weight: 900;
+  font-weight: 300;
   font-size: 25px;
-  text-align: center;
   color: #fff;
   line-height: 25px;
 }
@@ -773,8 +806,7 @@ h4 {
 /*  text-align: center;*/
   color: #393939;
   font-size: 20px;
-  text-align: center;
-  font-weight: 400;
+/*  text-align: center;*/
   line-height: 40px;
 }
 
