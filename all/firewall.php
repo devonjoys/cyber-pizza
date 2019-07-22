@@ -5,8 +5,9 @@
 		<title>Firewall Settings</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -107,6 +108,8 @@
       <div class="main">
       <div class="full">
 
+        <h1>Status of Firewall</h1>
+
         <section class="fire">
 
           <div class="tcell">
@@ -153,6 +156,7 @@
           </div>
 
           </section>
+
           <section class='fire-url'>
 
           <div>
@@ -169,24 +173,21 @@
             </div>
           </div>
 
-          
+          <a href="fire-change.php"><h4 class="to-edit">EDIT FIREWALL</h4></a>
 
         </section>
 
 
-        <section class="editor">
-        <a href="fire-change.php"><h4 class="to-edit">EDIT FIREWALL</h4></a>
-        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='to-edit'>Advanced Settings</h4></a>
-        </section>
+        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='inline-link'>Advanced Settings</h4></a>
 
       </div>
       </div>
 
-        <footer class="row footer">
+      <footer class="row group container footer">
 
-      <a class="footnote" href="dash.html">Home</a>
-      <a class="footnote" href="">FAQ</a>
-      <a class="footnote" href="">Contact DukeOIT</a>
+      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 

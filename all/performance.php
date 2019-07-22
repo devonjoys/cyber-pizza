@@ -5,8 +5,9 @@
 		<title>Network Performance</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -49,10 +50,10 @@
 
     
 
-    <section class="int-face">
+    <section class="perf-int">
 
       <section class="last-week">
-        <div class = "feed-title"><h3>Network Performance Summary</h3></div>
+        <div class = "lw-tit"><h3>Network Performance Summary</h3></div>
         <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
 	<img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
         <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><br>Download Performance Data</a>
@@ -60,11 +61,11 @@
 
       <section class="inputs">
 
-          <h1>Periodic Performance Testing</h1>
+          <h1 class="perf-tit">Periodic Performance Testing</h1>
 
           <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
 
-          <p> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
+          <p class="caption"> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
 
 
          <pre><form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
@@ -84,11 +85,12 @@
 	</section>
     </section>
    </section>
-    <footer class="row footer">
+   
+    <footer class="row group container footer">
 
-      <a class="footnote" href="dash.html">Home</a>
-      <a class="footnote" href="">FAQ</a>
-      <a class="footnote" href="">Contact DukeOIT</a>
+      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
