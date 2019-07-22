@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="refresh" content="0;URL='/cyber-pizza/all/performance.php'" />
+		<meta http-equiv="refresh" content="0;URL='../performance.php'" />
 		<title>Network Performance</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
     	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
