@@ -35,23 +35,18 @@
 
     <section class="help-sec">
     <a class= "back" href="help-home.php">&larr;</a>
-    <h3 class="help-head">Dashboard</h3>
+    <h3 class="help-head">VPN</h3>
 
 	<div class="help-content">
-		<p class="answer">The main page of your Guardian Devil displays the device's 6 applets, device status icons, a live Twitter Feed, as well as links to settings and help.</p>
+		<p class="answer">This <a class="inline-link" href="../vpn.php">applet</a>offers a VPN connection to a virtual machine within Duke's network, allowing you access to Duke's resources for all devices connected to your Guardian Devil. This works slightly differently from <a class="inline-link" href="https://oit.duke.edu/what-we-do/services/vpn">DukeVPN</a>, as your Guardian Devil connected to that specific virtual machines server.</p>
 		<br>
-		<h4 class="help-h">Applets</h4>
-		<p class="answer">The dashboard displays the 6 main applets: 
-		<a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocking</a>, <a class="inline-link" href="../performance.php">Performance</a>, <a class="inline-link" href="../firewall.php">Firewall</a>, <a class="inline-link" href="../vpn.php">VPN</a>, <a class="inline-link" href="/cgi-bin/luci">Router</a>, and <a class="inline-link" href="../scan.php">Scanning</a>.</p>
+		<p class="answer">Guardian Devil will also scan new devices when they connect, and you will receive a notification if they seem suspicious.</p>
 		<br>
-		<h4 class="help-h">Status Icons</h4>
-		<p class="answer">On the top right of your page are 3 icons indicating, from left to 
-			right, your internet connection, <a class="inline-link" href="../vpn.php">VPN</a> status, and <a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocker</a> status.</p>
+		<p class="answer">By toggling the status of your VPN, you will affect all devices connected to Guardian Devil, so any current processes may be briefly interrupted.</p>
 		<br>
-		<h4 class="help-h">Twitter Feed</h4>
-		<p class="answer">By default, the Twitter Feed shows the DukeOIT feed, a source 
-			for cybersecurity tips and updates. This can be manually changed on the 
-			<a class="inline-link" href="../adv-settings.php">Advanced Settings</a> page.</p>
+		<p class="answer">VPN directs your internet traffic to a Duke virtual machine, then forwarding it to its proper destination. This adds a layer of anonymity to your internet traffic, useful for secure transactions.</p>
+		<br>
+		<p class="answer">To set up your VPN connection to a virtual machine, see <a class="inline-link" href="vpn-set-up.php">VPN Set-Up</a>.</p>
 	</div>
 
 	</section>

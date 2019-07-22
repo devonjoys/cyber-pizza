@@ -43,7 +43,7 @@
             <a href="help.html"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="dash.html"><h5 class="btn">Options</h5></a>
+            <a href="settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
         </nav>

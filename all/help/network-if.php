@@ -41,32 +41,25 @@
 
     <section class="help-sec">
     <a class= "back" href="help-home.php">&larr;</a>
-    <h3 class="help-head">Advanced Settings</h3>
+    <h3 class="help-head">Network Interface</h3>
 
 	<div class="help-content">
-		<p class="answer"><a class="inline-link" href="../adv-settings.php">Advanced Settings</a> 
-			allows you to make larger changes to your device, but with greater risk. 
-			Only change these settings if you are aware of the implications.</p>
+		<p class="answer">This <a class="inline-link" href="/cgi-bin/luci">applet</a> allows you to make advanced changes to Guardian Devil's network via
+			OpenWRT's <a class="inline-link" href="https://openwrt.org/docs/guide-user/luci/start">Luci</a> interaface. This allows you to modify <a class="inline-link" href="/cgi-bin/luci/admin/network/dhcp">DNS/DHCP</a> settings, view <a class="inline-link" href="/cgi-bin/luci/admin/status/realtime">real-time graphs</a>, and make other changes. </p>
 		<br>
-		<p class="answer">Changes may also be made to your device via ssh to root, using the labeled password on your device, or via a manual input with a keyboard and monitor.</p>
+		<h4 class="help-h">Status</h4>
+		<p class="answer">This tab allows you to view current information about your system, including what processes are running and what has been logged. </p>
 		<br>
-		<h4 class="help-h">Restart Device</h4>
-		<p class="answer">This option reboots the Guardian Devil. It and the web interface will come back online after about a minute.</p>
+		<h4 class="help-h">System</h4>
+		<p class="answer">This tab allows you to view administrative information the software and core scripts of your device.</p>
 		<br>
-		<h4 class="help-h">Freeze/Unfreeze Network</h4>
-		<p class="answer">This option allows you to cut off access to the Internet from the Guardian Devil and any connected devices. You will still be able to access the web interface, although you may have to refresh the page.</p>
+		<h4 class="help-h">Services</h4>
+		<p class="answer">This tab allows you to view information about the add-on services, Adblock and OpenVPN.</p>
 		<br>
-		<h4 class="help-h">Generate Debug Log</h4>
-		<p class="answer">This option generates and downloads a log of diagnostic information on device. OIT may request this information during the troubleshooting process.</p>
+		<h4 class="help-h">Network</h4>
+		<p class="answer">This tab allows you to make advanced changes to your network, beyond those done on the <a class="inline-link" href="../settings.php">Settings</a> page.</p>
 		<br>
-		<h4 class="help-h">Factory Reset</h4>
-		<p class="answer">This option will reset your device to the state it was in when you received it. Any changes you have made will be overwritten.</p>
-		<br>
-		<h4 class="help-h">Twitter Feed</h4>
-		<p class="answer">This option will allow you to change the source of the Twitter Feed on the <a class="inline-link" href="../dash.html">Dashboard</a>.</p>
-		<br>
-		<h4 class="help-h">System Info</h4>
-		<p class="answer">This option displays useful diagnostic information about the device, including boot, update, and version information.</p>
+		<p class="more">More: <a class="inline-link" href="help-home.php#faq">FAQ</a>, <a class="inline-link" href="help-home.php">OIT Guardian Devil FAQ</a></p>
 	</div>
 
 	</section>
