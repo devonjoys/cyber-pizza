@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Mon Jul 22 14:12:49 2019 as: nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep 10.42.0.205
+Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Status: Up
+Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 28201/open/tcp//unknown///	Ignored State: filtered (997)
+# Nmap done at Mon Jul 22 14:12:56 2019 -- 1 IP address (1 host up) scanned in 8.01 seconds

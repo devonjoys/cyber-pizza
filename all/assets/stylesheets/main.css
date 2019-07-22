@@ -749,6 +749,22 @@ input:checked + .slider:before {
   line-height: 40px;
 }
 
+/*I've replaced all instances of this with help-h*/
+.section-header {
+  color: #393939;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 800;
+  line-height: 40px;
+}
+
+.help-bull-li {
+  padding-left: 30px;
+}
+
+.more {
+}
+
 .inline-link {
   color: #0577B1;
   text-decoration: none;
@@ -759,6 +775,12 @@ input:checked + .slider:before {
   text-decoration: underline;
 }
 
+.a-setting {
+  font-weight: 900;
+}
+.a-note {
+  font-style: italic;
+}
 /*
   ========================================
   Option Page

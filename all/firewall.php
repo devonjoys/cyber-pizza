@@ -178,7 +178,7 @@
         </section>
 
 
-        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='inline-link'>Advanced Settings</h4></a>
+        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='inline-link'>Advanced Firewall Settings</h4></a>
 
       </div>
       </div>
