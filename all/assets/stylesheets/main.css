@@ -793,6 +793,16 @@ input:checked + .slider:before {
   padding: 15px;
 }
 
+.edit-right {
+  float: right;
+  display: inline-block;
+}
+
+.addr {
+  width: 400px;
+  display: inline-block;
+}
+
 /*
   ========================================
   Custom styles

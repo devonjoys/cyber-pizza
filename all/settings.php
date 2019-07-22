@@ -17,7 +17,7 @@
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
            <div class="v-line"></div>
         </a> 
-        <h2 class="page">Home</h2>
+        <h2 class="page">Options</h2>
 
         <nav class="set-btns">
         <ul>
@@ -36,23 +36,22 @@
     <section class="options-int">
 
       <h4>Email Preferences</h4>
+
+     <a href="" class="inline-link edit-right">Edit Email Settings</a>
+
     
     <?php 
-    $email_f = "./assets/settings/emails.txt";
+    $email_f = "./assets/settings/email.txt";
     $ef = fopen($email_f, 'r');
 
-    $emails = array();
-      while(! feof($ef)) {
-        $addr = fgets($ef);
-        $emails[] = $addr;
-      }
+    $contents = fread($ef, filesize($email_f));
+    $emails = explode(",", $contents);
     $duke_e = $emails[0];
 
     foreach ($emails as $addr) {
-      echo "<h5> {$addr} </h5>";
+      echo "<h5 class='addr'> {$addr} </h5>";
     }
     ?>
-
 
 
 
@@ -63,11 +62,50 @@
       <h4>Network Performance Preferences</h4>
 
       <p>
-        hihihhi
+        <?php
+
+          $fname = './assets/settings/performance.txt';
+          $fp = fopen($fname, 'r');
+          $freq = fread($fp, filesize($fname));
+        ?>
+
+        Network performance is checked <?php echo $freq; ?> times a day. 
+
+<!--         <form action="perf-change.html" method="post">
+          <input type="submit" name="opt-freq" value="Change Frequency">
+        </form> -->
+
+        <a class= "inline-link" href="perf-change.html">Change Frequency</a>
+
       </p>
 
 
     </section>
+
+    <section class="options-int">
+
+      <h4>Network Settings</h4>
+
+      <p>
+        Network name and password
+      </p>
+
+
+    </section>
+
+    <section class="options-int">
+
+      <h4>Device Settings</h4>
+
+      <p>
+        device name and password <br> ifconfig gen
+      </p>
+
+
+    </section>
+
+    <a href="" class="inline-link">Advanced Settings</a>
+
 
 
     <footer class="row group container footer">
