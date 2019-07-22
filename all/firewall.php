@@ -108,6 +108,8 @@
       <div class="main">
       <div class="full">
 
+        <h1>Status of Firewall</h1>
+
         <section class="fire">
 
           <div class="tcell">
@@ -154,6 +156,7 @@
           </div>
 
           </section>
+
           <section class='fire-url'>
 
           <div>
@@ -170,15 +173,12 @@
             </div>
           </div>
 
-          
+          <a href="fire-change.php"><h4 class="to-edit">EDIT FIREWALL</h4></a>
 
         </section>
 
 
-        <section class="editor">
-        <a href="fire-change.php"><h4 class="to-edit">EDIT FIREWALL</h4></a>
-        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='to-edit'>Advanced Settings</h4></a>
-        </section>
+        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class='inline-link'>Advanced Settings</h4></a>
 
       </div>
       </div>
