@@ -37,7 +37,7 @@
             <a href="help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="../dash.html"><h5 class="btn">Options</h5></a>
+            <a href="../settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
 		</nav>
@@ -83,7 +83,7 @@
 		<br>
 		<p class="answer">Current Version:<br><?php echo nl2br($my_version);?></p>
 		<br>
-		<p class="more">More: <a class="inline-link" href="vpn.html">VPN</a>, <a class="inline-link" href="legal.html">Legal</a></p>
+		<p class="more">More: <a class="inline-link" href="vpn.html">Help-VPN</a>, <a class="inline-link" href="legal.html">Legal</a></p>
 	</div>
 
 	</section>

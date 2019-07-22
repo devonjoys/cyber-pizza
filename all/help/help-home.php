@@ -32,7 +32,7 @@
             <a href="help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="../dash.html"><h5 class="btn">Options</h5></a>
+            <a href="../settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
 		</nav>
@@ -69,8 +69,27 @@
             <a class="help-btn" href="adv-settings.php"><h5 class="help-btn">Advanced Settings</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="help-base.html"><h5 class="help-btn">Hekp Page Two</h5></a>
+            <a class="help-btn" href="network-if.php"><h5 class="help-btn">Network Interface</h5></a>
           </li>
+          <li  class="help-li">
+            <a class="help-btn" href="performance.html"><h5 class="help-btn">Performance</h5></a>
+          </li>
+          <li  class="help-li">
+            <a class="help-btn" href="scanning.html"><h5 class="help-btn">Scanning</h5></a>
+          </li>
+          <li  class="help-li">
+            <a class="help-btn" href="vpn.html"><h5 class="help-btn">VPN</h5></a>
+          </li>
+          <li  class="help-li">
+            <a class="help-btn" href="vpn-set-up.php"><h5 class="help-btn">VPN Set-Up</h5></a>
+          </li>
+          <li  class="help-li">
+            <a class="help-btn" href="firewall.html"><h5 class="help-btn">Firewall</h5></a>
+          </li>
+          <li  class="help-li">
+            <a class="help-btn" href="legal.html"><h5 class="help-btn">Legal</h5></a>
+          </li>
+
     </ul>
 
     </section>

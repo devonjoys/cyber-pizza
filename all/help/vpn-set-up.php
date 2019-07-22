@@ -35,23 +35,16 @@
 
     <section class="help-sec">
     <a class= "back" href="help-home.php">&larr;</a>
-    <h3 class="help-head">Dashboard</h3>
+    <h3 class="help-head">VPN Set-Up</h3>
 
 	<div class="help-content">
-		<p class="answer">The main page of your Guardian Devil displays the device's 6 applets, device status icons, a live Twitter Feed, as well as links to settings and help.</p>
+		<p class="answer">This guide explains how to set up a virtual machine and <a class="inline-link" href="vpn.html">VPN</a> connection. This installation requires access to an existing <a class="inline-link" href="https://oit.duke.edu/what-we-do/services/vpn">DukeVPN</a> client or for you to be physically on campus.</p>
 		<br>
-		<h4 class="help-h">Applets</h4>
-		<p class="answer">The dashboard displays the 6 main applets: 
-		<a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocking</a>, <a class="inline-link" href="../performance.php">Performance</a>, <a class="inline-link" href="../firewall.php">Firewall</a>, <a class="inline-link" href="../vpn.php">VPN</a>, <a class="inline-link" href="/cgi-bin/luci">Router</a>, and <a class="inline-link" href="../scan.php">Scanning</a>.</p>
+		<p class="answer">Navigate to _PLACEHOLDER_</p>
 		<br>
-		<h4 class="help-h">Status Icons</h4>
-		<p class="answer">On the top right of your page are 3 icons indicating, from left to 
-			right, your internet connection, <a class="inline-link" href="../vpn.php">VPN</a> status, and <a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocker</a> status.</p>
+		<p class="answer"></p>
 		<br>
-		<h4 class="help-h">Twitter Feed</h4>
-		<p class="answer">By default, the Twitter Feed shows the DukeOIT feed, a source 
-			for cybersecurity tips and updates. This can be manually changed on the 
-			<a class="inline-link" href="../adv-settings.php">Advanced Settings</a> page.</p>
+		<p class="more">More: <a class="inline-link" href="help-home.php">Help-PLACEHOLDER</a></p>
 	</div>
 
 	</section>

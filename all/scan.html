@@ -33,9 +33,19 @@
         margin-left: 0px
     }
 
-    iframe {
+    iframe.a {
     	width: 600px;
     	height: 100px;
+    	top: 50%;
+	    left: 50%;
+	    positon:center;
+	    margin-top: 0px;
+	    margin-left: 100px
+    }
+
+    iframe.b {
+    	width: 600px;
+    	height: 500px;
     	top: 50%;
 	    left: 50%;
 	    positon:center;
@@ -90,6 +100,8 @@
 	  text-align: center;
 	  font-weight:bold;
 	}
+
+
 	    
 
     </style>
@@ -122,10 +134,21 @@
       <section class="scan">
       	<div class="rowscan">
 
-      	<div class="columnscan">
+    	<div class="columnscan">
+    		<iframe class="b" name="myframe" id="myframe" src="./actions/preloadscan.html" height="1000" width="1000"></iframe> 
+    	</div>
 
-        <form class="portscan_output" action="./actions/portscan.php" method="post" target="speedy">
-            <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="initiation();">
+    	<div class="columnscan">
+
+    	<script>
+			function changeIFrame(){
+				initiation();
+			    document.getElementById("myframe").src = "./actions/portscan.php";
+			}
+		</script>
+
+        <form class="portscan_output" action="./actions/loadscanbar.php" method="post" target="speedy">
+            <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="changeIFrame();">
         </form>
 
         <p style="text-align: center">
@@ -135,25 +158,7 @@
         </em>
         </p>
 
-        <iframe name="speedy"></iframe>
-    	</div>
-
-    	<div class="columnscan">
-    		<h2 style="color:grey">Scan Information</h2>
-    		<table style="width:100%">
-			  <tr>
-			    <th>Frequency</th>
-			    <th>Protocol</th> 
-			    <th>Port</th>
-			    <th>Service</th>
-			  </tr>
-			  <tr>
-			    <td>Blah</td>
-			    <td>Blah</td> 
-			    <td>Blah</td>
-			    <td>Blah</td>
-			  </tr>
-			</table> 
+        <iframe class="a" name="speedy"></iframe>
     	</div>
 
  		</div>

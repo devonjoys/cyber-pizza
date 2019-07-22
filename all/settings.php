@@ -13,7 +13,7 @@
 	<body>
 
     <header class="row group container">
-        <a href="dash.html">
+        <a href="settings.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
            <div class="v-line"></div>
         </a> 
@@ -25,7 +25,7 @@
             <a href="./help/help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="options.php"><h5 class="btn">Options</h5></a>
+            <a href="settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
         </nav>
