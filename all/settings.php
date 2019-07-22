@@ -17,7 +17,7 @@
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
            <div class="v-line"></div>
         </a> 
-        <h2 class="page">Options</h2>
+        <h2 class="page">Settings</h2>
 
         <nav class="set-btns">
         <ul>
@@ -35,23 +35,44 @@
 
     <section class="options-int">
 
-      <h4>Email Preferences</h4>
+      <h4 class="sett-tit">Email Preferences</h4>
 
-     <a href="" class="inline-link edit-right">Edit Email Settings</a>
 
-    
+     <a href="email-chng.php" class="inline-link edit-right">Edit Email Settings</a>
+     <p class="sett-text">Emails below will recieve notifications for the events you specify.</p>
+
+    <ul>
     <?php 
-    $email_f = "./assets/settings/email.txt";
-    $ef = fopen($email_f, 'r');
 
-    $contents = fread($ef, filesize($email_f));
-    $emails = explode(",", $contents);
+    if (! empty($_POST['save'])){
+        exec('rm ./assets/settings/email.txt"');
+        exec('cp ./assets/settings/email-temp.txt ./assets/settings/email.txt');
+      }
+      if (! empty($_POST['cancel'])){
+        exec('rm ./assets/settings/email-temp.txt"');
+        exec('cp ./assets/settings/email.txt ./assets/settings/email-temp.txt');
+      }
+
+    $email_f = "./assets/settings/email.txt";
+    $nname = "./assets/settings/notifications.txt";
+    $ef = fopen($email_f, 'r');
+    $nf = fopen($nname, 'r');
+
+    $mail_contents = fread($ef, filesize($email_f));
+    $emails = explode(",", $mail_contents);
     $duke_e = $emails[0];
 
+    $notifs = array();
+    while(! feof($nf)) {
+        $ni = fgets($nf);
+        $ports[] = $ni;
+      }
+
     foreach ($emails as $addr) {
-      echo "<h5 class='addr'> {$addr} </h5>";
+      echo "<li class='good-ip addr'> {$addr} </li>";
     }
     ?>
+	</ul>
 
 
 
@@ -59,10 +80,11 @@
 
     <section class="options-int">
 
-      <h4>Network Performance Preferences</h4>
+      <h4 class="sett-tit">Network Performance Preferences</h4>
 
-      <p>
+      <p class="sett-text">
         <?php
+
 
           $fname = './assets/settings/performance.txt';
           $fp = fopen($fname, 'r');
@@ -84,9 +106,9 @@
 
     <section class="options-int">
 
-      <h4>Network Settings</h4>
+      <h4 class="sett-tit">Network Settings</h4>
 
-      <p>
+      <p class="sett-text">
         Network name and password
       </p>
 
@@ -95,9 +117,9 @@
 
     <section class="options-int">
 
-      <h4>Device Settings</h4>
+      <h4 class="sett-tit">Device Settings</h4>
 
-      <p>
+      <p class="sett-text">
         device name and password <br> ifconfig gen
       </p>
 
