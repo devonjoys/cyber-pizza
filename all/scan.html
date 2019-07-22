@@ -7,6 +7,68 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+    <!-- css --->
+    <style>
+      input.button-add { 
+        border: 10px solid grey; 
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-top: -220px;
+        margin-left: -220px
+      } 
+      input.button-add:hover { 
+        border: 5px solid grey;
+        margin: center;
+        width: 110px;
+        height: 110px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-top: -220px;
+        margin-left: -220px
+      } 
+
+      .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+      /* Control the left side */
+      .left {
+        left: 0;
+      }
+
+      /* Control the right side */
+      .right {
+        right: 0;
+      }
+
+      /* If you want the content centered horizontally and vertically */
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* Style the image inside the centered container, if needed */
+      .centered img {
+        width: 150px;
+        border-radius: 50%;
+      } 
+
+    </style>
+    <!--- css --->
+
 	</head>
 	<body>
 
@@ -28,18 +90,40 @@
 		</nav>
 
     </header>
+    </head>
 
     <section class="int-face">
+
+      <div class="split left">
+
       <section class="scan">
-        <p>
+        <h4>
           <b>Get started below to do a <i>port scan</i> on all of your connected devices.</b>
-        </p>
+        </h4>
+
+        <div class="centered">
 
         <form class="portscan_output" action="./actions/portscan.php" method="post" target="speedy">
-            <input class="submit" id="submit" type="submit" value="Run Device Scan" onclick="initiation();">
+            <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="initiation();">
         </form>
 
+        </div>
+          
+      </div>
+
+        <p style="text-align: center">
+          Click on the magnifying glass to start your scan
+        </p>
+
         <iframe name="speedy"></iframe>
+      </div>
+
+      <div class="split right">
+        <div class="centered">
+        </div>
+      </div>
+
+
 
       </section>
     </section>

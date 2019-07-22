@@ -3,6 +3,8 @@
 active_stations=`iw wlan0 station dump | grep 'Station' | awk '{print $2}'`
 active_stations_array=($active_stations)
 
+deviceNum=0
+
 info_() {
   FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
   if [[ -f $FILE ]] ; then
@@ -19,6 +21,7 @@ info_() {
   	do
   		if [[ "$station" == "$aS" ]]; then
   			cat /proc/net/arp | grep "$station" | awk '{print $1}' | tee -a $FILE
+        (( deviceNum++ ))
   		fi
           done
   done
@@ -42,6 +45,8 @@ info_() {
    	 printf '%d seconds\n' $S
    	 i=$((i+1))
   done
+
+  echo "Clients: $deviceNum device(s) connected"
 }
 
 new_device_check() {

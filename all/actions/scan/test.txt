@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Fri Jul 19 15:23:44 2019 as: nmap -oG test.txt 10.42.0.1
+Host: 10.42.0.1 (OpenWrt.lan)	Status: Up
+Host: 10.42.0.1 (OpenWrt.lan)	Ports: 22/open/tcp//ssh///, 53/open/tcp//domain///, 80/open/tcp//http///, 81/open/tcp//hosts2-ns///, 443/open/tcp//https///	Ignored State: closed (995)
+# Nmap done at Fri Jul 19 15:23:47 2019 -- 1 IP address (1 host up) scanned in 3.66 seconds

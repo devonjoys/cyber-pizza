@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Fri Jul 19 11:18:52 2019 as: nmap -oG device_ports_status.grep -iL /etc/nmapscripts/devicelog.txt
+Host: 10.42.0.205 ()	Status: Up
+Host: 10.42.0.205 ()	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 28201/open/tcp//unknown///	Ignored State: filtered (997)
+# Nmap done at Fri Jul 19 11:19:06 2019 -- 4 IP addresses (1 host up) scanned in 14.15 seconds
