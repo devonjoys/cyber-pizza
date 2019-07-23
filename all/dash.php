@@ -13,7 +13,7 @@
 
 		<header class="row group container">
 
-				<a href="dash.php">
+				<a href="dash.html">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
          </a> 
         <div class="v-line"></div>
@@ -40,7 +40,7 @@
       <section class="dash">
 
         <div id="status">
-      <p class="on-stat">STATUS</p>
+      <p class="stat">STATUS</p>
 
       <?php
         exec('/www/cyber-pizza/all/actions/my-adb.sh');
@@ -165,9 +165,9 @@
 
     <footer class="row group container footer">
 
-      <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
-      <a class="footnote" href="help/help-home.php"><p class="footie btn">FAQ</p></a>
-      <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
+      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
