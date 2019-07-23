@@ -207,6 +207,14 @@ table {
 
 }
 
+.on-stat {
+  background: #95de8e;
+}
+
+.off-stat {
+  background: #ff7a78;
+}
+
 .feed {
   display: table-cell;
   width: 40%;

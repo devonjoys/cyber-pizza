@@ -39,7 +39,7 @@
 
     <section class="int-face">
       
-    <section> id="status">
+    <section id="status">
       <p>STATUS</p>
 
       <?php
@@ -55,9 +55,25 @@
         $cf = fopen($conname, 'r');
         $vpnf = fopen($vpnname, 'r');
 
-        echo (fread($af, filesize($adname)));
-        echo (fread($cf, filesize($conname)));
-        echo (fread($vpnf, filesize($vpnname)));
+        $ad_stat = trim(fread($af, filesize($adname)));
+        $con_stat = trim(fread($cf, filesize($conname)));
+        $vpn_stat  = trim(fread($vpnf, filesize($vpnname)));
+
+        if ($ad_stat) {
+          echo "<p class='on-stat'>Adblock</p>";
+        } else {
+          echo "<p class='off-stat'>Adblock</p>";
+        }
+        if ($con_stat) {
+          echo "<p class='on-stat'> Network</p>";
+        } else {
+          echo "<p class='off-stat'>Network</p>";
+        }
+        if ($vpn_stat) {
+          echo "<p class='on-stat'>VPN</p>";
+        } else {
+          echo "<p class='off-stat'>PN</p>";
+        }
       ?>
 
     </section>
