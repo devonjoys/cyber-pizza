@@ -34,14 +34,12 @@
 			  text-align: center;
 
 			}
-
 			th {
 			  border-spacing: 5px;
 			  padding: 7px;
 			  margin-top: 10px;
 			  margin-bottom: 10px;
 			  text-align: center;
-			  font-weight:bold;
 			}
 		</style>
 
@@ -56,10 +54,12 @@
 		for ($i = 0; $i < count($topportAr); $i++) {
 			$topportAr[$i] = str_replace(' ','/', $topportAr[$i]);
 			$topportAr[$i] = str_replace('//','/', $topportAr[$i]);
+			$topportAr[$i] = trim($topportAr[$i]);
 			$topportAr[$i] = explode('/', $topportAr[$i]);
-			echo "$i ----------------------------";
-			print_r($topportAr[$i]);
+			$topportAr[$i] = array_filter($topportAr[$i]);
 		}
+
+		$topportAr = array_filter($topportAr);
 
 		?>	
 
@@ -75,15 +75,16 @@
 			  <?php
 
 			 for ($i = 0; $i < count($topportAr); $i++) {
-			 	echo "<tr>"
-			 	for ($k; $k < count($topportAr[$i]); $k++){
-			 		echo "<th>$topportAr[$i][$k]</th>"
-			 	}
+			 	echo "<tr>";
+		 		foreach($topportAr[$i] as $item) {
+		 			?>
+		 			<td><?php echo $item; ?></td>
+		 			<?php
+		 		}
+			 	echo "</tr>";
 			 }
 
 			  ?>
-			  <tr>
-			  </tr>
 			</table> 
 
 

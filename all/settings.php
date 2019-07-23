@@ -39,7 +39,7 @@
 
 
      <a href="email-chng.php" class="inline-link edit-right">Edit Email Settings</a>
-     <p class="sett-text">Emails below will recieve notifications for the events you specify.</p>
+     <p class="sett-text">Emails below will receive notifications for the events you specify.</p>
 
     <ul>
     	
@@ -105,15 +105,16 @@
     ?>
 	</ul>
 
-	<p class="sett-text">Recieving notifications when</p>
+	<br>
+	<p class="sett-text">Receiving notifications when</p>
 	<ul>
 
 	<?php 
 		if (trim($notifs[0])) {
-    		echo "<li> System boots</li>";
+    		echo "<li> The system boots</li>";
     	}
     	if (trim($notifs[1])) {
-    		echo "<li> Suspicious port is open</li>";
+    		echo "<li> A suspicious port is open</li>";
     	}
     	if (trim($notifs[2])) {
     		echo "<li> A new device connects to the network</li>";
