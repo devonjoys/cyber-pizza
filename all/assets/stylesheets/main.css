@@ -47,6 +47,7 @@ table {
   border-spacing: 0;
 }
 
+
 /*
   ========================================
   Clearfix
@@ -276,6 +277,11 @@ table {
   box-shadow: 0px 0px 15px #012169;
 }
 
+.app:focus-within {
+  padding: 0px;
+  border: 2px solid #012169;
+  box-shadow: 0px 0px 15px #012169;
+}
 
 .app-info {
   position: absolute;
@@ -791,6 +797,22 @@ input:checked + .slider:before {
   margin: 40px;
   background: #e8e8e8;
   padding: 15px;
+  min-width: 700px;
+  width: 80%;
+}
+
+.sett-tit {
+  width: 500px;
+  display: inline-block;
+  font-size: 28px;
+}
+
+.sett-text {
+  text-align: left;
+  font-size: 14px;
+  max-width: 500px;
+  padding-bottom: 20px;
+
 }
 
 .edit-right {
@@ -799,9 +821,14 @@ input:checked + .slider:before {
 }
 
 .addr {
-  width: 400px;
-  display: inline-block;
+  width: 600px;
 }
+
+.noti_choice {
+  display: inline-block;
+  margin-left: 30px;
+}
+
 
 /*
   ========================================
@@ -887,36 +914,6 @@ Mockups
   padding-right: 50px;
 }
 
-
-
-/*
-  ========================================
-Focus
-  ========================================
-*/
-
-
-
-
-
-
-
-/*a:hover {
-  color: #a9b2b9;
-}
-p a {
-  border-bottom: 1px solid #dfe2e5;
-}
-
-.primary-header a,
-.primary-footer a {
-  color: #fff;
-}
-.primary-header a:hover,
-.primary-footer a:hover {
-  color: #648880;
-}
-*/
 
 
 
