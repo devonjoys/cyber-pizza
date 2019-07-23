@@ -32,7 +32,7 @@
         margin-top: 0px;
         margin-left: 0px
     }
-    
+
     iframe.myframe {
     	width: 600px;
     	height: 500px;
@@ -127,6 +127,10 @@
 
         <div class="columnscan">
 
+        <div id="loadingGif" style="display:none"><img src="./assets/images/Loading.gif"></div>
+
+        <di
+
         <form class="portscan_output" action="./actions/portscan.php" method="post" target="myframe">
             <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="changeIFrame();">
         </form>
@@ -148,16 +152,12 @@
       </div>
 
       	<div class="columnscan">
+
           <h2 style="color:grey">Scan Information</h2>
       		<iframe class="myframe" name="myframe" id="myframe" height="1000" width="1000"></iframe> 
       	</div>
 
-        <script>
-            var browserFrame = document.getElementById("myframe");
-            browserFrame.src = document.getElementById("./actions/preloadscan.html").value;
-        </script>
-
-        </div>
+      </div>
 
 
 
