@@ -54,7 +54,7 @@
           document.getElementById('loadingGif').style.display = "block";
           setTimeout(function() {
             document.getElementById('loadingGif').style.display = "none";
-          },10);
+          },10000);
 
         </script>
 
@@ -81,9 +81,6 @@
 
 			$topportAr = array_filter($topportAr);
 
-			?>
-		    <?php
-
 			 for ($i = 0; $i < count($topportAr); $i++) {
 			 	echo "<tr>";
 		 		foreach($topportAr[$i] as $item) {
@@ -96,8 +93,6 @@
 
 			 ?>
 		</table> 
-
-
 
 
 	</body>
