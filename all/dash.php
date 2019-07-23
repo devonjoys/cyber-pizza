@@ -40,7 +40,7 @@
       <section class="dash">
 
         <div id="status">
-      <p class="stat">STATUS</p>
+<!--       <p class="stat">STATUS</p> -->
 
       <?php
         exec('/www/cyber-pizza/all/actions/my-adb.sh');
@@ -61,28 +61,33 @@
         $con_stat = trim(fread($cf, filesize($conname)));
         $vpn_stat  = trim(fread($vpnf, filesize($vpnname)));
 	$twitter_link = trim(fread($twitterf, filesize($twittername)));
+        ?>
+    
 
+    <a href="./help/help-home.php" alt="explanation page for device status icons">
+        <?php
         if ($ad_stat) {
-          echo "<p class='on-stat'>Adblock</p>";
+          echo "<img class='stat-img' src='./assets/images/status_adblock.png' alt='adblock status icon, adblock on'/>";
         } else {
-          echo "<p class='off-stat'>Adblock</p>";
+          echo "<img class='stat-img' src='./assets/images/status_no_adblock.png' alt='adblock status icon, adblock off'/>";
         }
         if ($con_stat) {
-          echo "<p class='on-stat'> Network</p>";
+          echo "<img class='stat-img' src='./assets/images/status_internet.png' alt='internet connection status icon, internet connected'/>";
         } else {
-          echo "<p class='off-stat'>Network</p>";
+          echo "<img class='stat-img' src='./assets/images/status_no_internet.png' alt='internet connection status icon, internet not connected'/>";
         }
         if ($vpn_stat) {
-          echo "<p class='on-stat'>VPN</p>";
+          echo "<img class='stat-img' src='./assets/images/status_Duke_Link.png' alt='VPN status icon, VPN on'/>";
         } else {
-          echo "<p class='off-stat'>PN</p>";
+          echo "<img class='stat-img' src='./assets/images/status_no_Duke_Link.png' alt='VPN status icon, VPN off'/>";
         }
 
-	fclose($af);
-	fclose($cf);
-	fclose($vpnf);
-	fclose($twitterf);
+	      fclose($af);
+	      fclose($cf);
+	      fclose($vpnf);
+	      fclose($twitterf);
       ?>
+    </a>
 
     </div>
 
