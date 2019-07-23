@@ -13,7 +13,7 @@
 
 		<header class="row group container">
 
-				<a href="dash.php">
+				<a href="dash.html">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
          </a> 
         <div class="v-line"></div>
@@ -29,45 +29,6 @@
           </li>
         </ul>
 				</nav>
-
-<!--         <div id="status">
-      <p class="on-stat">STATUS</p>
-
-      <?php
-        exec('/www/cyber-pizza/all/actions/my-adb.sh');
-        exec('/www/cyber-pizza/all/actions/my-connection.sh');
-        exec('/www/cyber-pizza/all/actions/my-vpn.sh');
-
-        $adname = './assets/settings/my-adb.txt';
-        $conname = './assets/settings/my-conn.txt';
-        $vpnname = './assets/settings/my-vpn.txt';
-
-        $af = fopen($adname, 'r');
-        $cf = fopen($conname, 'r');
-        $vpnf = fopen($vpnname, 'r');
-
-        $ad_stat = trim(fread($af, filesize($adname)));
-        $con_stat = trim(fread($cf, filesize($conname)));
-        $vpn_stat  = trim(fread($vpnf, filesize($vpnname)));
-
-        if ($ad_stat) {
-          echo "<p class='on-stat'>Adblock</p>";
-        } else {
-          echo "<p class='off-stat'>Adblock</p>";
-        }
-        if ($con_stat) {
-          echo "<p class='on-stat'> Network</p>";
-        } else {
-          echo "<p class='off-stat'>Network</p>";
-        }
-        if ($vpn_stat) {
-          echo "<p class='on-stat'>VPN</p>";
-        } else {
-          echo "<p class='off-stat'>PN</p>";
-        }
-      ?>
- -->
-    </div>
 
 		</header>
 
@@ -184,6 +145,7 @@
             <h4>Scanning</h4>
         </div>
       </div>
+
       </section>
 
 
@@ -203,9 +165,9 @@
 
     <footer class="row group container footer">
 
-      <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
-      <a class="footnote" href="help/help-home.php#faq"><p class="footie btn">FAQ</p></a>
-      <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
+      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
