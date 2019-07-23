@@ -40,13 +40,36 @@
 	<div class="help-content">
 		<p class="answer">The home page of your Guardian Devil displays the device's 6 applets, device status icons, a live Twitter Feed, as well as links to settings and help.</p>
 		<br>
+		<h4 class="help-h" id="status-icons">Status Icons</h4>
+                <p class="answer">On the top right of your page are 3 icons indicating, from left to
+                        right, your <a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocker</a>, <a class="inline-link" href="/cgi-bin/luci">internet connection</a>, and <a class="inline-link" href="../vpn.php">VPN</a> status.</p>
+		<br>
+		<p class="answer">Each icon corresponds to a different status, on or off.</p>
+                <br>
+		<table class="status-icons">
+			<tr>
+				<td width=10%></td>
+				<td class="icon-type">Advertisement Blocker</td>
+				<td class="icon-type">Internet Connection</td>
+				<td class="icon-type">VPN Connection</td>
+			</tr>
+			<tr>
+				<td class="on-off">On</td>
+				<td class="icon-td"><img src="../assets/images/status_adblock.png" alt="Adblock Status Icon, Adblock On" class="icon"></td>
+                                <td class="icon-td"><img src="../assets/images/status_internet.png" alt="Internet Status Icon, Internet On" class="icon"></td>
+                                <td class="icon-td"><img src="../assets/images/status_Duke_Link.png" alt="VPN Status Icon, VPN On" class="icon"></td>
+			</tr>
+			<tr>
+				<td class="on-off">Off</td>
+				<td class="icon-td"><img src="../assets/images/status_no_adblock.png" alt="Adblock Status Icon, Adblock Off" class="icon"></td>
+                                <td class="icon-td"><img src="../assets/images/status_no_internet.png" alt="Internet Status Icon, Internet Off" class="icon"></td>
+                                <td zclass="icon-td"><img src="../assets/images/status_no_Duke_Link.png" alt="VPN Status Icon, VPN Off" class="icon"></td>
+                        </tr>
+			</table>
+
 		<h4 class="help-h">Applets</h4>
 		<p class="answer">The dashboard displays the 6 main applets: 
 		<a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocking</a>, <a class="inline-link" href="../performance.php">Performance</a>, <a class="inline-link" href="../firewall.php">Firewall</a>, <a class="inline-link" href="../vpn.php">VPN</a>, <a class="inline-link" href="/cgi-bin/luci">Router</a>, and <a class="inline-link" href="../scan.php">Scanning</a>.</p>
-		<br>
-		<h4 class="help-h">Status Icons</h4>
-		<p class="answer">On the top right of your page are 3 icons indicating, from left to 
-			right, your internet connection, <a class="inline-link" href="../vpn.php">VPN</a> status, and <a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocker</a> status.</p>
 		<br>
 		<h4 class="help-h">Twitter Feed</h4>
 		<p class="answer">By default, the Twitter Feed shows the DukeOIT feed, a source 

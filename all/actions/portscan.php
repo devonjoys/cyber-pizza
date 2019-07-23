@@ -42,10 +42,12 @@
 			  text-align: center;
 			}
 
-			#loadingGif{
+			.loadingGif {
 				width: 100px;
 				height: 100px;
+				display: none;
 			}
+
 		</style>
 
 	</head>
@@ -53,7 +55,7 @@
 
 	<body>
 
-		<div id="loadingGif" name="loadingGif" style="display:block;"><img src="./assets/images/Loading.gif"></div>
+		<div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif"></div>
 		<table style="width:100%">
 		  <tr>
 		    <th>Frequency</th>

@@ -21,7 +21,7 @@ open_ports() {
 }
 
 top_ports() {
-	#nmap -oG $NMAP_FILE -iL $STATUS_FILE >/dev/null
+	nmap -oG $NMAP_FILE -iL $STATUS_FILE >/dev/null
 	egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f4- | \
 	sed -n -e 's/Ignored.*//p' | tr ',' '\n' | sed -e 's/^[ \t]*//' | \
 	sort -n | uniq -c | sort -k 1 -r | head -n 50
