@@ -1,7 +1,7 @@
 #!/bin/bash
 #might need opkg upgrade coreutils-sort
 #script to scan ports of all devices connected to ap and return port status for all
-#deviceNum=$(bash /www/cyber-pizza/all/actions/scan/connected_devices.sh info | grep 'Clients: ' | awk '{print $2}')
+deviceNum=$(bash /www/cyber-pizza/all/actions/scan/connected_devices.sh info | grep 'Clients: ' | awk '{print $2}')
 
 NMAP_FILE=/www/cyber-pizza/all/actions/scan/device_ports_status.grep
 STATUS_FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
@@ -9,7 +9,7 @@ STATUS_FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
 status=$(cat $STATUS_FILE)
 
 open_ports() {
-	for ip in $status
+	for ip in $statu
 	do
 		nmap -oG $NMAP_FILE $ip >/dev/null
 		egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
@@ -21,7 +21,7 @@ open_ports() {
 }
 
 top_ports() {
-	nmap -oG $NMAP_FILE -iL $STATUS_FILE >/dev/null
+	#nmap -oG $NMAP_FILE -iL $STATUS_FILE >/dev/null
 	egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f4- | \
 	sed -n -e 's/Ignored.*//p' | tr ',' '\n' | sed -e 's/^[ \t]*//' | \
 	sort -n | uniq -c | sort -k 1 -r | head -n 50
