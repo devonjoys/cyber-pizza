@@ -7,21 +7,86 @@
     	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
     	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+
+		<style>
+			table, td {
+			  border-spacing: 5px;
+			  padding: 5px;
+			  margin-top: 10px;
+			  margin-bottom: 5px;
+			  text-align: center;
+			} 	
+
+			tr{
+			  background: #B5B5B5;
+			  border-spacing: 5px;
+			  padding: 5px;
+			  margin-top: 10px;
+			  margin-bottom: 5px;
+			}
+
+			tr:nth-child(even){
+		      background: #e8e8e8;
+			  border-spacing: 5px;
+			  padding: 5px;
+			  margin-top: 10px;
+			  margin-bottom: 5px;
+			  text-align: center;
+
+			}
+
+			th {
+			  border-spacing: 5px;
+			  padding: 7px;
+			  margin-top: 10px;
+			  margin-bottom: 10px;
+			  text-align: center;
+			  font-weight:bold;
+			}
+		</style>
+
 	</head>
-	</head>
+	
 
 	<body>
 		<?php
 
 		$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports");
 		$topportAr = explode("\n", $scanOutput );
-
 		for ($i = 0; $i < count($topportAr); $i++) {
+			$topportAr[$i] = str_replace(' ','/', $topportAr[$i]);
+			$topportAr[$i] = str_replace('//','/', $topportAr[$i]);
 			$topportAr[$i] = explode('/', $topportAr[$i]);
+			echo "$i ----------------------------";
+			print_r($topportAr[$i]);
 		}
-		?>
-		</div>
-		
+
+		?>	
+
+		<h2 style="color:grey">Scan Information</h2>
+    		<table style="width:100%">
+			  <tr>
+			    <th>Frequency</th>
+			    <th>Port</th>
+			    <th>State</th> 
+			    <th>Protocol</th> 
+			    <th>Service</th>
+			  </tr>
+			  <?php
+
+			 for ($i = 0; $i < count($topportAr); $i++) {
+			 	echo "<tr>"
+			 	for ($k; $k < count($topportAr[$i]); $k++){
+			 		echo "<th>$topportAr[$i][$k]</th>"
+			 	}
+			 }
+
+			  ?>
+			  <tr>
+			  </tr>
+			</table> 
+
+
 	</body>
 
 </html>
