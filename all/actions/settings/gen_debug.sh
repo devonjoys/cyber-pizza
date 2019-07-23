@@ -1,7 +1,9 @@
 #!/bin/bash
 
-touch /www/cyber-pizza/all/assets/settings/debug-temp.txt
-
+debug_temp=/www/cyber-pizza/all/assets/settings/debug-temp.txt
+touch $debug_temp
+echo "Debug log for:" >> $debug_temp
+date >> $debug_temp
 
 
 

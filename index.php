@@ -9,7 +9,19 @@
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
 	</head>
 	<body>
-   	<meta http-equiv="Refresh" content="0; url=index.php"/>
+	<?php
+        $initialized_file="all/assets/settings/initialized.txt";
+        $initialized_open=fopen($initialized_file, 'r');
+        $initialized=fread($initialized_open, filesize($initialized_file));
+        fclose($initialized_open);
+	if ($initialized=="1") {
+                echo -e ("<meta http-equiv='Refresh' content='0; url=all/dash.php'/>");
+                echo("hi");
+        //} else {
+        //        echo("Welcome to Guardian Devil!");
+        }
+        ?>
+
 		<header class="row group container">
 				<h1 class="logo">DCDP</h1>
 				<div class="v-line"></div>

@@ -19,7 +19,7 @@
 	fclose($ssid_open);
     ?>
     <header class="row group container">
-        <a href="../dash.html">
+        <a href="../dash.php">
            <img class="logo" src="../assets/images/dgd.png" width="200px" height=auto>
            <div class="v-line"></div>
         </a> 
@@ -63,7 +63,7 @@
 		<p class="answer">This option will reset your device to the state it was in when you received it. Any changes you have made will be overwritten.</p>
 		<br>
 		<h4 class="help-h">Twitter Feed</h4>
-		<p class="answer">This option will allow you to change the source of the Twitter Feed on the <a class="inline-link" href="../dash.html">Dashboard</a>.</p>
+		<p class="answer">This option will allow you to change the source of the Twitter Feed on the <a class="inline-link" href="../dash.php">Dashboard</a>.</p>
 		<br>
 		<h4 class="help-h">System Info</h4>
 		<p class="answer">This option displays useful diagnostic information about the device, including boot, update, and version information.</p>
@@ -74,7 +74,7 @@
 
     <footer class="row group container footer">
 
-      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href="../dash.php"> <p class="footie btn">Home</p></a>
       <a class="footnote" href="help-home.php#faq"><p class="footie btn">FAQ</p></a>
       <a class="footnote" href="contact.html"><p class="footie btn">Contact DukeOIT</p></a>
 

@@ -32,18 +32,8 @@
         margin-top: 0px;
         margin-left: 0px
     }
-
-    iframe.a {
-    	width: 600px;
-    	height: 100px;
-    	top: 50%;
-	    left: 50%;
-	    positon:center;
-	    margin-top: 0px;
-	    margin-left: 100px
-    }
-
-    iframe.b {
+    
+    iframe.myframe {
     	width: 600px;
     	height: 500px;
     	top: 50%;
@@ -132,35 +122,42 @@
 
   
       <section class="scan">
+
       	<div class="rowscan">
 
-    	<div class="columnscan">
-    		<iframe class="b" name="myframe" id="myframe" src="./actions/preloadscan.html" height="1000" width="1000"></iframe> 
-    	</div>
+        <div class="columnscan">
 
-    	<div class="columnscan">
-
-    	<script>
-			function changeIFrame(){
-				initiation();
-        window.frames['iframe'].location = ./actions/portscan.php;
-		</script>
-
-        <form class="portscan_output" action="./actions/loadscanbar.php" method="post" target="speedy">
+        <form class="portscan_output" action="./actions/portscan.php" method="post" target="myframe">
             <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="changeIFrame();">
         </form>
+
+        <script>
+          function changeIFrame(){
+          initiation();
+          browserFrame.src = document.getElementById("./actions/portscan.php").value;
+        </script>
+
 
         <p style="text-align: center">
           Click on the magnifying glass to start your scan. -
         <em style="text-align: center">
-        	This will activate a port scan of all devices currently connected to your network
+          This will activate a port scan of all devices currently connected to your network
         </em>
         </p>
 
-        <iframe class="a" name="speedy"></iframe>
-    	</div>
+      </div>
 
- 		</div>
+      	<div class="columnscan">
+          <h2 style="color:grey">Scan Information</h2>
+      		<iframe class="myframe" name="myframe" id="myframe" height="1000" width="1000"></iframe> 
+      	</div>
+
+        <script>
+            var browserFrame = document.getElementById("myframe");
+            browserFrame.src = document.getElementById("./actions/preloadscan.html").value;
+        </script>
+
+        </div>
 
 
 

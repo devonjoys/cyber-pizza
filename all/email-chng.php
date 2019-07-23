@@ -13,7 +13,7 @@
 	<body>
 
     <header class="row group container">
-        <a href="dash.html">
+        <a href="dash.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
            <div class="v-line"></div>
         </a> 
@@ -120,9 +120,9 @@
 
     <footer class="row group container footer">
 
-      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
-      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
-      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
+      <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href="help/help-home.php"><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
