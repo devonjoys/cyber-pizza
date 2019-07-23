@@ -64,7 +64,7 @@
         ?>
     
 
-    <a href="./help/help-home.php" alt="explanation page for device status icons">
+    <a class="stat" href="./help/help-home.php" alt="explanation page for device status icons">
         <?php
         if ($ad_stat) {
           echo "<img class='stat-img' src='./assets/images/status_adblock.png' alt='adblock status icon, adblock on'/>";

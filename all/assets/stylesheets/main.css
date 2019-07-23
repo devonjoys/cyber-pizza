@@ -269,6 +269,14 @@ table {
 /*  background: #B5B5B5;*/
 }
 
+.stat {
+  background: #B5B5B5;
+  display: inline-block;
+  height: 37px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
 .app-wrap {
   position: relative;
   display: inline-block;
