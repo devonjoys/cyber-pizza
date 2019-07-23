@@ -182,6 +182,9 @@ table {
 
 
 
+
+
+
 /*
   ========================================
   Apps
@@ -193,6 +196,14 @@ table {
   min-width: 800px;
   height: 100%;
   width: 100%;
+
+}
+
+#status {
+  margin-top: 0px;
+  padding-top: 0px;
+  display: table-cell;
+  background: #B5B5B5;
 
 }
 

@@ -32,11 +32,39 @@
 
 		</header>
 
+<!--     <div id="status">
+      <p>STATUS</p>
+    </div> -->
+
 
     <section class="int-face">
+      
+    <section> id="status">
+      <p>STATUS</p>
+
+      <?php
+        exec('/www/cyber-pizza/all/actions/my-adb.sh');
+        exec('/www/cyber-pizza/all/actions/my-connection.sh');
+        exec('/www/cyber-pizza/all/actions/my-vpn.sh');
+
+        $adname = './assets/settings/my-adb.txt';
+        $conname = './assets/settings/my-conn.txt';
+        $vpnname = './assets/settings/my-vpn.txt';
+
+        $af = fopen($adname, 'r');
+        $cf = fopen($conname, 'r');
+        $vpnf = fopen($vpnname, 'r');
+
+        echo (fread($af, filesize($adname)));
+        echo (fread($cf, filesize($conname)));
+        echo (fread($vpnf, filesize($vpnname)));
+      ?>
+
+    </section>
 
 
       <section class="dash">
+
 
         <div class="app-wrap">
         <div class="app">
