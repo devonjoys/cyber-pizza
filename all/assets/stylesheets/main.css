@@ -238,9 +238,7 @@ table {
 .dash {
   display: table-cell;
   vertical-align: top;
-  /*padding-left: 5%;
-  padding-right: 3%;*/
-  padding-top: 20px;
+/*  padding-top: 20px;*/
   text-align: left;
   width: auto;
   height: 250px;
@@ -248,13 +246,12 @@ table {
 }
 
 #status {
-  margin-top: 0px;
+  padding-left: 10px;
+  padding-top: 10px;
   display: inline-block;
-  background: #B5B5B5;
+/*  background: #B5B5B5;*/
   width: 100%;
-  text-align: center;
-  /*float: right;*/
-  text-align: center;
+  text-align: left;
 
 }
 
@@ -264,14 +261,12 @@ table {
   padding-right: 3%;
 }
 
-.on-stat {
-  display: inline;
-  background: #95de8e;
-}
-
-.off-stat {
-  display: inline;
-  background: #ff7a78;
+.stat-img {
+  display: inline-block;
+  margin: 3px;
+  height: 25px;
+  width: auto;
+/*  background: #B5B5B5;*/
 }
 
 .app-wrap {
