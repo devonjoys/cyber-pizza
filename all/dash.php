@@ -77,9 +77,9 @@
           echo "<img class='stat-img' src='./assets/images/status_no_internet.png' alt='internet connection status icon, internet not connected'/>";
         }
         if ($vpn_stat) {
-          echo "<img class='stat-img' src='./assets/images/status_Duke_Link.png' alt='VPN status icon, VPN on'/>";
+          echo "<img class='stat-img' src='./assets/images/status_link.png' alt='VPN status icon, VPN on'/>";
         } else {
-          echo "<img class='stat-img' src='./assets/images/status_no_Duke_Link.png' alt='VPN status icon, VPN off'/>";
+          echo "<img class='stat-img' src='./assets/images/status_no_link.png' alt='VPN status icon, VPN off'/>";
         }
 
 	      fclose($af);
