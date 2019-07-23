@@ -824,6 +824,12 @@ input:checked + .slider:before {
   width: 600px;
 }
 
+.noti_choice {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+
 /*
   ========================================
   Custom styles

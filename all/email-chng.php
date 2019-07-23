@@ -75,13 +75,45 @@
 
     </section>
 
-    <form method='post' action='settings.php'> 
-        <input type="hidden" name="save" value="save">
-        <input type='submit' name='submit' value='Save Changes'>
-    </form>
-    <form method='post' action='settings.php'> 
-        <input type="hidden" name="cancel" value="cancel">
-        <input type='submit' name='submit' value='Cancel'>
+    <?php
+    $nname = "./assets/settings/notifications.txt";
+    $nf = fopen($nname, 'r');
+
+    $notifs = array();
+    while(! feof($nf)) {
+        $ni = fgets($nf);
+        $notifs[] = $ni;
+      }
+
+    $boots = "";
+    $sus_port = "";
+    $new_device = "";
+    $drop = "";
+
+      if (trim($notifs[0])) {
+        $boots = "checked";
+      }
+      if (trim($notifs[1])) {
+        $sus_port = "checked";
+      }
+      if (trim($notifs[2])) {
+        $new_device = "checked";
+      }
+      if (trim($notifs[3])) {
+        $drop = "checked";
+      }
+
+
+    ?>
+
+
+    <form method='post' action='settings.php'>
+        <input type="checkbox" class="noti_choice" name="boot" <?php echo $boots; ?> >System boots
+        <input type="checkbox" class="noti_choice" name="sus_port" <?php echo $sus_port; ?> >Suspicious port is open
+        <input type="checkbox" class="noti_choice" name="new_device" <?php echo $new_device; ?> >A new device connects to network
+        <input type="checkbox" class="noti_choice" name="drop" <?php echo $drop; ?> >Internet speed drops significantly <br><br>
+        <input type='submit' name='save' value='Save Changes'>
+        <input type='submit' name='cancel' value='Cancel'>
     </form>
 
 

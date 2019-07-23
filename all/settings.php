@@ -13,7 +13,7 @@
 	<body>
 
     <header class="row group container">
-        <a href="settings.php">
+        <a href="dash.html">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
            <div class="v-line"></div>
         </a> 
@@ -42,16 +42,43 @@
      <p class="sett-text">Emails below will recieve notifications for the events you specify.</p>
 
     <ul>
+    	
     <?php 
 
     if (! empty($_POST['save'])){
         exec('rm ./assets/settings/email.txt"');
         exec('cp ./assets/settings/email-temp.txt ./assets/settings/email.txt');
-      }
-      if (! empty($_POST['cancel'])){
+
+        $nname = "./assets/settings/notifications.txt";
+        $nf = fopen($nname, 'w+');
+        if (!empty($_POST['boot'])) {
+        	fwrite($nf, "1\n"); 
+        } else {
+        	fwrite($nf, "0\n");
+        }
+        if (!empty($_POST['sus_port'])) {
+        	fwrite($nf, "1\n"); 
+        } else {
+        	fwrite($nf, "0\n");
+        }
+        if (!empty($_POST['new_device'])) {
+        	fwrite($nf, "1\n"); 
+        } else {
+        	fwrite($nf, "0\n");
+        }
+        if (!empty($_POST['drop'])) {
+        	fwrite($nf, "1"); 
+        } else {
+        	fwrite($nf, "0");
+        }
+
+        fclose($nf);
+    }
+
+    if (! empty($_POST['cancel'])){
         exec('rm ./assets/settings/email-temp.txt"');
         exec('cp ./assets/settings/email.txt ./assets/settings/email-temp.txt');
-      }
+    }
 
     $email_f = "./assets/settings/email.txt";
     $nname = "./assets/settings/notifications.txt";
@@ -65,13 +92,37 @@
     $notifs = array();
     while(! feof($nf)) {
         $ni = fgets($nf);
-        $ports[] = $ni;
+        $notifs[] = $ni;
       }
+
+    fclose($ef);
+    fclose($nf);
+
 
     foreach ($emails as $addr) {
       echo "<li class='good-ip addr'> {$addr} </li>";
     }
     ?>
+	</ul>
+
+	<p class="sett-text">Recieving notifications when</p>
+	<ul>
+
+	<?php 
+		if (trim($notifs[0])) {
+    		echo "<li> System boots</li>";
+    	}
+    	if (trim($notifs[1])) {
+    		echo "<li> Suspicious port is open</li>";
+    	}
+    	if (trim($notifs[2])) {
+    		echo "<li> A new device connects to the network</li>";
+    	}
+    	if (trim($notifs[3])) {
+    		echo "<li> Internet speed drops significantly</li>";
+    	}
+	?>
+
 	</ul>
 
 
