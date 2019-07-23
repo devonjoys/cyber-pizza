@@ -50,14 +50,17 @@
         $adname = './assets/settings/my-adb.txt';
         $conname = './assets/settings/my-conn.txt';
         $vpnname = './assets/settings/my-vpn.txt';
+	$twittername= './assets/settings/twitter.txt';
 
         $af = fopen($adname, 'r');
         $cf = fopen($conname, 'r');
         $vpnf = fopen($vpnname, 'r');
+	$twitterf = fopen($twittername, 'r');
 
         $ad_stat = trim(fread($af, filesize($adname)));
         $con_stat = trim(fread($cf, filesize($conname)));
         $vpn_stat  = trim(fread($vpnf, filesize($vpnname)));
+	$twitter_link = trim(fread($twitterf, filesize($twittername)));
 
         if ($ad_stat) {
           echo "<p class='on-stat'>Adblock</p>";
@@ -74,6 +77,11 @@
         } else {
           echo "<p class='off-stat'>PN</p>";
         }
+
+	fclose($af);
+	fclose($cf);
+	fclose($vpnf);
+	fclose($twitterf);
       ?>
 
     </div>
@@ -154,7 +162,7 @@
           <div class = "feed-title"><h3>Network Security Tips</h3></div>
           <div class="feed-body">
             <div class="feed-twitter">
-              <a class="twitter-timeline" data-width="450" data-height="650" href="https://twitter.com/DukeOIT?ref_src=twsrc%5Etfw">Tweets by DukeOIT</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <a class="twitter-timeline" data-width="450" data-height="650" href=<?php echo $twitter_link;?>>Twitter Feed</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                <!-- <a class="twitter-timeline" data-width="500" data-height="650" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
             </div>
           </div>

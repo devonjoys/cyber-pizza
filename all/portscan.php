@@ -41,11 +41,6 @@
 			  margin-bottom: 10px;
 			  text-align: center;
 			}
-
-			#loadingGif{
-				width: 100px;
-				height: 100px;
-			}
 		</style>
 
 	</head>
@@ -53,7 +48,16 @@
 
 	<body>
 
-		<div id="loadingGif" name="loadingGif" style="display:block;"><img src="./assets/images/Loading.gif"></div>
+		<div id="loadingGif" style="display:none"><img src="./assets/images/Loading.gif"></div>
+
+        <script>
+          document.getElementById('loadingGif').style.display = "block";
+          setTimeout(function() {
+            document.getElementById('loadingGif').style.display = "none";
+          },10000);
+
+        </script>
+
 		<table style="width:100%">
 		  <tr>
 		    <th>Frequency</th>
@@ -77,14 +81,6 @@
 
 			$topportAr = array_filter($topportAr);
 
-			?>
-
-			<script>
-	          document.getElementById('loadingGif').style.display = "none";
-	        </script>
-
-		    <?php
-
 			 for ($i = 0; $i < count($topportAr); $i++) {
 			 	echo "<tr>";
 		 		foreach($topportAr[$i] as $item) {
@@ -97,8 +93,6 @@
 
 			 ?>
 		</table> 
-
-
 
 
 	</body>
