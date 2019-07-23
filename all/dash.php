@@ -30,7 +30,47 @@
         </ul>
 				</nav>
 
+<!--         <div id="status">
+      <p class="on-stat">STATUS</p>
+
+      <?php
+        exec('/www/cyber-pizza/all/actions/my-adb.sh');
+        exec('/www/cyber-pizza/all/actions/my-connection.sh');
+        exec('/www/cyber-pizza/all/actions/my-vpn.sh');
+
+        $adname = './assets/settings/my-adb.txt';
+        $conname = './assets/settings/my-conn.txt';
+        $vpnname = './assets/settings/my-vpn.txt';
+
+        $af = fopen($adname, 'r');
+        $cf = fopen($conname, 'r');
+        $vpnf = fopen($vpnname, 'r');
+
+        $ad_stat = trim(fread($af, filesize($adname)));
+        $con_stat = trim(fread($cf, filesize($conname)));
+        $vpn_stat  = trim(fread($vpnf, filesize($vpnname)));
+
+        if ($ad_stat) {
+          echo "<p class='on-stat'>Adblock</p>";
+        } else {
+          echo "<p class='off-stat'>Adblock</p>";
+        }
+        if ($con_stat) {
+          echo "<p class='on-stat'> Network</p>";
+        } else {
+          echo "<p class='off-stat'>Network</p>";
+        }
+        if ($vpn_stat) {
+          echo "<p class='on-stat'>VPN</p>";
+        } else {
+          echo "<p class='off-stat'>PN</p>";
+        }
+      ?>
+ -->
+    </div>
+
 		</header>
+
 
 
     <section class="int-face">
@@ -38,6 +78,46 @@
 
       <section class="dash">
 
+        <div id="status">
+      <p class="on-stat">STATUS</p>
+
+      <?php
+        exec('/www/cyber-pizza/all/actions/my-adb.sh');
+        exec('/www/cyber-pizza/all/actions/my-connection.sh');
+        exec('/www/cyber-pizza/all/actions/my-vpn.sh');
+
+        $adname = './assets/settings/my-adb.txt';
+        $conname = './assets/settings/my-conn.txt';
+        $vpnname = './assets/settings/my-vpn.txt';
+
+        $af = fopen($adname, 'r');
+        $cf = fopen($conname, 'r');
+        $vpnf = fopen($vpnname, 'r');
+
+        $ad_stat = trim(fread($af, filesize($adname)));
+        $con_stat = trim(fread($cf, filesize($conname)));
+        $vpn_stat  = trim(fread($vpnf, filesize($vpnname)));
+
+        if ($ad_stat) {
+          echo "<p class='on-stat'>Adblock</p>";
+        } else {
+          echo "<p class='off-stat'>Adblock</p>";
+        }
+        if ($con_stat) {
+          echo "<p class='on-stat'> Network</p>";
+        } else {
+          echo "<p class='off-stat'>Network</p>";
+        }
+        if ($vpn_stat) {
+          echo "<p class='on-stat'>VPN</p>";
+        } else {
+          echo "<p class='off-stat'>PN</p>";
+        }
+      ?>
+
+    </div>
+
+    <div class="apps">
         <div class="app-wrap">
         <div class="app">
           <a href="/cgi-bin/luci/admin/services/adblock">
@@ -103,7 +183,7 @@
         </div>
             <h4>Scanning</h4>
         </div>
-
+      </div>
       </section>
 
 

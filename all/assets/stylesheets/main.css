@@ -157,6 +157,8 @@ table {
   margin-bottom: 45px;
 }
 
+
+
 .set-btns {
   float: right;
   text-align: right;
@@ -177,6 +179,9 @@ table {
 .btn:hover {
   text-decoration: underline;
 }
+
+
+
 
 
 
@@ -233,13 +238,40 @@ table {
 .dash {
   display: table-cell;
   vertical-align: top;
-  padding-left: 5%;
-  padding-right: 3%;
-  padding-top: 50px;
+  /*padding-left: 5%;
+  padding-right: 3%;*/
+  padding-top: 20px;
   text-align: left;
   width: auto;
   height: 250px;
 
+}
+
+#status {
+  margin-top: 0px;
+  display: inline-block;
+  background: #B5B5B5;
+  width: 100%;
+  text-align: center;
+  /*float: right;*/
+  text-align: center;
+
+}
+
+.apps {
+  margin-left: 10px;
+  padding-left: 5%;
+  padding-right: 3%;
+}
+
+.on-stat {
+  display: inline;
+  background: #95de8e;
+}
+
+.off-stat {
+  display: inline;
+  background: #ff7a78;
 }
 
 .app-wrap {
@@ -247,7 +279,7 @@ table {
   display: inline-block;
   text-align: center;
   width: 22%;
-  min-width: 90px;
+  min-width: 110px;
   margin-right: 20px;
   margin-left: 5%;
   margin-bottom: 20px;
