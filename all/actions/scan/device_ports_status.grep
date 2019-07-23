@@ -1,4 +1,8 @@
-# Nmap 7.70 scan initiated Tue Jul 23 10:28:27 2019 as: nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep -iL /www/cyber-pizza/all/actions/scan/devicelog.txt
-Host: 10.42.0.209 (Devons-MBP-2.lan)	Status: Up
-Host: 10.42.0.209 (Devons-MBP-2.lan)	Ports: 53/open/tcp//domain///, 80/open/tcp//http///, 443/open/tcp//https///, 1947/open/tcp//sentinelsrm///, 8080/open/tcp//http-proxy///	Ignored State: closed (995)
-# Nmap done at Tue Jul 23 10:29:49 2019 -- 2 IP addresses (1 host up) scanned in 82.55 seconds
+# Nmap 7.70 scan initiated Tue Jul 23 15:22:41 2019 as: nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep -iL /www/cyber-pizza/all/actions/scan/devicelog.txt
+Host: 10.42.0.106 (DESKTOP-CMJ612M.lan)	Status: Up
+Host: 10.42.0.106 (DESKTOP-CMJ612M.lan)	Ports: 28201/open/tcp//unknown///	Ignored State: filtered (999)
+Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Status: Up
+Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 28201/open/tcp//unknown///	Ignored State: filtered (997)
+Host: 10.42.0.104 (Galaxy-S9.lan)	Status: Up
+Host: 10.42.0.104 (Galaxy-S9.lan)	Status: Up
+# Nmap done at Tue Jul 23 16:11:18 2019 -- 4 IP addresses (3 hosts up) scanned in 2916.59 seconds

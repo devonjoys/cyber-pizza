@@ -23,6 +23,7 @@
 			  padding: 5px;
 			  margin-top: 10px;
 			  margin-bottom: 5px;
+			  width: 50px;
 			}
 
 			tr:nth-child(even){
@@ -35,12 +36,15 @@
 
 			}
 			th {
+			  background: #e8e8e8;
 			  border-spacing: 5px;
 			  padding: 7px;
 			  margin-top: 10px;
 			  margin-bottom: 10px;
 			  text-align: center;
+			  font-weight: bold;
 			}
+
 		</style>
 
 	</head>
@@ -48,24 +52,17 @@
 
 	<body>
 
-		<div id="loadingGif" style="display:none"><img src="./assets/images/Loading.gif"></div>
-
-        <script>
-          document.getElementById('loadingGif').style.display = "block";
-          setTimeout(function() {
-            document.getElementById('loadingGif').style.display = "none";
-          },10000);
-
-        </script>
-
-		<table style="width:100%">
-		  <tr>
-		    <th>Frequency</th>
-		    <th>Port</th>
-		    <th>State</th> 
-		    <th>Protocol</th> 
-		    <th>Service</th>
-		  </tr>
+		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
+			<figcaption>This may take a few moments ... </figcaption></div>
+		<table style="width:100%"><center>
+			<caption>Top Ports</caption>
+			  <tr>
+			    <th>Frequency</th>
+			    <th>Port</th>
+			    <th>State</th> 
+			    <th>Protocol</th> 
+			    <th>Service</th>
+			  </tr>
 
 		  <?php
 
@@ -81,6 +78,14 @@
 
 			$topportAr = array_filter($topportAr);
 
+			?>
+
+			<script>
+	          document.getElementById('loadingGif').style.display = "none";
+	        </script>
+
+		    <?php
+
 			 for ($i = 0; $i < count($topportAr); $i++) {
 			 	echo "<tr>";
 		 		foreach($topportAr[$i] as $item) {
@@ -94,7 +99,29 @@
 			 ?>
 		</table> 
 
+		<?php
 
+		$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports");
+			$topportAr = explode("\n", $scanOutput );
+			for ($i = 0; $i < count($topportAr); $i++) {
+				$topportAr[$i] = str_replace('/','', $topportAr[$i]);
+				$topportAr[$i] = trim($topportAr[$i]);
+				$topportAr[$i] = explode(' ', $topportAr[$i]);
+				$topportAr[$i] = array_filter($topportAr[$i]);
+			}
+
+		?>
+
+		<table style="width:100%"><center>
+			<caption>Device Information</caption>
+			  <tr>
+			    <th style="border-right:3px solid black">Device IP</th>
+			    <th style="border-right:3px solid black">Open Ports</th>
+			  </tr style="font-style: italic">
+			  	<th style="border-right:1px solid black">Protocol</th>
+			  	<th style="border-right:1px solid black">Port Number</th>
+			  	<th style="border-right:1px solid black">Service</th>
+			  </tr>
 	</body>
 
 </html>

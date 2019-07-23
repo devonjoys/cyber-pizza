@@ -822,6 +822,36 @@ input:checked + .slider:before {
 .a-note {
   font-style: italic;
 }
+
+.icon-td {
+  width: 33.3%;
+  position: relative;
+}
+
+.icon-td:after {
+  content: '';
+  display: block;
+}
+
+.status-icons {
+  width: 60%;
+  height: 60%;
+  text-align: center;
+  padding: 20px;
+}
+
+.icon-type {
+  text-align: center;
+  font-size: 25px;
+}
+
+.on-off {
+  width: 10%
+  text-align: center;
+  vertical-align: middle;
+  font-size: 25px;
+}
+
 /*
   ========================================
   Option Page
