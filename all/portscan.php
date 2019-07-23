@@ -23,6 +23,7 @@
 			  padding: 5px;
 			  margin-top: 10px;
 			  margin-bottom: 5px;
+			  width: 50px;
 			}
 
 			tr:nth-child(even){
@@ -98,15 +99,28 @@
 			 ?>
 		</table> 
 
+		<?php
+
+		$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports");
+			$topportAr = explode("\n", $scanOutput );
+			for ($i = 0; $i < count($topportAr); $i++) {
+				$topportAr[$i] = str_replace('/','', $topportAr[$i]);
+				$topportAr[$i] = trim($topportAr[$i]);
+				$topportAr[$i] = explode(' ', $topportAr[$i]);
+				$topportAr[$i] = array_filter($topportAr[$i]);
+			}
+
+		?>
+
 		<table style="width:100%"><center>
 			<caption>Device Information</caption>
 			  <tr>
-			    <th>Device IP</th>
-			    <th>Open Ports</th>
-			  </tr>
-			  	<th>Protocol</th>
-			  	<th>Port Number</th>
-			  	<th>Service</th>
+			    <th style="border-right:3px solid black">Device IP</th>
+			    <th style="border-right:3px solid black">Open Ports</th>
+			  </tr style="font-style: italic">
+			  	<th style="border-right:1px solid black">Protocol</th>
+			  	<th style="border-right:1px solid black">Port Number</th>
+			  	<th style="border-right:1px solid black">Service</th>
 			  </tr>
 	</body>
 
