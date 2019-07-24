@@ -53,9 +53,10 @@
 	<body>
 
 		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
-			<figcaption>This may take a few moments ... </figcaption></div>
+			<figcaption>This may take a few moments ... </figcaption></div></center>
 
-		<table style="width:100%"><center>
+		<table style="width:100%">
+			<center>
 			<caption>Top Ports</caption>
 			  <tr>
 			    <th>Frequency</th>
@@ -88,21 +89,23 @@
 		    <?php
 
 			 for ($i = 0; $i < count($topportAr); $i++) {
-			 	echo "<tr>";
+			 	echo "<tr>" ;
 		 		foreach($topportAr[$i] as $item) {
-		 			?>
-		 			<td><?php echo $item; ?></td>
-		 			<?php
+		 			
+		 			 echo "<td> {$item} </td>" ;
 		 		}
-			 	echo "</tr>";
+			 	echo "</tr>" ;
 			 }
 
 			 ?>
 
+		</center>
 		</table> 
 
 
-		<table style="width:100%"><center>
+
+		<table style="width:100%">
+			<center>
 			<caption>Device Information</caption>
 
 		<?php
@@ -112,23 +115,22 @@
 			for ($i = 0; $i < count($portdetailAr); $i++) {
 				if (substr( $portdetailAr[$i], 0, 4 ) === "Host"){
 					$portdetailAr[$i] = trim($portdetailAr[$i]);
-					$portdetailAr[$i] = str_replace(':','', $portdetailAr[$i]);
-					$portdetailAr[$i] = explode(' ', $portdetailAr[$i]);
+					$portdetailAr[$i] = str_replace('Host: ','', $portdetailAr[$i]);
+					$portdetailAr[$i] = str_replace('Ports ','', $portdetailAr[$i]);
+					$portdetailAr[$i] = explode('Open:', $portdetailAr[$i]);
 					$portdetailAr[$i] = array_filter($portdetailAr[$i]);
 					?>
 
 					<tr>
 				    <th style="border-right:5px solid black">Device IP</th>
-				    <th>Open Ports</th>
+				    <th>Ports Open</th>
 				  	</tr>
 
 				  	<?php
 					echo "<tr>";
 
-					foreach($portdetailAr[$i] as $item) {
-		 				?>
-					  <td><?php echo $item; ?></td>;
-					  <?php
+					foreach($portdetailAr[$i] as $item) {	
+					  echo "<td> {$item} </td>" ;
 					}
 
 				}else{
@@ -144,21 +146,17 @@
 				    <th style="border-right:1px solid black">Port</th>
 				    <th>Service</th>
 				  	</tr>
-
+				  	<tr>
 				  	<?php
-					echo "<tr>";
 
 					foreach($portdetailAr[$i] as $item) {
-		 				?>
-					  <td><?php echo $item; ?></td>;
-					  <?php
-
+					  echo "<td> {$item} </td>" ;
+					}
 				}
-				echo "</tr>";
 			}
-		}
-
 		?>
+
+	</tr>
 
 		</center>
 		</table>
