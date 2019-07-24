@@ -102,9 +102,8 @@
 		</table> 
 
 
-		<table style="width:100%">
-		<center>
-		<caption>Device Information</caption>
+		<table style="width:100%"><center>
+			<caption>Device Information</caption>
 
 		<?php
 

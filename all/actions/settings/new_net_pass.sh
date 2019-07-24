@@ -16,7 +16,8 @@ else
 				uci set wireless.@wifi-iface[0].key="$1"
 				uci commit wireless
 				wifi
-				service network restart
+				/etc/init.d/network restart
+				/etc/init.d/uhttpd restart
 			else
 				echo "Your passwords do not match"
 			fi
