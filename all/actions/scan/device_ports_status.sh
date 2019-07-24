@@ -1,7 +1,7 @@
 #!/bin/bash
 #might need opkg upgrade coreutils-sort
 #script to scan ports of all devices connected to ap and return port status for all
-deviceNum=$(bash /www/cyber-pizza/all/actions/scan/connected_devices.sh info | grep 'Clients: ' | awk '{print $2}')
+#deviceNum=$(bash /www/cyber-pizza/all/actions/scan/connected_devices.sh info | grep 'Clients: ' | awk '{print $2}')
 
 NMAP_FILE=/www/cyber-pizza/all/actions/scan/device_ports_status.grep
 STATUS_FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
@@ -9,7 +9,7 @@ STATUS_FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
 status=$(cat $STATUS_FILE)
 
 open_ports() {
-	for ip in $statu
+	for ip in $status
 	do
 		nmap -oG $NMAP_FILE $ip >/dev/null
 		egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
@@ -30,7 +30,7 @@ top_ports() {
 port_detail() {
 	for ip in $status
 	do
-		nmap -oG $NMAP_FILE $ip >/dev/null
+		#nmap -oG $NMAP_FILE $ip >/dev/null
 		egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
 		sed -n -e 's/Ignored.*//p'  | \
 		awk '{print "Host: " $1  NF-1; $1=""; for(i=2; i<=NF; i++) { a=a" "$i; }; split(a,s,","); for(e in s) { split(s[e],v,"/"); printf "%-8s %s/%-7s %s\n" , v[2], v[3], v[1], v[5]}; a="" }'

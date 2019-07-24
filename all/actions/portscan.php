@@ -124,8 +124,8 @@
 		<table style="width:100%"><center>
 			<caption>Device Information</caption>
 			  <tr>
-			    <th style="border-right:3px solid black">Device IP</th>
-			    <th style="border-right:3px solid black">Open Ports</th>
+			    <th style="border-right:4px solid black">Device IP</th>
+			    <th style="border-right:4px solid black">Open Ports</th>
 			  </tr style="font-style: italic">
 			  	<th style="border-right:1px solid black">Protocol</th>
 			  	<th style="border-right:1px solid black">Port Number</th>
