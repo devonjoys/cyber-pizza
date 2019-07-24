@@ -54,6 +54,7 @@
 
 		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
 			<figcaption>This may take a few moments ... </figcaption></div>
+
 		<table style="width:100%"><center>
 			<caption>Top Ports</caption>
 			  <tr>
@@ -97,7 +98,12 @@
 			 }
 
 			 ?>
+
 		</table> 
+
+
+		<table style="width:100%"><center>
+			<caption>Device Information</caption>
 
 		<?php
 
@@ -105,32 +111,58 @@
 		$portdetailAr = explode("\n", $scanOutput );
 			for ($i = 0; $i < count($portdetailAr); $i++) {
 				if (substr( $portdetailAr[$i], 0, 4 ) === "Host"){
-					$portdetailAr[$i] = str_replace(':','', $topportAr[$i]);
 					$portdetailAr[$i] = trim($portdetailAr[$i]);
-					$topportAr[$i] = explode(' ', $topportAr[$i]);
-					$topportAr[$i] = array_filter($topportAr[$i]);
-				} else {
-					$portdetailAr[$i] = str_replace('/','', $topportAr[$i]);
+					$portdetailAr[$i] = str_replace(':','', $portdetailAr[$i]);
+					$portdetailAr[$i] = explode(' ', $portdetailAr[$i]);
+					$portdetailAr[$i] = array_filter($portdetailAr[$i]);
+					?>
+
+					<tr>
+				    <th style="border-right:5px solid black">Device IP</th>
+				    <th>Open Ports</th>
+				  	</tr>
+
+				  	<?php
+					echo "<tr>";
+
+					foreach($portdetailAr[$i] as $item) {
+		 				?>
+					  <td><?php echo $item; ?></td>;
+					  <?php
+					}
+
+				}else{
 					$portdetailAr[$i] = trim($portdetailAr[$i]);
-					$topportAr[$i] = explode(' ', $topportAr[$i]);
-					$topportAr[$i] = array_filter($topportAr[$i]);
+					$portdetailAr[$i] = str_replace('/','', $portdetailAr[$i]);
+					$portdetailAr[$i] = explode(' ', $portdetailAr[$i]);
+					$portdetailAr[$i] = array_filter($portdetailAr[$i]);
+					?>
+
+					<tr>
+				    <th style="border-right:1px solid black">State</th>
+				    <th style="border-right:1px solid black">Protocol</th>
+				    <th style="border-right:1px solid black">Port</th>
+				    <th>Service</th>
+				  	</tr>
+
+				  	<?php
+					echo "<tr>";
+
+					foreach($portdetailAr[$i] as $item) {
+		 				?>
+					  <td><?php echo $item; ?></td>;
+					  <?php
+
 				}
-				echo '<pre>';
-				print_r(array_filter($topportAr[$i]));
-				echo '</pre>';
+				echo "</tr>";
 			}
+		}
+
 		?>
 
-		<table style="width:100%"><center>
-			<caption>Device Information</caption>
-			  <tr>
-			    <th style="border-right:3px solid black">Device IP</th>
-			    <th style="border-right:3px solid black">Open Ports</th>
-			  </tr style="font-style: italic">
-			  	<th style="border-right:1px solid black">Protocol</th>
-			  	<th style="border-right:1px solid black">Port Number</th>
-			  	<th style="border-right:1px solid black">Service</th>
-			  </tr>
+		</center>
+		</table>
+
 	</body>
 
 </html>

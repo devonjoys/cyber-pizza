@@ -6,7 +6,7 @@ if [[ $1 -eq 1 ]]; then
 	#service openvpn enable
 	/etc/init.d/openvpn start
 	/etc/init.d/openvpn enable
-	echo 'vpn on'>>/www/cyber-pizza/all/actions/vpn/vpn
+	#echo 'vpn on'>>/www/cyber-pizza/all/actions/vpn/vpn
 fi
 if [[ $1 -eq 0 ]]; then
 	uci set openvpn.custom_config.enabled="0"
@@ -14,7 +14,7 @@ if [[ $1 -eq 0 ]]; then
 	#service openvpn disable
 	/etc/init.d/openvpn stop
 	/etc/init.d/openvpn disable
-	echo 'vpn off'>>/www/cyber-pizza/all/actions/vpn/vpn
+	#echo 'vpn off'>>/www/cyber-pizza/all/actions/vpn/vpn
 fi	
 uci commit openvpn
 #service openvpn restart

@@ -11,7 +11,7 @@ status=$(cat $STATUS_FILE)
 open_ports() {
 	for ip in $status
 	do
-		nmap -oG $NMAP_FILE $ip >/dev/null
+		#nmap -oG $NMAP_FILE $ip >/dev/null
 		egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
 		sed -n -e 's/Ignored.*//p' | \
 		awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
