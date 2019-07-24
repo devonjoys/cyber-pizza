@@ -113,14 +113,18 @@ table {
 
 /*
   ========================================
-  Typography
+  Loggin
   ========================================
 */
 
-/*h1, h3, h4, h5, p {
-  margin-bottom: 22px;
+.welc-tit {
+  text-align: center;
+  color: #393939;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 50px;
 }
-*/
 
 /*
   ========================================
