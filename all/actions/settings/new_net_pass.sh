@@ -3,6 +3,8 @@
 length=$(expr length "$1")
 
 if [[ -z "$1" ]]; then
+	echo "Please input a valid password"
+else
 	if [[ $length -lt 8 ]]; then
 		echo "Your password isn't long enough"
 	else
@@ -20,8 +22,6 @@ if [[ -z "$1" ]]; then
 			fi
 		fi
 	fi
-else
-	echo "Please input a valid password"
 fi
 
 
