@@ -31,11 +31,11 @@ if (!empty($_POST['vpn'])) {
 	#shell_exec("service openvpn stop");
 	#shell_exec("echo 'vpn off'>>vpn");
 }	
-shell_exec("uci commit openvpn");
+#shell_exec("uci commit openvpn");
 #shell_exec("service openvpn restart");
-shell_exec("service network restart");
-shell_exec("/www/cyber-pizza/all/actions/vpn/my-ip.sh");
-shell_exec("touch hello");
+#shell_exec("service network restart");
+#shell_exec("/www/cyber-pizza/all/actions/vpn/my-ip.sh");
+#shell_exec("touch hello");
 
 ?>
 

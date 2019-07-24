@@ -101,15 +101,24 @@
 
 		<?php
 
-		$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports");
-			$topportAr = explode("\n", $scanOutput );
-			for ($i = 0; $i < count($topportAr); $i++) {
-				$topportAr[$i] = str_replace('/','', $topportAr[$i]);
-				$topportAr[$i] = trim($topportAr[$i]);
-				$topportAr[$i] = explode(' ', $topportAr[$i]);
-				$topportAr[$i] = array_filter($topportAr[$i]);
+		$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh portdetail");
+		$portdetailAr = explode("\n", $scanOutput );
+			for ($i = 0; $i < count($portdetailAr); $i++) {
+				if (substr( $portdetailAr[$i], 0, 4 ) === "Host"){
+					$portdetailAr[$i] = str_replace(':','', $topportAr[$i]);
+					$portdetailAr[$i] = trim($portdetailAr[$i]);
+					$topportAr[$i] = explode(' ', $topportAr[$i]);
+					$topportAr[$i] = array_filter($topportAr[$i]);
+				} else {
+					$portdetailAr[$i] = str_replace('/','', $topportAr[$i]);
+					$portdetailAr[$i] = trim($portdetailAr[$i]);
+					$topportAr[$i] = explode(' ', $topportAr[$i]);
+					$topportAr[$i] = array_filter($topportAr[$i]);
+				}
+				echo '<pre>';
+				print_r(array_filter($topportAr[$i]));
+				echo '</pre>';
 			}
-
 		?>
 
 		<table style="width:100%"><center>

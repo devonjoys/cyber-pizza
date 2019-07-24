@@ -828,6 +828,7 @@ input:checked + .slider:before {
 .icon-td {
   width: 33.3%;
   position: relative;
+  vertical-align: middle;
 }
 
 .icon-td:after {
