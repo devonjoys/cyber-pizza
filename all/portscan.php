@@ -118,7 +118,7 @@
 					?>
 
 					<tr>
-				    <th style="border-right:3px solid black">Device IP</th>
+				    <th style="border-right:5px solid black">Device IP</th>
 				    <th>Open Ports</th>
 				  	</tr>
 
@@ -129,8 +129,32 @@
 		 				?>
 					  <td><?php echo $item; ?></td>;
 					  <?php
+					}
+
+				}else{
+					$portdetailAr[$i] = trim($portdetailAr[$i]);
+					$portdetailAr[$i] = str_replace('/','', $portdetailAr[$i]);
+					$portdetailAr[$i] = explode(' ', $portdetailAr[$i]);
+					$portdetailAr[$i] = array_filter($portdetailAr[$i]);
+					?>
+
+					<tr>
+				    <th style="border-right:1px solid black">State</th>
+				    <th style="border-right:1px solid black">Protocol</th>
+				    <th style="border-right:1px solid black">Port</th>
+				    <th>Service</th>
+				  	</tr>
+
+				  	<?php
+					echo "<tr>";
+
+					foreach($portdetailAr[$i] as $item) {
+		 				?>
+					  <td><?php echo $item; ?></td>;
+					  <?php
+
 				}
-				  echo "</tr>";
+				echo "</tr>";
 			}
 		}
 
