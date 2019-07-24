@@ -31,21 +31,9 @@
         </nav>
     </header>
 
-    
-
-    <section class="options-int">
-
-      <h4 class="sett-tit">Email Preferences</h4>
-
-
-     <a href="email-chng.php" class="inline-link edit-right">Edit Email Settings</a>
-     <p class="sett-text">Emails below will receive notifications for the events you specify.</p>
-
-    <ul>
-    	
     <?php 
 
-    if (! empty($_POST['save'])){
+	 if (! empty($_POST['save'])){
         exec('rm ./assets/settings/email.txt"');
         exec('cp ./assets/settings/email-temp.txt ./assets/settings/email.txt');
 
@@ -79,6 +67,25 @@
         exec('rm ./assets/settings/email-temp.txt"');
         exec('cp ./assets/settings/email.txt ./assets/settings/email-temp.txt');
     }
+
+    ?>
+
+    
+
+    <section class="options-int">
+
+      <h4 class="sett-tit">Email Preferences</h4>
+
+
+     <a href="email-chng.php" class="inline-link edit-right">Edit Email Settings</a>
+     <p class="sett-text">Emails below will receive notifications for the events you specify.</p>
+
+    <ul>
+    	
+    <?php 
+
+   
+
 
     $email_f = "./assets/settings/email.txt";
     $nname = "./assets/settings/notifications.txt";
@@ -132,6 +139,8 @@
 
     <section class="options-int">
 
+
+    <a href="perf-change.html" class="inline-link edit-right">Change Frequency</a>
       <h4 class="sett-tit">Network Performance Preferences</h4>
 
       <p class="sett-text">
@@ -149,7 +158,7 @@
           <input type="submit" name="opt-freq" value="Change Frequency">
         </form> -->
 
-        <a class= "inline-link" href="perf-change.html">Change Frequency</a>
+<!--         <a class= "inline-link" href="perf-change.html">Change Frequency</a> -->
 
       </p>
 
@@ -160,8 +169,20 @@
 
       <h4 class="sett-tit">Network Settings</h4>
 
+      <a href="network-chng.php" class="inline-link edit-right">Change Network Settings</a>
+
+    	<?php
+        $ssid_name = "./assets/settings/my-ssid.txt";
+        $f = fopen($ssid_name, 'r');
+        $ssid = fread($f, filesize($ssid_name));
+        fclose($f);
+
+        $w_pass = shell_exec("uci show wireless.default_radio0.key | cut -f2 -d \"'\"");
+    	?>
+
       <p class="sett-text">
-        Network name and password
+        Network name: <?php echo $ssid; ?> <br>
+        Network password: <?php echo $w_pass; ?>
       </p>
 
 
@@ -171,9 +192,12 @@
 
       <h4 class="sett-tit">Device Settings</h4>
 
+      <a href="device-chng.php" class="inline-link edit-right">Change Device Password</a>
+
       <p class="sett-text">
         device name and password <br> ifconfig gen
       </p>
+
 
 
     </section>
