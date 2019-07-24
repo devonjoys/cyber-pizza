@@ -257,6 +257,7 @@ table {
 
 .apps {
   margin-left: 10px;
+  margin-top: 20px;
   padding-left: 5%;
   padding-right: 3%;
 }
@@ -270,11 +271,12 @@ table {
 }
 
 .stat {
-  background: #B5B5B5;
+/*  background: #B5B5B5;*/
   display: inline-block;
   height: 37px;
   padding: 3px;
-  border-radius: 5px;
+/*  border-radius: 5px;*/
+  border-bottom: 2px solid #B5B5B5;
 }
 
 .app-wrap {
