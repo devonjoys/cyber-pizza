@@ -15,11 +15,8 @@
     
 
    <?php
-      echo "hello";
-      echo "{$_POST['net-name']}";
       $message1 = shell_exec("/www/cyber-pizza/all/actions/settings/new_ssid.sh {$_POST['net-name']}");
       $message2 = shell_exec("/www/cyber-pizza/all/actions/settings/new_net_pass.sh {$_POST['net-pass']} {$_POST['net-pass']}");
-      echo "{$_POST['net-pass']}";
       echo $message1;
       echo $message2;
    ?>
