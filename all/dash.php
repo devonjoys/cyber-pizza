@@ -39,7 +39,7 @@
 
       <section class="dash">
 
-        <div id="status">
+      <div id="status">
 <!--       <p class="stat">STATUS</p> -->
 
       <?php
@@ -91,6 +91,8 @@
     </a>
     
      <iframe class="devicePopulation" name="devicePopulation" id="devicePopulation" src="./connected-devices.php" height="75" width="400"></iframe>
+
+    
 
     </div>
 
