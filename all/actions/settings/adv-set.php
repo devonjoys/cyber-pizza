@@ -13,11 +13,9 @@
 	<body>
 
     <header class="row group container">
-        <a href="dash.php">
-           <img class="logo" src="../../assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
-           <div class="v-line"></div>
-        </a> 
-        <h2 class="page">Options</h2>
+        <img class="logo" src="../../assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
+        <div class="v-line"></div>
+        <h2 class="page">Advanced Settings</h2>
 
         <nav class="set-btns">
         <ul>
@@ -32,15 +30,116 @@
     </header>
 
     <?php
-
+      $reboot = $_POST['reboot'];
       $freeze = $_POST['freeze'];
+      $unfreeze = $_POST['unfreeze'];
       $gen_debug = $_POST['gen_debug'];
       $reset = $_POST['reset'];
       $update = $_POST['update'];
       $speed = $_POST['ch-speed'];
       $twitt = $_POST['twitter'];
+    ?>
+
+    <section class="options-int">
+
+    <?php
+
+      if (! empty($reboot)) {
+        echo "<h4 class='sett-tit'>Reboot Device?</h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+      }
+      if (! empty($freeze)) {
+        echo "<h4 class='sett-tit'>Freeze Network?</h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+
+        echo "
+          <p class='warn'> Freezing the network will halt all traffic in to or out of your home network. Internal communication will still be allowed, so you will not lose access to the device. <br><br> </p>";
+        echo "
+          <form method='post' action='../../adv-settings.php'>
+            Are you sure you want to freeze the network?
+            <br><input type='submit' name='freeze-it' value='Yes, freeze the network'>
+          </form>
+        ";
+      }
+      if (! empty($unfreeze)) {
+        echo "<h4 class='sett-tit'>Unfreeze Network?</h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+
+        echo "
+          <p class='warn'> Unfreezing the network will resume all traffic in to or out of your home network. <br><br> </p>";
+        echo "
+          <form method='post' action='../../adv-settings.php'>
+            Are you sure you want to unfreeze the network?
+            <br><input type='submit' name='unfreeze-it' value='Yes, unfreeze the network'>
+          </form>
+        ";
+      }
+      if (! empty($gen_debug)) {
+        echo "<h4 class='sett-tit'>Debug Generated<br></h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+        // exec("./actions/settings/gen_debug.sh");
+        echo "<a href='../../assets/settings/debug.txt' download='debug.txt'><br><br>Download Debug File</a>";
+        
+      }
+      if (! empty($reset)) {
+        echo "<h4 class='sett-tit'>Factory Reset?</h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+
+        echo "
+          <p class='warn'> WARNING: if you reset the device back to factory settings all of your configurations for the Guardian Devil will be lost. Any devices currently connected will need to be reconnected. <br><br> </p>";
+        echo "
+          <form method='post' action='../../adv-settings.php'>
+            Are you sure you want to reset the device?
+            <br><input type='submit' name='reset-it' value='Yes, reset the device to factory settings'>
+          </form>
+        ";
+      }
+      if (! empty($update)) {
+        echo "<h4 class='sett-tit'>Update Packages?</h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+        echo " <p class='warn'>Running this update will update the packages used by Guardian Devil and pull from the Git repository for the web interface.<br><br> </p>";
+        echo "
+          <form method='post' action='../../adv-settings.php'>
+            Continue?
+            <br><input type='submit' name='update-it' value='Yes, update the device'>
+          </form>
+        ";
+        
+      }
+      if (! empty($speed)) {
+        echo "<h4 class='sett-tit'>Change Speed Test Server?</h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+        echo "<p class='warn'>Change the server used to run the speed test.<br><br> </p>";
+        echo "
+          <form method='post' action='../../adv-settings.php'>
+            <input type='text' name='new-speed-serv'>
+            <br><input type='submit' name='speed-it' value='Use this server'>
+          </form>
+        ";
+
+        
+      }
+      if (! empty($twitt)) {
+        $twittername= '../../assets/settings/twitter.txt';
+        $twitterf = fopen($twittername, 'r');
+        $twitter_link = trim(fread($twitterf, filesize($twittername)));
+
+        echo "<h4 class='sett-tit'>Change Twitter Feed?</h4>";
+        echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+        echo "<p class='warn'>Change the twitter feed that appears on the home page.<br><br> </p>";
+        echo "
+          <form method='post' action='../../adv-settings.php'>
+            <input type='text' size=70 name='new-twit' value='{$twitter_link}'>
+            <br><input type='submit' name='twitter-it' value='Use this feed'>
+          </form>
+        ";
+        
+      }
 
     ?>
+
+
+    </section>
 
 
 

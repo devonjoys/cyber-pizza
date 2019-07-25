@@ -302,7 +302,7 @@ table {
 }
 
 .blinking{
-  animation:blinkingText 1s infinite;
+  animation:blinkingText 2s infinite;
 }
 @keyframes blinkingText{
   0%{   color: #393939;  }
