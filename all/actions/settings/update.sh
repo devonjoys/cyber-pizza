@@ -11,4 +11,6 @@ touch /www/cyber-pizza/all/assets/settings/last-update-temp.txt
 date >> /www/cyber-pizza/all/assets/settings/last-update-temp.txt
 mv /www/cyber-pizza/all/assets/settings/last-update-temp.txt /www/cyber-pizza/all/assets/settings/last-update.txt
 
+#pull from git
+
 chroot /mnt/mmcblk0p3/ubuntu /etc/update/update.sh

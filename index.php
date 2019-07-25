@@ -115,9 +115,9 @@
 	<br>	Please select frequency of port scanning:
 		<br><select name="nmap">
 			<option value="0">Never</option>
-                        <option value "2">2 Times a Day</option>
-                        <option value "6">6 Times a Day</option>
-                        <option value "12">12 Times a Day</option>
+                        <option value "1">Every Day</option>
+                        <option value "3">2 Times a Week</option>
+                        <option value "7">1 Time a Week</option>
                 </select>
         <br>
 	<br>
@@ -131,7 +131,7 @@
 
 	<footer class="row group container footer">
 
-      <a class="footnote" href="dash.html"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
       <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
       <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
 

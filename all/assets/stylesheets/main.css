@@ -303,6 +303,7 @@ table {
 
 .blinking{
   animation:blinkingText 1s infinite;
+  font-weight: bold;
 }
 @keyframes blinkingText{
   0%{   color: #393939;  }

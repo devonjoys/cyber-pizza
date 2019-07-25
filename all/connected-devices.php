@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Device Scanning</title>
+		<title>Connected Devices</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
     	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
     	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
@@ -28,7 +28,7 @@
 		<?php
 
 		$scanPopOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/connected_devices.sh population");
-		echo "<h3 style=\"color:black;text-align:right;\"><span class=\"blinking\">{$scanPopOutput}</span>devices are connected</h3>" ;
+		echo "<h3 style=\"color:black\"><span class=\"blinking\">{$scanPopOutput}</span>devices are connected</h3>" ;
 		?>
 
 	</body>
