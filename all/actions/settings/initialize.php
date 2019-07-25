@@ -17,9 +17,6 @@
    <?php
       $message = shell_exec("new_pass.sh {$_POST['old-pass']} {$_POST['new-pass1']} {$_POST['new-pass2']}");
       echo $message;
-      if ($message=="Your admin password has been successfully changed.") {
-	shell_exec("/etc/init.d/uhttpd restart");
-      }
    ?>
 
 

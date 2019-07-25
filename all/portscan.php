@@ -107,10 +107,12 @@
 
 		$scanDOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh portdetail");
 		$portdetailAr = explode("\n", $scanDOutput );
+		$hostrowNum = 0;
 		$portrowNum = 0;
 			for ($i = 0; $i < count($portdetailAr); $i++) {
 				if (substr( $portdetailAr[$i], 0, 4 ) === "Host"){
-					$portdetailAr[$i] = array(substr($portdetailAr[$i], 0, -2), substr($portdetailAr[$i], -1));
+					$hostrowNum++;
+					$portdetailAr[$i] = array(substr($portdetailAr[$i], 0, -1), substr($portdetailAr[$i], -1));
 					$portdetailAr[$i] = str_replace('Host:', '', $portdetailAr[$i]); 
 					
 					if ($portrowNum > 0){
@@ -129,16 +131,11 @@
 
 					<table style="width:100%">
 						<center>
-						<h3 style="color:black">Device Specs</h3>
-						<h5 style="border-right:5px solid black">Device IP</h5>
-					    <h5>Ports Open</h5>
+						<h4 style="color:black">Device: <?php echo "{$hostrowNum}" ?> </h4>
+						<h6 style="font-weight:bold">Device IP: <?php echo "{$portdetailAr[$i][0]}" ?> </h6>
+					    <h6 style="font-weight:bold">Ports Open: <?php echo "{$portdetailAr[$i][1]}" ?></h6>
 
 				  	<?php
-					echo "<tr>";
-
-					foreach($portdetailAr[$i] as $item) {	
-					  echo "<td> {$item} </td>" ;
-					}
 
 				}else{
 					$portrowNum++;

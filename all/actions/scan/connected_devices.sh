@@ -49,6 +49,11 @@ info_() {
   echo "Clients: $deviceNum device(s) connected"
 }
 
+population_() {
+  info_  >/dev/null
+  echo "$deviceNum"
+}
+
 new_device_check() {
   newAm=0
   FILE=/www/cyber-pizza/all/actions/scan/devicetracklog.txt
@@ -97,7 +102,8 @@ case $option
 in 
   newdevicecheck) new_device_check ;;
   info) info_ ;;
-  *) echo "please specify an option such as: 'newdevicecheck' or 'info'"
+  population) population_;;
+  *) echo "please specify an option such as: 'newdevicecheck' or 'info' or 'population"
     exit ;;
 esac
 
