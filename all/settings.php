@@ -184,6 +184,9 @@
         Network name: <?php echo $ssid; ?> <br>
         Network password: <?php echo $w_pass; ?>
       </p>
+	<form class="ifconfig_output" action="./actions/settings/troubleshoot.sh" method="post">
+            <input type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0">
+      </form>
 
 
     </section>
@@ -195,14 +198,51 @@
       <a href="device-chng.php" class="inline-link edit-right">Change Device Password</a>
 
       <p class="sett-text">
-        device name and password <br> ifconfig gen
+        device name and password
       </p>
 
+      <p class="sett-text">
+        Internet Configuration Information
+      </p>
 
+	<form class="ifconfig_output" action="./actions/settings/reboot.php" method="post">            
+		<input type="submit" alt="reboot button" value="Reboot Device">
+	</form>
 
+  <script>
+
+      function showLink() {
+      var x = document.getElementById("downloadThis");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+      var y = document.getElementById("ifconfig_frame");
+      if (y.style.display === "none") {
+        y.style.display = "block";
+      } else {
+        y.style.display = "none";
+      }
+    } 
+
+  </script>
+
+      <form class="ifconfig_output" action="./actions/ifconfig.php" method="post" target="ifconfig_frame">
+            <input type="submit" alt="submit button to show ifconfig output" value="See Your If Config" onclick="showLink()">
+      </form>
+
+      <iframe name="ifconfig_frame" id="ifconfig_frame" height="250" width="500" style="display:none"></iframe> 
+
+      <div id="downloadThis" style="display:none">
+       <a href="./actions/settings/ifconfig.txt" download="ifconfig.txt">
+          <br>Click Here to Download If Config</a>
+      </div>
+
+    
     </section>
 
-    <a href="adv-settings.php" class="inline-link">Advanced Settings</a>
+    <a href="" class="inline-link">Advanced Settings</a>
 
 
 

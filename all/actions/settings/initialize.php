@@ -20,6 +20,18 @@
       shell_exec("new_ssid.sh {$_POST['new_ssid']}");
       shell_exec("new_net_pass.sh {$_POST['new-net-pass1']} {$_POST['new-net-pass2']}");
 
+	$info = $_POST["freq"];
+	$fp = fopen("../assets/settings/performance.txt", 'w+');
+	fwrite($fp, $info);
+	fclose($fp);
+	shell_exec("/www/cyber-pizza/all/actions/performance/perf-set-cron.sh");	
+	$info = $_POST["nmap"];
+	$fp = fopen("../assets/settings/nmap_freq.txt", 'w+');
+	fwrite($fp, $info);
+	fclose($fp);
+	shell_exec("/www/cyber-pizza/all/actions/scan/scan-set-cron.sh");	
+	
+
 	$login_errors_file="/www/cyber-pizza/all/assets/settings/login-error.txt";
 	$login_errors_open=fopen($login_errors_file, 'r');
 	$login_errors=fread($login_errors_open, filesize($login_errors_file));

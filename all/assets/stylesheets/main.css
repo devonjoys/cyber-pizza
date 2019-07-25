@@ -302,8 +302,10 @@ table {
 }
 
 .blinking{
-  animation:blinkingText 2s infinite;
+  animation:blinkingText 1s infinite;
+  font-weight: bold;
 }
+
 @keyframes blinkingText{
   0%{   color: #393939;  }
   49%{  color: transparent; }
