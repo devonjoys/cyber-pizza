@@ -1,9 +1,0 @@
-# Nmap 7.70 scan initiated Wed Jul 24 09:32:53 2019 as: nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep -iL /www/cyber-pizza/all/actions/scan/devicelog.txt
-Host: 10.42.0.209 (Devons-MBP-2.lan)	Status: Up
-Host: 10.42.0.209 (Devons-MBP-2.lan)	Ports: 53/open/tcp//domain///, 80/open/tcp//http///, 443/open/tcp//https///, 1947/open/tcp//sentinelsrm///, 8080/open/tcp//http-proxy///	Ignored State: closed (995)
-Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Status: Up
-Host: 10.42.0.205 (DESKTOP-98U1IOE.lan)	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 28201/open/tcp//unknown///	Ignored State: filtered (997)
-Host: 10.42.0.135 (Jons-iPhone.lan)	Status: Up
-Host: 10.42.0.135 (Jons-iPhone.lan)	Status: Up
-# Nmap done at Wed Jul 24 12:06:17 2019 -- 3 IP addresses (3 hosts up) scanned in 9204.85 seconds
-sts up) scanned in 6037.43 seconds

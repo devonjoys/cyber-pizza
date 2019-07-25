@@ -131,9 +131,9 @@
 
 	<footer class="row group container footer">
 
-      <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
-      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
-      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
+      <a class="footnote" href="index.php"> <p class="footie btn">Home</p></a>
+     <!-- <a class="footnote" href=""><p class="footie btn">FAQ</p></a> -->
+      <a class="footnote" href="contact.html"><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
