@@ -90,7 +90,11 @@
       ?>
     </a>
 
-    <iframe style="text-align:right" class="devicestat" name="devicestat" id="devicestat" src="./connected-devices.php" height="75"></iframe>
+    <?php
+
+    $scanPopOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/connected_devices.sh population");
+    echo "<p class='devicestat'><span class='blinking'>{$scanPopOutput}</span>devices are connected</p>";
+    ?>
 
     </div>
 
