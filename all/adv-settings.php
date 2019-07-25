@@ -32,6 +32,49 @@
     </header>
 
     <?php
+      if (! empty($_POST['freeze-it'])) {
+        $freezename= './assets/settings/frozen.txt';
+        $frozef = fopen($freezename, 'w+');
+        flock($frozef, LOCK_EX);
+        fwrite($frozef, '1');
+        fclose($frozef);
+        // exec('./actions/settings/frozen.sh');
+      }
+      if (! empty($_POST['unfreeze-it'])) {
+        $freezename= './assets/settings/frozen.txt';
+        $frozef = fopen($freezename, 'w+');
+        flock($frozef, LOCK_EX);
+        fwrite($frozef, '0');
+        fclose($frozef); 
+        // exec('./actions/settings/frozen.sh');
+      }
+      if (! empty($_POST['reset-it'])) {
+        // exec('./actions/settings/factory-reset.sh');
+      }
+      if (! empty($_POST['update-it'])) {
+        // exec('./actions/settings/update.sh');
+      }
+      if (! empty($_POST['speed-it'])) {
+        $new_serv = $_POST['new-speed-serv'];
+        $speedname= './assets/settings/twitter.txt';
+        $speedf = fopen($speedname, 'w+');
+        flock($speedf, LOCK_EX);
+        fwrite($speedf, $new_serv);
+        fclose($speedf); 
+        // exec(?????);
+      }
+      if (! empty($_POST['twitter-it'])) {
+        $new_twit = $_POST['new-twit'];
+        $twitname= './assets/settings/twitter.txt';
+        $twitf = fopen($twitname, 'w+');
+        flock($twitf, LOCK_EX);
+        fwrite($twitf, $new_twit);
+        fclose($twitf); 
+      }
+
+    ?>
+
+    <?php
       $boot_f = "./assets/settings/last-boot.txt";
       $update_f = "./assets/settings/last-update.txt";
       $version_f = "./assets/settings/version.txt";
@@ -51,6 +94,10 @@
       $servname= './assets/settings/speed-server.txt';
       $servef = fopen($servname, 'r');
       $speed_server = trim(fread($servef, filesize($servname)));
+
+      $freezename= './assets/settings/frozen.txt';
+      $frozef = fopen($freezename, 'r');
+      $freeze_state = trim(fread($frozef, filesize($freezename)));
     ?>
 
 
@@ -64,14 +111,21 @@
 
       <form method='post' action='actions/settings/adv-set.php'>
         <br><input type='submit' name='reboot' value='Reboot'>
-        <br><br><input type='submit' name='freeze' value='Freeze Network'>
+        <?php
+          if ($freeze_state) {
+            echo "<br><br><input type='submit' name='unfreeze' value='Unfreeze Network'>";
+          } else {
+            echo "<br><br><input type='submit' name='freeze' value='Freeze Network'>";
+          }
+
+        ?>
         <br><br><input type='submit' name='gen_debug' value='Generate Debug'>
         <br><br><input type='submit' name='reset' value='Factory Reset'>
         <br><br><input type='submit' name='update' value='Update Now'>
-        <br><br><input type='text' name='speed-serv' <?php echo "value='{$speed_server}'"; ?> > 
-        <input type='submit' name='ch-speed' value='Change Speed Test Server'>
-        <br><br><input type='text' name='twitt' <?php echo "value='{$twitter_link}'"; ?> > 
-        <input type='submit' name='twitter' value='Update Twitter Feed'>
+        <br><br>Current speed test server: <?php echo $speed_server; ?> 
+        <br><input type='submit' name='ch-speed' value='Change Speed Test Server'>
+        <br><br>Current twitter feed: <?php echo $twitter_link; ?> 
+        <br><input type='submit' name='twitter' value='Update Twitter Feed'>
       </form>
 
     </section>
