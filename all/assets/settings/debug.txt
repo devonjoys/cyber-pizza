@@ -1,6 +1,9 @@
 Debug log for:
-Thu Jul 25 17:00:26 EDT 2019
+Thu Jul 25 17:05:58 EDT 2019
+taj26
 ---------------------------
+*-*-*-*-*-*-*
+
 ps------
   PID USER       VSZ STAT COMMAND
     1 root      1524 S    /sbin/procd
@@ -114,12 +117,14 @@ ps------
 13402 root         0 SW   [kworker/1:1]
 13579 root         0 SW   [kworker/u8:2]
 13756 root         0 SW   [kworker/3:2]
-14156 root         0 SW   [kworker/0:0]
-14194 root         0 SW   [kworker/2:0]
 14331 root         0 SW   [kworker/0:1]
 14432 root         0 SW   [kworker/2:1]
-14515 root      2296 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
-14519 root      1192 R    ps
+14612 root         0 SW   [kworker/0:0]
+14730 root         0 SW   [kworker/2:0]
+14731 root      2296 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
+14735 root      1192 R    ps
+*-*-*-*-*-*-*
+
 netstat------
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       
@@ -155,6 +160,8 @@ unix  3      [ ]         STREAM     CONNECTED        335 /var/run/ubus.sock
 unix  2      [ ]         DGRAM                      2057 
 unix  2      [ ]         DGRAM                      2527 
 unix  3      [ ]         STREAM     CONNECTED        479 
+*-*-*-*-*-*-*
+
 /etc/config/network-----
 
 config interface 'loopback'
@@ -182,6 +189,8 @@ config interface 'myvpnc'
 	option proto 'none'
 	option ifname 'tun0'
 	option auto '1'
+*-*-*-*-*-*-*
+
 /etc/config/wireless------
 
 config wifi-device 'radio0'
@@ -202,7 +211,10 @@ config wifi-iface 'default_radio0'
 	option key 'cyberpizza5'
 	option ssid 'OPENWRTPIZZA'
 
+*-*-*-*-*-*-*
+
 /etc/config/firewall----- first 100 lines
+firewall size
 4	/etc/config/firewall
 
 config defaults
@@ -304,6 +316,158 @@ config rule
 	list icmp_type 'neighbour-advertisement'
 	option limit '1000/sec'
 	option family 'ipv6'
-speed test table------
+*-*-*-*-*-*-*
+
+speed test------
+test 0 | "Durham,NC"                   42231192.33515901             54808553.71948510             "2019-07-25T19:47:59.883559Z" 15.764                        *-*-*-*-*-*-*
+
 adblock,connection,vpn status
+1
+*-*-*-*-*-*-*
+
+1
+*-*-*-*-*-*-*
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+*-*-*-*-*-*-*
+
 speed test server
+16970
