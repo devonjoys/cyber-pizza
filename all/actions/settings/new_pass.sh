@@ -1,5 +1,8 @@
 #!/bin/bash
 
+login_errors="/www/cyber-pizza/all/assets/settings"
+login_line=2
+
 old_pass=$(cat /etc/shadow | head -n 2 | tail -n 1 | cut -f2 -d ":")
 salt=$(cat /etc/shadow | head -n 2 | tail -n 1 | cut -f3 -d "$")
 echo "ok"
@@ -10,19 +13,41 @@ length=$(expr length "$2")
 if [[ "$conf_old" == "$old_pass" ]]; then
 	if [[ -z "$2" ]]; then
 		echo "Please input a valid password."
+		cat $login_errors/login_errors.txt | head -n 1 >> $login_errors/login_errors_temp.txt
+		echo "1" >> $login_errors/login_errors_temp.txt
+		cat $login_errors/login_errors.txt | tail -n +3 >> $login_errors/login_errors_temp.txt
+		mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
 	else
 		if [[ $length -lt 8 ]]; then
 			echo "Your password isn't long enough."
+			cat $login_errors/login_errors.txt | head -n 1 >> $login_errors/login_errors_temp.txt
+			echo "2" >> $login_errors/login_errors_temp.txt
+			cat $login_errors/login_errors.txt | tail -n +3 >> $login_errors/login_errors_temp.txt
+			mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
 		else
 			if [[ $length -gt 32 ]]; then
 				echo "Your password is too long."
+				cat $login_errors/login_errors.txt | head -n 1 >> $login_errors/login_errors_temp.txt
+				echo "3" >> $login_errors/login_errors_temp.txt
+				cat $login_errors/login_errors.txt | tail -n +3 >> $login_errors/login_errors_temp.txt
+				mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
+
 			else
 				if [[ "$2" == "$3" ]]; then
 					echo "Your admin password has been successfully changed."
 					echo -e "$2\n$2" | passwd devil
-					/etc/init.d/uhttpd restart
+					cat $login_errors/login_errors.txt | head -n 1 >> $login_errors/login_errors_temp.txt
+					echo "0" >> $login_errors/login_errors_temp.txt
+					cat $login_errors/login_errors.txt | tail -n +3 >> $login_errors/login_errors_temp.txt
+					mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
+
+					#/etc/init.d/uhttpd restart
 				else
 					echo "Your new passwords do not match."
+					cat $login_errors/login_errors.txt | head -n 1 >> $login_errors/login_errors_temp.txt
+					echo "4" >> $login_errors/login_errors_temp.txt
+					cat $login_errors/login_errors.txt | tail -n +3 >> $login_errors/login_errors_temp.txt
+					mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
 				fi
 			fi
 		fi

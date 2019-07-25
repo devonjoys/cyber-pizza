@@ -57,7 +57,7 @@
 
 		<table style="width:100%">
 			<center>
-			<caption>Top Ports</caption>
+			<h3 style="color:black">Top Ports</h3>
 			  <tr>
 			    <th>Frequency</th>
 			    <th>Port</th>
@@ -107,10 +107,13 @@
 
 		$scanDOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh portdetail");
 		$portdetailAr = explode("\n", $scanDOutput );
+		$hostrowNum = 0;
 		$portrowNum = 0;
 			for ($i = 0; $i < count($portdetailAr); $i++) {
 				if (substr( $portdetailAr[$i], 0, 4 ) === "Host"){
-					$portdetailAr[$i] = array(substr($portdetailAr[$i], 0, -2), substr($portdetailAr[$i], -1)); 
+					$hostrowNum++;
+					$portdetailAr[$i] = array(substr($portdetailAr[$i], 0, -1), substr($portdetailAr[$i], -1));
+					$portdetailAr[$i] = str_replace('Host:', '', $portdetailAr[$i]); 
 					
 					if ($portrowNum > 0){
 						$portrowNum = 0;
@@ -128,39 +131,39 @@
 
 					<table style="width:100%">
 						<center>
-						<caption>Device Specs</caption>
-						<tr>
-					    <th style="border-right:5px solid black">Device IP</th>
-					    <th>Ports Open</th>
-					  	</tr>
+						<h4 style="color:black">Device: <?php echo "{$hostrowNum}" ?> </h4>
+						<h6 style="font-weight:bold">Device IP: <?php echo "{$portdetailAr[$i][0]}" ?> </h6>
+					    <h6 style="font-weight:bold">Ports Open: <?php echo "{$portdetailAr[$i][1]}" ?></h6>
 
 				  	<?php
-					echo "<tr>";
-
-					foreach($portdetailAr[$i] as $item) {	
-					  echo "<td> {$item} </td>" ;
-					}
 
 				}else{
 					$portrowNum++;
+
+					if($portrowNum === 1){
+						?>
+
+						<tr>
+					    <th style="border-right:1px solid black">State</th>
+					    <th style="border-right:1px solid black">Protocol</th>
+					    <th style="border-right:1px solid black">Port</th>
+					    <th>Service</th>
+					  	</tr>
+					  	<tr>
+
+						<?php
+
+					}
 					$portdetailAr[$i] = trim($portdetailAr[$i]);
 					$portdetailAr[$i] = str_replace('/','', $portdetailAr[$i]);
 					$portdetailAr[$i] = explode(' ', $portdetailAr[$i]);
 					$portdetailAr[$i] = array_filter($portdetailAr[$i]);
-					?>
-
-					<tr>
-				    <th style="border-right:1px solid black">State</th>
-				    <th style="border-right:1px solid black">Protocol</th>
-				    <th style="border-right:1px solid black">Port</th>
-				    <th>Service</th>
-				  	</tr>
-				  	<tr>
-				  	<?php
-
+				  	
+				  
 					foreach($portdetailAr[$i] as $item) {
-					  echo "<td> {$item} </td>" ;
+						echo "<td> {$item} </td>" ;
 					}
+					echo "</tr>";
 
 				}
 			}

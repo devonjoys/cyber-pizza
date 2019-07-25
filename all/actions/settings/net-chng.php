@@ -19,6 +19,14 @@
       $message2 = shell_exec("/www/cyber-pizza/all/actions/settings/new_net_pass.sh {$_POST['net-pass']} {$_POST['net-pass']}");
       echo $message1;
       echo $message2;
+      if ($message1=="Your ssid has been successfully changed") {
+	if ($message2=="Your network password has been successfully changed") {
+	  shell_exec("uci commit wireless");
+	  shell_exec("wifi");
+	  shell_exec("/etc/init.d/network restart");
+	  shell_exec("/etc/init.d/uhttpd restart");
+	}	
+      }
    ?>
 
 

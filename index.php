@@ -4,13 +4,17 @@
 		<meta charset="utf-8">
 		<title>Cyber Pizza</title>
 		<?php
-    	    $initialized_file="all/assets/settings/initialized.txt";
+    	    	$initialized_file="all/assets/settings/initialized.txt";
     		$initialized_open=fopen($initialized_file, 'r');
         	$initialized=fread($initialized_open, filesize($initialized_file));
         	fclose($initialized_open);
-			if ($initialized=="1") {
-                echo ("<meta http-equiv='Refresh' content='0; url=all/dash.php'/>");
+		if ($initialized=="1") {
+                	echo ("<meta http-equiv='Refresh' content='0; url=all/dash.php'/>");
         	}
+		$login_errors_file="all/assets/settings/login-errors.txt";
+		$login_errors_open=fopen($login_errors_file, 'r');
+		$login_errors=fread($login_errors_open, filesize($login_errors_file));
+		fclose($login_errors_open);
         ?>
 		<link rel="stylesheet" href="./all/assets/stylesheets/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
@@ -34,19 +38,84 @@
 		</header>
 
 		<h2 class="welc-tit">Welcome to Guardian Devil</h2>
-		<p class="welc-cap">Before getting started with your home network protection device you will need to change the password for the device, name your network, and choose what features you wish to use.</p>
+		<p class="welc-cap">Before getting started with your home network security device, you must set a custom SSID, passwords, and device settings.</p>
 
 		<section class="options-int">
 
 			<h4 class="sett-tit">Setup</h4>
 
-			<form method='post' action='./actions/settings/dev-pass-chng.php' target="pass-result">
-        <br><br>User name: devil <br> <br>
-		Enter new password: <input type="password" name="new-pass1" required>
-        <br>Re-enter new password: <input type="password" name="new-pass2" required>
-        <br><br>
+			<form method='post' action='./actions/settings/initialize.php' target="pass-result">
+	<br><r>NetID: <input type="text" name="netID" required>
+	<br><br>User name: devil <br> <br>
+		Enter new admin password: <input type="password" name="new-pass1" required>
+        <br>	Re-enter new admin password: <input type="password" name="new-pass2" required>
+		<p class="error"><?php
+			if (substr($login_errors, 2, 1)=="0") {
+				echo "";
+			} elseif (substr($login_errors, 2, 1)=="1") {
+				echo "Please input a valid password.<br>";
+			} elseif (substr($login_errors, 2, 1)=="2") {
+				echo "Please enter a password with at least 8 characters.<br>";
+			} elseif (substr($login_errors, 2, 1)=="3") {
+				echo "Please enter a password with less than 32 characters.<br>";
+			} elseif (substr($login_errors, 2, 1)=="4") {
+				echo "Passwords do not match.<br>";
+			} else {
+				echo "Unknown error.<br>";
+			}
+		?></p>
+	<br>Network SSID: <input type="text" name="new_ssid" required>
+		<p class="error"><?php
+                        if (substr($login_errors, 4, 1)=="0") {
+                                echo "";
+                        } elseif (substr($login_errors, 4, 1)=="1") {
+                                echo "Please input a valid ssid.<br>";
+                        } elseif (substr($login_errors, 4, 1)=="2") {
+                                echo "Please enter an SSID with at least 3 characters.<br>";
+                        } elseif (substr($login_errors, 4, 1)=="3") {
+                                echo "Please enter an SSID with less than 32 characters.<br>";
+                        } else {
+                                echo "Unknown error.<br>";
+                        }
+                ?></p>
+	<br>
+	<br>Enter new network password: <input type="password" name="new-net-pass1" required>
+	<br>	Re-enter new network password: <input type="password" name="new-net-pass2" required>
+		<p class="error"><?php
+                        if (substr($login_errors, 6, 1)=="0") {
+                                echo "";
+                        } elseif (substr($login_errors, 6, 1)=="1") {
+                                echo "Please input a valid network password.<br>";
+                        } elseif (substr($login_errors, 6, 1)=="2") {
+                                echo "Please enter a network password with at least 8 characters.<br>";
+                        } elseif (substr($login_errors, 6, 1)=="3") {
+                                echo "Please enter a network password with less than 32 characters.<br>";
+                        } elseif (substr($login_errors, 6, 1)=="4") {
+                                echo "Network passwords do not match.<br>";
+                        } else {
+                                echo "Unknown error.<br>";
+                        }
+                ?></p>
+	<br>
+	<br>	Please select frequency of speed testing:
+		<br><select name="freq">
+			<option value="0">Never</option>
+			<option value "2">2 Times a Day</option>
+			<option value "6">6 Times a Day</option>
+			<option value "12">12 Times a Day</option>
+		</select>
+	<br>
+	<br>	Please select frequency of port scanning:
+		<br><select name="nmap">
+			<option value="0">Never</option>
+                        <option value "2">2 Times a Day</option>
+                        <option value "6">6 Times a Day</option>
+                        <option value "12">12 Times a Day</option>
+                </select>
+        <br>
+	<br>
         <input type='submit' name='init' value='Finish'>
-
+	<br>	<p class="a-note">By using this device, you agree to have Guardian Devil conduct port scans of your network devices.</p>
         <iframe name="pass-result"></iframe>
     </form>
 
