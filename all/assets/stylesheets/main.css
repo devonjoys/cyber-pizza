@@ -119,11 +119,21 @@ table {
 
 .welc-tit {
   text-align: center;
+  min-width: 800px;
   color: #393939;
   margin-top: 40px;
   font-weight: 500;
   font-size: 50px;
   line-height: 50px;
+}
+
+.welc-cap {
+  text-align: center;
+  min-width: 800px;
+  display: block;
+  padding-top: 20px;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 /*

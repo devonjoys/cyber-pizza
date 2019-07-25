@@ -20,19 +20,16 @@
 	<body>
 
 		<header class="row group container">
-
-				<a href="dash.html">
+				
            <img class="logo" src="./all/assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
-         </a> 
-        <div class="v-line"></div>
-				<h2 class="page">Home</h2>
 
-		<nav class="set-btns">
-        <ul>
-          <li>
-            <a href="all/dash.php"><h5 class="btn">login</h5></a>
-          </li>
-        </ul>
+			<nav class="set-btns">
+        	<ul>
+        	  <li>
+        	    <a href="all/dash.php"><h5 class="btn">login</h5></a>
+        	  </li>
+    	    </ul>
+    		</nav>
 
 		</header>
 
@@ -41,7 +38,17 @@
 
 		<section class="options-int">
 
-			<h4 class="sett-tit">Password</h4>
+			<h4 class="sett-tit">Setup</h4>
+
+			<form method='post' action='./actions/settings/dev-pass-chng.php' target="pass-result">
+        <br><br>User name: devil <br> <br>
+		Enter new password: <input type="password" name="new-pass1" required>
+        <br>Re-enter new password: <input type="password" name="new-pass2" required>
+        <br><br>
+        <input type='submit' name='init' value='Finish'>
+
+        <iframe name="pass-result"></iframe>
+    </form>
 
 		</section>
 
