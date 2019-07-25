@@ -1,6 +1,7 @@
 #!/bin/bash
 login_errors="/www/cyber-pizza/all/assets/settings"
 login_line=3
+touch $login_errors/login_errors_temp.txt
 length=$(expr length "$1")
 
 if [[ -z "$1" ]]; then

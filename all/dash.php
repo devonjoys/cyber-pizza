@@ -89,6 +89,8 @@
 	      fclose($twitterf);
       ?>
     </a>
+    
+     <iframe class="devicePopulation" name="devicePopulation" id="devicePopulation" src="./connected-devices.php" height="75" width="400"></iframe>
 
     </div>
 

@@ -46,7 +46,14 @@
 
 			<form method='post' action='./actions/settings/initialize.php' target="pass-result">
 	<br><r>NetID: <input type="text" name="netID" required>
-	<br><br>User name: devil <br> <br>
+		<p class="error"><?php
+		if (substr($login_errors, 0, 1)=="0") {
+                       echo "";
+                } else {
+                       echo "Please input a valid NetID.<br>";
+		}?></p>
+
+	<br>User name: devil <br> <br>
 		Enter new admin password: <input type="password" name="new-pass1" required>
         <br>	Re-enter new admin password: <input type="password" name="new-pass2" required>
 		<p class="error"><?php
