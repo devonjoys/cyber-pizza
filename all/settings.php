@@ -202,7 +202,7 @@
 
     </section>
 
-    <a href="" class="inline-link">Advanced Settings</a>
+    <a href="adv-settings.php" class="inline-link">Advanced Settings</a>
 
 
 

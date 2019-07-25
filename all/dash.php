@@ -39,7 +39,7 @@
 
       <section class="dash">
 
-        <div id="status">
+      <div id="status">
 <!--       <p class="stat">STATUS</p> -->
 
       <?php
@@ -89,6 +89,8 @@
 	      fclose($twitterf);
       ?>
     </a>
+
+    
 
     </div>
 
