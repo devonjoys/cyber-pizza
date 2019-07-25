@@ -103,28 +103,36 @@
 		</table> 
 
 
-
-		<table style="width:100%">
-			<center>
-			<caption>Device Information</caption>
-
 		<?php
 
-		$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh portdetail");
-		$portdetailAr = explode("\n", $scanOutput );
+		$scanDOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh portdetail");
+		$portdetailAr = explode("\n", $scanDOutput );
+		$portrowNum = 0;
 			for ($i = 0; $i < count($portdetailAr); $i++) {
 				if (substr( $portdetailAr[$i], 0, 4 ) === "Host"){
-					$portdetailAr[$i] = trim($portdetailAr[$i]);
-					$portdetailAr[$i] = str_replace('Host: ','', $portdetailAr[$i]);
-					$portdetailAr[$i] = str_replace('Ports ','', $portdetailAr[$i]);
-					$portdetailAr[$i] = explode('Open:', $portdetailAr[$i]);
-					$portdetailAr[$i] = array_filter($portdetailAr[$i]);
-					?>
+					$portdetailAr[$i] = array(substr($portdetailAr[$i], 0, -2), substr($portdetailAr[$i], -1)); 
+					
+					if ($portrowNum > 0){
+						$portrowNum = 0;
+						?>
 
-					<tr>
-				    <th style="border-right:5px solid black">Device IP</th>
-				    <th>Ports Open</th>
-				  	</tr>
+					</center>
+					</table>
+
+					<?php
+
+
+				}
+
+				?>
+
+					<table style="width:100%">
+						<center>
+						<caption>Device Specs</caption>
+						<tr>
+					    <th style="border-right:5px solid black">Device IP</th>
+					    <th>Ports Open</th>
+					  	</tr>
 
 				  	<?php
 					echo "<tr>";
@@ -134,6 +142,7 @@
 					}
 
 				}else{
+					$portrowNum++;
 					$portdetailAr[$i] = trim($portdetailAr[$i]);
 					$portdetailAr[$i] = str_replace('/','', $portdetailAr[$i]);
 					$portdetailAr[$i] = explode(' ', $portdetailAr[$i]);
@@ -152,14 +161,10 @@
 					foreach($portdetailAr[$i] as $item) {
 					  echo "<td> {$item} </td>" ;
 					}
+
 				}
 			}
 		?>
-
-	</tr>
-
-		</center>
-		</table>
 
 	</body>
 
