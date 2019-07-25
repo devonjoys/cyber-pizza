@@ -1,0 +1,2 @@
+Host: 10.42.0.205          Ports Open: 3
+Host: 10.42.0.106          Ports Open: 1

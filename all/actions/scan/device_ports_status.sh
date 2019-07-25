@@ -9,15 +9,32 @@ STATUS_FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
 status=$(cat $STATUS_FILE)
 
 open_ports() {
+	 FILE=/www/cyber-pizza/all/actions/scan/open_port_check.txt
+	  if [[ -f $FILE ]] ; then
+	  	: > $FILE
+	  else
+	  	touch $FILE
+	  fi
 	for ip in $status
 	do
 		nmap -oG $NMAP_FILE $ip >/dev/null
 		egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
 		sed -n -e 's/Ignored.*//p' | \
 		awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
-		| sort -k 5 -g
+		| sort -k 5 -g | tee -a /www/cyber-pizza/all/actions/scan/open_port_check.txt
 	done
-
+	# portcheckAr=$(cat $FILE)
+	# lineNum=0 
+	# for item in $portcheckAr
+	# do
+	# 	(( lineNum++ ))
+	# 	if [[ $lineNum -eq 4 ]]; then
+	# 		if [[ $item -gt 2 ]] ; then 
+	# 			echo $item
+	# 			echo "too many ports open my guy"
+	# 		fi
+	# 	fi
+	# done
 }
 
 top_ports() {

@@ -20,8 +20,8 @@ info_() {
   	for station in ${active_stations_array[@]}
   	do
   		if [[ "$station" == "$aS" ]]; then
-  			cat /proc/net/arp | grep "$station" | awk '{print $1}' | tee -a $FILE
         (( deviceNum++ ))
+          cat /proc/net/arp | grep "$station" | awk '{print $1}' | tee -a $FILE
   		fi
           done
   done
