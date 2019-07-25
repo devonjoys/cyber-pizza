@@ -266,6 +266,7 @@ table {
 
 #status {
   padding-left: 10px;
+  padding-right: 10px;
   padding-top: 10px;
   display: inline-block;
 /*  background: #B5B5B5;*/
@@ -300,12 +301,24 @@ table {
   border-bottom: 2px solid #B5B5B5;
 }
 
+.blinking{
+  animation:blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+  0%{   color: #393939;  }
+  49%{  color: transparent; }
+  50%{  color: transparent; }
+  99%{  color:#393939; }
+  100%{ color: #393939;  }
+}
+
 .devicestat {
-/*  background: #B5B5B5;*/
   display: inline-block;
+  float: right;
+  line-height: 37px;
   height: 37px; 
-  text-align: left;
-  padding: 3px;
+/*  text-align: right;*/
+  border-bottom: 2px solid #B5B5B5;
 /*  border-radius: 5px;*/
 }
 
