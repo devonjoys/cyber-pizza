@@ -270,7 +270,7 @@ table {
   display: inline-block;
 /*  background: #B5B5B5;*/
   width: 100%;
-  text-align: left;
+  /*text-align: left;*/
 
 }
 
@@ -286,16 +286,27 @@ table {
   margin: 3px;
   height: 25px;
   width: auto;
+
 /*  background: #B5B5B5;*/
 }
 
 .stat {
 /*  background: #B5B5B5;*/
   display: inline-block;
-  height: 37px;
+  height: 37px; 
+  text-align: left;
   padding: 3px;
 /*  border-radius: 5px;*/
   border-bottom: 2px solid #B5B5B5;
+}
+
+.devicestat {
+/*  background: #B5B5B5;*/
+  display: inline-block;
+  height: 37px; 
+  text-align: left;
+  padding: 3px;
+/*  border-radius: 5px;*/
 }
 
 .app-wrap {

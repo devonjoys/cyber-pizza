@@ -39,7 +39,7 @@
 
       <section class="dash">
 
-      <div id="status">
+        <div id="status">
 <!--       <p class="stat">STATUS</p> -->
 
       <?php
@@ -89,10 +89,8 @@
 	      fclose($twitterf);
       ?>
     </a>
-    
-     <iframe class="devicePopulation" name="devicePopulation" id="devicePopulation" src="./connected-devices.php" height="75" width="400"></iframe>
 
-    
+    <iframe style="text-align:right" class="devicestat" name="devicestat" id="devicestat" src="./connected-devices.php" height="75"></iframe>
 
     </div>
 

@@ -28,7 +28,7 @@
 		<?php
 
 		$scanPopOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/connected_devices.sh population");
-		echo "<h3 style=\"color:black\"><span class=\"blinking\">{$scanPopOutput}</span>devices are connected</h3>" ;
+		echo "<h3 style=\"color:black;text-align:right;\"><span class=\"blinking\">{$scanPopOutput}</span>devices are connected</h3>" ;
 		?>
 
 	</body>
