@@ -2,6 +2,7 @@
 
 login_errors="/www/cyber-pizza/all/assets/settings"
 login_line=2
+touch $login_errors/login_errors_temp.txt
 
 old_pass=$(cat /etc/shadow | head -n 2 | tail -n 1 | cut -f2 -d ":")
 salt=$(cat /etc/shadow | head -n 2 | tail -n 1 | cut -f3 -d "$")

@@ -1,6 +1,7 @@
 #!/bin/bash
 login_errors="/www/cyber-pizza/all/assets/settings"
 login_line=3
+touch $login_errors/login_errors_temp.txt
 length=$(expr length "$1")
 
 if [[ -z "$1" ]]; then
@@ -26,8 +27,9 @@ else
 			cat $login_errors/login_errors.txt | tail -n +2 >> $login_errors/login_errors_temp.txt
 			mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
 
-			#CHANGE NETID HERE
-			
+			touch /www/cyber-pizza/all/assets/settings/net-id-temp.txt
+			echo "$1" >> /www/cyber-pizza/all/assets/settings/net-id-temp.txt
+			mv /www/cyber-pizza/all/assets/settings/net-id-temp.txt /www/cyber-pizza/all/assets/settings/net-id.txt
 			fi
 	fi
 
