@@ -31,6 +31,16 @@
         </nav>
     </header>
 
+    <?php
+
+      $freeze = $_POST['freeze'];
+      $gen_debug = $_POST['gen_debug'];
+      $reset = $_POST['reset'];
+      $update = $_POST['update'];
+      $speed = $_POST['ch-speed'];
+      $twitt = $_POST['twitter'];
+
+    ?>
 
 
 

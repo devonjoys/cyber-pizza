@@ -47,6 +47,10 @@
       $twittername= './assets/settings/twitter.txt';
       $twitterf = fopen($twittername, 'r');
       $twitter_link = trim(fread($twitterf, filesize($twittername)));
+
+      $servname= './assets/settings/speed-server.txt';
+      $servef = fopen($servname, 'r');
+      $speed_server = trim(fread($servef, filesize($servname)));
     ?>
 
 
@@ -63,7 +67,9 @@
         <br><br><input type='submit' name='freeze' value='Freeze Network'>
         <br><br><input type='submit' name='gen_debug' value='Generate Debug'>
         <br><br><input type='submit' name='reset' value='Factory Reset'>
-        <br><br><input type='submit' name='freeze' value='Freeze Network'>
+        <br><br><input type='submit' name='update' value='Update Now'>
+        <br><br><input type='text' name='speed-serv' <?php echo "value='{$speed_server}'"; ?> > 
+        <input type='submit' name='ch-speed' value='Change Speed Test Server'>
         <br><br><input type='text' name='twitt' <?php echo "value='{$twitter_link}'"; ?> > 
         <input type='submit' name='twitter' value='Update Twitter Feed'>
       </form>
