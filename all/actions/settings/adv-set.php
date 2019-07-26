@@ -118,14 +118,14 @@
 
 	echo "<h4 class='sett-tit'>Change Speed Test Server?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
-        echo "<p class='warn'>Change the server used to run the speed test.<br><br> </p>";
+        echo "<p class='warn'>Change the server used to run the speed test. The codes for a selection of server locations are provided below. </p>";
 	
-	echo "<br><div class='server-choices'><p class='answer'>Common Server Choices
+	echo "
 		<br>
-		<table class='server-table'>
+    <table class='server-table'>
 		<tr>
-			<th><span class='a-setting'>Server</span></th>
-			<th><span class='a-setting'>Location</span></th>
+			<th class='col-label'><p class='col-label'>Server</p></th>
+			<th class='col-label'><p class='col-label'>Location</p></th>
 		</tr>
 		<tr>
 			<td class='server-td'>4185</td>

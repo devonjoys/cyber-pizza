@@ -644,6 +644,7 @@ input:checked + .slider:before {
   border-bottom: 5px solid #B5B5B5;
   border-left: 5px solid #B5B5B5;
   border-right: 5px solid #B5B5B5;
+  margin-bottom: 15px;
   background: #e8e8e8;
   text-align: center;
   padding-bottom: 30px;
@@ -725,6 +726,7 @@ input:checked + .slider:before {
 .main {
   background: #F3F2F1;
   overflow: scroll;
+  margin-bottom: 20px;
 }
 
 
@@ -947,6 +949,7 @@ input:checked + .slider:before {
 
 .icon-td {
   width: 33.3%;
+  height: auto;
   position: relative;
   vertical-align: middle;
 }
@@ -957,19 +960,20 @@ input:checked + .slider:before {
 }
 
 .status-icons {
-  width: 60%;
-  height: 60%;
+  width: 300px;
+  height: auto;
   text-align: center;
   padding: 20px;
 }
 
 .icon-type {
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
+  padding: 10px;
 }
 
 .on-off {
-  width: 10%
+  width: 10%;
   text-align: center;
   vertical-align: middle;
   font-size: 25px;
@@ -1001,7 +1005,7 @@ input:checked + .slider:before {
 }
 
 .sett-tit {
-  width: 500px;
+  width: 400px;
   display: inline-block;
   font-weight: 900;
   font-size: 28px;
@@ -1031,7 +1035,8 @@ input:checked + .slider:before {
 
 .noti_choice {
   display: inline-block;
-/*  margin-left: 30px;*/
+  margin-left: 30px;
+  list-style: outside;
 }
 
 .set-form {
@@ -1039,20 +1044,63 @@ input:checked + .slider:before {
   min-width: 700px;
 }
 
+.adv-link {
+  margin-left: 50px;
+/*  line-height: 50px;*/
+}
+
+.server-choices {
+  width: 60%;
+  text-align: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.server-table {
+  text-align: center;
+  padding: 10px;
+}
+
+.server-td {
+  min-width: 70px;
+  text-align: left;
+  position: relative;
+  vertical-align: middle;
+}
+
+.server-td:after {
+  content: '';
+  text-align: left;
+  display: block;
+}
+
+.col-label {
+  font-weight: 800;
+  text-align: left;
+}
+
+/*
+  ========================================
+  Forms
+  ========================================
+*/
 
 .form-btn {
+  background: #fff;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 400;
-  margin: 0;
+  color: #393939;
+  padding: .15em .5em;
+  text-decoration: none;
+  font: 300 12px/16px "Open Sans", "Helvetica Neue", Arial, sans-serif;
 /*  letter-spacing: .5px;*/
 }
 .form-btn:hover {
+  background: #F3F2F1;
   border-radius: 5px;
   cursor: pointer;
   font-weight: 400;
 /*  letter-spacing: .5px;*/
-  background: #f8f7f7;
 }
 
 .form-end {
@@ -1066,7 +1114,8 @@ input:checked + .slider:before {
 
 .sub-canc {
   border-radius: 5px;
-  color: #393939;
+  background: #e2e6ed;
+  color: #012169;
   font: 300 18px/26px "Open Sans", "Helvetica Neue", Arial, sans-serif;
   cursor: pointer;
   margin-right: 15px;
@@ -1078,40 +1127,12 @@ input:checked + .slider:before {
   cursor: pointer;
   font-weight: 400;
 /*  letter-spacing: .5px;*/
-  background: #f8f7f7;
+  background: #012169;
+  color: #fff;
 }
 /*.sub-canc:hover {
   background: #f8f7f7;
 }*/
-
-.adv-link {
-  margin-left: 50px;
-/*  line-height: 50px;*/
-}
-
-.server-choices {
-  width: 60%;
-  text-align: center;
-  padding: 20px;
-}
-
-.server-table {
-  width: 100%;
-  height: 60%;
-  text-align: center;
-  padding: 10px;
-}
-
-.server-td {
-  width: 50%;
-  position: relative;
-  vertical-align: middle;
-}
-
-.server-td:after {
-  content: '';
-  display: block;
-}
 
 
 

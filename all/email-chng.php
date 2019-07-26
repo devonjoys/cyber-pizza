@@ -113,13 +113,13 @@
       <p class="sett-text">Choose which events you would like to recieve emails about:</p>
 
       <ul class='set-form'>
-        <li><input type="checkbox" class="noti_choice" name="boot" <?php echo $boots; ?> >System boots</li>
+        <li><input type="checkbox" class="noti_choice" name="boot" <?php echo $boots; ?> ><p class="noti_choice">System boots</p></li>
 
-        <li><input type="checkbox" class="noti_choice" name="sus_port" <?php echo $sus_port; ?> >Suspicious port is open</li>
+        <li><input type="checkbox" class="noti_choice" name="sus_port" <?php echo $sus_port; ?> ><p class="noti_choice">Suspicious port is open</p></li>
 
-        <li><input type="checkbox" class="noti_choice" name="new_device" <?php echo $new_device; ?> >A new device connects to network</li>
+        <li><input type="checkbox" class="noti_choice"  name="new_device" <?php echo $new_device; ?> ><p class="noti_choice">A new device connects to network</p></li>
 
-        <li><input type="checkbox" class="noti_choice" name="drop" <?php echo $drop; ?> >Internet speed drops significantly</li>
+        <li><input type="checkbox" class="noti_choice" name="drop" <?php echo $drop; ?> ><p class="noti_choice">Internet speed drops significantly</p></li>
       </ul>
 
       <div class="form-end">
