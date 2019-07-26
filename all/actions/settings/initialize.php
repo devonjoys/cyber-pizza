@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+	<meta http-equiv="refresh" content="0;URL='/cyber-pizza/index.php'"/>
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
 	</head>
 	<body>
@@ -15,24 +16,22 @@
     
 
    <?php
-      shell_exec("new_netid.sh {$_POST['netID']}");
-      shell_exec("new_pass.sh pepperoni {$_POST['new-pass1']} {$_POST['new-pass2']}");
-      shell_exec("new_ssid.sh {$_POST['new_ssid']}");
-      shell_exec("new_net_pass.sh {$_POST['new-net-pass1']} {$_POST['new-net-pass2']}");
-
+      shell_exec("./new_netid.sh {$_POST['netID']}");
+      shell_exec("./new_pass.sh pepperoni {$_POST['new-pass1']} {$_POST['new-pass2']}");
+      shell_exec("./new_ssid.sh {$_POST['new_ssid']}");
+      shell_exec("./new_net_pass.sh {$_POST['new-net-pass1']} {$_POST['new-net-pass2']}");
 	$info = $_POST["freq"];
-	$fp = fopen("../assets/settings/performance.txt", 'w+');
+	$fp = fopen("../../assets/settings/performance.txt", 'w+');
 	fwrite($fp, $info);
 	fclose($fp);
 	shell_exec("/www/cyber-pizza/all/actions/performance/perf-set-cron.sh");	
 	$info = $_POST["nmap"];
-	$fp = fopen("../assets/settings/nmap_freq.txt", 'w+');
+	$fp = fopen("../../assets/settings/nmap_freq.txt", 'w+');
 	fwrite($fp, $info);
 	fclose($fp);
 	shell_exec("/www/cyber-pizza/all/actions/scan/scan-set-cron.sh");	
 	
-
-	$login_errors_file="/www/cyber-pizza/all/assets/settings/login-error.txt";
+	$login_errors_file="/www/cyber-pizza/all/assets/settings/login_errors.txt";
 	$login_errors_open=fopen($login_errors_file, 'r');
 	$login_errors=fread($login_errors_open, filesize($login_errors_file));
 	if (substr($login_errors, 0, 1) == "0" && substr($login_errors, 2, 1) == "0" && substr($login_errors, 4, 1) =="0" && substr($login_errors, 2, 1) == "0") {

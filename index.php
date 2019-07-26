@@ -11,7 +11,7 @@
 		if ($initialized=="1") {
                 	echo ("<meta http-equiv='Refresh' content='0; url=all/dash.php'/>");
         	}
-		$login_errors_file="all/assets/settings/login-errors.txt";
+		$login_errors_file="all/assets/settings/login_errors.txt";
 		$login_errors_open=fopen($login_errors_file, 'r');
 		$login_errors=fread($login_errors_open, filesize($login_errors_file));
 		fclose($login_errors_open);
@@ -44,7 +44,7 @@
 
 			<h4 class="sett-tit">Setup</h4>
 
-			<form method='post' action='./all/actions/settings/initialize.php' target="pass-result">
+			<form method='post' action='./all/actions/settings/initialize.php'>
 	<br><r>NetID: <input type="text" name="netID" required>
 		<p class="error"><?php
 		if (substr($login_errors, 0, 1)=="0") {
