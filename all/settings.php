@@ -186,7 +186,7 @@
         Network password: <?php echo $w_pass; ?>
       </p>
 	<form class="ifconfig_output" action="./actions/settings/troubleshoot.sh" method="post">
-            <p class='sett-text'>Internet not working?</p><input class='form-btn' type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0">
+            <p class='sett-text'>Internet not working? --> <input class='form-btn' type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0"></p>
       </form>
 
 
