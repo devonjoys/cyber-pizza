@@ -59,7 +59,7 @@
       }
       if (! empty($_POST['speed-it'])) {
         $new_serv = $_POST['new-speed-serv'];
-        $speedname= './assets/settings/twitter.txt';
+        $speedname= './assets/settings/speed-server.txt';
         $speedf = fopen($speedname, 'w+');
         flock($speedf, LOCK_EX);
         fwrite($speedf, $new_serv);
