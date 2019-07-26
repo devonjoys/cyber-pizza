@@ -108,7 +108,7 @@
       <div class="main">
       <div class="full">
 
-        <h1>Status of Firewall</h1>
+        <h1>Current Firewall</h1>
 
         <section class="fire">
 
@@ -173,7 +173,7 @@
             </div>
           </div>
 
-          <a href="fire-change.php"><h4 class="to-edit">EDIT FIREWALL</h4></a>
+          <a href="fire-change.php"><p class="sub-canc to-edit">Edit Firewall</p></a>
 
         </section>
 
