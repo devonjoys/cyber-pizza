@@ -1,3 +1,2 @@
-Guardian Devil
-Version: Cyberpizza 0.8.2
+Cyberpizza 0.8.8b
 Release Date: July 26, 2019

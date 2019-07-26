@@ -23,7 +23,7 @@
             <a href="./help/help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="options.php"><h5 class="btn">Options</h5></a>
+            <a href="../../settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
         </nav>
@@ -125,6 +125,38 @@
             <br><input type='submit' name='speed-it' value='Use this server'>
           </form>
         ";
+	echo "<br><p class='answer'>Common Server Choices
+		<br>
+		<table class='server-table'>
+		<tr>
+			<th>Server</th>
+			<th>Location</th>
+		</tr>
+		<tr>
+			<td>4185</td>
+			<td>Duke</td>
+		</tr>
+		<tr>
+			<td>16970</td>
+			<td>Durham, NC</td>
+		</tr>
+		<tr>
+			<td>14774</td>
+			<td>Chapel Hill, NC</td>
+		</tr>
+		<tr>
+			<td>14148</td>
+			<td>Rochester, NY</td>
+		</tr>
+		<tr>
+			<td>1776</td>
+			<td>Chicago, IL</td>
+		</tr>
+		<tr>
+			<td>1783</td>
+			<td>San Francisco, CA</td>
+		</tr></table>
+		</p>";
 
         
       }

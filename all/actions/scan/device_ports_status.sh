@@ -10,31 +10,45 @@ status=$(cat $STATUS_FILE)
 
 open_ports() {
 	 FILE=/www/cyber-pizza/all/actions/scan/open_port_check.txt
-	  if [[ -f $FILE ]] ; then
-	  	: > $FILE
-	  else
-	  	touch $FILE
-	  fi
-	for ip in $status
-	do
-		nmap -oG $NMAP_FILE $ip >/dev/null
-		egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
-		sed -n -e 's/Ignored.*//p' | \
-		awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
-		| sort -k 5 -g | tee -a /www/cyber-pizza/all/actions/scan/open_port_check.txt
-	done
-	# portcheckAr=$(cat $FILE)
-	# lineNum=0 
-	# for item in $portcheckAr
+	#   if [[ -f $FILE ]] ; then
+	#   	: > $FILE
+	#   else
+	#   	touch $FILE
+	#   fi
+	# for ip in $status
 	# do
-	# 	(( lineNum++ ))
-	# 	if [[ $lineNum -eq 4 ]]; then
-	# 		if [[ $item -gt 2 ]] ; then 
-	# 			echo $item
-	# 			echo "too many ports open my guy"
-	# 		fi
-	# 	fi
+	# 	nmap -oG $NMAP_FILE $ip >/dev/null
+	# 	egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
+	# 	sed -n -e 's/Ignored.*//p' | \
+	# 	awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
+	# 	| sort -k 5 -g | tee -a /www/cyber-pizza/all/actions/scan/open_port_check.txt
 	# done
+	portcheckAr=$(cat $FILE)
+	lineNum=1
+	warnCount=0
+	declare -a ipWatch
+	declare -a hosts
+	for item in $portcheckAr
+	do
+		if [[ $(( "$lineNum" % 5 )) == 0 ]]
+		#&& "$item" -gt 2
+		then
+			ipWatch+=($item)
+		fi
+		if [[ $item == *.* ]]
+		then
+			hosts+=($item)
+		fi 
+		(( lineNum++ ))
+	done
+
+	if [[ $warnCount -gt 0 ]]
+	then 
+		for ((i=0; i<{#ipWatch[@]};++i));
+		do
+			printf "IP %s has %s ports open, too many ports my guy" "${ipWatch[i]}" "${hosts[i]}"
+		done
+	fi
 }
 
 top_ports() {

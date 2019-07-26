@@ -47,9 +47,13 @@ cp /etc/backups/twitter.txt /www/cyber-pizza/all/assets/settings/twitter.txt
 cp /etc/backups/empty /www/cyber-pizza/all/actions/firewall/tmp_list.txt
 
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/
+cp /etc/backups/empty /etc/openvpn/vpnclient.conf
+
 
 cp /etc/backups/blocklists.txt /www/cyber-pizza/all/assets/data/blocklists.txt
 cp /etc/backups/blocklists.txt /www/cyber-pizza/all/assets/data/blocklists-temp.txt
+
+/www/cyber-pizza/all/actions/firewall/firewall_restore.sh
 
 cp /etc/backups/speed-server.txt /www/cyber-pizza/all/assets/settings/speed-server.txt
 cp /etc/backups/adblock /etc/config/adblock

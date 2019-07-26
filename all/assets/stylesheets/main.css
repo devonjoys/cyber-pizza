@@ -1088,6 +1088,20 @@ input:checked + .slider:before {
 /*  line-height: 50px;*/
 }
 
+.server-table {
+  width: 60%;
+  height: 60%;
+  text-align: center;
+  padding: 20px;
+}
+
+.server-table-td {
+
+}
+
+.server-table-th {
+  font-weight: 400px;
+}
 
 /*
   ========================================

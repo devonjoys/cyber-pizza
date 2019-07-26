@@ -17,7 +17,7 @@
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
            <div class="v-line"></div>
         </a> 
-        <h2 class="page">Options</h2>
+        <h2 class="page">Settings</h2>
 
         <nav class="set-btns">
         <ul>
@@ -25,7 +25,7 @@
             <a href="./help/help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="options.php"><h5 class="btn">Options</h5></a>
+            <a href="settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
         </nav>

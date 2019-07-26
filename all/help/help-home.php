@@ -154,7 +154,7 @@
                 </div>
                 <div class="q" id="why-feedback">
                         <h4 class="question">How do I give feedback on Guardian Devil?</h4>
-                        <p class="answer">We're glad you asked! Simply navigate to __PLACEHOLDER__, and you can fill out a Qualtrics survey detailing your experience with Guardian Devil.</p>
+                        <p class="answer">We're glad you asked! Simply navigate to the <a class="inline-link" href="../dash.php">Feedback Page</a> to fill out a Qualtrics survey detailing your experience with Guardian Devil.</p>
                 </div>
 
 	
