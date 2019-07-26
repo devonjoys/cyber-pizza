@@ -48,7 +48,7 @@ cp /etc/backups/empty /www/cyber-pizza/all/actions/firewall/tmp_list.txt
 
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/
 cp /etc/backups/empty /etc/openvpn/vpnclient.conf
-
+mv /etc/openvpn/vpnclient.conf /etc/openvpn/vpnclientnull.conf
 
 cp /etc/backups/blocklists.txt /www/cyber-pizza/all/assets/data/blocklists.txt
 cp /etc/backups/blocklists.txt /www/cyber-pizza/all/assets/data/blocklists-temp.txt

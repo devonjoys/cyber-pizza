@@ -20,10 +20,10 @@
         <nav class="set-btns">
         <ul>
           <li>
-            <a href="./help/help-home.php"><h5 class="btn">Help</h5></a>
+            <a href=""><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="../../settings.php"><h5 class="btn">Settings</h5></a>
+            <a href=""><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
         </nav>
@@ -119,46 +119,47 @@
 	echo "<h4 class='sett-tit'>Change Speed Test Server?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
         echo "<p class='warn'>Change the server used to run the speed test.<br><br> </p>";
+	
+	echo "<br><div class='server-choices'><p class='answer'>Common Server Choices
+		<br>
+		<table class='server-table'>
+		<tr>
+			<th><span class='a-setting'>Server</span></th>
+			<th><span class='a-setting'>Location</span></th>
+		</tr>
+		<tr>
+			<td class='server-td'>4185</td>
+			<td class='server-td'>Duke</td>
+		</tr>
+		<tr>
+			<td class='server-td'>16970</td>
+			<td class='server-td'>Durham, NC</td>
+		</tr>
+		<tr>
+			<td class='server-td'>14774</td>
+			<td class='server-td'>Chapel Hill, NC</td>
+		</tr>
+		<tr>
+			<td class='server-td'>14148</td>
+			<td class='server-td'>Rochester, NY</td>
+		</tr>
+		<tr>
+			<td class='server-td'>1776</td>
+			<td class='server-td'>Chicago, IL</td>
+		</tr>
+		<tr>
+			<td class='server-td'>1783</td>
+			<td class='server-td'>San Francisco, CA</td>
+		</tr></table>
+		</p></div><br>";
+
+        
         echo "
           <form method='post' action='../../adv-settings.php'>
             <input type='text' name='new-speed-serv' value='{$speed_serv}'>
             <br><input type='submit' name='speed-it' value='Use this server'>
           </form>
         ";
-	echo "<br><p class='answer'>Common Server Choices
-		<br>
-		<table class='server-table'>
-		<tr>
-			<th>Server</th>
-			<th>Location</th>
-		</tr>
-		<tr>
-			<td>4185</td>
-			<td>Duke</td>
-		</tr>
-		<tr>
-			<td>16970</td>
-			<td>Durham, NC</td>
-		</tr>
-		<tr>
-			<td>14774</td>
-			<td>Chapel Hill, NC</td>
-		</tr>
-		<tr>
-			<td>14148</td>
-			<td>Rochester, NY</td>
-		</tr>
-		<tr>
-			<td>1776</td>
-			<td>Chicago, IL</td>
-		</tr>
-		<tr>
-			<td>1783</td>
-			<td>San Francisco, CA</td>
-		</tr></table>
-		</p>";
-
-        
       }
       if (! empty($twitt)) {
         $twittername= '../../assets/settings/twitter.txt';
@@ -187,9 +188,9 @@
 
     <footer class="row group container footer">
 
-      <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
-      <a class="footnote" href="help/help-home.php"><p class="footie btn">FAQ</p></a>
-      <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
+      <a class="footnote" href=""> <p class="footie btn">Home</p></a>
+      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
