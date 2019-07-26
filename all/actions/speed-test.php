@@ -13,6 +13,9 @@
 
 	<body>
 
+		<center><div id="loadingGif" name="loadingGif"><img src="../assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
+			<figcaption>This may take a few moments ... </figcaption></div></center>
+	
 		<?php  
 		function tab2nbsp($str)
 		{
@@ -26,7 +29,6 @@
 		$return2=str_replace("ttt", "\t", str_replace("qqq", "\n", $return1));
 		$output=tab2nbsp(nl2br($return2));
 		echo "<html>";
-		/////////echo "<div class='speed-output'>$output</div>";
 		
 		$inter=explode("@", $output);
 		
@@ -46,8 +48,9 @@
 						<tr><td>$out_names[5]</td><td>$out_vals[5]</td></tr></table></html>";		
 
 		?>
-		
-
+		<script>
+		document.getElementById('loadingGif').style.display="none"
+		</script>
 	</body>
 
 </html>

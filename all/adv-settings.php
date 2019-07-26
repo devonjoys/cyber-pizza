@@ -38,7 +38,7 @@
         flock($frozef, LOCK_EX);
         fwrite($frozef, '1');
         fclose($frozef);
-        // exec('./actions/settings/frozen.sh');
+        exec('./actions/settings/frozen.sh');
       }
       if (! empty($_POST['unfreeze-it'])) {
         $freezename= './assets/settings/frozen.txt';
@@ -46,13 +46,16 @@
         flock($frozef, LOCK_EX);
         fwrite($frozef, '0');
         fclose($frozef); 
-        // exec('./actions/settings/frozen.sh');
+        exec('./actions/settings/frozen.sh');
+      }
+      if (! empty($_POST['freeze-it'])) {
+	exec('./actions/settings/reboot.sh');
       }
       if (! empty($_POST['reset-it'])) {
-        // exec('./actions/settings/factory-reset.sh');
+        exec('./actions/settings/factory-reset.sh');
       }
       if (! empty($_POST['update-it'])) {
-        // exec('./actions/settings/update.sh');
+        exec('./actions/settings/update.sh');
       }
       if (! empty($_POST['speed-it'])) {
         $new_serv = $_POST['new-speed-serv'];
@@ -61,7 +64,6 @@
         flock($speedf, LOCK_EX);
         fwrite($speedf, $new_serv);
         fclose($speedf); 
-        // exec(?????);
       }
       if (! empty($_POST['twitter-it'])) {
         $new_twit = $_POST['new-twit'];

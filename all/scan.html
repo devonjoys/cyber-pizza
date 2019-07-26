@@ -4,18 +4,12 @@
 		<meta charset="utf-8">
 		<title>Device Scanning</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-
-    <!-- css --->
-    <style>
-     
-
-    </style>
-    <!--- css --->
+	    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
+
 	<body>
 
     <header class="row group container">
@@ -39,6 +33,13 @@
     </header>
     </head>
 
+    	<script> 
+    		function hideButton() {
+		      var x = document.getElementById("before_scan");
+		      x.style.display = "none";
+		    }
+    	</script>
+
   
       <section class="scan">
 
@@ -48,19 +49,7 @@
 
         <iframe class="devicePopulation" name="devicePopulation" id="devicePopulation" src="./connected-devices.php" height="75" width="400"></iframe> 
 
-        <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
-            <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="initiation();">
-        </form>
-
-
-        <p style="text-align: center">
-          Click on the magnifying glass to start your scan. -
-        <em style="text-align: center">
-          This will activate a port scan of all devices currently connected to your network
-        </em>
-        </p>
-
-        <h4 style="border-left:3px solid grey;padding-left:10px;">Port Scan Guide</h4>
+        <h4 style="border-left:3px solid grey;padding-left:10px;margin-top:100px;">Port Scan Guide</h4>
         <section>
         <ul class=scan>
           <li class=scan><em style="font-weight:bold">Open</em> - An application is actively accepting TCP connections, UDP datagrams or SCTP associations on this port.</li>
@@ -75,6 +64,21 @@
       	<div class="columnscan">
 
           <h3 style="border-bottom:3px solid grey;color:grey;margin:.5em 0;">Scan Information</h3>
+
+	       <div id ="before_scan" name="before_scan" style="display:block">
+
+		       <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
+		            <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="hideButton();">
+		        </form>
+
+		        <p style="text-align: center">
+		          Click on the magnifying glass to start your scan. -
+		        <em style="text-align: center">
+		          This will activate a port scan of all devices currently connected to your network
+		        </em>
+		        </p>
+
+	        </div>
 
       		<iframe class="myframe" name="myframe" id="myframe" height="1000" width="1000"></iframe> 
 

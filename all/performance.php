@@ -10,7 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-
+	<script>
+		function hideButton() {
+			var x = document.getElementById("before_test");
+			x.style.display="none";
+			var test_initiated=false;
+		}
+	</script>
     <?php  
       $fname = './assets/settings/performance.txt';
 
@@ -23,9 +29,6 @@
       shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/last_speed_test.txt /www/cyber-pizza/all/assets/data/last_speed_test.txt");
 
     ?>
-    <script>
-	var test_initiated=false;
-    </script>
 
     <header class="row group container">
         <a href="dash.php">
@@ -68,15 +71,13 @@
           <p class="caption"> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
 
 
-         <pre><form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
-           	<input class="submit" type="submit" value="Run Speed Test" onclick="initiation();">
-          </form></pre>
-	  <p class="notice" id="notice"></p>
-		<script>
-		function initiation() {
-		document.getElementById("notice").innerHTML = "This may take a moment...";
-		}
-		</script>
+         
+	<div id="before_test" name="before_test" style="display:block">
+		<pre><form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
+           		<input class="submit" type="submit" value="Run Speed Test" style="align: center;">
+          	</form></pre>
+		<p style="test-align: center">Click on the button to start your speed test.</p>
+	</div>
           <iframe name="speedy"></iframe>
 
 

@@ -1,1 +1,473 @@
-bees!
+Debug log for:
+Thu Jul 25 17:05:58 EDT 2019
+taj26
+---------------------------
+*-*-*-*-*-*-*
+
+ps------
+  PID USER       VSZ STAT COMMAND
+    1 root      1524 S    /sbin/procd
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [ksoftirqd/0]
+    5 root         0 SW<  [kworker/0:0H]
+    7 root         0 SW   [rcu_sched]
+    8 root         0 SW   [rcu_bh]
+    9 root         0 SW   [migration/0]
+   10 root         0 SW<  [lru-add-drain]
+   11 root         0 SW   [cpuhp/0]
+   12 root         0 SW   [cpuhp/1]
+   13 root         0 SW   [migration/1]
+   14 root         0 SW   [ksoftirqd/1]
+   16 root         0 SW<  [kworker/1:0H]
+   17 root         0 SW   [cpuhp/2]
+   18 root         0 SW   [migration/2]
+   19 root         0 SW   [ksoftirqd/2]
+   21 root         0 SW<  [kworker/2:0H]
+   22 root         0 SW   [cpuhp/3]
+   23 root         0 SW   [migration/3]
+   24 root         0 SW   [ksoftirqd/3]
+   26 root         0 SW<  [kworker/3:0H]
+   27 root         0 SW   [oom_reaper]
+   28 root         0 SW<  [writeback]
+   29 root         0 SW   [kcompactd0]
+   30 root         0 SW<  [crypto]
+   31 root         0 SW<  [bioset]
+   32 root         0 SW<  [kblockd]
+   33 root         0 SW<  [watchdogd]
+   34 root         0 SW   [kswapd0]
+   36 root         0 SW<  [vmstat]
+   41 root         0 SW<  [pencrypt]
+   42 root         0 SW<  [pdecrypt]
+   49 root         0 SW<  [bioset]
+   50 root         0 SW<  [bioset]
+   51 root         0 SW<  [bioset]
+   52 root         0 SW<  [bioset]
+   53 root         0 SW<  [bioset]
+   54 root         0 SW<  [bioset]
+   55 root         0 SW<  [bioset]
+   56 root         0 SW<  [bioset]
+   57 root         0 SW<  [bioset]
+   58 root         0 SW<  [bioset]
+   59 root         0 SW<  [bioset]
+   60 root         0 SW<  [bioset]
+   61 root         0 SW<  [bioset]
+   62 root         0 SW<  [bioset]
+   63 root         0 SW<  [bioset]
+   64 root         0 SW<  [bioset]
+   65 root         0 SW<  [bioset]
+   66 root         0 SW<  [bioset]
+   67 root         0 SW<  [bioset]
+   68 root         0 SW<  [bioset]
+   69 root         0 SW<  [bioset]
+   70 root         0 SW<  [bioset]
+   71 root         0 SW<  [bioset]
+   72 root         0 SW<  [bioset]
+   73 root         0 SW<  [dwc_otg]
+   76 root         0 SW<  [DWC Notificatio]
+   78 root         0 SW   [irq/77-mmc1]
+   80 root         0 SW<  [ipv6_addrconf]
+   81 root         0 SW<  [bioset]
+   82 root         0 SW   [mmcqd/0]
+   85 root         0 SW<  [kworker/2:1H]
+   86 root         0 SW<  [ext4-rsv-conver]
+   88 root         0 SW<  [kworker/3:1H]
+  137 root      1132 S    /sbin/ubusd
+  138 root       804 S    /sbin/askfirst /usr/libexec/login.sh
+  162 root         0 SW<  [cfg80211]
+  163 root         0 SW<  [brcmf_wq/mmc1:0]
+  164 root         0 SW   [brcmf_wdog/mmc1]
+  174 root         0 SW<  [kworker/0:1H]
+  302 root      1160 S    /sbin/logd -S 64
+  321 root      1480 S    /sbin/rpcd -s /var/run/ubus.sock -t 30
+  400 root       960 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
+  454 root      1700 S    /sbin/netifd
+  527 root      1372 S    /usr/sbin/odhcpd
+  554 root      1196 S    /usr/sbin/crond -f -c /etc/crontabs -l 8
+  592 root      2452 S    /usr/sbin/uhttpd -f -h /www -r OpenWrt -c /etc/httpd.conf -x /cgi-bin -t 60 -T 30 -k 20 -A 1 -n 3 -N 100 -R -p 0.0.0.0:80 -p [::]:80 -i .php=/usr/bin/php-cgi -C /etc/uhttpd.crt -K /etc/uhttpd.key -s 0
+  593 root      1228 S    /usr/sbin/uhttpd -f -h /srv/www -r OpenWrt -n 3 -p 81
+  833 nobody    3708 S    /usr/sbin/openvpn --syslog openvpn(custom_config) --status /var/run/openvpn.custom_config.status --cd /etc/openvpn --config /etc/openvpn/vpnclient.conf
+  929 root         0 SW   [jbd2/mmcblk0p3-]
+  930 root         0 SW<  [ext4-rsv-conver]
+ 1047 root      1188 S    udhcpc -p /var/run/udhcpc-eth0.pid -s /lib/netifd/dhcp.script -f -t 0 -i eth0 -x hostname:OpenWrt -C -O 121
+ 1052 root      1796 S    /usr/sbin/hostapd -s -P /var/run/wifi-phy0.pid -B /var/run/hostapd-phy0.conf
+ 1141 root       976 S    /usr/sbin/announce
+ 1175 dnsmasq  12440 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c -k -x /var/run/dnsmasq/dnsmasq.cfg01411c.pid
+ 1176 root      1220 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c -k -x /var/run/dnsmasq/dnsmasq.cfg01411c.pid
+ 1210 root      1192 S<   /usr/sbin/ntpd -n -N -S /usr/sbin/ntpd-hotplug -p 0.openwrt.pool.ntp.org -p 1.openwrt.pool.ntp.org -p 2.openwrt.pool.ntp.org -p 3.openwrt.pool.ntp.org -p 152.3.250.2 -p 152.3.250.1
+ 1755 root         0 SW<  [kworker/1:1H]
+ 3705 root      1208 S    /bin/ash --login
+ 4480 root         0 SW   [kworker/1:0]
+ 7403 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
+ 7404 root       956 S    /usr/libexec/sftp-server
+ 7405 root         0 SW   [kworker/3:1]
+ 7629 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
+ 7639 root      2528 S    -bash
+ 7885 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
+ 7906 root       916 S    /usr/libexec/sftp-server
+ 8001 root         0 SW   [kworker/2:2]
+ 8062 root      2352 S    bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports
+ 8101 root     15004 S    nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep -iL /www/cyber-pizza/all/actions/scan/devicelog.txt
+10412 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
+10413 root       908 S    /usr/libexec/sftp-server
+10495 root         0 SW   [kworker/u8:0]
+12349 root         0 SW   [kworker/u8:1]
+12494 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
+12516 root      2528 S    -bash
+13131 root         0 SW   [kworker/0:2]
+13402 root         0 SW   [kworker/1:1]
+13579 root         0 SW   [kworker/u8:2]
+13756 root         0 SW   [kworker/3:2]
+14331 root         0 SW   [kworker/0:1]
+14432 root         0 SW   [kworker/2:1]
+14612 root         0 SW   [kworker/0:0]
+14730 root         0 SW   [kworker/2:0]
+14731 root      2296 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
+14735 root      1192 R    ps
+*-*-*-*-*-*-*
+
+netstat------
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       
+tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50791 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50503 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50462 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50549 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:ssh         10.42.0.106:56507       ESTABLISHED 
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node Path
+unix  9      [ ]         DGRAM                       303 /dev/log
+unix  2      [ ]         DGRAM                      2698 /var/run/hostapd/wlan0
+unix  3      [ ]         STREAM     CONNECTED       1894 
+unix  2      [ ]         DGRAM                      2823 
+unix  3      [ ]         STREAM     CONNECTED       1708 
+unix  3      [ ]         STREAM     CONNECTED       1771 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       3138 
+unix  3      [ ]         STREAM     CONNECTED       1780 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      4376 
+unix  2      [ ]         DGRAM                      2569 
+unix  3      [ ]         STREAM     CONNECTED       2034 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      3397 
+unix  3      [ ]         STREAM     CONNECTED       4154 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      1963 
+unix  3      [ ]         STREAM     CONNECTED       2827 
+unix  2      [ ]         DGRAM                      3175 
+unix  3      [ ]         STREAM     CONNECTED        346 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       2058 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED        305 
+unix  2      [ ]         DGRAM                      3136 
+unix  3      [ ]         STREAM     CONNECTED        310 
+unix  3      [ ]         STREAM     CONNECTED        335 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      2057 
+unix  2      [ ]         DGRAM                      2527 
+unix  3      [ ]         STREAM     CONNECTED        479 
+*-*-*-*-*-*-*
+
+/etc/config/network-----
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fd9c:79f6:3270::/48'
+
+config interface 'lan'
+	option type 'bridge'
+	option ifname 'wlan0'
+	option proto 'static'
+	option ipaddr '10.42.0.1'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+
+config interface 'wan'
+	option ifname 'eth0'
+	option proto 'dhcp'
+
+config interface 'myvpnc'
+	option proto 'none'
+	option ifname 'tun0'
+	option auto '1'
+*-*-*-*-*-*-*
+
+/etc/config/wireless------
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option channel '11'
+	option hwmode '11g'
+	option path 'platform/soc/3f300000.mmc/mmc_host/mmc1/mmc1:0001/mmc1:0001:1'
+	option htmode 'HT20'
+	option disabled '0'
+	option country 'US'
+	option legacy_rates '1'
+
+config wifi-iface 'default_radio0'
+	option device 'radio0'
+	option network 'lan'
+	option mode 'ap'
+	option encryption 'psk2+tkip+ccmp'
+	option key 'cyberpizza5'
+	option ssid 'OPENWRTPIZZA'
+
+*-*-*-*-*-*-*
+
+/etc/config/firewall----- first 100 lines
+firewall size
+4	/etc/config/firewall
+
+config defaults
+	option syn_flood '1'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+
+config zone
+	option name 'lan'
+	list network 'lan'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'ACCEPT'
+
+config zone
+	option name 'wan'
+	list network 'wan'
+	list network 'wan6'
+	option input 'REJECT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	option masq '1'
+	option mtu_fix '1'
+
+config forwarding
+	option src 'lan'
+	option dest 'wan'
+
+config rule
+	option name 'Allow-DHCP-Renew'
+	option src 'wan'
+	option proto 'udp'
+	option dest_port '68'
+	option target 'ACCEPT'
+	option family 'ipv4'
+
+config rule
+	option name 'Allow-Ping'
+	option src 'wan'
+	option proto 'icmp'
+	option icmp_type 'echo-request'
+	option family 'ipv4'
+	option target 'ACCEPT'
+
+config rule 
+	option name 'Allow-Ping2'
+	option src '*'
+	option icmp_type 'echo-request'
+	option dest '*'
+	option proto 'icmp'
+	option family 'ipv4'
+	option target 'ACCEPT'
+
+config rule
+	option name 'Allow-Ping3'
+	option src '*'
+	option icmp_type 'echo-reply'
+	option dest '*'
+	option proto 'icmp'
+	option family 'ipv4'
+	option target 'ACCEPT'
+
+config rule
+	option name 'Allow-DHCPv6'
+	option src 'wan'
+	option proto 'udp'
+	option src_ip 'fc00::/6'
+	option dest_ip 'fc00:/6'
+	option dest_port '546'
+	option family 'ipv6'
+	option target 'ACCEPT'
+
+config rule
+	option name 'Allow-MLD'
+	option src 'wan'
+	option src_ip 'fe80::/10'
+	list icmp_type '130/0'
+	list icmp_type '131/0'
+	list icmp_type '132/0'
+	list icmp_type '143/0'
+	option family 'ipv6'
+	option target 'ACCEPT'
+
+config rule
+	option name 'Allow-ICMPv6-Input'
+	option src 'wan'
+	option proto 'icmp'
+	list icmp_type 'echo-request'
+	list icmp_type 'echo-reply'
+	list icmp_type 'destination-unreachable'
+	list icmp_type 'packet-too-big'
+	list icmp_type 'time-exceeded'
+	list icmp_type 'bad-header'
+	list icmp_type 'unknown-header-type'
+	list icmp_type 'router-solicitation'
+	list icmp_type 'neighbour-solicitation'
+	list icmp_type 'router-advertisement'
+	list icmp_type 'neighbour-advertisement'
+	option limit '1000/sec'
+	option family 'ipv6'
+*-*-*-*-*-*-*
+
+speed test------
+test 0 | "Durham,NC"                   42231192.33515901             54808553.71948510             "2019-07-25T19:47:59.883559Z" 15.764                        *-*-*-*-*-*-*
+
+adblock,connection,vpn status
+1
+*-*-*-*-*-*-*
+
+1
+*-*-*-*-*-*-*
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+*-*-*-*-*-*-*
+
+speed test server
+16970

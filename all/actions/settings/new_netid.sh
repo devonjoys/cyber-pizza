@@ -26,7 +26,10 @@ else
 			echo "0" >> $login_errors/login_errors_temp.txt
 			cat $login_errors/login_errors.txt | tail -n +2 >> $login_errors/login_errors_temp.txt
 			mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
-
+			cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/email.txt
+			echo "$1@duke.edu" >> /www/cyber-pizza/all/assets/settings/email.txt
+			cp /www/cyber-pizza/all/assets/settings/email.txt /www/cyber-pizza/all/assets/settings/email-temp.txt
+			
 			touch /www/cyber-pizza/all/assets/settings/net-id-temp.txt
 			echo "$1" >> /www/cyber-pizza/all/assets/settings/net-id-temp.txt
 			mv /www/cyber-pizza/all/assets/settings/net-id-temp.txt /www/cyber-pizza/all/assets/settings/net-id.txt

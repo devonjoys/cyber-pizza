@@ -47,6 +47,10 @@
       if (! empty($reboot)) {
         echo "<h4 class='sett-tit'>Reboot Device?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
+	echo "<form method='post' action='../../adv-settings.php'>
+            <p class='warn'>Are you sure you want to reboot the device? You will temporarily lose connection.</p>
+            <br><input type='submit' name='reboot-it' value='Yes, reboot the device'>
+         </form>";
       }
       if (! empty($freeze)) {
         echo "<h4 class='sett-tit'>Freeze Network?</h4>";
@@ -107,12 +111,17 @@
         
       }
       if (! empty($speed)) {
-        echo "<h4 class='sett-tit'>Change Speed Test Server?</h4>";
+        $speedname='../../assets/settings/speed-server.txt';
+	$speedf = fopen($speedname, 'r');
+	$speed_serv = trim(fread($speedf, filesize($speedname)));
+	fclose($speedf);
+
+	echo "<h4 class='sett-tit'>Change Speed Test Server?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
         echo "<p class='warn'>Change the server used to run the speed test.<br><br> </p>";
         echo "
           <form method='post' action='../../adv-settings.php'>
-            <input type='text' name='new-speed-serv'>
+            <input type='text' name='new-speed-serv' value='{$speed_serv}'>
             <br><input type='submit' name='speed-it' value='Use this server'>
           </form>
         ";
@@ -123,6 +132,7 @@
         $twittername= '../../assets/settings/twitter.txt';
         $twitterf = fopen($twittername, 'r');
         $twitter_link = trim(fread($twitterf, filesize($twittername)));
+	fclose($twitterf);
 
         echo "<h4 class='sett-tit'>Change Twitter Feed?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
