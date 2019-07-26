@@ -45,10 +45,13 @@
 
 	<div class="help-content">
 		<p class="answer"><a class="inline-link" href="../adv-settings.php">Advanced Settings</a> 
-			allows you to make larger changes to your device, but with greater risk. 
+			allows you to make larger changes to your device, but with greater risk. All of these changes will prompt you for confirmation before taking effect.
 			Only change these settings if you are aware of the implications.</p>
 		<br>
 		<p class="answer">Changes may also be made to your device via ssh to root, using the labeled password on your device, or via a manual input with a keyboard and monitor.</p>
+		<br>
+		<h4 class="help-h">System Info</h4>
+		<p class="answer">This option displays useful diagnostic information about the device, including boot, update, and version information.</p>
 		<br>
 		<h4 class="help-h">Restart Device</h4>
 		<p class="answer">This option reboots the Guardian Devil. It and the web interface will come back online after about a minute.</p>
@@ -57,16 +60,13 @@
 		<p class="answer">This option allows you to cut off access to the Internet from the Guardian Devil and any connected devices. You will still be able to access the web interface, although you may have to refresh the page.</p>
 		<br>
 		<h4 class="help-h">Generate Debug Log</h4>
-		<p class="answer">This option generates and downloads a log of diagnostic information on device. OIT may request this information during the troubleshooting process.</p>
+		<p class="answer">This option generates and downloads a log of diagnostic information on the device. OIT may request this information during the troubleshooting process.</p>
 		<br>
 		<h4 class="help-h">Factory Reset</h4>
 		<p class="answer">This option will reset your device to the state it was in when you received it. Any changes you have made will be overwritten.</p>
 		<br>
 		<h4 class="help-h">Twitter Feed</h4>
 		<p class="answer">This option will allow you to change the source of the Twitter Feed on the <a class="inline-link" href="../dash.php">Dashboard</a>.</p>
-		<br>
-		<h4 class="help-h">System Info</h4>
-		<p class="answer">This option displays useful diagnostic information about the device, including boot, update, and version information.</p>
 	</div>
 
 	</section>
