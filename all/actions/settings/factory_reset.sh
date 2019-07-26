@@ -27,7 +27,7 @@ cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/frozen.txt
 echo 0 >> /www/cyber-pizza/all/assets/settings/frozen.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/initialized.txt
 echo 0 >> /www/cyber-pizza/all/assets/settings/initialized.txt
-cp /etc/backups/login-errors.txt /www/cyber-pizza/all/assets/settings/login-errors.txt
+cp /etc/backups/login-errors.txt /www/cyber-pizza/all/assets/settings/login_errors.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/my-adb.txt
 echo 1 >> /www/cyber-pizza/all/assets/settings/my-adb.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/my-conn.txt
