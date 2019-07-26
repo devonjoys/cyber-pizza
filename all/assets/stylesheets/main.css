@@ -975,6 +975,13 @@ input:checked + .slider:before {
   font-size: 25px;
 }
 
+.code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+
 /*
   ========================================
   Option Page
@@ -989,6 +996,10 @@ input:checked + .slider:before {
   width: 80%;
 }
 
+.set-content {
+  margin-bottom: 80px; 
+}
+
 .sett-tit {
   width: 500px;
   display: inline-block;
@@ -997,9 +1008,10 @@ input:checked + .slider:before {
 
 .sett-text {
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
   max-width: 500px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
 }
 
@@ -1010,11 +1022,70 @@ input:checked + .slider:before {
 
 .addr {
   width: 600px;
+  font-size: 14px;
+  padding-left: 50px;
+  line-height: 25px;
+  list-style: square inside;
 }
 
 .noti_choice {
   display: inline-block;
-  margin-left: 30px;
+/*  margin-left: 30px;*/
+}
+
+.set-form {
+  margin-left: 40px;
+  min-width: 700px;
+}
+
+
+.form-btn {
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+  margin: 0;
+/*  letter-spacing: .5px;*/
+}
+.form-btn:hover {
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+/*  letter-spacing: .5px;*/
+  background: #f8f7f7;
+}
+
+.form-end {
+  padding: 40px;
+  min-width: 700px;
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.sub-canc {
+  border-radius: 5px;
+  color: #393939;
+  font: 300 18px/26px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 15px;
+/*  letter-spacing: .5px;*/
+}
+.sub-canc:hover {
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+/*  letter-spacing: .5px;*/
+  background: #f8f7f7;
+}
+/*.sub-canc:hover {
+  background: #f8f7f7;
+}*/
+
+.adv-link {
+  margin-left: 50px;
+/*  line-height: 50px;*/
 }
 
 
