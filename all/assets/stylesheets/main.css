@@ -1003,6 +1003,7 @@ input:checked + .slider:before {
 .sett-tit {
   width: 500px;
   display: inline-block;
+  font-weight: 900;
   font-size: 28px;
 }
 
