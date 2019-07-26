@@ -35,23 +35,27 @@
 	<div class="help-content">
 		<p class="answer">This guide explains how to set up a virtual machine and <a class="inline-link" href="vpn.html">VPN</a> connection.  This guide is also available on the <a class="inline-link" href="help-home.php">OIT website</a>.</p>
 		<br>
-		<p class="answer">Navigate to Duke's <a class="inline-link" href="https://vcm.duke.edu">Virtual Computing Manager</a> and log in. Select <span class="a-setting">Reserve a VM</span> and choose the newest version of <span class="a-setting">Ubuntu</span>. Once the your virtual machine has been claimed, make note of its <span class="a-setting">Hostname</span> and <span class="a-setting">uncheck</span> the box labeled "Automatic power downs".</p>
+		<p class="answer">Navigate to Duke's <a class="inline-link" href="https://vcm.duke.edu">Virtual Computing Manager</a> and log in. Select <span class="a-setting">Reserve a VM</span> and choose the newest version of <span class="a-setting">Ubuntu</span>.</p>
 		<br>
-		<p class="answer">INCLUDE IMAGE_S HERE</p>
+		<p class="answer"><img src="../assets/images/Reserve_vm.JPG" alt="Reserve a VM on VCM page"><img src="../assets/images/Ubuntu.png" alt="Select the newest version of Ubuntu"></p>
+		<br>
+		<p class="answer">Once the virtual machine has finished building, make note of its <span class="a-setting">Hostname</span> on the left and <span class="a-setting">uncheck</span> automatic power downs.</p>
+		<br>
+		<p class="answer"><img src="../assets/images/VCM.png" alt="VCM Hostname and uncheck the automatic power down box"></p>
 		<br>
 		<p class="answer">Open your prefered terminal on your computer and run the following commands, following the prompts. The installation process should take less than 10 minutes.</p>
-		<p class="code"><code>ssh netID@vcm-#####.vm.duke.edu 		#Replace netID and ##### with your information. Use your normal Duke password.
+		<section class='options-int'><p class="code"><code>ssh netID@vcm-#####.vm.duke.edu 		</code>#Replace netID and ##### with your information. Use your normal Duke password.<code>
 					<br>sudo su
 					<br>curl https://raw.githubusercontent.com/TylerJang27/OpenVPNSetup/master/inner_script2.sh >> temp.sh
 					<br>chmod +x temp.sh
 					<br>./temp.sh	</code></p>
-					<p class="answer">Wait for the scripts to run. Make sure you are connected to Guardian Devil's network."</p>
-					<p class="code"><code>exit
-					<br>exit
-					<br>scp netID@vcm-#####.vm.duke.edu:/home/client1.ovpn vpnclient.conf
-					<br>scp vpnclient.conf root@10.42.0.1:/etc/openvpn/vpnclient.conf</code>   #Use the root password labeled on your device
-					</p>
-		<br>
+					<br><p class="answer">Wait for the scripts to run.<br></p>
+					<br><p class="code"><code>exit
+					<br>exit</code></p>
+					<br><p class="answer">Make sure you are connected to Guardian Devil's network.</p>
+					<br><p class="code"<code>scp netID@vcm-#####.vm.duke.edu:/home/client1.ovpn vpnclient.conf
+					<br>scp vpnclient.conf root@10.42.0.1:/etc/openvpn/vpnclient.conf</code>   		</code>#Use the root password labeled on your device<code>
+					</p></section>
 		<p class="answer">Navigate to the <a class="inline-link" href="../vpn.php">VPN page</a> and enable VPN!</p>
 		<br>
 		<p class="answer">WARNING: This feature currently lacks ufw!!!</p>
