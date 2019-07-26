@@ -1,4 +1,4 @@
-# Nmap 7.70 scan initiated Fri Jul 26 14:52:26 2019 as: nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep -oX /www/cyber-pizza/all/actions/scan/device_ports_status.xml 10.42.0.209
+# Nmap 7.70 scan initiated Fri Jul 26 15:29:58 2019 as: nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep -oX /www/cyber-pizza/all/actions/scan/device_ports_status.xml 10.42.0.209
 Host: 10.42.0.209 (Devons-MBP-2.lan)	Status: Up
 Host: 10.42.0.209 (Devons-MBP-2.lan)	Ports: 53/open/tcp//domain///, 80/open/tcp//http///, 443/open/tcp//https///, 1947/open/tcp//sentinelsrm///, 8080/open/tcp//http-proxy///	Ignored State: closed (995)
-# Nmap done at Fri Jul 26 14:53:20 2019 -- 1 IP address (1 host up) scanned in 54.48 seconds
+# Nmap done at Fri Jul 26 15:31:00 2019 -- 1 IP address (1 host up) scanned in 62.81 seconds

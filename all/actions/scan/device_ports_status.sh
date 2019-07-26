@@ -54,7 +54,8 @@ open_ports() {
 
 	fi
 
-	/etc/init.d/emailnotification.sh start 2 $deviceNum $emailText "/www/cyber-pizza/all/actions/scan/device_ports_status.xml"
+	mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
+	/etc/init.d/emailnotification.sh start 2 $deviceNum $emailText "/mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml"
 }
 
 top_ports() {

@@ -37,11 +37,11 @@
 		<br>
 		<p class="answer">Navigate to Duke's <a class="inline-link" href="https://vcm.duke.edu">Virtual Computing Manager</a> and log in. Select <span class="a-setting">Reserve a VM</span> and choose the newest version of <span class="a-setting">Ubuntu</span>.</p>
 		<br>
-		<p class="answer"><img src="../assets/images/Reserve_vm.JPG" alt="Reserve a VM on VCM page"><img src="../assets/images/Ubuntu.png" alt="Select the newest version of Ubuntu"></p>
+		<p class="answer"><img src="../assets/images/Reserve_vm.jpg" alt="Reserve a VM on VCM page" style="padding: 10px; width:30%;"><img src="../assets/images/Ubuntu.png" alt="Select the newest version of Ubuntu" style="padding:20px; padding-left:0px;width:50%;"></p>
 		<br>
 		<p class="answer">Once the virtual machine has finished building, make note of its <span class="a-setting">Hostname</span> on the left and <span class="a-setting">uncheck</span> automatic power downs.</p>
 		<br>
-		<p class="answer"><img src="../assets/images/VCM.png" alt="VCM Hostname and uncheck the automatic power down box"></p>
+		<p class="answer"><img src="../assets/images/VCM.png" alt="VCM Hostname and uncheck the automatic power down box" style="padding:10px; width:80%;"></p>
 		<br>
 		<p class="answer">Open your prefered terminal on your computer and run the following commands, following the prompts. The installation process should take less than 10 minutes.</p>
 		<section class='options-int'><p class="code"><code>ssh netID@vcm-#####.vm.duke.edu 		</code>#Replace netID and ##### with your information. Use your normal Duke password.<code>
