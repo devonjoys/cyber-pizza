@@ -66,8 +66,8 @@
 		<h4 class="help-h">Setup</h4>
 		<p class="answer">To initialize your Guardian Devil, connect it via an Ethernet cord 
 			to your existing router. The device should connect automatically. Connect a laptop 
-			or computer to your Guardian Devil's network, named <span class="a-setting"><?php echo $my_ssid;?></span> with network password 
-			_PLACEHOLDER_. Then, type in <span class="a-setting"><?php echo $my_ip;?></span> into your browser's web address bar and log in with 
+			or computer to your Guardian Devil's network, named <span class="a-setting"><?php echo $my_ssid;?></span> with the network password labeled on your device. 
+			Then, type in <span class="a-setting"><?php echo $my_ip;?></span> into your browser's web address bar and log in with 
 			the default admin credentials devil and admin password _PLACEHOLDER_. After entering your 
 			Duke email, hit the Accept button on the login page and click on the Guardian devil 
 			logo at the top.</p>

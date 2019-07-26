@@ -14,7 +14,8 @@
 		function hideButton() {
 			var x = document.getElementById("before_test");
 			x.style.display="none";
-			var test_initiated=false;
+			var y = document.getElementById("speedy_gif");
+			y.style.display="block";
 		}
 	</script>
     <?php  
@@ -74,11 +75,23 @@
          
 	<div id="before_test" name="before_test" style="display:block">
 		<pre><form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
-           		<input class="submit" type="submit" value="Run Speed Test" style="align: center;">
+           		<input class="submit" type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
           	</form></pre>
 		<p style="test-align: center">Click on the button to start your speed test.</p>
 	</div>
-          <iframe name="speedy"></iframe>
+	<div id="speedy_gif" name="speedy_gif" style="display:none">
+		<img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
+	</div>
+
+	<script>
+		function frameLoaded() {
+			var y = document.getElementById("speedy_gif");
+			y.style.display="none";
+
+		}
+	</script>
+
+          <iframe name="speedy" id="speedy" onload="frameLoaded(this)"></iframe>
 
 
       	<section class="bottom-link">
@@ -97,7 +110,7 @@
 
 
 
-    <iframe name="votar" style="display:none;"></iframe>
+    <iframe name="votar"></iframe>
 
 	</body>
 

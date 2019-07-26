@@ -39,17 +39,17 @@
 		<br>
 		<p class="answer">INCLUDE IMAGE_S HERE</p>
 		<br>
-		<p class="answer">Open a terminal on your computer and run the following commands, following the prompts. The installation process should take less than 10 minutes.</p>
-		<p class="code">ssh netID@vcm-#####.vm.duke.edu 		#replace netID and ##### with your information
+		<p class="answer">Open your prefered terminal on your computer and run the following commands, following the prompts. The installation process should take less than 10 minutes.</p>
+		<p class="code"><code>ssh netID@vcm-#####.vm.duke.edu 		#Replace netID and ##### with your information. Use your normal Duke password.
 					<br>sudo su
 					<br>curl https://raw.githubusercontent.com/TylerJang27/OpenVPNSetup/master/inner_script2.sh >> temp.sh
 					<br>chmod +x temp.sh
-					<br>./temp.sh	</p>
+					<br>./temp.sh	</code></p>
 					<p class="answer">Wait for the scripts to run. Make sure you are connected to Guardian Devil's network."</p>
-					<p class="code">exit
+					<p class="code"><code>exit
 					<br>exit
-					<br>scp netID@vcm-#####.vm.duke.edu:/home/client1.ovpn /tmp/vpnclient1.conf
-					<br>scp /tmp/vpnclient1.conf devil@10.42.0.1:/etc/openvpn/vpnclient1.conf
+					<br>scp netID@vcm-#####.vm.duke.edu:/home/client1.ovpn vpnclient.conf
+					<br>scp vpnclient.conf root@10.42.0.1:/etc/openvpn/vpnclient.conf</code>   #Use the root password labeled on your device
 					</p>
 		<br>
 		<p class="answer">Navigate to the <a class="inline-link" href="../vpn.php">VPN page</a> and enable VPN!</p>

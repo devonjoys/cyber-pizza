@@ -125,6 +125,38 @@
             <br><input type='submit' name='speed-it' value='Use this server'>
           </form>
         ";
+	echo "<p class='answer'>Common Server Choices
+		<br>
+		<table class='status-icons'> <!--PLACEHOLDER-->
+		<tr>
+			<th class='server-header';>Server</th>
+			<th class='server-header';>Location</th>
+		</tr>
+		<tr>
+			<td class='server-choice'>4185</td>
+			<td class='server-choice'>Duke</td>
+		</tr>
+		<tr>
+			<td class='server-choice'>16970</td>
+			<td class='server-choice'>Durham, NC</td>
+		</tr>
+		<tr>
+			<td class='server-choice'>14774</td>
+			<td class='server-choice'>Chapel Hill, NC</td>
+		</tr>
+		<tr>
+			<td class='server-choice'>14148</td>
+			<td class='server-choice'>Rochester, NY</td>
+		</tr>
+		<tr>
+			<td class='server-choice'>1776</td>
+			<td class='server-choice'>Chicago, IL</td>
+		</tr>
+		<tr>
+			<td class='server-choice'>1783</td>
+			<td class='server-choice'>San Francisco, CA</td>
+		</tr></table>
+		</p>";
 
         
       }
