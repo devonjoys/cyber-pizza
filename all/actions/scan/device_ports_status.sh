@@ -26,14 +26,15 @@ open_ports() {
 	portcheckAr=$(cat $FILE)
 	lineNum=1
 	warnCount=0
-	declare -a ipWatch
+	declare -a portsWatch
 	declare -a hosts
 	for item in $portcheckAr
 	do
-		if [[ $(( "$lineNum" % 5 )) == 0 ]]
-		#&& "$item" -gt 2
+		if [[ $(( "$lineNum" % 5 )) == 0 && "$item" -gt 2 ]]
+		
 		then
-			ipWatch+=($item)
+			portsWatch+=($item)
+			(( warnCount++ ))
 		fi
 		if [[ $item == *.* ]]
 		then
@@ -44,9 +45,9 @@ open_ports() {
 
 	if [[ $warnCount -gt 0 ]]
 	then 
-		for ((i=0; i<{#ipWatch[@]};++i));
+		for (( i=0; i<${#portsWatch[@]}; i++));
 		do
-			printf "IP %s has %s ports open, too many ports my guy" "${ipWatch[i]}" "${hosts[i]}"
+			printf "IP %s has %s ports open, please monitor this device for unusual behavior \n" "${hosts[$i]}" "${portsWatch[$i]}"
 		done
 	fi
 }

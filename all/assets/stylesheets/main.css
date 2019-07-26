@@ -1088,20 +1088,31 @@ input:checked + .slider:before {
 /*  line-height: 50px;*/
 }
 
-.server-table {
+.server-choices {
   width: 60%;
-  height: 60%;
   text-align: center;
   padding: 20px;
 }
 
-.server-table-td {
-
+.server-table {
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  padding: 10px;
 }
 
-.server-table-th {
-  font-weight: 400px;
+.server-td {
+  width: 50%;
+  position: relative;
+  vertical-align: middle;
 }
+
+.server-td:after {
+  content: '';
+  display: block;
+}
+
+
 
 /*
   ========================================
