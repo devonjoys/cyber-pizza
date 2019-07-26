@@ -27,10 +27,10 @@
 				
            <img class="logo" src="./all/assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
 
-			<nav class="set-btns">
+			<nav>
         	<ul>
         	  <li>
-        	    <a href="all/dash.php"><h5 class="btn">login</h5></a>
+        	    <a href="all/dash.php"><h5 style="color:#012169;">login</h5></a>
         	  </li>
     	    </ul>
     		</nav>
@@ -44,7 +44,7 @@
 
 			<h4 class="sett-tit">Setup</h4>
 
-			<form method='post' action='./actions/settings/initialize.php' target="pass-result">
+			<form method='post' action='./all/actions/settings/initialize.php' target="pass-result">
 	<br><r>NetID: <input type="text" name="netID" required>
 		<p class="error"><?php
 		if (substr($login_errors, 0, 1)=="0") {
@@ -120,10 +120,11 @@
                         <option value "7">1 Time a Week</option>
                 </select>
         <br>
-	<br>
-        <input type='submit' name='init' value='Finish'>
 	<br>	<p class="a-note">By using this device, you agree to have Guardian Devil conduct port scans of your network devices.</p>
-        <iframe name="pass-result"></iframe>
+
+	<br>
+        <input type='submit' class='sub-canc' name='init' value='Finish'>
+        <iframe name="pass-result" style='display:none;'></iframe>
     </form>
 
 		</section>

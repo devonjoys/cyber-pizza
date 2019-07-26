@@ -49,7 +49,7 @@
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
 	echo "<form method='post' action='../../adv-settings.php'>
             <p class='warn'>Are you sure you want to reboot the device? You will temporarily lose connection.</p>
-            <br><input type='submit' name='reboot-it' value='Yes, reboot the device'>
+            <br><input type='submit' class='sub-canc' name='reboot-it' value='Yes, reboot the device'>
          </form>";
       }
       if (! empty($freeze)) {
@@ -61,7 +61,7 @@
         echo "
           <form method='post' action='../../adv-settings.php'>
             Are you sure you want to freeze the network?
-            <br><input type='submit' name='freeze-it' value='Yes, freeze the network'>
+            <br><input type='submit' class='sub-canc' name='freeze-it' value='Yes, freeze the network'>
           </form>
         ";
       }
@@ -74,7 +74,7 @@
         echo "
           <form method='post' action='../../adv-settings.php'>
             Are you sure you want to unfreeze the network?
-            <br><input type='submit' name='unfreeze-it' value='Yes, unfreeze the network'>
+            <br><input type='submit' class='sub-canc' name='unfreeze-it' value='Yes, unfreeze the network'>
           </form>
         ";
       }
@@ -94,7 +94,7 @@
         echo "
           <form method='post' action='../../adv-settings.php'>
             Are you sure you want to reset the device?
-            <br><input type='submit' name='reset-it' value='Yes, reset the device to factory settings'>
+            <br><input type='submit' class='sub-canc' name='reset-it' value='Yes, reset the device to factory settings'>
           </form>
         ";
       }
@@ -105,7 +105,7 @@
         echo "
           <form method='post' action='../../adv-settings.php'>
             Continue?
-            <br><input type='submit' name='update-it' value='Yes, update the device'>
+            <br><input type='submit' class='sub-canc' name='update-it' value='Yes, update the device'>
           </form>
         ";
         
@@ -157,7 +157,7 @@
         echo "
           <form method='post' action='../../adv-settings.php'>
             <input type='text' name='new-speed-serv' value='{$speed_serv}'>
-            <br><input type='submit' name='speed-it' value='Use this server'>
+            <br><input type='submit' class='form-btn' name='speed-it' value='Use this server'>
           </form>
         ";
       }
@@ -173,7 +173,7 @@
         echo "
           <form method='post' action='../../adv-settings.php'>
             <input type='text' size=70 name='new-twit' value='{$twitter_link}'>
-            <br><input type='submit' name='twitter-it' value='Use this feed'>
+            <br><input type='submit' class='form-btn' name='twitter-it' value='Use this feed'>
           </form>
         ";
         
