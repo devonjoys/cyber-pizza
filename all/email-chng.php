@@ -36,6 +36,7 @@
     <section class="options-int">
 
       <h4 class="sett-tit">Email Preferences</h4>
+      <p class="sett-text">Add email addresses to recieve emails when Guardian Devil detects the events chosen below.</p>
     
     <?php 
     $email_f = "./assets/settings/email-temp.txt";
@@ -58,7 +59,7 @@
                 {$addr}
                 <form class='remove' method='post' action='./actions/edit-email.php'> 
                   <input type='hidden' name='addr' value={$addr}>
-                  <input type='submit' name='submit' value='Remove email address'>
+                  <input class='form-btn' type='submit' name='submit' value='Remove email address'>
                 </form>
                 </li>";
             }
@@ -68,12 +69,12 @@
 
     </div>
         <form class="add-email" action='./actions/edit-email.php' method="post">
-            <input type="email" name="new_addr">
-            <input type="submit" name="email-update" value="Add email to recieve notifications">
+            <input  type="email" name="new_addr">
+            <input class='form-btn' type="submit" name="email-update" value="Add email to recieve notifications">
         </form>
     </div>
 
-    </section>
+    
 
     <?php
     $nname = "./assets/settings/notifications.txt";
@@ -108,13 +109,26 @@
 
 
     <form method='post' action='settings.php'>
-        <input type="checkbox" class="noti_choice" name="boot" <?php echo $boots; ?> >System boots
-        <input type="checkbox" class="noti_choice" name="sus_port" <?php echo $sus_port; ?> >Suspicious port is open
-        <input type="checkbox" class="noti_choice" name="new_device" <?php echo $new_device; ?> >A new device connects to network
-        <input type="checkbox" class="noti_choice" name="drop" <?php echo $drop; ?> >Internet speed drops significantly <br><br>
-        <input type='submit' name='save' value='Save Changes'>
-        <input type='submit' name='cancel' value='Cancel'>
+
+      <p class="sett-text">Choose which events you would like to recieve emails about:</p>
+
+      <ul class='set-form'>
+        <li><input type="checkbox" class="noti_choice" name="boot" <?php echo $boots; ?> >System boots</li>
+
+        <li><input type="checkbox" class="noti_choice" name="sus_port" <?php echo $sus_port; ?> >Suspicious port is open</li>
+
+        <li><input type="checkbox" class="noti_choice" name="new_device" <?php echo $new_device; ?> >A new device connects to network</li>
+
+        <li><input type="checkbox" class="noti_choice" name="drop" <?php echo $drop; ?> >Internet speed drops significantly</li>
+      </ul>
+
+      <div class="form-end">
+        <input class="sub-canc" type='submit' name='save' value='Save Changes'>
+        <input class='sub-canc' type='submit' name='cancel' value='Cancel'>
+      </div>
     </form>
+
+    </section>
 
 
 

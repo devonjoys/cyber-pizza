@@ -71,6 +71,7 @@
     ?>
 
     
+    <div class="set-content">
 
     <section class="options-int">
 
@@ -107,7 +108,7 @@
 
 
     foreach ($emails as $addr) {
-      echo "<li class='good-ip addr'> {$addr} </li>";
+      echo "<li class='addr'> {$addr} </li>";
     }
     ?>
 	</ul>
@@ -118,16 +119,16 @@
 
 	<?php 
 		if (trim($notifs[0])) {
-    		echo "<li> The system boots</li>";
+    		echo "<li class='addr'> The system boots</li>";
     	}
     	if (trim($notifs[1])) {
-    		echo "<li> A suspicious port is open</li>";
+    		echo "<li class='addr'> A suspicious port is open</li>";
     	}
     	if (trim($notifs[2])) {
-    		echo "<li> A new device connects to the network</li>";
+    		echo "<li class='addr'> A new device connects to the network</li>";
     	}
     	if (trim($notifs[3])) {
-    		echo "<li> Internet speed drops significantly</li>";
+    		echo "<li class='addr'> Internet speed drops significantly</li>";
     	}
 	?>
 
@@ -185,7 +186,7 @@
         Network password: <?php echo $w_pass; ?>
       </p>
 	<form class="ifconfig_output" action="./actions/settings/troubleshoot.sh" method="post">
-            <input type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0">
+            <p class='sett-text'>Internet not working?</p><input class='form-btn' type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0">
       </form>
 
 
@@ -197,16 +198,8 @@
 
       <a href="device-chng.php" class="inline-link edit-right">Change Device Password</a>
 
-      <p class="sett-text">
-        device name and password
-      </p>
-
-      <p class="sett-text">
-        Internet Configuration Information
-      </p>
-
 	<form class="ifconfig_output" action="./actions/settings/reboot.php" method="post">            
-		<input type="submit" alt="reboot button" value="Reboot Device">
+		<input class='form-btn' type="submit" alt="reboot button" value="Reboot Device">
 	</form>
 
   <script>
@@ -229,7 +222,7 @@
   </script>
 
       <form class="ifconfig_output" action="./actions/ifconfig.php" method="post" target="ifconfig_frame">
-            <input type="submit" alt="submit button to show ifconfig output" value="See Your If Config" onclick="showLink()">
+            <input class='form-btn' type="submit" alt="submit button to show ifconfig output" value="See Your If Config" onclick="showLink()">
       </form>
 
       <iframe name="ifconfig_frame" id="ifconfig_frame" height="250" width="500" style="display:none"></iframe> 
@@ -242,8 +235,8 @@
     
     </section>
 
-    <a href="adv-settings.php" class="inline-link">Advanced Settings</a>
-
+    <a href="adv-settings.php" class="inline-link adv-link">Advanced Settings</a>
+  </div>
 
 
     <footer class="row group container footer">
