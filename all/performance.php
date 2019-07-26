@@ -63,21 +63,21 @@
         <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><br>Download Performance Data</a>
       </section>
 
-      <section class="inputs">
+   <section class="inputs">
 
           <h1 class="perf-tit">Periodic Performance Testing</h1>
 
           <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
 
-          <p class="caption"> Performance is checked <?php echo $freq; ?> times a day. <a href="perf-change.html">Change Frequency</a></p>
+          <p class="caption"> <br>Performance is checked <?php echo $freq; ?> times a day. <a class="inline-link" href="perf-change.html"><br>Change Frequency<br><br></a></p>
 
 
          
-	<div id="before_test" name="before_test" style="display:block">
-		<pre><form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
-           		<input class="submit" type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
-          	</form></pre>
-		<p style="test-align: center">Click on the button to start your speed test.</p>
+	<div id="before_test" name="before_test">
+		<form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
+           		<input class="form-btn" id='speedo' type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
+    </form>
+		<p class="caption">Click on the button to start your speed test.</p>
 	</div>
 	<div id="speedy_gif" name="speedy_gif" style="display:none">
 		<img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
@@ -94,8 +94,8 @@
           <iframe name="speedy" id="speedy" onload="frameLoaded(this)"></iframe>
 
 
-      	<section class="bottom-link">
-	  <p class="caption"><a href="https://10.42.0.1/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
+  <section class="bottom-link">
+	  <p class="caption"><a class='inline-link' href="https://10.42.0.1/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
 	</section>
     </section>
    </section>
@@ -107,10 +107,6 @@
       <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
-
-
-
-    <iframe name="votar"></iframe>
 
 	</body>
 

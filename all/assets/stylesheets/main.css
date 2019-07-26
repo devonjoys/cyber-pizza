@@ -432,6 +432,7 @@ table {
 
 .perf-tit {
   margin: 20px;
+  margin-top: 30px;
   line-height: 50px;
 }
 
@@ -444,16 +445,24 @@ table {
 .inputs {
   display: table-cell;
   width: 40%;
+  min-width: 500px;
   text-align: center;
   color: #393939;
 }
 
 .speed-output {
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Arial, sans-serif;
-  margin-top: 12px;
+  margin: 20px;
+  text-align: center;
+/*  margin-top: 12px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 10px;*/
   font-size: 16px;
+}
+
+#speedo {
+  margin: 20px;
+  margin-top: 50px;
 }
 
 .caption {
@@ -1036,7 +1045,8 @@ input:checked + .slider:before {
 .noti_choice {
   display: inline-block;
   margin-left: 30px;
-  list-style: outside;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .set-form {
