@@ -4,12 +4,13 @@
 deviceNum=$(bash /www/cyber-pizza/all/actions/scan/connected_devices.sh population)
 
 NMAP_FILE=/www/cyber-pizza/all/actions/scan/device_ports_status.grep
+NMAP_FILE_XML=/www/cyber-pizza/all/actions/scan/device_ports_status.xml
 STATUS_FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
 
 status=$(cat $STATUS_FILE)
 
 open_ports() {
-	 FILE=/www/cyber-pizza/all/actions/scan/open_port_check.txt
+	FILE=/www/cyber-pizza/all/actions/scan/open_port_check.txt
 	#   if [[ -f $FILE ]] ; then
 	#   	: > $FILE
 	#   else
@@ -17,7 +18,7 @@ open_ports() {
 	#   fi
 	# for ip in $status
 	# do
-	# 	nmap -oG $NMAP_FILE $ip >/dev/null
+	# 	nmap -oG $NMAP_FILE -oX $NMAP_FILE_XML $ip >/dev/null
 	# 	egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
 	# 	sed -n -e 's/Ignored.*//p' | \
 	# 	awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
@@ -45,11 +46,16 @@ open_ports() {
 
 	if [[ $warnCount -gt 0 ]]
 	then 
-		for (( i=0; i<${#portsWatch[@]}; i++));
+		emailText="Please monitor these device ports: "
+		for (( i=0; i<$warnCount; i++ ));
 		do
-			printf "IP %s has %s ports open, please monitor this device for unusual behavior \n" "${hosts[$i]}" "${portsWatch[$i]}"
+			emailText="$emailText <----> IP ${hosts[$i]} has ${portsWatch[$i]} ports open"
 		done
+
 	fi
+
+	mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
+	/etc/init.d/emailnotification.sh start 2 $deviceNum $emailText "/mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml"
 }
 
 top_ports() {
