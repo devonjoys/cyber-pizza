@@ -81,7 +81,7 @@
                 <form method='post' action='./actions/edit-ip.php'> 
                   <input type='hidden' name='ip' value={$ip}>
                   <input type='hidden' name='gorb' value='g'>
-                  <input type='submit' name='submit' value='X'>
+                  <input type='submit' class='form-btn' name='submit' value='X'>
                 </form>
                 {$ip}
                 </li>";
@@ -90,7 +90,7 @@
             </div>
             <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="wl-ip">
-               <input type="submit" name="wl-update" value="Add IP to white-list">
+               <input type="submit" class='form-btn' name="wl-update" value="Add IP to white-list">
              </form>
           </div>
 
@@ -105,7 +105,7 @@
                 <form class='X' method='post' action='./actions/edit-ip.php'> 
                   <input type='hidden' name='ip' value={$ip}>
                   <input type='hidden' name='gorb' value='b'>
-                  <input type='submit' name='submit' value='X' >
+                  <input type='submit' class='form-btn' name='submit' value='X' >
                 </form>
                 {$ip}
                 </li>";
@@ -114,7 +114,7 @@
             </div>
             <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="bl-ip">
-               <input type="submit" name="bl-update" value="Add IP to black-list">
+               <input type="submit" class="form-btn" name="bl-update" value="Add IP to black-list">
             </form>
           </div>
 
@@ -129,7 +129,7 @@
                 <form class='X' method='post' action='./actions/edit-ip.php'> 
                   <input type='hidden' name='ip' value={$port}>
                   <input type='hidden' name='gorb' value='port'>
-                  <input type='submit' name='submit' value='X' >
+                  <input type='submit' class='form-btn' name='submit' value='X' >
                 </form>
                 {$port}
                 </li>";
@@ -138,7 +138,7 @@
             </div>
             <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="port-add">
-               <input type="submit" name="url-update" value="Block Port">
+               <input type="submit" class='form-btn' name="url-update" value="Block Port">
               </form>
           </div>
 
@@ -156,7 +156,7 @@
                 <form class='X' method='post' action='./actions/edit-ip.php'> 
                   <input type='hidden' name='ip' value={$url}>
                   <input type='hidden' name='gorb' value='url'>
-                  <input type='submit' name='submit' value='X' >
+                  <input type='submit' class='form-btn' name='submit' value='X' >
                 </form>
                 {$url}
                 </li>";
@@ -165,7 +165,7 @@
             </div>
             <form class="add-ip" action='./actions/edit-ip.php' method="post">
                <input type="txt" name="url-add">
-               <input type="submit" name="url-update" value="Add URL to black-list feed">
+               <input type="submit" class='form-btn' name="url-update" value="Add URL to black-list feed">
               </form>
           </div>
 
@@ -178,15 +178,16 @@
 		<p class="caption">Your changes may require several minutes to take effect.</p>
 	</section>
 
-  
+	<div class='form-end'>
         <form method='post' action='firewall.php'> 
             <input type="hidden" name="save" value="save">
-            <input type='submit' name='submit' value='Save Changes'>
+            <input type='submit' class='sub-canc' name='submit' value='Save Changes'>
         </form>
         <form method='post' action='firewall.php'> 
-            <input type="hidden" name="cancel" value="cancel">
-            <input type='submit' name='submit' value='Cancel'>
+		<input type="hidden" name="cancel" value="cancel">
+            	<input type='submit' class='sub-canc' name='submit' value='Cancel'>
         </form>
+	</div>
 
     <footer class="row footer">
     </footer>

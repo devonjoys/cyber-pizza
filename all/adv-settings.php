@@ -113,27 +113,27 @@
 
       <form method='post' action='actions/settings/adv-set.php'>
 	<br><p>Reboot the device. You will briefly lose network access.</p>
-        <input type='submit' name='reboot' value='Reboot'><br>
+        <input type='submit' class='form-btn' name='reboot' value='Reboot'><br>
         
 	<br><p>Freeze your network so that nothing can connect to the internet. You will still be able to connect to the web interface. You will briefly lose network access.</p>
 	<?php
           if ($freeze_state) {
-            echo "<input type='submit' name='unfreeze' value='Unfreeze Network'>";
+            echo "<input type='submit' class='form-btn' name='unfreeze' value='Unfreeze Network'>";
           } else {
-            echo "<input type='submit' name='freeze' value='Freeze Network'>";
+            echo "<input type='submit' class='form-btn' name='freeze' value='Freeze Network'>";
           }
         ?>
 	<br>
 	<br><p>Generate and download a log file that can be used to troubleshoot problems with your device.</p>
-        <input type='submit' name='gen_debug' value='Generate Debug'><br>
+        <input type='submit' class='form-btn' name='gen_debug' value='Generate Debug'><br>
 	<br><p>Reset your Guardian Devil to as it was when you received it. Careful: This will overwrite any changes you have made and cannot be undone. </p>
-        <input type='submit' name='reset' value='Factory Reset'><br>
+        <input type='submit' class='form-btn' name='reset' value='Factory Reset'><br>
 	<br><p>Manually update your Guardian Devil. It will be automatically updated on the 15th of every month. You will briefly lose network access. </p>
-        <input type='submit' name='update' value='Update Now'><br>
+        <input type='submit' class='form-btn' name='update' value='Update Now'><br>
 	<br><p>Change the server used to run speed tests. Current speed test server: <?php echo $speed_server; ?> </p>
-        <input type='submit' name='ch-speed' value='Change Speed Test Server'><br>
+        <input type='submit' class='form-btn' name='ch-speed' value='Change Speed Test Server'><br>
 	<br><p>Change the source for the Twitter feed on your dashboard. Current Twitter feed: <?php echo $twitter_link; ?> </p>
-        <input type='submit' name='twitter' value='Update Twitter Feed'><br>
+        <input type='submit' class='form-btn' name='twitter' value='Update Twitter Feed'><br>
       </form>
 
     </section>
