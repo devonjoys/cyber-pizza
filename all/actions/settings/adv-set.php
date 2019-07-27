@@ -48,7 +48,7 @@
         echo "<h4 class='sett-tit'>Reboot Device?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
 	echo "<form method='post' action='../../adv-settings.php'>
-            <p class='warn'>Are you sure you want to reboot the device? You will temporarily lose connection.</p>
+            <p class='warn'>Are you sure you want to reboot the device? This may take up to 5 minutes, and you will temporarily lose connection.</p>
             <br><input type='submit' class='sub-canc' name='reboot-it' value='Yes, reboot the device'>
          </form>";
       }
