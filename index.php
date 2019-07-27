@@ -3,23 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cyber Pizza</title>
-		<?php
-    	    	$initialized_file="all/assets/settings/initialized.txt";
-    		$initialized_open=fopen($initialized_file, 'r');
-        	$initialized=fread($initialized_open, filesize($initialized_file));
-        	fclose($initialized_open);
-		if ($initialized=="1") {
-                	echo ("<meta http-equiv='Refresh' content='0; url=all/dash.php'/>");
-        	}
-		$login_errors_file="all/assets/settings/login_errors.txt";
-		$login_errors_open=fopen($login_errors_file, 'r');
-		$login_errors=fread($login_errors_open, filesize($login_errors_file));
-		fclose($login_errors_open);
-        ?>
 		<link rel="stylesheet" href="./all/assets/stylesheets/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
     		<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
+		<?php
+	    	    	$initialized_file="all/assets/settings/initialized.txt";
+	    		$initialized_open=fopen($initialized_file, 'r');
+	        	$initialized=fread($initialized_open, filesize($initialized_file));
+	        	fclose($initialized_open);
+			if (trim("$initialized")=="1") {
+	                	echo ("<meta http-equiv='Refresh' content='0; url=all/dash.php'/>");
+	        	}
+			$login_errors_file="all/assets/settings/login_errors.txt";
+			$login_errors_open=fopen($login_errors_file, 'r');
+			$login_errors=fread($login_errors_open, filesize($login_errors_file));
+			fclose($login_errors_open);
+        	?>
 	</head>
 	<body>
 

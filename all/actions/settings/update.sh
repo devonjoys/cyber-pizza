@@ -4,7 +4,7 @@ opkg update
 echo "y" | opkg upgrade luci nmap uhttpd 
 
 
-/www/cyber-pizza/all/actions/perforance/json_chrooter.sh 1 s u
+/www/cyber-pizza/all/actions/performance/json_chrooter.sh 1 s u
 
 
 touch /www/cyber-pizza/all/assets/settings/last-update-temp.txt

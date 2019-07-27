@@ -1,4 +1,0 @@
-# Nmap 7.70 scan initiated Sat Jul 27 15:46:05 2019 as: nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep 10.42.0.106
-Host: 10.42.0.106 (DESKTOP-CMJ612M.lan)	Status: Up
-Host: 10.42.0.106 (DESKTOP-CMJ612M.lan)	Ports: 28201/open/tcp//unknown///	Ignored State: filtered (999)
-# Nmap done at Sat Jul 27 15:49:21 2019 -- 1 IP address (1 host up) scanned in 196.19 seconds
