@@ -1,12 +1,12 @@
 Debug log for:
-Thu Jul 25 17:05:58 EDT 2019
+Fri Jul 26 16:50:18 EDT 2019
 taj26
 ---------------------------
 *-*-*-*-*-*-*
 
 ps------
   PID USER       VSZ STAT COMMAND
-    1 root      1524 S    /sbin/procd
+    1 root      1596 S    /sbin/procd
     2 root         0 SW   [kthreadd]
     3 root         0 SW   [ksoftirqd/0]
     5 root         0 SW<  [kworker/0:0H]
@@ -63,103 +63,96 @@ ps------
    71 root         0 SW<  [bioset]
    72 root         0 SW<  [bioset]
    73 root         0 SW<  [dwc_otg]
-   76 root         0 SW<  [DWC Notificatio]
+   77 root         0 SW<  [DWC Notificatio]
    78 root         0 SW   [irq/77-mmc1]
    80 root         0 SW<  [ipv6_addrconf]
-   81 root         0 SW<  [bioset]
-   82 root         0 SW   [mmcqd/0]
-   85 root         0 SW<  [kworker/2:1H]
+   83 root         0 SW<  [bioset]
+   84 root         0 SW   [mmcqd/0]
+   85 root         0 SW<  [kworker/1:1H]
    86 root         0 SW<  [ext4-rsv-conver]
-   88 root         0 SW<  [kworker/3:1H]
-  137 root      1132 S    /sbin/ubusd
-  138 root       804 S    /sbin/askfirst /usr/libexec/login.sh
-  162 root         0 SW<  [cfg80211]
-  163 root         0 SW<  [brcmf_wq/mmc1:0]
-  164 root         0 SW   [brcmf_wdog/mmc1]
-  174 root         0 SW<  [kworker/0:1H]
-  302 root      1160 S    /sbin/logd -S 64
-  321 root      1480 S    /sbin/rpcd -s /var/run/ubus.sock -t 30
-  400 root       960 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
-  454 root      1700 S    /sbin/netifd
-  527 root      1372 S    /usr/sbin/odhcpd
-  554 root      1196 S    /usr/sbin/crond -f -c /etc/crontabs -l 8
-  592 root      2452 S    /usr/sbin/uhttpd -f -h /www -r OpenWrt -c /etc/httpd.conf -x /cgi-bin -t 60 -T 30 -k 20 -A 1 -n 3 -N 100 -R -p 0.0.0.0:80 -p [::]:80 -i .php=/usr/bin/php-cgi -C /etc/uhttpd.crt -K /etc/uhttpd.key -s 0
-  593 root      1228 S    /usr/sbin/uhttpd -f -h /srv/www -r OpenWrt -n 3 -p 81
-  833 nobody    3708 S    /usr/sbin/openvpn --syslog openvpn(custom_config) --status /var/run/openvpn.custom_config.status --cd /etc/openvpn --config /etc/openvpn/vpnclient.conf
-  929 root         0 SW   [jbd2/mmcblk0p3-]
-  930 root         0 SW<  [ext4-rsv-conver]
- 1047 root      1188 S    udhcpc -p /var/run/udhcpc-eth0.pid -s /lib/netifd/dhcp.script -f -t 0 -i eth0 -x hostname:OpenWrt -C -O 121
- 1052 root      1796 S    /usr/sbin/hostapd -s -P /var/run/wifi-phy0.pid -B /var/run/hostapd-phy0.conf
- 1141 root       976 S    /usr/sbin/announce
- 1175 dnsmasq  12440 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c -k -x /var/run/dnsmasq/dnsmasq.cfg01411c.pid
- 1176 root      1220 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c -k -x /var/run/dnsmasq/dnsmasq.cfg01411c.pid
- 1210 root      1192 S<   /usr/sbin/ntpd -n -N -S /usr/sbin/ntpd-hotplug -p 0.openwrt.pool.ntp.org -p 1.openwrt.pool.ntp.org -p 2.openwrt.pool.ntp.org -p 3.openwrt.pool.ntp.org -p 152.3.250.2 -p 152.3.250.1
- 1755 root         0 SW<  [kworker/1:1H]
- 3705 root      1208 S    /bin/ash --login
- 4480 root         0 SW   [kworker/1:0]
- 7403 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
- 7404 root       956 S    /usr/libexec/sftp-server
- 7405 root         0 SW   [kworker/3:1]
- 7629 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
- 7639 root      2528 S    -bash
- 7885 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
- 7906 root       916 S    /usr/libexec/sftp-server
- 8001 root         0 SW   [kworker/2:2]
- 8062 root      2352 S    bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports
- 8101 root     15004 S    nmap -oG /www/cyber-pizza/all/actions/scan/device_ports_status.grep -iL /www/cyber-pizza/all/actions/scan/devicelog.txt
-10412 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
-10413 root       908 S    /usr/libexec/sftp-server
-10495 root         0 SW   [kworker/u8:0]
-12349 root         0 SW   [kworker/u8:1]
-12494 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300 -T 3
-12516 root      2528 S    -bash
-13131 root         0 SW   [kworker/0:2]
-13402 root         0 SW   [kworker/1:1]
-13579 root         0 SW   [kworker/u8:2]
-13756 root         0 SW   [kworker/3:2]
-14331 root         0 SW   [kworker/0:1]
-14432 root         0 SW   [kworker/2:1]
-14612 root         0 SW   [kworker/0:0]
-14730 root         0 SW   [kworker/2:0]
-14731 root      2296 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
-14735 root      1192 R    ps
+  136 root      1148 S    /sbin/ubusd
+  137 root       804 S    /sbin/askfirst /usr/libexec/login.sh
+  138 root      1212 S    /bin/ash --login
+  140 root         0 SW<  [kworker/0:1H]
+  161 root         0 SW<  [kworker/3:1H]
+  163 root         0 SW<  [cfg80211]
+  164 root         0 SW<  [brcmf_wq/mmc1:0]
+  165 root         0 SW   [brcmf_wdog/mmc1]
+  179 root         0 SW<  [kworker/2:1H]
+  295 root      1160 S    /sbin/logd -S 64
+  314 root      2340 S    /sbin/rpcd -s /var/run/ubus.sock -t 30
+  393 root       960 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+  520 root      1440 S    /usr/sbin/odhcpd
+  585 root      2404 S    /usr/sbin/uhttpd -f -h /www -r OpenWrt -c /etc/httpd
+  586 root      1228 S    /usr/sbin/uhttpd -f -h /srv/www -r OpenWrt -n 3 -p 8
+  925 root         0 SW   [jbd2/mmcblk0p3-]
+  926 root         0 SW<  [ext4-rsv-conver]
+  952 root         0 SW   [kworker/1:0]
+ 1146 root       976 S    /usr/sbin/announce
+ 1452 root         0 SW   [kworker/3:1]
+ 2427 root         0 SW   [kworker/2:1]
+ 3318 root      1700 S    /sbin/netifd
+ 3711 root      1776 S    /usr/sbin/hostapd -s -P /var/run/wifi-phy0.pid -B /v
+ 3985 root      1188 S    udhcpc -p /var/run/udhcpc-eth0.pid -s /lib/netifd/dh
+ 4053 dnsmasq  12420 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
+ 4054 root      1220 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
+ 4135 root      1188 S<   /usr/sbin/ntpd -n -N -S /usr/sbin/ntpd-hotplug -p 0.
+ 4421 root      2364 S    bash /www/cyber-pizza/all/actions/scan/device_ports_
+ 4448 root     14936 S    nmap -oG /www/cyber-pizza/all/actions/scan/device_po
+ 4800 root         0 SW   [kworker/u8:2]
+ 4801 root         0 SW   [kworker/0:0]
+ 4831 root         0 SW   [kworker/1:2]
+ 4986 root     10132 S    /usr/bin/php-cgi /www/cyber-pizza/all/actions/settin
+ 4987 root      2308 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
+ 4991 root      1192 R    ps
+14973 root         0 SW   [kworker/3:0]
+30137 root         0 SW   [kworker/u8:1]
+30348 root         0 SW   [kworker/2:0]
+31209 root         0 SW   [kworker/0:1]
+31240 root         0 SW   [kworker/1:1]
+31244 root         0 SW   [kworker/u8:0]
+31444 root      1196 S    /usr/sbin/crond -f -c /etc/crontabs -l 8
+32173 root         0 SW   [kworker/0:2]
 *-*-*-*-*-*-*
 
 netstat------
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       
-tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50791 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50503 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50462 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:50549 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:ssh         10.42.0.106:56507       ESTABLISHED 
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59555  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59582  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59591  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59566  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59589  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59570  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59590  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59601  ESTABLISHED 
+tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59563  TIME_WAIT   
 Active UNIX domain sockets (w/o servers)
 Proto RefCnt Flags       Type       State         I-Node Path
-unix  9      [ ]         DGRAM                       303 /dev/log
-unix  2      [ ]         DGRAM                      2698 /var/run/hostapd/wlan0
-unix  3      [ ]         STREAM     CONNECTED       1894 
-unix  2      [ ]         DGRAM                      2823 
-unix  3      [ ]         STREAM     CONNECTED       1708 
-unix  3      [ ]         STREAM     CONNECTED       1771 /var/run/ubus.sock
-unix  3      [ ]         STREAM     CONNECTED       3138 
-unix  3      [ ]         STREAM     CONNECTED       1780 /var/run/ubus.sock
-unix  2      [ ]         DGRAM                      4376 
-unix  2      [ ]         DGRAM                      2569 
-unix  3      [ ]         STREAM     CONNECTED       2034 /var/run/ubus.sock
-unix  2      [ ]         DGRAM                      3397 
-unix  3      [ ]         STREAM     CONNECTED       4154 /var/run/ubus.sock
-unix  2      [ ]         DGRAM                      1963 
-unix  3      [ ]         STREAM     CONNECTED       2827 
-unix  2      [ ]         DGRAM                      3175 
-unix  3      [ ]         STREAM     CONNECTED        346 /var/run/ubus.sock
-unix  3      [ ]         STREAM     CONNECTED       2058 /var/run/ubus.sock
-unix  3      [ ]         STREAM     CONNECTED        305 
-unix  2      [ ]         DGRAM                      3136 
-unix  3      [ ]         STREAM     CONNECTED        310 
-unix  3      [ ]         STREAM     CONNECTED        335 /var/run/ubus.sock
-unix  2      [ ]         DGRAM                      2057 
-unix  2      [ ]         DGRAM                      2527 
-unix  3      [ ]         STREAM     CONNECTED        479 
+unix  8      [ ]         DGRAM                      3117 /dev/log
+unix  2      [ ]         DGRAM                     80615 /var/run/hostapd/wlan0
+unix  3      [ ]         STREAM     CONNECTED       3541 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED        800 
+unix  2      [ ]         DGRAM                      3080 
+unix  3      [ ]         STREAM     CONNECTED      80618 
+unix  3      [ ]         STREAM     CONNECTED       3124 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                     81533 
+unix  3      [ ]         STREAM     CONNECTED      78542 
+unix  3      [ ]         STREAM     CONNECTED      81541 
+unix  2      [ ]         DGRAM                     80595 
+unix  2      [ ]         DGRAM                     78540 
+unix  3      [ ]         STREAM     CONNECTED       3540 
+unix  3      [ ]         STREAM     CONNECTED      81343 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       3081 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED        879 
+unix  3      [ ]         STREAM     CONNECTED       3119 
+unix  2      [ ]         DGRAM                       915 
+unix  3      [ ]         STREAM     CONNECTED       3120 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED      81473 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      4214 
+unix  2      [ ]         DGRAM                     78560 
+unix  2      [ ]         DGRAM                     76148 
+unix  3      [ ]         STREAM     CONNECTED      78767 /var/run/ubus.sock
 *-*-*-*-*-*-*
 
 /etc/config/network-----
@@ -215,7 +208,7 @@ config wifi-iface 'default_radio0'
 
 /etc/config/firewall----- first 100 lines
 firewall size
-4	/etc/config/firewall
+8	/etc/config/firewall
 
 config defaults
 	option syn_flood '1'
@@ -319,7 +312,7 @@ config rule
 *-*-*-*-*-*-*
 
 speed test------
-test 0 | "Durham,NC"                   42231192.33515901             54808553.71948510             "2019-07-25T19:47:59.883559Z" 15.764                        *-*-*-*-*-*-*
+test 0 | "Durham,NC"                   91457411.83809166             92836793.83973240             "2019-07-26T20:38:27.220710Z" 27.957                        *-*-*-*-*-*-*
 
 adblock,connection,vpn status
 1
@@ -328,145 +321,7 @@ adblock,connection,vpn status
 1
 *-*-*-*-*-*-*
 
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
+0
 *-*-*-*-*-*-*
 
 speed test server

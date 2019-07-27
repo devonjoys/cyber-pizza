@@ -59,8 +59,9 @@
         	</label>
     	</form>
     
-    <p class="caption">Your VPN IP is: <?php echo $vpn_ip ?></p>
-    <p class="caption">For more information on OpenVPN, visit <a href="help.html">Help-VPN</a></p>
+    <p class="caption">Your network's current external-facing IP is: <?php echo $vpn_ip ?></p>
+    <p class="caption">For more information on OpenVPN, visit <a href="help/vpn.html">Help-VPN</a></p>
+    <p class="caption">To set up a VPN connection for the first time, visit <a href="help/vpn-set-up.php">Help-VPN Set-Up</a></p>
 
     </div>
 

@@ -51,7 +51,7 @@
     
 
 
-    <form method='post' action='./actions/settings/net-chng.php' target="pass-result">
+    <form method='post' action='./actions/settings/net-chng.php'>
         <br>Network Name: <input type="text" name="net-name" <?php echo "value='{$ssid}'"; ?> required>
         <br>Network Password: <input type="text" name="net-pass" <?php echo "value='{$w_pass}'"; ?> required>
         <br><br>

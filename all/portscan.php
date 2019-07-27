@@ -51,7 +51,7 @@
 	
 
 	<body>
-		<p>hi</p>
+		<p></p>
 
 		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
 			<figcaption>This may take a few moments ... </figcaption></div></center>

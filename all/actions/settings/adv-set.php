@@ -81,7 +81,7 @@
       if (! empty($gen_debug)) {
         echo "<h4 class='sett-tit'>Debug Generated<br></h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
-        // exec("./actions/settings/gen_debug.sh");
+        exec("./gen_debug.sh");
         echo "<a href='../../assets/settings/debug.txt' download='debug.txt'><br><br>Download Debug File</a>";
         
       }
