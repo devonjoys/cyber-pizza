@@ -45,7 +45,7 @@
 
 	<div class="help-content">
 		<p class="answer">This <a class="inline-link" href="/cgi-bin/luci">applet</a> allows you to make advanced changes to Guardian Devil's network via
-			OpenWRT's <a class="inline-link" href="https://openwrt.org/docs/guide-user/luci/start">Luci</a> interaface. This allows you to modify <a class="inline-link" href="/cgi-bin/luci/admin/network/dhcp">DNS/DHCP</a> settings, view <a class="inline-link" href="/cgi-bin/luci/admin/status/realtime">real-time graphs</a>, and make other changes. </p>
+			OpenWRT's <a class="inline-link" href="https://openwrt.org/docs/guide-user/luci/start">Luci</a> interface. This allows you to modify <a class="inline-link" href="/cgi-bin/luci/admin/network/dhcp">DNS/DHCP</a> settings, view <a class="inline-link" href="/cgi-bin/luci/admin/status/realtime">real-time graphs</a>, and make other changes. Some of these settings may take a few minutes to load.</p>
 		<br>
 		<h4 class="help-h">Status</h4>
 		<p class="answer">This tab allows you to view current information about your system, including what processes are running and what has been logged. </p>
