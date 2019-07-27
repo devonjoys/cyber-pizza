@@ -117,7 +117,7 @@
 			<br><p class="more">More: <a class="inline-link" href="about.php">About</a></p>
 		</div>
 		<div class="q" id="why-no-connect">
-			<h4 class="question">Why wont my devices connect to the network?</h4>
+			<h4 class="question">Why won't my devices connect to the network?</h4>
 			<p class="answer">Make sure that you are using Guardian Devil's SSID, <span class="a-setting"><?php echo $my_ssid; ?></span>, and that you are using your network password, not your admin password, to connect. If the problem persists, restart your network using the <a class="inline-link" href="../settings.php">Settings</a> page.</p>
 			<br>
 			<p class="answer">If devices still arent connecting, unplug Guardian Devil and plug it back in.</p>
