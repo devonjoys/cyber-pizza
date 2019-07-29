@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	
 <?php
-      $fname = "./actions/vpn/vpn_status.txt";
+      $fname = "./assets/settings/my-vpn.txt";
       exec("./actions/vpn/my-ip.sh");
       shell_exec("sleep 2");
       $fname2 = "./actions/vpn/my-ip.txt";
@@ -22,7 +22,7 @@
       fclose($fp2);
 	//echo $vpn_on;
         $out="checked";
-	if ($vpn_on == "false") {
+	if ($vpn_on == "0") {
 		$out="";
 	} else {
 		$out="checked";

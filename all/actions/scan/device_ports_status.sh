@@ -55,8 +55,11 @@ open_ports() {
 
 	fi
 
+	OFS=$IFS
+	IFS=':'
+
 	mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
-	/etc/init.d/emailnotification.sh start 2 $deviceNum $emailText $NMAP_FILE_XML
+	/etc/init.d/emailnotification.sh start 2 "$deviceNum:$emailText:$NMAP_FILE_XML"
 }
 
 top_ports() {
@@ -67,7 +70,7 @@ top_ports() {
 }
 
 port_detail() {
-	nmap -oG $NMAP_FILE $ip >/dev/null
+	nmap -oG $NMAP_FILE -iL $STATUS_FILE >/dev/null
 	egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
 	sed -n -e 's/Ignored.*//p'  | \
 	awk '{print "Host: " $1  NF-1; $1=""; for(i=2; i<=NF; i++) { a=a" "$i; }; split(a,s,","); for(e in s) { split(s[e],v,"/"); printf "%-8s %s/%-7s %s\n" , v[2], v[3], v[1], v[5]}; a="" }'

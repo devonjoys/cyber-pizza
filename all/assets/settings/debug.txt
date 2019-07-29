@@ -1,5 +1,5 @@
 Debug log for:
-Mon Jul 29 12:49:44 EDT 2019
+Mon Jul 29 14:03:51 EDT 2019
 taj26
 ---------------------------
 *-*-*-*-*-*-*
@@ -93,10 +93,9 @@ ps------
  2266 root      1228 S    /usr/sbin/uhttpd -f -h /srv/www -r OpenWrt -n 3 -p 8
  2616 root      1776 S    /usr/sbin/hostapd -s -P /var/run/wifi-phy0.pid -B /v
  2891 root      1188 S    udhcpc -p /var/run/udhcpc-eth0.pid -s /lib/netifd/dh
- 2975 dnsmasq  12432 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
+ 2975 dnsmasq  12436 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
  2976 root      1220 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
  3068 root      1188 S<   /usr/sbin/ntpd -n -N -S /usr/sbin/ntpd-hotplug -p 0.
- 3583 root         0 SW   [kworker/2:2]
  4312 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
  4313 root       968 S    /usr/libexec/sftp-server
  4328 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
@@ -104,37 +103,30 @@ ps------
  4537 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
  4538 root       952 S    /usr/libexec/sftp-server
  4539 root         0 SW   [kworker/2:1]
- 6359 root         0 SW   [kworker/1:0]
- 6700 root         0 SW   [kworker/u8:0]
- 6991 root         0 SW   [kworker/u8:3]
- 7146 root         0 SW   [kworker/0:0]
- 7212 root         0 SW   [kworker/1:1]
- 7330 root         0 SW   [kworker/0:2]
- 7382 root         0 SW   [kworker/3:1]
- 7383 root         0 SW   [kworker/u8:1]
- 7389 root      2372 S    bash device_ports_status.sh openports
- 7441 root     14892 S    nmap -oG /www/cyber-pizza/all/actions/scan/device_po
- 7444 root         0 SW   [kworker/u8:2]
- 7494 root      2876 S    nano all/performance.php
- 7495 root         0 SW   [kworker/0:1]
  7496 root         0 SW   [kworker/1:2]
- 7547 root     10132 S    /usr/bin/php-cgi /www/cyber-pizza/all/actions/settin
- 7548 root      2308 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
- 7552 root      1192 R    ps
+ 8271 root         0 SW   [kworker/2:2]
+ 8641 root         0 SW   [kworker/u8:2]
+10146 root         0 SW   [kworker/0:0]
+10208 root         0 SW   [kworker/0:2]
+10209 root         0 SW   [kworker/u8:1]
+10210 root         0 SW   [kworker/1:1]
+10219 root         0 SW   [kworker/3:1]
+10243 root         0 SW   [kworker/0:1]
+10244 root         0 SW   [kworker/u8:0]
+10245 root         0 SW   [kworker/u8:3]
+10291 root         0 SW   [kworker/3:0]
+10337 root     10132 S    /usr/bin/php-cgi /www/cyber-pizza/all/actions/settin
+10338 root      2308 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
+10342 root      1192 R    ps
 *-*-*-*-*-*-*
 
 netstat------
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       
-tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54945 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54942 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61505 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54926 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61427 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61348 ESTABLISHED 
-tcp        0     23 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54944 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54939 ESTABLISHED 
-tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54943 ESTABLISHED 
+tcp        0     80 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61505 ESTABLISHED 
+tcp        0     80 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61427 ESTABLISHED 
+tcp        0     80 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61348 ESTABLISHED 
+tcp        0     52 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:56044 ESTABLISHED 
 Active UNIX domain sockets (w/o servers)
 Proto RefCnt Flags       Type       State         I-Node Path
 unix  2      [ ]         DGRAM                      4379 /var/run/hostapd/wlan0
@@ -320,7 +312,7 @@ config rule
 *-*-*-*-*-*-*
 
 speed test------
-test 0 | "Durham,NC"                   90518305.08064600             11761639.05623028             "2019-07-29T00:00:01.837555Z" 23.781                        *-*-*-*-*-*-*
+test 0 | "Durham,NC"                   92357884.50955006             92905446.35218066             "2019-07-29T16:57:12.711411Z" 29.068                        *-*-*-*-*-*-*
 
 adblock,connection,vpn status
 1
