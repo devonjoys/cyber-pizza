@@ -11,19 +11,19 @@ STATUS_FILE=/www/cyber-pizza/all/actions/scan/testdevicelog.txt
 status=$(cat $STATUS_FILE)
 
 open_ports() {
-	FILE=/www/cyber-pizza/all/actions/scan/open_port_check.txt
+	FILE=/www/cyber-pizza/all/actions/scan/open_port_check.txt 
 
-	#   if [[ -f $FILE ]] ; then
-	#   	: > $FILE
-	#   else
-	#   	touch $FILE
-	#   fi
+	  if [[ -f $FILE ]] ; then
+	  	: > $FILE
+	  else
+	  	touch $FILE
+	  fi
 
-	# nmap -oG $NMAP_FILE -oX $NMAP_FILE_XML -iL $STATUS_FILE
-	# egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
-	# sed -n -e 's/Ignored.*//p' | \
-	# awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
-	# | sort -k 5 -g | tee -a /www/cyber-pizza/all/actions/scan/open_port_check.txt
+	nmap -oG $NMAP_FILE -oX $NMAP_FILE_XML -iL $STATUS_FILE >/dev/null 
+	egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
+	sed -n -e 's/Ignored.*//p' | \
+	awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
+	| sort -k 5 -g | tee -a /www/cyber-pizza/all/actions/scan/open_port_check.txt
 
 	portcheckAr=$(cat $FILE)
 	lineNum=1
@@ -56,7 +56,7 @@ open_ports() {
 	fi
 
 	mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
-	/etc/init.d/emailnotification.sh start 2 $deviceNum $emailText "/mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml"
+	/etc/init.d/emailnotification.sh start 2 $deviceNum $emailText $NMAP_FILE_XML
 }
 
 top_ports() {
