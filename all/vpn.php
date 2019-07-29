@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	
 <?php
-      $fname = "./assets/settings/my-vpn.txt";
+      #$fname = "./assets/settings/my-vpn.txt";
+	     $fname = "./assets/settings/vpn_status.txt";
       exec("./actions/vpn/my-ip.sh");
       shell_exec("sleep 2");
       $fname2 = "./actions/vpn/my-ip.txt";
@@ -22,7 +23,8 @@
       fclose($fp2);
 	//echo $vpn_on;
         $out="checked";
-	if ($vpn_on == "0") {
+	#if ($vpn_on == "0") {
+	if ($vpn_on == "false") {
 		$out="";
 	} else {
 		$out="checked";
@@ -59,7 +61,7 @@
 	       <p class="sett-tit">Turn VPN On/Off<br></p>
 	       <form class="vpn-toggle" action="./actions/vpn/vpn_toggle.php" method="post">
         	<label class="switch">
-           	<input type="checkbox" name="vpn" value="on" onchange="this.form.submit()" <?php echo $out ?>>
+           	<input type="checkbox" name="vpn" value="on" alt="toggle for VPN" onchange="this.form.submit()" <?php echo $out ?>>
            	<span class="slider round"></span>
         	</label>
     	   </form>

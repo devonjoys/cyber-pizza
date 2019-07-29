@@ -93,7 +93,7 @@
 
           <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
 
-          <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a class="inline-link" href="perf-change.html"><p class="form-btn to-edit">Change Frequency</p><br></a></p>
+          <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a href="perf-change.html"><p class="form-btn to-edit">Change Frequency</p><br></a></p>
 
 
 
