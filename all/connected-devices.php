@@ -8,18 +8,18 @@
     	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-		<style>
+<!-- 		<style>
 			.blinking{
 					animation:blinkingText 1s infinite;
 			}
 			@keyframes blinkingText{
-				0%{		color: #000;	}
+				0%{		color: #393939;	}
 				49%{	color: transparent;	}
 				50%{	color: transparent;	}
-				99%{	color:#000;	}
-				100%{	color: #000;	}
+				99%{	color:#393939;	}
+				100%{	color: #393939;	}
 			}
-		</style>
+		</style> -->
 
 	</head>
 
@@ -28,7 +28,7 @@
 		<?php
 
 		$scanPopOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/connected_devices.sh population");
-		echo "<h3 style=\"color:black\"><span class=\"blinking\">{$scanPopOutput}</span>devices are connected</h3>" ;
+		echo "<p style=\"color:#393939\" style=\"font-size:18px\"><span class=\"blinking\">{$scanPopOutput}</span>devices are connected</p>" ;
 		?>
 
 	</body>

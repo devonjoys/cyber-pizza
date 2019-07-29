@@ -47,10 +47,10 @@
 
         <div class="columnscan">
 
-        <iframe class="devicePopulation" name="devicePopulation" id="devicePopulation" src="./connected-devices.php" height="75" width="400"></iframe> 
+        <iframe class="devicePopulation" name="devicePopulation" id="devicePopulation" src="./connected-devices.php" height="75" width="350"></iframe> 
 
-        <h4 style="border-left:3px solid grey;padding-left:10px;margin-top:100px;">Port Scan Guide</h4>
-        <section>
+        <section class="p-guide">
+          <h4 style="border-left:3px solid #B5B5B5;padding-left:10px;margin-top:100px;">Port Scan Guide</h4>
         <ul class=scan>
           <li class=scan><em style="font-weight:bold">Open</em> - An application is actively accepting TCP connections, UDP datagrams or SCTP associations on this port.</li>
           <li class=scan><em style="font-weight:bold">Closed</em> - Port is accessible (it receives and responds to Nmap probe packets), but there is no application listening on it.</li>
@@ -61,15 +61,19 @@
 
       </div>
 
-      	<div class="columnscan">
+      <div class="columnscan">
+        <section class="p-scan">
 
-          <h3 style="border-bottom:3px solid grey;color:grey;margin:.5em 0;">Scan Information</h3>
+          <h3 style="border-bottom:3px solid #393939;color:#393939;margin:.5em 0;">Scan Information</h3>
 
 	       <div id ="before_scan" name="before_scan" style="display:block">
 
-		       <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
+<!-- 		       <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
 		            <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="hideButton();">
-		        </form>
+		        </form> -->
+            <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
+                <input type="image" src="./assets/images/search.png" alt="button to run scan" type="submit" value="Run Device Scan" class="button-add" onclick="hideButton();">
+            </form>
 
 		        <p style="text-align: center">
 		          Click on the magnifying glass to start your scan. -
@@ -80,9 +84,10 @@
 
 	        </div>
 
-      		<iframe class="myframe" name="myframe" id="myframe" height="1000" width="1000"></iframe> 
+      		<iframe class="myframe" name="myframe" id="myframe"></iframe> 
 
       	</div>
+        </section>
       </div>
 
       </section>
