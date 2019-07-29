@@ -47,6 +47,8 @@ info_() {
   done
 
   echo "Clients: $deviceNum device(s) connected"
+
+  head -1 /www/cyber-pizza/all/actions/scan/devicelog.txt > /www/cyber-pizza/all/actions/scan/testdevicelog.txt
 }
 
 population_() {

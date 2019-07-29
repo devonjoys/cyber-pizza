@@ -140,9 +140,9 @@
 
     <section class="options-int">
 
+      <h4 class="sett-tit">Network Performance Preferences</h4>
 
     <a href="perf-change.html" class="inline-link edit-right">Change Frequency</a>
-      <h4 class="sett-tit">Network Performance Preferences</h4>
 
       <p class="sett-text">
         <?php
@@ -222,7 +222,7 @@
   </script>
 
       <form class="ifconfig_output" action="./actions/ifconfig.php" method="post" target="ifconfig_frame">
-            <p class="sett-text">Display the output of ifconfig. <input class='form-btn' type="submit" alt="submit button to show ifconfig output" value="See Your ifconfig" onclick="showLink()"></p>
+            <p class="sett-text" style="padding-top:0px;">Display the output of ifconfig. <input class='form-btn' type="submit" alt="submit button to show ifconfig output" value="See Your ifconfig" onclick="showLink()"></p>
       </form>
 
       <iframe name="ifconfig_frame" id="ifconfig_frame" height="250" width="500" style="display:none"></iframe> 

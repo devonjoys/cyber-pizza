@@ -20,10 +20,10 @@
         <nav class="set-btns">
         <ul>
           <li>
-            <a href=""><h5 class="btn">Help</h5></a>
+            <a href="../../help/help-home.php#faq"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href=""><h5 class="btn">Settings</h5></a>
+            <a href="../../settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
         </nav>
@@ -82,7 +82,8 @@
         echo "<h4 class='sett-tit'>Debug Generated<br></h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
         exec("./gen_debug.sh");
-        echo "<a href='../../assets/settings/debug.txt' download='debug.txt'><br><br>Download Debug File</a>";
+        #echo "<input class='sub-canc' href='../../assets/settings/debug.txt' download='debug.txt' val='Download Debug File'>";
+	echo "<br><a href='../../assets/settings/debug.txt'><p class='sub-canc to-edit'>Download Debug File</p></a>";
         
       }
       if (! empty($reset)) {
@@ -104,7 +105,7 @@
         echo " <p class='warn'>Running this update will update the packages used by Guardian Devil and pull from the Git repository for the web interface.<br><br> </p>";
         echo "
           <form method='post' action='../../adv-settings.php'>
-            Continue?
+            <p>Continue?</p>
             <br><input type='submit' class='sub-canc' name='update-it' value='Yes, update the device'>
           </form>
         ";
@@ -188,9 +189,9 @@
 
     <footer class="row group container footer">
 
-      <a class="footnote" href=""> <p class="footie btn">Home</p></a>
-      <a class="footnote" href=""><p class="footie btn">FAQ</p></a>
-      <a class="footnote" href=""><p class="footie btn">Contact DukeOIT</p></a>
+      <a class="footnote" href="../../dash.php"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href="../../help/help-home.php#faq"><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href="../../help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
 
     </footer>
 
