@@ -13,7 +13,7 @@
 	<body>
 
     <header class="row group container">
-        <img class="logo" src="../../assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
+        <a href="../../dash.php"><img class="logo" src="../../assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo"></a>
         <div class="v-line"></div>
         <h2 class="page">Advanced Settings</h2>
 

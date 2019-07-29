@@ -19,6 +19,6 @@ fi
 uci commit openvpn
 #service openvpn restart
 #service network restart
-/etc/init.d/network restart
-sleep 5
-/www/cyber-pizza/all/actions/vpn/my-ip.sh
+#/etc/init.d/network restart
+#sleep 5
+#/www/cyber-pizza/all/actions/vpn/my-ip.sh

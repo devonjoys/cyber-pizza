@@ -10,7 +10,7 @@
         </head>
 
         <body>
-
+	<p>You will be redirected momentarily...</p>
 
 <?php
 
@@ -18,24 +18,23 @@ echo "here">>vpn;
 
 if (!empty($_POST['vpn'])) {
 	shell_exec("cp /etc/backups/empty /www/cyber-pizza/all/actions/vpn/vpn_status.txt");
-	shell_exec("echo true >> /www/cyber-pizza/all/actions/vpn/vpn_status.txt");
-	shell_exec("/www/cyber-pizza/all/actions/vpn/vpn_toggle.sh 1");
+	#shell_exec("echo true >> /www/cyber-pizza/all/actions/vpn/vpn_status.txt");
+	exec("/www/cyber-pizza/all/actions/vpn/vpn_toggle.sh 1");
 	#shell_exec("uci set openvpn.custom_config.enabled=1");
 	#shell_exec("service openvpn start");
 	#shell_exec("echo 'vpn on'>>vpn");
 } else {
 	shell_exec("cp /etc/backups/empty /www/cyber-pizza/all/actions/vpn/vpn_status.txt");
-	shell_exec("echo false >> /www/cyber-pizza/all/actions/vpn/vpn_status.txt");
-	shell_exec("/www/cyber-pizza/all/actions/vpn/vpn_toggle.sh 0");
+	#shell_exec("echo false >> /www/cyber-pizza/all/actions/vpn/vpn_status.txt");
+	exec("/www/cyber-pizza/all/actions/vpn/vpn_toggle.sh 0");
 	#shell_exec("uci set openvpn.custom_config.enabled=0");
 	#shell_exec("service openvpn stop");
 	#shell_exec("echo 'vpn off'>>vpn");
 }	
 #shell_exec("uci commit openvpn");
-#shell_exec("service openvpn restart");
-#shell_exec("service network restart");
-#shell_exec("/www/cyber-pizza/all/actions/vpn/my-ip.sh");
-#shell_exec("touch hello");
+shell_exec("/etc/init.d/network restart > /dev/null 2>/dev/null &");
+shell_exec('sleep 1');
+shell_exec("/www/cyber-pizza/all/actions/vpn/my-ip.sh");
 
 ?>
 
