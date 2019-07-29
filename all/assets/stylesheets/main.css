@@ -446,7 +446,7 @@ table {
   display: table-cell;
   width: 40%;
   min-width: 500px;
-  text-align: center;
+  text-align: left;
   color: #393939;
 }
 
