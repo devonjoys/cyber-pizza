@@ -29,6 +29,7 @@
 	
     ?>
 	</head>
+
 	<body>
 <header class="row group container">
         <a href="dash.php">
@@ -50,21 +51,24 @@
 
     </header>
 
-    <div>
-	<p class="caption">Turn VPN On/Off</p>
-	<form class="vpn-toggle" action="./actions/vpn/vpn_toggle.php" method="post">
+
+
+    <div class='vert-fill vpn-fill'>
+      <div class="vpn-stuff options-int">
+	       <p class="sett-tit">Turn VPN On/Off<br></p>
+	       <form class="vpn-toggle" action="./actions/vpn/vpn_toggle.php" method="post">
         	<label class="switch">
            	<input type="checkbox" name="vpn" value="on" onchange="this.form.submit()" <?php echo $out ?>>
            	<span class="slider round"></span>
         	</label>
-    	</form>
+    	   </form>
     
-    <p class="caption">Your network's current external-facing IP is: <span class="a-setting"><?php echo $vpn_ip ?></span></p>
-    <p class="caption">For more information on OpenVPN, visit <a class="inline-link" href="help/vpn.html">Help-VPN</a></p>
-    <p class="caption">To set up a VPN connection for the first time, visit <a class="inline-link" href="help/vpn-set-up.php">Help-VPN Set-Up</a></p>
+    <p>Your network's current external-facing IP is: <span class="a-setting"><?php echo $vpn_ip ?></span></p>
+    <p>For more information on OpenVPN, visit <a class="inline-link" href="help/vpn.html">Help-VPN</a></p>
+    <p>To set up a VPN connection for the first time, visit <a class="inline-link" href="help/vpn-set-up.php">Help-VPN Set-Up</a></p>
 
     </div>
-
+</div>
     <footer class="row group container footer">
 
       <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>

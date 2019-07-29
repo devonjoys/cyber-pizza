@@ -560,6 +560,12 @@ SCAN
   ========================================
 */
 
+.vpn-fill {
+  text-align: center;
+  padding-top: 50px;
+  margin-left: 60px;
+}
+
 .vpn-toggle {
   margin-top: 6px;
   margin-bottom: 30px;
@@ -568,10 +574,15 @@ SCAN
   padding-bottom: 60px;
 }
 
+.vpn-stuff {
+  text-align: left;
+}
+
 /* The switch - the box around the slider */ /*I made this 1.5x the original suggested size, please feel free to play around with it*/
 .switch {
+  margin: 20px;
   position: relative;
-  display: inline-block;
+  display: block;
   width: 90px; /*60*/
   height: 51px; /*34*/
 }
@@ -1154,6 +1165,12 @@ input:checked + .slider:before {
   Custom styles
   ========================================
 */
+
+.vert-fill {
+  height: 80vh;
+  min-height: 400px;
+}
+
 body {
   background: #F3F2F1;
   color: #393939;
