@@ -12,6 +12,7 @@
 <?php
       $fname = "./actions/vpn/vpn_status.txt";
       exec("./actions/vpn/my-ip.sh");
+      shell_exec("sleep 2");
       $fname2 = "./actions/vpn/my-ip.txt";
       $fp = fopen($fname, 'r');
       $fp2 = fopen($fname2, 'r');

@@ -1,5 +1,5 @@
 Debug log for:
-Fri Jul 26 16:50:18 EDT 2019
+Mon Jul 29 12:49:44 EDT 2019
 taj26
 ---------------------------
 *-*-*-*-*-*-*
@@ -63,96 +63,104 @@ ps------
    71 root         0 SW<  [bioset]
    72 root         0 SW<  [bioset]
    73 root         0 SW<  [dwc_otg]
-   77 root         0 SW<  [DWC Notificatio]
-   78 root         0 SW   [irq/77-mmc1]
+   76 root         0 SW<  [DWC Notificatio]
+   77 root         0 SW   [irq/77-mmc1]
    80 root         0 SW<  [ipv6_addrconf]
-   83 root         0 SW<  [bioset]
-   84 root         0 SW   [mmcqd/0]
-   85 root         0 SW<  [kworker/1:1H]
-   86 root         0 SW<  [ext4-rsv-conver]
-  136 root      1148 S    /sbin/ubusd
+   82 root         0 SW<  [bioset]
+   83 root         0 SW   [mmcqd/0]
+   84 root         0 SW<  [kworker/2:1H]
+   85 root         0 SW<  [ext4-rsv-conver]
+  111 root         0 SW   [kworker/3:2]
+  136 root      1132 S    /sbin/ubusd
   137 root       804 S    /sbin/askfirst /usr/libexec/login.sh
-  138 root      1212 S    /bin/ash --login
-  140 root         0 SW<  [kworker/0:1H]
-  161 root         0 SW<  [kworker/3:1H]
-  163 root         0 SW<  [cfg80211]
-  164 root         0 SW<  [brcmf_wq/mmc1:0]
-  165 root         0 SW   [brcmf_wdog/mmc1]
-  179 root         0 SW<  [kworker/2:1H]
-  295 root      1160 S    /sbin/logd -S 64
-  314 root      2340 S    /sbin/rpcd -s /var/run/ubus.sock -t 30
-  393 root       960 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
-  520 root      1440 S    /usr/sbin/odhcpd
-  585 root      2404 S    /usr/sbin/uhttpd -f -h /www -r OpenWrt -c /etc/httpd
-  586 root      1228 S    /usr/sbin/uhttpd -f -h /srv/www -r OpenWrt -n 3 -p 8
-  925 root         0 SW   [jbd2/mmcblk0p3-]
-  926 root         0 SW<  [ext4-rsv-conver]
-  952 root         0 SW   [kworker/1:0]
- 1146 root       976 S    /usr/sbin/announce
- 1452 root         0 SW   [kworker/3:1]
- 2427 root         0 SW   [kworker/2:1]
- 3318 root      1700 S    /sbin/netifd
- 3711 root      1776 S    /usr/sbin/hostapd -s -P /var/run/wifi-phy0.pid -B /v
- 3985 root      1188 S    udhcpc -p /var/run/udhcpc-eth0.pid -s /lib/netifd/dh
- 4053 dnsmasq  12420 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
- 4054 root      1220 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
- 4135 root      1188 S<   /usr/sbin/ntpd -n -N -S /usr/sbin/ntpd-hotplug -p 0.
- 4421 root      2364 S    bash /www/cyber-pizza/all/actions/scan/device_ports_
- 4448 root     14936 S    nmap -oG /www/cyber-pizza/all/actions/scan/device_po
- 4800 root         0 SW   [kworker/u8:2]
- 4801 root         0 SW   [kworker/0:0]
- 4831 root         0 SW   [kworker/1:2]
- 4986 root     10132 S    /usr/bin/php-cgi /www/cyber-pizza/all/actions/settin
- 4987 root      2308 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
- 4991 root      1192 R    ps
-14973 root         0 SW   [kworker/3:0]
-30137 root         0 SW   [kworker/u8:1]
-30348 root         0 SW   [kworker/2:0]
-31209 root         0 SW   [kworker/0:1]
-31240 root         0 SW   [kworker/1:1]
-31244 root         0 SW   [kworker/u8:0]
-31444 root      1196 S    /usr/sbin/crond -f -c /etc/crontabs -l 8
-32173 root         0 SW   [kworker/0:2]
+  138 root      1204 S    /bin/ash --login
+  140 root         0 SW<  [kworker/1:1H]
+  162 root         0 SW<  [cfg80211]
+  163 root         0 SW<  [brcmf_wq/mmc1:0]
+  164 root         0 SW   [brcmf_wdog/mmc1]
+  220 root         0 SW<  [kworker/3:1H]
+  294 root      1160 S    /sbin/logd -S 64
+  313 root      2312 S    /sbin/rpcd -s /var/run/ubus.sock -t 30
+  392 root       960 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+  459 root         0 SW<  [kworker/0:1H]
+  519 root      1440 S    /usr/sbin/odhcpd
+  900 root         0 SW   [jbd2/mmcblk0p3-]
+  901 root         0 SW<  [ext4-rsv-conver]
+ 1121 root       976 S    /usr/sbin/announce
+ 1822 root      1196 S    /usr/sbin/crond -f -c /etc/crontabs -l 8
+ 2179 root      1700 S    /sbin/netifd
+ 2265 root      2344 S    /usr/sbin/uhttpd -f -h /www -r OpenWrt -c /etc/httpd
+ 2266 root      1228 S    /usr/sbin/uhttpd -f -h /srv/www -r OpenWrt -n 3 -p 8
+ 2616 root      1776 S    /usr/sbin/hostapd -s -P /var/run/wifi-phy0.pid -B /v
+ 2891 root      1188 S    udhcpc -p /var/run/udhcpc-eth0.pid -s /lib/netifd/dh
+ 2975 dnsmasq  12432 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
+ 2976 root      1220 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf.cfg01411c
+ 3068 root      1188 S<   /usr/sbin/ntpd -n -N -S /usr/sbin/ntpd-hotplug -p 0.
+ 3583 root         0 SW   [kworker/2:2]
+ 4312 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+ 4313 root       968 S    /usr/libexec/sftp-server
+ 4328 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+ 4374 root      2536 S    -bash
+ 4537 root      1084 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+ 4538 root       952 S    /usr/libexec/sftp-server
+ 4539 root         0 SW   [kworker/2:1]
+ 6359 root         0 SW   [kworker/1:0]
+ 6700 root         0 SW   [kworker/u8:0]
+ 6991 root         0 SW   [kworker/u8:3]
+ 7146 root         0 SW   [kworker/0:0]
+ 7212 root         0 SW   [kworker/1:1]
+ 7330 root         0 SW   [kworker/0:2]
+ 7382 root         0 SW   [kworker/3:1]
+ 7383 root         0 SW   [kworker/u8:1]
+ 7389 root      2372 S    bash device_ports_status.sh openports
+ 7441 root     14892 S    nmap -oG /www/cyber-pizza/all/actions/scan/device_po
+ 7444 root         0 SW   [kworker/u8:2]
+ 7494 root      2876 S    nano all/performance.php
+ 7495 root         0 SW   [kworker/0:1]
+ 7496 root         0 SW   [kworker/1:2]
+ 7547 root     10132 S    /usr/bin/php-cgi /www/cyber-pizza/all/actions/settin
+ 7548 root      2308 S    {gen_debug.sh} /bin/bash ./gen_debug.sh
+ 7552 root      1192 R    ps
 *-*-*-*-*-*-*
 
 netstat------
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59555  TIME_WAIT   
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59582  TIME_WAIT   
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59591  TIME_WAIT   
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59566  TIME_WAIT   
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59589  TIME_WAIT   
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59570  TIME_WAIT   
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59590  TIME_WAIT   
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59601  ESTABLISHED 
-tcp        0      0 OpenWrt.lan:https       Devons-MBP-2.lan:59563  TIME_WAIT   
+tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54945 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54942 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61505 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54926 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61427 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:ssh         DESKTOP-98U1IOE.lan:61348 ESTABLISHED 
+tcp        0     23 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54944 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54939 ESTABLISHED 
+tcp        0      0 OpenWrt.lan:https       DESKTOP-CMJ612M.lan:54943 ESTABLISHED 
 Active UNIX domain sockets (w/o servers)
 Proto RefCnt Flags       Type       State         I-Node Path
-unix  8      [ ]         DGRAM                      3117 /dev/log
-unix  2      [ ]         DGRAM                     80615 /var/run/hostapd/wlan0
-unix  3      [ ]         STREAM     CONNECTED       3541 /var/run/ubus.sock
-unix  3      [ ]         STREAM     CONNECTED        800 
-unix  2      [ ]         DGRAM                      3080 
-unix  3      [ ]         STREAM     CONNECTED      80618 
-unix  3      [ ]         STREAM     CONNECTED       3124 /var/run/ubus.sock
-unix  2      [ ]         DGRAM                     81533 
-unix  3      [ ]         STREAM     CONNECTED      78542 
-unix  3      [ ]         STREAM     CONNECTED      81541 
-unix  2      [ ]         DGRAM                     80595 
-unix  2      [ ]         DGRAM                     78540 
-unix  3      [ ]         STREAM     CONNECTED       3540 
-unix  3      [ ]         STREAM     CONNECTED      81343 /var/run/ubus.sock
-unix  3      [ ]         STREAM     CONNECTED       3081 /var/run/ubus.sock
-unix  3      [ ]         STREAM     CONNECTED        879 
-unix  3      [ ]         STREAM     CONNECTED       3119 
-unix  2      [ ]         DGRAM                       915 
-unix  3      [ ]         STREAM     CONNECTED       3120 /var/run/ubus.sock
-unix  3      [ ]         STREAM     CONNECTED      81473 /var/run/ubus.sock
-unix  2      [ ]         DGRAM                      4214 
-unix  2      [ ]         DGRAM                     78560 
-unix  2      [ ]         DGRAM                     76148 
-unix  3      [ ]         STREAM     CONNECTED      78767 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      4379 /var/run/hostapd/wlan0
+unix  8      [ ]         DGRAM                      2268 /dev/log
+unix  3      [ ]         STREAM     CONNECTED       3935 
+unix  2      [ ]         DGRAM                      4363 
+unix  3      [ ]         STREAM     CONNECTED       1167 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      1606 
+unix  2      [ ]         DGRAM                      5668 
+unix  3      [ ]         STREAM     CONNECTED       1204 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       2275 
+unix  3      [ ]         STREAM     CONNECTED        736 
+unix  3      [ ]         STREAM     CONNECTED       2839 
+unix  2      [ ]         DGRAM                      2837 
+unix  3      [ ]         STREAM     CONNECTED       5911 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      3930 
+unix  3      [ ]         STREAM     CONNECTED       2212 
+unix  2      [ ]         DGRAM                      5256 
+unix  2      [ ]         DGRAM                      1166 
+unix  3      [ ]         STREAM     CONNECTED       2270 
+unix  3      [ ]         STREAM     CONNECTED       2276 /var/run/ubus.sock
+unix  2      [ ]         DGRAM                      2695 
+unix  3      [ ]         STREAM     CONNECTED       4382 
+unix  3      [ ]         STREAM     CONNECTED        737 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       5583 /var/run/ubus.sock
+unix  3      [ ]         STREAM     CONNECTED       5778 /var/run/ubus.sock
 *-*-*-*-*-*-*
 
 /etc/config/network-----
@@ -202,13 +210,13 @@ config wifi-iface 'default_radio0'
 	option mode 'ap'
 	option encryption 'psk2+tkip+ccmp'
 	option key 'cyberpizza5'
-	option ssid 'OPENWRTPIZZA'
+	option ssid 'Guardian_Devils'
 
 *-*-*-*-*-*-*
 
 /etc/config/firewall----- first 100 lines
 firewall size
-8	/etc/config/firewall
+4	/etc/config/firewall
 
 config defaults
 	option syn_flood '1'
@@ -253,24 +261,6 @@ config rule
 	option family 'ipv4'
 	option target 'ACCEPT'
 
-config rule 
-	option name 'Allow-Ping2'
-	option src '*'
-	option icmp_type 'echo-request'
-	option dest '*'
-	option proto 'icmp'
-	option family 'ipv4'
-	option target 'ACCEPT'
-
-config rule
-	option name 'Allow-Ping3'
-	option src '*'
-	option icmp_type 'echo-reply'
-	option dest '*'
-	option proto 'icmp'
-	option family 'ipv4'
-	option target 'ACCEPT'
-
 config rule
 	option name 'Allow-DHCPv6'
 	option src 'wan'
@@ -309,10 +299,28 @@ config rule
 	list icmp_type 'neighbour-advertisement'
 	option limit '1000/sec'
 	option family 'ipv6'
+	option target 'ACCEPT'
+
+config rule
+	option name 'Allow-ICMPv6-Forward'
+	option src 'wan'
+	option dest '*'
+	option proto 'icmp'
+	list icmp_type 'echo-request'
+	list icmp_type 'echo-reply'
+	list icmp_type 'destination-unreachable'
+	list icmp_type 'packet-too-big'
+	list icmp_type 'time-exceeded'
+	list icmp_type 'bad-header'
+	list icmp_type 'unknown-header-type'
+	option limit '1000/sec'
+	option family 'ipv6'
+	option target 'ACCEPT'
+
 *-*-*-*-*-*-*
 
 speed test------
-test 0 | "Durham,NC"                   91457411.83809166             92836793.83973240             "2019-07-26T20:38:27.220710Z" 27.957                        *-*-*-*-*-*-*
+test 0 | "Durham,NC"                   90518305.08064600             11761639.05623028             "2019-07-29T00:00:01.837555Z" 23.781                        *-*-*-*-*-*-*
 
 adblock,connection,vpn status
 1

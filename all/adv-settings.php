@@ -130,9 +130,9 @@
         <input type='submit' class='form-btn' name='reset' value='Factory Reset'><br>
 	<br><p>Manually update your Guardian Devil. It will be automatically updated on the 15th of every month. You will briefly lose network access. </p>
         <input type='submit' class='form-btn' name='update' value='Update Now'><br>
-	<br><p>Change the server used to run speed tests. Current speed test server: <?php echo $speed_server; ?> </p>
+	<br><p>Change the server used to run speed tests. Current speed test server: <span class='a-setting'><?php echo $speed_server; ?></span> </p>
         <input type='submit' class='form-btn' name='ch-speed' value='Change Speed Test Server'><br>
-	<br><p>Change the source for the Twitter feed on your dashboard. Current Twitter feed: <?php echo $twitter_link; ?> </p>
+	<br><p>Change the source for the Twitter feed on your dashboard. Current Twitter feed: <span><?php echo $twitter_link; ?></span> </p>
         <input type='submit' class='form-btn' name='twitter' value='Update Twitter Feed'><br>
       </form>
 

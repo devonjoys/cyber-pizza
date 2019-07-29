@@ -57,19 +57,16 @@
     <section class="perf-int">
 
       <section class="last-week">
-        <div class = "lw-tit"><h3>Network Performance Summary</h3></div>
+        <h1 class='perf-tit'>Performance Summary</h1>
         <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
 	<img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
-        <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><br>Download Performance Data</a>
+        <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><p class="sub-canc to-edit" style="margin-bottom:50px;">Download Performance Data</p></a>
+	<br>
       </section>
 
    <section class="inputs">
 
-          <h1 class="perf-tit">Periodic Performance Testing</h1>
-
-          <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
-
-          <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a class="inline-link" href="perf-change.html"><br>Change Frequency<br><br></a></p>
+          <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
 
 
          
@@ -94,8 +91,14 @@
           <iframe name="speedy" id="speedy" onload="frameLoaded(this)"></iframe>
 
 
+          <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
+
+          <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a class="inline-link" href="perf-change.html"><p class="form-btn to-edit">Change Frequency</p><br></a></p>
+
+
+
   <section class="bottom-link">
-	  <p class="caption"><a class='inline-link' href="https://10.42.0.1/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
+	  <p class="caption"><a class='inline-link' href="/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
 	</section>
     </section>
    </section>

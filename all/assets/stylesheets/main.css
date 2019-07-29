@@ -502,7 +502,6 @@ SCAN
 
  input.button-add { 
         border: 10px solid transparent; 
-        background: 
         width: 100px;
         height: 100px;
         position: relative;
@@ -523,6 +522,7 @@ SCAN
       iframe.myframe {
         width: 100%;
         max-width: 420px;
+        min-height: 300px;
         padding: 15px;
       }
 
@@ -535,7 +535,7 @@ SCAN
         padding-left: 30px;
       }
 
-      .columnscan {
+    .columnscan {
       float: left;
       width: 50%;
       min-width: 390px;
@@ -547,6 +547,7 @@ SCAN
     .rowscan:after {
       content: "";
       display: table;
+      width: 50%;
       clear: both;
     }
 

@@ -49,7 +49,7 @@
 					<br>curl https://raw.githubusercontent.com/TylerJang27/OpenVPNSetup/master/inner_script2.sh >> temp.sh
 					<br>chmod +x temp.sh
 					<br>./temp.sh	</code></p>
-					<br><p class="answer">Wait for the scripts to run.<br></p>
+					<br><p class="answer">Follow the prompts and wait for the scripts to run.<br></p>
 					<br><p class="code"><code>exit
 					<br>exit</code></p>
 					<br><p class="answer">Make sure you are connected to Guardian Devil's network.</p>
