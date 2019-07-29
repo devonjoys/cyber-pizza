@@ -57,7 +57,7 @@
 			<figcaption>This may take a few moments ... </figcaption></div></center> -->
 
 		<table style="width:100%">
-			<!-- <center> -->
+			<center>
 			<h3 style="color:black">Top Ports</h3>
 			  <tr>
 			    <th>Frequency</th>
@@ -66,12 +66,6 @@
 			    <th>Protocol</th> 
 			    <th>Service</th>
 			  </tr>
-		</table>
-
-			  		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
-			<figcaption>This may take a few moments ... </figcaption></div></center>
-
-		<table>
 
 		  <?php
 
@@ -89,10 +83,6 @@
 
 			?>
 
-<!-- 			<script>
-	          document.getElementById('loadingGif').style.display = "none";
-	        </script> -->
-
 		    <?php
 
 			 for ($i = 0; $i < count($topportAr); $i++) {
@@ -106,8 +96,11 @@
 
 			 ?>
 
-	<!-- 	</center> -->
+		</center>
 		</table> 
+
+		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
+			<figcaption>This may take a few moments ... </figcaption></div></center>
 
 
 		<?php
@@ -124,15 +117,7 @@
 					
 					if ($portrowNum > 0){
 						$portrowNum = 0;
-						?>
-
-					</center>
-					</table>
-
-					<?php
-
-
-				}
+					}
 
 				?>
 
@@ -142,7 +127,7 @@
 						<h6 style="font-weight:bold">Device IP: <?php echo "{$portdetailAr[$i][0]}" ?> </h6>
 					    <h6 style="font-weight:bold">Ports Open: <?php echo "{$portdetailAr[$i][1]}" ?></h6>
 
-				  	<?php
+				<?php
 
 				}else{
 					$portrowNum++;
@@ -175,6 +160,13 @@
 				}
 			}
 		?>
+		</center>
+		</table>
+
+		<script>
+	          document.getElementById('loadingGif').style.display = "none";
+	    </script>
+
 
 	</body>
 
