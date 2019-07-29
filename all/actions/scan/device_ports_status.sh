@@ -50,16 +50,26 @@ open_ports() {
 		emailText="Please monitor these device ports: "
 		for (( i=0; i<$warnCount; i++ ));
 		do
-			emailText="$emailText <----> IP ${hosts[$i]} has ${portsWatch[$i]} ports open"
+			emailText="$emailText : IP ${hosts[$i]} has ${portsWatch[$i]} ports open"
 		done
 
 	fi
 
-	OFS=$IFS
-	IFS=':'
+	FILE=/www/cyber-pizza/all/actions/scan/pass_to_email.txt 
+
+	if [[ -f $FILE ]] ; then
+		: > $FILE
+	else
+		touch $FILE
+	fi
+
+	echo $emailText | $FILE
+	echo $NMAP_FILE_XML | $FILE
+
+
 
 	mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
-	/etc/init.d/emailnotification.sh start 2 "$deviceNum:$emailText:$NMAP_FILE_XML"
+	/etc/init.d/emailnotification.sh start 2 1
 }
 
 top_ports() {

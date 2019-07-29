@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="refresh" content="0;URL='../performance.php'" />
+		<meta http-equiv="refresh" content="0;URL='../../scan.html'" />
 		<title>Network Performance</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
     	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
@@ -15,10 +15,10 @@
 		$info = $_POST["nmap"];
 		echo($info);
 
-		$fp = fopen("../assets/settings/performance.txt", 'w+');
+		$fp = fopen("../../assets/settings/scan.txt", 'w+');
 		fwrite($fp, $info);
 		fclose($fp);
-		shell_exec("/www/cyber-pizza/all/actions/scan/perf-scan-cron.sh");
+		shell_exec("/www/cyber-pizza/all/actions/scan/scan-set-cron.sh");
 		?>
 
 	</body>
