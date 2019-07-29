@@ -485,50 +485,62 @@ SCAN
 =====================================
 */
 
-      input.button-add { 
-        border: 10px solid grey; 
+.p-guide {
+  width: 100%;
+  min-width: 420px;
+  max-width: 800px;
+  padding-left: 30px;
+}
+.p-scan {
+  width: 100%;
+  min-width: 400px;
+  max-width: 800px;
+  text-align: center;
+  padding-right: 30px
+  padding-left: 15px;
+}
+
+ input.button-add { 
+        border: 10px solid transparent; 
         width: 100px;
         height: 100px;
         position: relative;
-        top: 50%;
-        left: 50%;
         margin-top: 0px;
         margin-left: 0px
       } 
 
       input.button-add:hover { 
-        border: 5px solid grey;
+        border: 5px solid transparent;
         margin: center;
         width: 100px;
         height: 100px;
         position: relative;
-        top: 50%;
-        left: 50%;
         margin-top: 0px;
         margin-left: 0px
     }
 
       iframe.myframe {
-        width: 600px;
-        height: 500px;
-        top: 50%;
-        left: 50%;
-        positon: relative;
-        margin-top: 0px;
-        margin-left: 100px
+        width: 100%;
+        max-width: 420px;
+        min-height: 300px;
+        padding: 15px;
       }
 
-      iframe.devicePopulation {
-        width: 400px;
-        height: 75px;
+      .devicePopulation {
         text-align: left;
-        position: absolute;
+        height: 35px;
+        float: left;
+        color: grey;
+        padding-top: 10px;
+        padding-left: 30px;
       }
 
     .columnscan {
       float: left;
       width: 50%;
+      min-width: 390px;
       padding: 10px;
+      padding-bottom: 30px;
     }
 
     /* Clear floats after the columns */
@@ -540,9 +552,9 @@ SCAN
     }
 
     ul.scan {
-      list-style-type: disc;
+      list-style-type: none;
       padding: 5px 10px;
-      background-color: #e8e8e8;
+      background-color: #E5E5E5;
       border-style: 1px solid black;
     }
 
