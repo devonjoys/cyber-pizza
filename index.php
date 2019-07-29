@@ -115,9 +115,9 @@
 	<br>	Please select frequency of port scanning:
 		<br><select name="nmap">
 			<option value="0">Never</option>
-                        <option value "1">Every Day</option>
-                        <option value "3">2 Times a Week</option>
-                        <option value "7">1 Time a Week</option>
+                        <option value "7">Every Day</option>
+                        <option value "2">2 Times a Week</option>
+                        <option value "1">1 Time a Week</option>
                 </select>
         <br>
 	<br>	<p class="a-note">By using this device, you agree to have Guardian Devil conduct port scans of your network devices.</p>
