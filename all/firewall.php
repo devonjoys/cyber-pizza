@@ -47,7 +47,7 @@
 	exec('/www/cyber-pizza/all/actions/firewall/firewall_restore.sh');
 	exec('echo I did it');
 	exec('uci commit firewall');
-	exec('service firewall restart');
+	exec('/etc/init.d/firewall restart');
       }
       if (! empty($_POST['cancel'])){
         exec('rm ./assets/data/allowed-ips-temp.txt');

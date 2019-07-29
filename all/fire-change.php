@@ -174,8 +174,8 @@
         </section>
 	
 	<section>
-		<p class="caption">Do not add blocklists with more than 1000 IPs, as it may slow down the device.</p>
-		<p class="caption">Your changes may require several minutes to take effect.</p>
+		<p class="a-note">Do not add blocklists with more than 1000 IPs, as it may slow down the device.
+		Your changes may require several minutes to take effect.</p>
 	</section>
 
 	<div class='form-end'>

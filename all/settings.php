@@ -186,7 +186,7 @@
         Network password: <?php echo $w_pass; ?>
       </p>
 	<form class="ifconfig_output" action="./actions/settings/troubleshoot.sh" method="post">
-            <p class='sett-text'>Internet not working? --> <input class='form-btn' type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0"></p>
+            <p class='sett-text'>Internet not working? <input class='form-btn' type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0"></p>
       </form>
 
 
@@ -197,9 +197,9 @@
       <h4 class="sett-tit">Device Settings</h4>
 
       <a href="device-chng.php" class="inline-link edit-right">Change Device Password</a>
-
+	
 	<form class="ifconfig_output" action="./actions/settings/reboot.php" method="post">            
-		<input class='form-btn' type="submit" alt="reboot button" value="Reboot Device">
+		<p class="sett-text">Reboot your device. <input class='form-btn' type="submit" alt="reboot button" value="Reboot Device"></p>
 	</form>
 
   <script>
@@ -222,14 +222,14 @@
   </script>
 
       <form class="ifconfig_output" action="./actions/ifconfig.php" method="post" target="ifconfig_frame">
-            <input class='form-btn' type="submit" alt="submit button to show ifconfig output" value="See Your If Config" onclick="showLink()">
+            <p class="sett-text">Display the output of ifconfig. <input class='form-btn' type="submit" alt="submit button to show ifconfig output" value="See Your ifconfig" onclick="showLink()"></p>
       </form>
 
       <iframe name="ifconfig_frame" id="ifconfig_frame" height="250" width="500" style="display:none"></iframe> 
 
       <div id="downloadThis" style="display:none">
        <a href="./actions/settings/ifconfig.txt" download="ifconfig.txt">
-          <br>Click Here to Download If Config</a>
+          <br>Click Here to Download ifconfig</a>
       </div>
 
     

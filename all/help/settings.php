@@ -48,7 +48,7 @@
 			functionality and output. On this page, you may change the notification 
 			settings for receiving alerts about your network. You may also make some 
 			system changes to the device, such as changing passwords. For other system 
-			modifications, see the <a class="inline-link" href="/cgi-bin/luci">Network Interface</a>.</p>
+			modifications, see the <a class="inline-link" href="/cgi-bin/luci">Router Interface</a>.</p>
 		<br>
 		<h4 class="help-h">Notification Settings</h4>
 		<p class="answer">By default, Guardian Devil will send you emails when certain activities happen on your network. You may change the types of notifications that you may receive, as well as add alternate email addresses to receive these notifications. You must always have one registered Duke email on your Guardian Devil.</p>
@@ -57,6 +57,7 @@
 		<br>
 		<h4 class="help-h">Testing Preferences</h4>
 		<p class="answer">Guardian Devil can conduct regular speed tests and port scans of your device, keeping you informed of what is happing on your network. Here, you can change how frequently these tests are run.</p>
+		<br>
 		<h4 class="help-h">Change Password</h4>
 		<p class="answer">Guardian Devil comes with two passwords: one so that you may connect to your network, and one so that you may make changes to your device. This way, a malicious actor who has connected to your network cannot make changes without knowing your admin password.</p>
 		<br>

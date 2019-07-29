@@ -34,10 +34,13 @@
 	$login_errors_file="/www/cyber-pizza/all/assets/settings/login_errors.txt";
 	$login_errors_open=fopen($login_errors_file, 'r');
 	$login_errors=fread($login_errors_open, filesize($login_errors_file));
-	if (substr($login_errors, 0, 1) == "0" && substr($login_errors, 2, 1) == "0" && substr($login_errors, 4, 1) =="0" && substr($login_errors, 2, 1) == "0") {
+	if (substr($login_errors, 0, 1) == "0" && substr($login_errors, 2, 1) == "0" && substr($login_errors, 4, 1) =="0" && substr($login_errors, 6, 1) == "0") {
 		shell_exec("touch /www/cyber-pizza/all/assets/initialized_temp.txt");
 		shell_exec("echo 1 >> /www/cyber-pizza/all/assets/initialized_temp.txt");
 		shell_exec("mv /www/cyber-pizza/all/assets/initialized_temp.txt /www/cyber-pizza/all/assets/initialized.txt");
+		shell_exec("sleep 1");
+		shell_exec("/etc/init.d/network restart");
+		shell_exec("/etc/init.d/uhttpd restart");
 	} else {
 		shell_exec("touch /www/cyber-pizza/all/assets/initialized_temp.txt");
 		shell_exec("echo 0 >> /www/cyber-pizza/all/assets/initialized_temp.txt");

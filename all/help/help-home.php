@@ -69,7 +69,7 @@
             <a class="help-btn" href="adv-settings.php"><h5 class="help-btn">Advanced Settings</h5></a>
           </li>
           <li  class="help-li">
-            <a class="help-btn" href="network-if.php"><h5 class="help-btn">Network Interface</h5></a>
+            <a class="help-btn" href="network-if.php"><h5 class="help-btn">Router Interface</h5></a>
           </li>
           <li  class="help-li">
             <a class="help-btn" href="performance.html"><h5 class="help-btn">Performance</h5></a>
@@ -122,7 +122,7 @@
 			<br>
 			<p class="answer">If devices still arent connecting, unplug Guardian Devil and plug it back in.</p>
 			<br>
-			<p class="more">More: <a class="inline-link" href="../../../cgi-bin/luci">Network Interface</a>, <a class="inline-link" href="contact.html">Contact</a></p>
+			<p class="more">More: <a class="inline-link" href="../../../cgi-bin/luci">Router Interface</a>, <a class="inline-link" href="contact.html">Contact</a></p>
 		</div>
 		<div class="q" id="why-2-pass">
 			<h4 class="question">Why two different passwords?</h4>

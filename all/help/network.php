@@ -49,8 +49,8 @@
 			<span class="a-setting"><?php echo $my_ssid;?></span> will benefit from its core functionalities. Make sure to only 
 			connect trusted devices to Guardian Devil for best performance and security.</p>
 		<br>
-		<p class="answer">Most network settings may be modified via the OpenWRT <a class="inline-link" href="/cgi-bin/luci">Network</a> 
-			interface. Others may be modified on the <a class="inline-link" href="../settings.php">Settings</a> page.</p>
+		<p class="answer">Most network settings may be modified via the OpenWRT <a class="inline-link" href="/cgi-bin/luci">Router Interface</a> 
+			. Others may be modified on the <a class="inline-link" href="../settings.php">Settings</a> page.</p>
 		<br>
 		<p class="answer">In this version, Guardian Devil only offers a limited range of access, so you may be unable to use its network in some parts of your house.</p>
 		<br>

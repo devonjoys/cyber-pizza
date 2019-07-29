@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<title>Cyber Pizza</title>
 		<?php
-    	    	$initialized_file="all/assets/settings/initialized.txt";
+    	    	$initialized_file="all/assets/initialized.txt";
     		$initialized_open=fopen($initialized_file, 'r');
         	$initialized=fread($initialized_open, filesize($initialized_file));
         	fclose($initialized_open);
-		if ($initialized=="1") {
+		if (trim($initialized)=="1") {
                 	echo ("<meta http-equiv='Refresh' content='0; url=all/dash.php'/>");
         	}
 		$login_errors_file="all/assets/settings/login_errors.txt";
@@ -121,6 +121,7 @@
                 </select>
         <br>
 	<br>	<p class="a-note">By using this device, you agree to have Guardian Devil conduct port scans of your network devices.</p>
+	<br>	<p class="answer">After clicking <span class="a-setting">Finish</span>, you will have to reconnect to the network.</p>
 
 	<br>
         <input type='submit' class='sub-canc' name='init' value='Finish'>
