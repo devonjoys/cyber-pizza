@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Device Scanning</title>
+		<link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	</head>
+	<body>
+
+    <header class="row group container">
+        <a href="dash.php">
+           <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
+           <div class="v-line"></div>
+        </a> 
+        <h2 class="page">Device Scanning</h2>
+
+        
+        <nav class="set-btns">
+        <ul>
+          <li>
+            <a href="./help/help-home.php"><h5 class="btn">Help</h5></a>
+          </li>
+          <li>
+            <a href="settings.php"><h5 class="btn">Settings</h5></a>
+          </li>
+        </ul>
+        </nav>
+    </header>
+
+
+
+
+    <section class="perf-int">
+
+      <section class="last-week">
+        <div class = "lw-tit"><h3>Network Performance Summary</h3></div>
+        <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
+  <img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
+        <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><br>Download Performance Data</a>
+      </section>
+
+      <section class="inputs inputs-alt">
+
+          <h1 class="perf-tit">Periodic Performance Testing</h1>
+
+          <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
+
+
+          <form action="./actions/perf-set.php" method="post">
+            <p><br>Select frequency of testing: </p>
+            <select name="freq">
+                <option value="0">Never</option>
+                <option value="2">2 Times a Day</option>
+                <option value="6">6 Times a Day</option>
+                <option value="12">12 Times a Day</option>
+            </select>
+            <br><br>
+            <input class="sub-canc" type="submit" value="Save">
+          </form>
+
+
+      </section>
+
+
+    </section>
+
+
+    <footer class="row group container footer">
+
+      <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
+      <a class="footnote" href="help/help-home.php"><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
+
+    </footer>
+
+
+
+	</body>
+
+</html>
