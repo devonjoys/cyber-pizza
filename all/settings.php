@@ -178,12 +178,17 @@
         $ssid = fread($f, filesize($ssid_name));
         fclose($f);
 
+	$block_pass_name = "./assets/settings/block_pass.txt";
+	$block_pass_file = fopen($block_pass_name, 'r');
+	$block_pass=fread($block_pass_file, filesize($block_pass_name));
+	fclose($block_pass_file);
+
         $w_pass = shell_exec("uci show wireless.default_radio0.key | cut -f2 -d \"'\"");
     	?>
 
       <p class="sett-text">
-        Network name: <?php echo $ssid; ?> <br>
-        Network password: <?php echo $w_pass; ?>
+        Network name: <span class='a-setting'><?php echo $ssid; ?></span> <br>
+        Network password: <span class='a-setting'><?php echo $w_pass; ?></span>
       </p>
 	<form class="ifconfig_output" action="./actions/settings/troubleshoot.sh" method="post">
             <p class='sett-text'>Internet not working? <input class='form-btn' type="submit" alt="submit button to troubleshoot eth0" value="Troubleshoot eth0"></p>
@@ -197,7 +202,9 @@
       <h4 class="sett-tit">Device Settings</h4>
 
       <a href="device-chng.php" class="inline-link edit-right">Change Device Password</a>
-	
+	<p class="sett-text">Admin user: <span class='a-setting'>devil</span> <br>
+	Admin password: <span class='a-setting'><?php echo $block_pass; ?></span>
+	</p>
 	<form class="ifconfig_output" action="./actions/settings/reboot.php" method="post">            
 		<p class="sett-text">Reboot your device. <input class='form-btn' type="submit" alt="reboot button" value="Reboot Device"></p>
 	</form>

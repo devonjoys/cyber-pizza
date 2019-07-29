@@ -9,7 +9,7 @@ done < "/www/cyber-pizza/all/assets/settings/frozen.txt"
 
 if [[ "$stat" == 1 ]]; then
 	ifup wan
-	/etc/init.d/network restart
+	#/etc/init.d/network restart
 	touch /www/cyber-pizza/all/assets/settings/frozen-temp.txt
 	echo 0 >> /www/cyber-pizza/all/assets/settings/frozen-temp.txt
 	mv /www/cyber-pizza/all/assets/settings/frozen-temp.txt /www/cyber-pizza/all/assets/settings/frozen.txt

@@ -41,7 +41,10 @@ if [[ "$conf_old" == "$old_pass" ]]; then
 					echo "0" >> $login_errors/login_errors_temp.txt
 					cat $login_errors/login_errors.txt | tail -n +3 >> $login_errors/login_errors_temp.txt
 					mv $login_errors/login_errors_temp.txt $login_errors/login_errors.txt
-
+					block_pass=$(echo "$2" | tr "!-~" "*")
+					touch /www/cyber-pizza/all/assets/settings/block_pass_temp.txt
+					echo "$block_pass" >> /www/cyber-pizza/all/assets/settings/block_pass_temp.txt
+					mv /www/cyber-pizza/all/assets/settings/block_pass_temp.txt /www/cyber-pizza/all/assets/settings/block_pass.txt
 					#/etc/init.d/uhttpd restart
 				else
 					echo "Your new passwords do not match."

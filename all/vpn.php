@@ -64,6 +64,7 @@
         	</label>
     	   </form>
     
+    <p>You will briefly lose internet connection after starting/stopping VPN.</p>
     <p>Your network's current external-facing IP is: <span class="a-setting"><?php echo $vpn_ip ?></span></p>
     <p>For more information on OpenVPN, visit <a class="inline-link" href="help/vpn.html">Help-VPN</a></p>
     <p>To set up a VPN connection for the first time, visit <a class="inline-link" href="help/vpn-set-up.php">Help-VPN Set-Up</a></p>
