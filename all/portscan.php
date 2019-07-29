@@ -53,9 +53,6 @@
 	<body>
 		<p></p>
 
-		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
-			<figcaption>This may take a few moments ... </figcaption></div></center>
-
 		<table style="width:100%">
 			<center>
 			<h3 style="color:black">Top Ports</h3>
@@ -66,7 +63,7 @@
 			    <th>Protocol</th> 
 			    <th>Service</th>
 			  </tr>
-
+			
 		  <?php
 
 			$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports");
@@ -83,10 +80,6 @@
 
 			?>
 
-			<script>
-	          document.getElementById('loadingGif').style.display = "none";
-	        </script>
-
 		    <?php
 
 			 for ($i = 0; $i < count($topportAr); $i++) {
@@ -100,8 +93,17 @@
 
 			 ?>
 
+			 
+
+<!-- 			<script>
+	          document.getElementById('loadingGif').style.display = "none";
+	        </script> -->
+
 		</center>
 		</table> 
+
+		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;">
+			<figcaption>This may take a few moments ... </figcaption></div></center>
 
 
 		<?php

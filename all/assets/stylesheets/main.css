@@ -497,7 +497,7 @@ SCAN
   max-width: 800px;
   text-align: center;
   padding-right: 30px
-  padding-left: 15px;
+  margin-left: 15px;
 }
 
  input.button-add { 
@@ -538,7 +538,7 @@ SCAN
     .columnscan {
       float: left;
       width: 50%;
-      min-width: 390px;
+      min-width: 420px;
       padding: 10px;
       padding-bottom: 30px;
     }
@@ -549,6 +549,10 @@ SCAN
       display: table;
       width: 50%;
       clear: both;
+    }
+
+    #loadingGif {
+      margin: 20px;
     }
 
     ul.scan {
