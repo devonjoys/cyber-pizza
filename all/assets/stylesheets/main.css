@@ -495,6 +495,7 @@ SCAN
   width: 100%;
   min-width: 400px;
   max-width: 800px;
+  height: 100%;
   text-align: center;
   padding-right: 30px
   margin-left: 15px;
@@ -522,7 +523,7 @@ SCAN
       iframe.myframe {
         width: 100%;
         max-width: 420px;
-        min-height: 300px;
+        min-height: 450px;
         padding: 15px;
       }
 
@@ -541,6 +542,7 @@ SCAN
       min-width: 420px;
       padding: 10px;
       padding-bottom: 30px;
+      height: 100%;
     }
 
     /* Clear floats after the columns */
