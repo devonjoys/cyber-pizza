@@ -15,7 +15,7 @@
 <?php
 	$fname = './assets/settings/scan.txt';
 	$fp = fopen($fname, 'r');
-	$freq = fread($fp, firesize($fname));
+	$freq = fread($fp, filesize($fname));
 	fclose($fp)
 ?>
 
