@@ -53,7 +53,7 @@
 		<h4 class="help-h">Notification Settings</h4>
 		<p class="answer">By default, Guardian Devil will send you emails when certain activities happen on your network. You may change the types of notifications that you may receive, as well as add alternate email addresses to receive these notifications. You must always have one registered Duke email on your Guardian Devil.</p>
 		<br>
-		<p class="answer">Guardian Devil notifications will come from _PLACEHOLDER_@duke.edu, so make sure you have not blocked this address.</p> 
+		<p class="answer">Guardian Devil notifications will come from guardiandevil@duke.edu, so make sure you have not blocked this address.</p> 
 		<br>
 		<h4 class="help-h">Testing Preferences</h4>
 		<p class="answer">Guardian Devil can conduct regular speed tests and port scans of your device, keeping you informed of what is happing on your network. Here, you can change how frequently these tests are run.</p>

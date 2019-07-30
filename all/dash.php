@@ -49,8 +49,8 @@
 
         $adname = './assets/settings/my-adb.txt';
         $conname = './assets/settings/my-conn.txt';
-        ###$vpnname = './assets/settings/my-vpn.txt';
-        $vpnname = './assets/settings/vpn_status.txt';
+        $vpnname = './assets/settings/my-vpn.txt';
+        ###$vpnname = './assets/settings/vpn_status.txt';
 	$twittername= './assets/settings/twitter.txt';
 
         $af = fopen($adname, 'r');
@@ -78,7 +78,7 @@
         } else {
           echo "<img class='stat-img' src='./assets/images/status_no_internet.png' alt='internet connection status icon, internet not connected'/>";
         }
-        if ($vpn_stat=="true") {
+        if ($vpn_stat) {
           echo "<img class='stat-img' src='./assets/images/status_link.png' alt='VPN status icon, VPN on'/>";
         } else {
           echo "<img class='stat-img' src='./assets/images/status_no_link.png' alt='VPN status icon, VPN off'/>";
