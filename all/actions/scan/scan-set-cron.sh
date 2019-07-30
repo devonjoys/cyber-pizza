@@ -1,6 +1,6 @@
 #!/bin/bash
 
-input="/www/cyber-pizza/all/assets/settings/nmap_freq.txt"
+input="/www/cyber-pizza/all/assets/settings/scan.txt"
 
 times=$(cat $input)
 
@@ -23,11 +23,11 @@ cat /etc/crontabs/root | head -n $one_less >> /etc/crontabs/root.tmp
 
 if [[ "$times" == "0" ]]; then
 	echo '#0 0 * * * bash /www/cyber-pizza/all/actions/scan/device_ports_inter.sh' >> /etc/crontabs/root.tmp
-elif [[ "$times" == "1" ]]; then
-	echo '0 3 * * * bash /www/cyber-pizza/all/actions/scan/device_ports_inter.sh' >> /etc/crontabs/root.tmp
-elif [[ "$times" == "3" ]]; then
-	echo '0 3 1,4 * * bash /www/cyber-pizza/all/actions/scan/device_ports_inter.sh' >> /etc/crontabs/root.tmp
 elif [[ "$times" == "7" ]]; then
+	echo '0 3 * * * bash /www/cyber-pizza/all/actions/scan/device_ports_inter.sh' >> /etc/crontabs/root.tmp
+elif [[ "$times" == "2" ]]; then
+	echo '0 3 1,4 * * bash /www/cyber-pizza/all/actions/scan/device_ports_inter.sh' >> /etc/crontabs/root.tmp
+elif [[ "$times" == "1" ]]; then
 	echo '0 3 1 * * bash /www/cyber-pizza/all/actions/scan/device_ports_inter.sh' >> /etc/crontabs/root.tmp
 else
 	echo "Error. Invalid time"

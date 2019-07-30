@@ -139,7 +139,6 @@
     </section>
 
     <section class="options-int">
-
       <h4 class="sett-tit">Network Performance Preferences</h4>
 
     <a href="perf-change.html" class="inline-link edit-right">Change Frequency</a>
@@ -153,14 +152,27 @@
           $freq = fread($fp, filesize($fname));
         ?>
 
-        Network performance is checked <?php echo $freq; ?> times a day. 
+        Network performance is checked <span class='a-setting'><?php echo $freq; ?></span> times a day. 
+      </p>
 
-<!--         <form action="perf-change.html" method="post">
-          <input type="submit" name="opt-freq" value="Change Frequency">
-        </form> -->
 
-<!--         <a class= "inline-link" href="perf-change.html">Change Frequency</a> -->
+    </section>
 
+<section class="options-int">
+      <h4 class="sett-tit">Scan Preferences</h4>
+
+    <a href="scan-change.html" class="inline-link edit-right">Change Frequency</a>
+
+      <p class="sett-text">
+        <?php
+
+
+          $sname = './assets/settings/scan.txt';
+          $sp = fopen($sname, 'r');
+          $sreq = fread($sp, filesize($sname));
+        ?>
+
+        Guardian Devil runs scans <span class='a-setting'><?php echo $sreq; ?></span> times a week.
       </p>
 
 

@@ -1,0 +1,2 @@
+Please monitor these device ports: <-> IP 10.42.0.205 has 3 ports open
+/mnt/mmcblk0p3/ubuntu/etc/my_mail/scansummary.zip

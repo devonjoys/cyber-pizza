@@ -23,7 +23,7 @@ open_ports() {
 	egrep -v "^#|Status: Up" $NMAP_FILE | cut -d' ' -f2,4- | \
 	sed -n -e 's/Ignored.*//p' | \
 	awk -F, '{split($0,a," "); printf "Host: %-20s Ports Open: %d\n" , a[1], NF}' \
-	| sort -k 5 -g | tee -a /www/cyber-pizza/all/actions/scan/open_port_check.txt
+	| sort -k 5 -g | tee -a /www/cyber-pizza/all/actions/scan/open_port_check.txt >/dev/null
 
 	portcheckAr=$(cat $FILE)
 	lineNum=1
@@ -46,20 +46,36 @@ open_ports() {
 	done
 
 	if [[ $warnCount -gt 0 ]]
-	then 
+	then
+
 		emailText="Please monitor these device ports: "
 		for (( i=0; i<$warnCount; i++ ));
 		do
-			emailText="$emailText <----> IP ${hosts[$i]} has ${portsWatch[$i]} ports open"
+			emailText="$emailText <-> IP ${hosts[$i]} has ${portsWatch[$i]} ports open"
 		done
+
+		FILE=/www/cyber-pizza/all/actions/scan/pass_to_email.txt 
+
+		if [[ -f $FILE ]] ; then
+			: > $FILE
+		else
+			touch $FILE
+		fi
+		
+		
+		mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
+		bash /mnt/mmcblk0p3/ubuntu/etc/my_mail/zippy_xml.sh
+
+		echo $emailText | tee -a $FILE >/dev/null
+		echo "/mnt/mmcblk0p3/ubuntu/etc/my_mail/scansummary.zip" | tee -a $FILE >/dev/null
+		chmod 777 $FILE 
+		
+	 	/etc/init.d/emailnotification.sh start 2 $deviceNum 1
 
 	fi
 
-	OFS=$IFS
-	IFS=':'
+	
 
-	mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
-	/etc/init.d/emailnotification.sh start 2 "$deviceNum:$emailText:$NMAP_FILE_XML"
 }
 
 top_ports() {

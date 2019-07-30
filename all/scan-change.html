@@ -33,29 +33,20 @@
 
 
 
-    <section class="perf-int">
-
-      <section class="last-week">
-        <div class = "lw-tit"><h3>Network Performance Summary</h3></div>
-        <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
-  <img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
-        <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><br>Download Performance Data</a>
-      </section>
-
-      <section class="inputs inputs-alt">
-
-          <h1 class="perf-tit">Periodic Performance Testing</h1>
-
-          <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
+    <section class="options-int">
+          <h3 style="border-bottom:3px solid #393939;color:#393939;margin:.5em 0;">Scan Preferences</h3>
 
 
-          <form action="./actions/perf-set.php" method="post">
-            <p><br>Select frequency of testing: </p>
-            <select name="freq">
+          <p class="caption">Set how often device runs port scans. If Guardian Devil detects a threat, you may opt to receive an email notification.</p>
+
+
+          <form action="./actions/scan/scan-set-freq.php" method="post">
+            <p><br>Select frequency of scans: </p>
+            <select name="nmap">
                 <option value="0">Never</option>
-                <option value="2">2 Times a Day</option>
-                <option value="6">6 Times a Day</option>
-                <option value="12">12 Times a Day</option>
+                <option value="7">Every Day</option>
+                <option value="2">2 Times a Week</option>
+                <option value="1">1 Time a Week</option>
             </select>
             <br><br>
             <input class="sub-canc" type="submit" value="Save">
