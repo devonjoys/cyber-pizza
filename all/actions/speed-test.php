@@ -16,7 +16,7 @@
 	<!--	<div id="loadingGif" name="loadingGif" style="display:block;"><img src="./all/assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
 			<figcaption>This may take a few moments ... </figcaption></div>-->
 
-		<br>
+		
 		<div>
 		<?php  
 		function tab2nbsp($str)
@@ -39,12 +39,12 @@
 		$out_names=explode("&", $inter[0]);
 		$out_vals=explode("&", $inter[1]);
 		
-		echo "<table style='width:100%'> <tr><td>$out_names[0]</td><td>$out_vals[0]</td></tr>
+		echo "<div class='speed-test-output'><table style='width:100%'> <tr><td>$out_names[0]</td><td>$out_vals[0]</td></tr>
 						<tr><td>$out_names[1]</td><td>$out_vals[1]</td></tr>
 						<tr><td>$out_names[2]</td><td>$out_vals[2]</td></tr>
 						<tr><td>$out_names[3]</td><td>$out_vals[3]</td></tr>
 						<tr><td>$out_names[4]</td><td>$out_vals[4]</td></tr>
-						<tr><td>$out_names[5]</td><td>$out_vals[5]</td></tr></table></html>";		
+						<tr><td>$out_names[5]</td><td>$out_vals[5]</td></tr></table></html></div>";		
 
 		?>
 		</div>

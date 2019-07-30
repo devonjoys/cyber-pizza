@@ -40,33 +40,25 @@
       $allowed = array();
       while(! feof($af)) {
         $ip = fgets($af);
-	if (!is_null($ip)) {        
-	  $allowed[] = $ip;
-	}
+        $allowed[] = $ip;
       }
 
       $blocked = array();
       while(! feof($bf)) {
         $ip = fgets($bf);
-	if (!is_null($ip)) {        
-          $blocked[] = $ip;
-	}
+        $blocked[] = $ip;
       }
 
       $urls = array();
       while(! feof($urlf)) {
         $url = fgets($urlf);
-	if (!is_null($url)) {        
-	  $urls[] = $url;
-	}
+        $urls[] = $url;
       }
 
       $ports = array();
       while(! feof($pf)) {
         $port = fgets($pf);
-	if (!is_null($port) && $port != "\n") {        
-          $ports[] = $port;
-	}
+        $ports[] = $port;
       }
 
       fclose($af);

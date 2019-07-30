@@ -469,6 +469,10 @@ table {
   margin-right: 40px;
 }
 
+.speed-test-output {
+  background: #e8e8e8;
+}
+
 #speedo {
   margin: 20px;
   margin-top: 50px;

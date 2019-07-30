@@ -80,7 +80,7 @@
 		<p class="caption">Click on the button to start your speed test.</p>
 	</div>
 	<div id="speedy_gif" name="speedy_gif" style="display:none">
-		<img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
+		<br><br><br><br><br><br><img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
 	</div>
 
 	<script>
@@ -91,7 +91,7 @@
 		}
 	</script>
 
-          <iframe name="speedy" id="speedy" onload="frameLoaded(this)"></iframe>
+          <iframe name="speedy" class='speed-test-output' id="speedy" onload="frameLoaded(this)"></iframe>
 
   </div>
 
