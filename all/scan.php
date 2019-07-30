@@ -12,6 +12,13 @@
 
 	<body>
 
+<?php
+	$fname = './assets/settings/scan.txt';
+	$fp = fopen($fname, 'r');
+	$freq = fread($fp, firesize($fname));
+	fclose($fp)
+?>
+
     <header class="row group container">
         <a href="dash.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
@@ -24,7 +31,7 @@
             <a href="./help/help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
-            <a href="../settings.php"><h5 class="btn">Settings</h5></a>
+            <a href="./settings.php"><h5 class="btn">Settings</h5></a>
           </li>
         </ul>
 		</nav>
@@ -57,6 +64,14 @@
           <li class=scan><em style="font-weight:bold">Filtered</em> - Scan cannot determine whether the port is open because packet filtering prevents its probes from reaching the port.</li>
           <li class=scan><em style="font-weight:bold">Unfiltered</em> - This port is accessible, but the scan is unable to determine whether it is open or closed.</li>
         </ul> 
+
+	 <h1 class="perf-tit" align="center">Periodic Port Scans</h1>
+
+
+	 <p class="caption">Set how often device runs port scans. If Guardian Devil detects a threat, you will receive an email notification.</p>
+
+   	 <p class="caption"> <br>Guardian devil runs port scans <span class="a-setting"><?php echo $freq; ?></span> times a week.<a href="scan-change.html" class="form-btn">Change Frequency</a></p>
+
         </section>
 
       </div>

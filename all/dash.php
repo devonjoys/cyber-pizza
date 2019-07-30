@@ -157,7 +157,7 @@
 
         <div class="app-wrap">
         <div class="app">
-          <a href="scan.html">
+          <a href="scan.php">
           <div class="app-info">
             <img class="icon" src="./assets/images/eye.png" alt="scanning app icon depicting an eye"/>
           </div>
