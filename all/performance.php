@@ -66,13 +66,16 @@
 
    <section class="inputs">
 
-          <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
+          <h1 class="perf-tit" align="center">Network Speed Test</h1>
+
+
+    <div class="speed-test-div">
 
 
          
 	<div id="before_test" name="before_test">
 		<form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
-           		<input class="form-btn" id='speedo' type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
+           		<input class="sub-canc" id='speedo' type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
     </form>
 		<p class="caption">Click on the button to start your speed test.</p>
 	</div>
@@ -90,15 +93,20 @@
 
           <iframe name="speedy" id="speedy" onload="frameLoaded(this)"></iframe>
 
+  </div>
 
-          <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
 
-          <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a class="inline-link" href="perf-change.html"><p class="form-btn to-edit">Change Frequency</p><br></a></p>
+    <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
+
+
+    <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
+
+    <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a href="perf-change.html" class="form-btn">Change Frequency</a></p>
 
 
 
   <section class="bottom-link">
-	  <p class="caption"><a class='inline-link' href="/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
+	  <p class="buttum"><a class='inline-link' href="/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
 	</section>
     </section>
    </section>
