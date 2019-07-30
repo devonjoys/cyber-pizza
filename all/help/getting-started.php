@@ -72,16 +72,16 @@
 			Duke email, hit the Accept button on the login page and click on the Guardian devil 
 			logo at the top.</p>
 		<br>
-		<p class="answer">Navigate to the <a class="inline-link" href="settings.html">Settings</a> page and change your network password and 
+		<p class="answer">Navigate to the <a class="inline-link" href="../settings.php">Settings</a> page and change your network password and 
 			admin password. If you have initial connection problems, see the "Troubleshoot 
-			eth0" option on <a class="inline-link" href="settings.html">Settings</a>.</p>
+			eth0" option on <a class="inline-link" href="../settings.php">Settings</a>.</p>
 		<br>
 		<p class="answer">You should now be able to use your Guardian Devil to increase your 
 			network security and peace of mind. Connect additional trusted devices to its 
 			network to take advantage of its features. If you require assistance, see the 
 			other <a class="inline-link" href="help-home.php">Help</a> pages or <a class="inline-link" href="contact.html">Contact Duke OIT</a>.</p>
 		<br>
-		<p class="more">More: <a class="inline-link" href="../settings.php">Settings</a>, <a class="inline-link" href="settings.html">Help-Settings</a>, <a class="inline-link" href="help-home.php">OIT Guardian Devil FAQ</a>, <a class="inline-link" href="help-home.php#why-2-pass">FAQ-Why two different passwords?</a></p>
+		<p class="more">More: <a class="inline-link" href="../settings.php">Settings</a>, <a class="inline-link" href="settings.php">Help-Settings</a>, <a class="inline-link" href="help-home.php">OIT Guardian Devil FAQ</a>, <a class="inline-link" href="help-home.php#why-2-pass">FAQ-Why two different passwords?</a></p>
 	</div>
 
 	</section>

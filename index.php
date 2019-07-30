@@ -124,7 +124,7 @@
 	<br>	<p class="answer">After clicking <span class="a-setting">Finish</span>, you will have to reconnect to the network.</p>
 
 	<br>
-        <input type='submit' class='sub-canc' name='init' value='Finish'>
+        <input type='submit' class='sub-canc' alt='Click button to submit' name='init' value='Finish'>
         <iframe name="pass-result" style='display:none;'></iframe>
     </form>
 

@@ -41,7 +41,7 @@
     
 
 
-    <form method='post' action='./actions/settings/dev-pass-chng.php' target="pass-result">
+    <form method='post' action='./actions/settings/dev-pass-chng.php'>
         Current user name: devil <br> <br>
         Enter old password: <input type="password" name="old-pass" required>
         <br><br>Enter new password: <input type="password" name="new-pass1" required>
@@ -49,7 +49,7 @@
         <br><br>
         <input type='submit' name='dev-pass' value='Update Device Password'>
 
-        <iframe name="pass-result"></iframe>
+        <iframe name="pass-result" display="none"></iframe>
     </form>
 
   </section>
