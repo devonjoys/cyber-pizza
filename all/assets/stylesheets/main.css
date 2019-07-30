@@ -361,7 +361,8 @@ table {
 
 .app:focus-within {
   padding: 0px;
-  border: 2px solid #012169;
+  border: 0px solid #fff;
+  background: #E5E5E5;
   box-shadow: 0px 0px 15px #012169;
 }
 
@@ -454,10 +455,18 @@ table {
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Arial, sans-serif;
   margin: 20px;
   text-align: center;
+  display: block;
 /*  margin-top: 12px;
   padding-left: 10px;
   padding-right: 10px;*/
   font-size: 16px;
+}
+
+.speed-test-div {
+  text-align: center;
+  background: #e8e8e8;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 #speedo {
@@ -477,6 +486,13 @@ table {
   height: 80px;
   width: 120px;
   background: #B5B5B5;
+}
+
+.buttum {
+  margin-top: 40px;
+  padding-left: 40px;
+  display: block;
+  background: #e8e8e8;
 }
 
 /*
