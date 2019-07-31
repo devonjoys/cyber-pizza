@@ -865,6 +865,44 @@ input:checked + .slider:before {
   ========================================
 */
 
+.help-me {
+  color: #fff;
+  float: left;
+  margin: 30px;
+  margin-top: 45px;
+  margin-left: 20px;
+  border: 1px solid #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 22px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 100px;
+}
+.help-me .tiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #f8f7f7;
+  color: #393939;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 15px;
+  position: absolute;
+  z-index: 1;
+}
+.help-me:hover {
+  background: #B5B5B5;
+  border: 1px solid transparent;
+  color: #393939;
+}
+.help-me:hover .tiptext {
+  visibility: visible;
+}
+
+
+
 .help-tit {
   text-align: center;
   color: #393939;

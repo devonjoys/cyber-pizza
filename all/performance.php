@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
+
+  <!-- Script to change display when speed test button is pressed -->
 	<script>
 		function hideButton() {
 			var x = document.getElementById("before_test");
@@ -18,6 +20,8 @@
 			y.style.display="block";
 		}
 	</script>
+
+  <!-- grabbing latest plot of network performance data -->
     <?php  
       $fname = './assets/settings/performance.txt';
 
@@ -31,12 +35,16 @@
 
     ?>
 
+    <!-- Main header -->
     <header class="row group container">
         <a href="dash.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
            <div class="v-line"></div>
         </a> 
         <h2 class="page">Network Performance</h2>
+        <a href='' class='help-me' alt='To performance help page'> ?
+          <span class="tiptext">Tooltip text</span>
+        </a>
 
         
         <nav class="set-btns">
@@ -53,14 +61,20 @@
 
 
     
+    <!-- page content -->
+  <section class="perf-int">
 
-    <section class="perf-int">
-
-      <section class="last-week">
+    <!-- Displays network performance data plots -->
+    <section class="last-week">
         <h1 class='perf-tit'>Performance Summary</h1>
         <img class="graph" src="./assets/images/net_speed_plot1.png" width=90% height=auto>
-	<img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
+	       <img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
+         <!-- Download the performance data -->
         <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><p class="sub-canc to-edit" style="margin-bottom:50px;">Download Performance Data</p></a>
+<<<<<<< HEAD
+	       <br>
+    </section>
+=======
 	<br>
       </section>
 
@@ -97,26 +111,59 @@
 
 
     <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
+>>>>>>> fa8148dcb3e9da1146e317b9a118b852873318a3
+
+  
+
+    <section class="inputs">
 
 
-    <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
+    <!-- Interface to run Speed Test -->
+    <h1 class="perf-tit" align="center">Network Speed Test</h1>
 
-    <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a href="perf-change.html" class="form-btn">Change Frequency</a></p>
+    <div class="speed-test-div">
+      
+    	<div id="before_test" name="before_test">
+    		<form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
+               		<input class="sub-canc" id='speedo' type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
+        </form>
+    		<p class="caption">Click on the button to start your speed test.</p>
+    	</div>
 
+    	<div id="speedy_gif" name="speedy_gif" style="display:none">
+    		<img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
+    	</div>
 
+    	<script>
+    		function frameLoaded() {
+    			var y = document.getElementById("speedy_gif");
+    			y.style.display="none";
+    		}
+    	</script>
 
-  <section class="bottom-link">
-	  <p class="buttum"><a class='inline-link' href="/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
-	</section>
+      <iframe name="speedy" id="speedy" onload="frameLoaded(this)"></iframe>
+    </div>
+
+      <!-- Interface to change/see performance testing settings -->
+      <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
+      <p class="caption">Set how often device checks network performance. Results are stored for a week and displayed on this page.</p>
+      <p class="caption"> <br>Performance is checked <span class="a-setting"><?php echo $freq; ?></span> times a day. <a href="perf-change.html" class="form-btn">Change Frequency</a></p>
+
+      <!-- Link to OpenWRT interface for real-time data on network -->
+      <section class="bottom-link">
+  	      <p class="buttum"><a class='inline-link' href="/cgi-bin/luci/admin/status/realtime">Advanced Graphs and Status</a></p>
+  	  </section>
+
     </section>
-   </section>
-   
-    <footer class="row group container footer">
 
+  </section>
+   
+
+   <!-- Main footer -->
+    <footer class="row group container footer">
       <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
       <a class="footnote" href="help/help-home.php#faq"><p class="footie btn">FAQ</p></a>
       <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
-
     </footer>
 
 	</body>
