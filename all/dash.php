@@ -11,8 +11,8 @@
 	</head>
 	<body>
 
+    <!-- Main Header -->
 		<header class="row group container">
-
 				<a href="dash.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
          </a> 
@@ -29,19 +29,20 @@
           </li>
         </ul>
 				</nav>
-
 		</header>
 
 
+    <!-- Dash with status icons, connected devices, and applet nav buttons -->
 
     <section class="int-face">
 
 
       <section class="dash">
 
+        <!-- Status icons -->
         <div id="status">
-<!--       <p class="stat">STATUS</p> -->
 
+        <!-- Reading statuses -->
       <?php
         exec('/www/cyber-pizza/all/actions/my-adb.sh');
         exec('/www/cyber-pizza/all/actions/my-connection.sh');
@@ -49,24 +50,23 @@
 
         $adname = './assets/settings/my-adb.txt';
         $conname = './assets/settings/my-conn.txt';
-        ###$vpnname = './assets/settings/my-vpn.txt';
         $vpnname = './assets/settings/vpn_status.txt';
-	$twittername= './assets/settings/twitter.txt';
+	       $twittername= './assets/settings/twitter.txt';
 
         $af = fopen($adname, 'r');
         $cf = fopen($conname, 'r');
         $vpnf = fopen($vpnname, 'r');
-	$twitterf = fopen($twittername, 'r');
+	     $twitterf = fopen($twittername, 'r');
 
         $ad_stat = trim(fread($af, filesize($adname)));
         $con_stat = trim(fread($cf, filesize($conname)));
         $vpn_stat  = trim(fread($vpnf, filesize($vpnname)));
-	$twitter_link = trim(fread($twitterf, filesize($twittername)));
-        ?>
+	      $twitter_link = trim(fread($twitterf, filesize($twittername)));
+      ?>
     
 
     <a class="stat" href="./help/dashboard.html#status-icons" alt="explanation page for device status icons">
-      
+        <!-- echoing statuses -->
         <?php
         if ($ad_stat) {
           echo "<img class='stat-img' src='./assets/images/status_adblock.png' alt='adblock status icon, adblock on'/>";
@@ -91,14 +91,15 @@
       ?>
     </a>
 
+
+    <!-- Connected Devices -->
     <?php
-
-    $scanPopOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/connected_devices.sh population");
-    echo "<p class='devicestat'><span class='blinking'>{$scanPopOutput}</span>devices are connected</p>";
+      $scanPopOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/connected_devices.sh population");
+      echo "<p class='devicestat'><span class='blinking'>{$scanPopOutput}</span>devices are connected</p>";
     ?>
-
     </div>
 
+    <!-- Applet navigation buttons  -->
     <div class="apps">
         <div class="app-wrap">
         <div class="app">
@@ -170,26 +171,23 @@
       </section>
 
 
-
+      <!-- Twitter feed -->
       <section class="feed">
           <div class = "feed-title"><h3>Network Security Tips</h3></div>
           <div class="feed-body">
             <div class="feed-twitter">
               <a class="twitter-timeline" data-width="450" data-height="650" href=<?php echo $twitter_link;?>>Twitter Feed</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-               <!-- <a class="twitter-timeline" data-width="500" data-height="650" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
             </div>
           </div>
       </section>
     
     </section>
 
-
+    <!-- Main footer -->
     <footer class="row group container footer">
-
       <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
       <a class="footnote" href="help/help-home.php#faq"><p class="footie btn">FAQ</p></a>
       <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
-
     </footer>
 
 	</body>
