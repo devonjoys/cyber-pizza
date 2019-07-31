@@ -68,20 +68,20 @@
 			to your existing router. The device should connect automatically. Connect a laptop 
 			or computer to your Guardian Devil's network, named <span class="a-setting"><?php echo $my_ssid;?></span> with the network password labeled on your device. 
 			Then, type in <span class="a-setting"><?php echo $my_ip;?></span> into your browser's web address bar and log in with 
-			the default admin credentials devil and admin password _PLACEHOLDER_. After entering your 
+			the default admin credentials <span class='a-setting'>devil</span> and admin password <span class='a-setting'>TrueBlueForever2019</span>. After entering your 
 			Duke email, hit the Accept button on the login page and click on the Guardian devil 
 			logo at the top.</p>
 		<br>
-		<p class="answer">Navigate to the <a class="inline-link" href="settings.html">Settings</a> page and change your network password and 
+		<p class="answer">Navigate to the <a class="inline-link" href="../settings.php">Settings</a> page and change your network password and 
 			admin password. If you have initial connection problems, see the "Troubleshoot 
-			eth0" option on <a class="inline-link" href="settings.html">Settings</a>.</p>
+			eth0" option on <a class="inline-link" href="../settings.php">Settings</a>.</p>
 		<br>
 		<p class="answer">You should now be able to use your Guardian Devil to increase your 
 			network security and peace of mind. Connect additional trusted devices to its 
 			network to take advantage of its features. If you require assistance, see the 
 			other <a class="inline-link" href="help-home.php">Help</a> pages or <a class="inline-link" href="contact.html">Contact Duke OIT</a>.</p>
 		<br>
-		<p class="more">More: <a class="inline-link" href="../settings.php">Settings</a>, <a class="inline-link" href="settings.html">Help-Settings</a>, <a class="inline-link" href="help-home.php">OIT Guardian Devil FAQ</a>, <a class="inline-link" href="help-home.php#why-2-pass">FAQ-Why two different passwords?</a></p>
+		<p class="more">More: <a class="inline-link" href="../settings.php">Settings</a>, <a class="inline-link" href="settings.php">Help-Settings</a>, <a class="inline-link" href="help-home.php">OIT Guardian Devil FAQ</a>, <a class="inline-link" href="help-home.php#why-2-pass">FAQ-Why two different passwords?</a></p>
 	</div>
 
 	</section>

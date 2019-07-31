@@ -15,11 +15,30 @@
 
 		<?php  
     
+
+    function validEmail($input) {
+      $atemp = '../assets/settings/email.txt';
+      $aname = '../assets/settings/email-temp.txt';
+      $ems = file($atemp);
+      foreach($ems as $line) {
+        if(trim($line) == $input)) {
+          return 0;
+        }
+      }
+        $ems = file($aname);
+        foreach($ems as $line) {
+          if (trim($line) == $input) {
+                return 0;
+          }
+        }
+        return 1;
+    }
+
     $mname = "../assets/settings/email.txt";
     $mtemp = "../assets/settings/email-temp.txt";
 
     $new_addr = $_POST['new_addr'];
-    if (! empty($new_addr)) {
+    if (! empty($new_addr) && validEmail($new_addr) {
         $f = fopen($mtemp, 'a+');
         fwrite($f, ",".$new_addr);
         fclose($f);

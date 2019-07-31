@@ -63,11 +63,14 @@ open_ports() {
 		fi
 		
 		
-		mv /www/cyber-pizza/all/actions/scan/device_ports_status.xml /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.xml 
-		bash /mnt/mmcblk0p3/ubuntu/etc/my_mail/zippy_xml.sh
+		
+		# bash /mnt/mmcblk0p3/ubuntu/etc/my_mail/zippy_xml.sh
+		# zip /www/cyber-pizza/all/actions/scan/scansummary.zip /www/cyber-pizza/all/actions/scan/device_ports_status.xml
+		xsltproc /www/cyber-pizza/all/actions/scan/device_ports_status.xml -o /www/cyber-pizza/all/actions/scan/device_ports_status.html >/dev/null
+		mv /www/cyber-pizza/all/actions/scan/device_ports_status.html /mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.html
 
 		echo $emailText | tee -a $FILE >/dev/null
-		echo "/mnt/mmcblk0p3/ubuntu/etc/my_mail/scansummary.zip" | tee -a $FILE >/dev/null
+		echo "/mnt/mmcblk0p3/ubuntu/etc/my_mail/device_ports_status.html" | tee -a $FILE >/dev/null
 		chmod 777 $FILE 
 		
 	 	/etc/init.d/emailnotification.sh start 2 $deviceNum 1

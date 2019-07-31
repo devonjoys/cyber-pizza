@@ -27,12 +27,19 @@
 
     function validIPa($input) {
       $atemp = '../assets/data/allowed-ips-temp.txt';
+      $aname = '../assets/data/allowed-ips.txt';
       $ips = file($atemp);
       foreach($ips as $line) {
-        if(trim($line) == $input) {
+        if(trim($line) == $input || is_null($input)) {
           return 0;
         } 
       }
+	$ips = file($aname);
+	foreach($ips as $line) {
+	  if (trim($line) == $input) {
+		return 0;	
+	  }
+	}
       if (filter_var($input, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) or filter_var($input, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
         return 1;
       }
@@ -41,12 +48,19 @@
 
     function validIPb($input) {
       $btemp = '../assets/data/blocked-ips-temp.txt';
+      $bname = '../assets/data/blocked-ips.txt';
       $ips = file($btemp);
       foreach($ips as $line) {
-        if(trim($line) == $input) {
+        if(trim($line) == $input || is_null($input)) {
           return 0;
         } 
       }
+	$ips = file($bname);
+	foreach($ips as $line) {
+	  if (trim($line) == $input) {
+		return 0;	
+	  }
+	}
       if (filter_var($input, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) or filter_var($input, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
         return 1;
       }
@@ -56,12 +70,19 @@
 
     function validURL($input) {
       $urltemp = '../assets/data/blocklists-temp.txt';
+      $urlname = '../assets/data/blocklists.txt';
       $urls = file($urltemp);
       foreach($urls as $line) {
-        if(trim($line) == $input) {
+        if(trim($line) == $input || is_null($input)) {
           return 0;
         } 
       }
+	$urls = file($urlname);
+	foreach($urls as $line) {
+	  if (trim($line) == $input) {
+		return 0;	
+	  }
+	}
       $protocal = 'http://'.$input;
       if (filter_var($input, FILTER_VALIDATE_URL) || filter_var($protocal, FILTER_VALIDATE_URL)) {
         echo 'valid url';
@@ -72,12 +93,19 @@
 
     function validPORT($input) {
       $ptemp = '../assets/data/blocked-ports-temp.txt';
+      $pname = '../assets/data/blocked-ports.txt';
       $ports = file($ptemp);
-      foreach($ports as $port) {
-        if(trim($line) == $port) {
+      foreach($ports as $line) {
+        if(trim($line) == $input || is_null($input)) {
           return 0;
         } 
       }
+	$ports = file($pname);
+	foreach($ports as $line) {
+	  if (trim($line) == $input) {
+		return 0;	
+	  }
+	}
       echo "checking";
       $bad_ports = array(22, 53, 67, 68, 80, 123, 443);
       foreach ($bad_ports as $prt) {

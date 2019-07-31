@@ -150,7 +150,7 @@
 			<br>
 			<p class="answer">While Guardian Devil's advertisement blocking software attempts to block as much as possible, sometimes some slip through, particularly advertisements embedded in other videos. You may, however, modify the blocklists using the <a class="inline-link" href="/cgi-bin/luci/admin/services/adblock">Advertisement Blocker</a>page.</p>
 			<br>
-			<p class="more">More: <a class="inline-link" href="dashboard.html">Help-Dashboard</a>, <a class="inline-link" href="adblock.html">Help-Advertisement Blocker</a></p>
+			<p class="more">More: <a class="inline-link" href="dashboard.html">Help-Dashboard</a>, <a class="inline-link" href="ad-blocker.html">Help-Advertisement Blocker</a></p>
                 </div>
                 <div class="q" id="why-feedback">
                         <h4 class="question">How do I give feedback on Guardian Devil?</h4>

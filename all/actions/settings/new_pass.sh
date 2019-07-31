@@ -6,9 +6,9 @@ touch $login_errors/login_errors_temp.txt
 
 old_pass=$(cat /etc/shadow | head -n 2 | tail -n 1 | cut -f2 -d ":")
 salt=$(cat /etc/shadow | head -n 2 | tail -n 1 | cut -f3 -d "$")
-echo "ok"
+#echo "ok"
 conf_old=$(echo $1 | openssl passwd -1 -salt $salt -stdin)
-echo "ok"
+#echo "ok"
 length=$(expr length "$2")
 
 if [[ "$conf_old" == "$old_pass" ]]; then

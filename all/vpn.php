@@ -44,7 +44,7 @@
         <nav class="set-btns">
         <ul>
           <li>
-            <a href="help.html"><h5 class="btn">Help</h5></a>
+            <a href="help/help-home.php"><h5 class="btn">Help</h5></a>
           </li>
           <li>
             <a href="settings.php"><h5 class="btn">Settings</h5></a>

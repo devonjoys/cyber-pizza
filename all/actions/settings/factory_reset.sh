@@ -11,6 +11,7 @@ cp /etc/backups/empty /www/cyber-pizza/all/actions/scan/devicelog.txt
 cp /etc/backups/empty /www/cyber-pizza/all/actions/scan/device_ports_status.grep
 cp /etc/backups/empty /www/cyber-pizza/all/actions/performance/summary.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/email-temp.txt
+cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/email.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/data/all_speed_tests.txt
 cp /etc/backups/empty /mnt/mmcblk0p3/etc/speedtestprocessor/all_speed_tests.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/data/allowed-ips.txt

@@ -71,8 +71,47 @@
 	       <img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
          <!-- Download the performance data -->
         <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><p class="sub-canc to-edit" style="margin-bottom:50px;">Download Performance Data</p></a>
+<<<<<<< HEAD
 	       <br>
     </section>
+=======
+	<br>
+      </section>
+
+   <section class="inputs">
+
+          <h1 class="perf-tit" align="center">Network Speed Test</h1>
+
+
+    <div class="speed-test-div">
+
+
+         
+	<div id="before_test" name="before_test">
+		<form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
+           		<input class="sub-canc" id='speedo' type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
+    </form>
+		<p class="caption">Click on the button to start your speed test.</p>
+	</div>
+	<div id="speedy_gif" name="speedy_gif" style="display:none">
+		<br><br><br><br><br><br><img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
+	</div>
+
+	<script>
+		function frameLoaded() {
+			var y = document.getElementById("speedy_gif");
+			y.style.display="none";
+
+		}
+	</script>
+
+          <iframe name="speedy" class='speed-test-output' id="speedy" onload="frameLoaded(this)"></iframe>
+
+  </div>
+
+
+    <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
+>>>>>>> fa8148dcb3e9da1146e317b9a118b852873318a3
 
   
 
@@ -123,7 +162,7 @@
    <!-- Main footer -->
     <footer class="row group container footer">
       <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
-      <a class="footnote" href="help/help-home.php"><p class="footie btn">FAQ</p></a>
+      <a class="footnote" href="help/help-home.php#faq"><p class="footie btn">FAQ</p></a>
       <a class="footnote" href="help/contact.html"><p class="footie btn">Contact DukeOIT</p></a>
     </footer>
 

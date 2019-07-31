@@ -54,7 +54,7 @@
 		<br>
 		<p class="answer">In this version, Guardian Devil only offers a limited range of access, so you may be unable to use its network in some parts of your house.</p>
 		<br>
-		<p class="answer">You may experience slightly slower speeds than your router's main network, especially when connected to <a class="inline-link" href="vpn.php">VPN</a>.</p>
+		<p class="answer">You may experience slightly slower speeds than your router's main network, especially when connected to <a class="inline-link" href="../vpn.php">VPN</a>.</p>
 		<br>
 		<p class="more">More: <a class="inline-link" href="about.php">About</a>, <a class="inline-link" href="help-home.php">OIT Guardian Devil FAQ</a>, <a class="inline-link" href="help-home.php#why-slow">FAQ-Why is my internet speed slow?</a></p>
 	</div>

@@ -9,15 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
+	<meta http-equiv='Refresh' content='0; url=../../device-chnge.php'/>
 	</head>
 	<body>
 
     
 
    <?php
-      $message = shell_exec("new_pass.sh {$_POST['old-pass']} {$_POST['new-pass1']} {$_POST['new-pass2']}");
+      $message = shell_exec("./new_pass.sh {$_POST['old-pass']} {$_POST['new-pass1']} {$_POST['new-pass2']}");
       echo $message;
-      if (trim($message)=="Your admin password has been successfully changed.") {
+	shell_exec("touch /www/cyber-pizza/all/assets/{$message}");
+      if (substr(trim($message),0,4)=="Your") {
 	shell_exec("/etc/init.d/uhttpd restart");
       }
    ?>

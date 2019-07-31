@@ -50,8 +50,10 @@
 
         $adname = './assets/settings/my-adb.txt';
         $conname = './assets/settings/my-conn.txt';
-        $vpnname = './assets/settings/vpn_status.txt';
-	       $twittername= './assets/settings/twitter.txt';
+
+        $vpnname = './assets/settings/my-vpn.txt';
+        ###$vpnname = './assets/settings/vpn_status.txt';
+	      $twittername= './assets/settings/twitter.txt';
 
         $af = fopen($adname, 'r');
         $cf = fopen($conname, 'r');
@@ -78,7 +80,7 @@
         } else {
           echo "<img class='stat-img' src='./assets/images/status_no_internet.png' alt='internet connection status icon, internet not connected'/>";
         }
-        if ($vpn_stat=="true") {
+        if ($vpn_stat) {
           echo "<img class='stat-img' src='./assets/images/status_link.png' alt='VPN status icon, VPN on'/>";
         } else {
           echo "<img class='stat-img' src='./assets/images/status_no_link.png' alt='VPN status icon, VPN off'/>";
@@ -158,7 +160,7 @@
 
         <div class="app-wrap">
         <div class="app">
-          <a href="scan.html">
+          <a href="scan.php">
           <div class="app-info">
             <img class="icon" src="./assets/images/eye.png" alt="scanning app icon depicting an eye"/>
           </div>
