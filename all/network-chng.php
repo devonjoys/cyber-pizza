@@ -12,6 +12,7 @@
 	</head>
 	<body>
 
+    <!-- Main Header -->
     <header class="row group container">
         <a href="dash.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
@@ -41,7 +42,7 @@
         $w_pass = shell_exec("uci show wireless.default_radio0.key | cut -f2 -d \"'\"");
     ?>
 
-
+    <!-- Page to change network name and password -->
     <section class="options-int">
 
       <h4 class="sett-tit">Network Preferences</h4>
@@ -63,7 +64,7 @@
   </section>
 
 
-
+    <!-- Main Footer -->
     <footer class="row group container footer">
 
       <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>

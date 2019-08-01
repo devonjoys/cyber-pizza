@@ -11,17 +11,15 @@
   </head>
   <body>
 
+    <!-- Main Header, no links to force save/cancel -->
     <header class="row group container">
-
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
            <div class="v-line"></div>
  
         <h2 class="page">Firewall Settings</h2>
-
-        
-
     </header>
 
+    <!-- PHP to read current firewall blocks -->
       <?php  
       $aname = './assets/data/allowed-ips.txt';
       $atemp = './assets/data/allowed-ips-temp.txt';
@@ -75,7 +73,7 @@
       fclose($pf);
       ?>
 
-
+    <!-- Interface to change firewall -->
         <section class="fire">
 
           <div class="tcell">
@@ -198,6 +196,7 @@
         </form>
 	</div>
 
+    <!-- Main footer, no links to force save/cancel -->
     <footer class="row footer">
     </footer>
 
