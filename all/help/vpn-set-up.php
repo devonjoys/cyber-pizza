@@ -4,18 +4,18 @@
 		<meta charset="utf-8">
 		<title>Help</title>
 		<link rel="stylesheet" href="../assets/stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
 	<?php
-	$ipname='../assets/settings/my-lan-ip.txt';
-	$ipf=fopen($ipname, 'r');
-	$lan_ip = trim(fread($ipf, filesize($ipname)));
+		//Reads the current LAN IP Address of the Guardian Devil
+		$ipname='../assets/settings/my-lan-ip.txt';
+		$ipf=fopen($ipname, 'r');
+		$lan_ip = trim(fread($ipf, filesize($ipname)));
 	?>
 
 

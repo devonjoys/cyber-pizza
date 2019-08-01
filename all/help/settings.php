@@ -4,20 +4,20 @@
 		<meta charset="utf-8">
 		<title>Help</title>
 		<link rel="stylesheet" href="../assets/stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-    <?php
-	shell_exec("../actions/my-ssid.sh");
-	$ssid_file ="../assets/settings/my-ssid.txt";
-	$ssid_open = fopen($ssid_file, 'r');
-	$my_ssid = fread($ssid_open, filesize($ssid_file));
-	fclose($ssid_open);
-    ?>
+	<?php
+		//Reads the current network SSID
+		shell_exec("../actions/my-ssid.sh");
+		$ssid_file ="../assets/settings/my-ssid.txt";
+		$ssid_open = fopen($ssid_file, 'r');
+		$my_ssid = fread($ssid_open, filesize($ssid_file));
+		fclose($ssid_open);
+	?>
     <header class="row group container">
         <a href="../dash.php">
            <img class="logo" src="../assets/images/dgd.png" width="200px" height=auto>

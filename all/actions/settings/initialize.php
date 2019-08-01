@@ -14,7 +14,7 @@
 	<body>
 
     
-
+<!-- Runs in the context of login to set new passwords, settings, etc. Tests using login_errors whether or not input is valid -->
    <?php
       shell_exec("./new_netid.sh {$_POST['netID']}");
       shell_exec("./new_pass.sh pepperoni {$_POST['new-pass1']} {$_POST['new-pass2']}");

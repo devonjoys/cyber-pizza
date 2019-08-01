@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#cp /etc/backups/empty ./my-ip.txt
+#This script determines what the external-facing IP address of the network is and adds it to my-ip.txt
 
 touch /www/cyber-pizza/all/actions/vpn/ip-temp.txt
 curl ifconfig.me/ip >> /www/cyber-pizza/all/actions/vpn/ip-temp.txt

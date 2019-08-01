@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This script checks whether VPN is active as a service and adds it to my-vpn.txt
+
 vpn_stat=$(pidof openvpn)
 echo $vpn_stat
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/my-vpn.txt

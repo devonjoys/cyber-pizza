@@ -16,7 +16,8 @@
 	$fname = './assets/settings/scan.txt';
 	$fp = fopen($fname, 'r');
 	$freq = fread($fp, filesize($fname));
-	fclose($fp)
+	fclose($fp);
+  shell_exec("rm /www/cyber-pizza/all/portscanoutput.html");
 ?>
 
     <header class="row group container">
@@ -45,9 +46,11 @@
 
     	<script> 
     		var initiated = false;
-		function hideButton() {
+		    function hideButton() {
 		      var x = document.getElementById("before_scan");
+          var y = document.getElementById("loadingGif");
 		      x.style.display = "none";
+          y.style.display = "block";
 		      initiated=true;
 		    }
     	</script>
@@ -88,9 +91,16 @@
 
 	       <div id ="before_scan" name="before_scan" style="display:block">
 
-<!-- 		       <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
+
+            <!-- <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
 		            <input type="image" src="./assets/images/search.png" name="image" align="middle" width="100" height="100" vspace ="50" hspace="50" alt="submit button" type="submit" value="Run Device Scan" class="button-add" onclick="hideButton();">
 		        </form> -->
+
+
+            <center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:none;top:50%;">
+               <!--  <figcaption>This may take a few moments ... </figcaption></div></center> -->
+
+
             <form class="portscan_output" action="./portscan.php" method="post" target="myframe">
                 <input type="image" src="./assets/images/search.png" alt="button to run scan" type="submit" value="Run Device Scan" class="button-add" onclick="hideButton();">
             </form>
@@ -102,21 +112,9 @@
 		        </em>
 		        </p>
 
+            <iframe class="myframe" name="myframe" id="myframe"></iframe> 
+
 	        </div>
-
-	<!--Technique to allow iframe to eventually load-->
-		<script>
-			function changeUrl() {
-				if (initiated==true) {
-					var source = "______"; <!--___________________________________________-->
-					document.getElementById.src=source;
-				}
-			}
-			setInterval(changeUrl(), 10000);
-		</script>
-
-
-      		<iframe class="myframe" name="myframe" id="myframe"></iframe> 
 
       	</div>
         </section>

@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<title>Advanced Settings</title>
 		<link rel="stylesheet" href="../../assets/stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
+    		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -30,20 +29,21 @@
     </header>
 
     <?php
-      $reboot = $_POST['reboot'];
-      $freeze = $_POST['freeze'];
-      $unfreeze = $_POST['unfreeze'];
-      $gen_debug = $_POST['gen_debug'];
-      $reset = $_POST['reset'];
-      $update = $_POST['update'];
-      $speed = $_POST['ch-speed'];
-      $twitt = $_POST['twitter'];
+      //handles Post input to display appropriate editing page
+	$reboot = $_POST['reboot'];
+      	$freeze = $_POST['freeze'];
+      	$unfreeze = $_POST['unfreeze'];
+      	$gen_debug = $_POST['gen_debug'];
+      	$reset = $_POST['reset'];
+      	$update = $_POST['update'];
+      	$speed = $_POST['ch-speed'];
+      	$twitt = $_POST['twitter'];
     ?>
 
     <section class="options-int">
 
     <?php
-
+	//display of reboot option
       if (! empty($reboot)) {
         echo "<h4 class='sett-tit'>Reboot Device?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
@@ -52,6 +52,7 @@
             <br><input type='submit' class='sub-canc' name='reboot-it' value='Yes, reboot the device'>
          </form>";
       }
+	//display of freeze option
       if (! empty($freeze)) {
         echo "<h4 class='sett-tit'>Freeze Network?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
@@ -78,14 +79,15 @@
           </form>
         ";
       }
+	//display of generate debug option
       if (! empty($gen_debug)) {
         echo "<h4 class='sett-tit'>Debug Generated<br></h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
         exec("./gen_debug.sh");
         #echo "<input class='sub-canc' href='../../assets/settings/debug.txt' download='debug.txt' val='Download Debug File'>";
 	echo "<br><a href='../../assets/settings/debug.txt'><p class='sub-canc to-edit'>Download Debug File</p></a>";
-        
       }
+	//display of reset option
       if (! empty($reset)) {
         echo "<h4 class='sett-tit'>Factory Reset?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
@@ -99,6 +101,7 @@
           </form>
         ";
       }
+	//display of update option
       if (! empty($update)) {
         echo "<h4 class='sett-tit'>Update Packages?</h4>";
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
@@ -109,8 +112,8 @@
             <br><input type='submit' class='sub-canc' name='update-it' value='Yes, update the device'>
           </form>
         ";
-        
       }
+	//display of changing speed test server option
       if (! empty($speed)) {
         $speedname='../../assets/settings/speed-server.txt';
 	$speedf = fopen($speedname, 'r');
@@ -121,6 +124,7 @@
         echo "<a href='../../adv-settings.php' class='inline-link edit-right'>Back to Advanced Settings</a>";
         echo "<p class='warn'>Change the server used to run the speed test. The codes for a selection of server locations are provided below. </p>";
 	
+	//displays table of common speed test servers
 	echo "
 		<br>
     <table class='server-table'>
@@ -162,6 +166,7 @@
           </form>
         ";
       }
+	//displays changing twitter feed option
       if (! empty($twitt)) {
         $twittername= '../../assets/settings/twitter.txt';
         $twitterf = fopen($twittername, 'r');

@@ -10,14 +10,15 @@
 	</head>
 
 	<body>
-
+		
 		<?php  
 		$info = $_POST["nmap"];
 		echo($info);
-
+		//incorporates the change of scanning frequency and writes it to scan.txt
 		$fp = fopen("../../assets/settings/scan.txt", 'w+');
 		fwrite($fp, $info);
 		fclose($fp);
+		//executes change of scanning frequency into cron
 		shell_exec("/www/cyber-pizza/all/actions/scan/scan-set-cron.sh");
 		?>
 

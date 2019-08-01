@@ -13,7 +13,7 @@
 	<body>
 
     
-
+<!--Reboots the device-->
    <?php
       shell_exec("/www/cyber-pizza/all/actions/settings/reboot.sh");
    ?>

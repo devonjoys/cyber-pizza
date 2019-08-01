@@ -4,6 +4,9 @@ login_line=4
 touch $login_errors/login_errors_temp.txt
 length=$(expr length "$1")
 
+#This script tests if user has chosen a valid new network password, and changes it accordingly or outputs error messages
+#Takes input #1 of network password and #2 of confirmed network password
+
 if [[ -z "$1" ]]; then
 	echo "Please input a valid password"
 	cat $login_errors/login_errors.txt | head -n 3 >> $login_errors/login_errors_temp.txt

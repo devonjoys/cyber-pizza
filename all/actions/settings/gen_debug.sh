@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#This script generates a downloadable debug log for users to troubleshoot with
+#Includes information from ps, netstat, config files, speed tests, and cyber-pizza settings
+
 debug_temp=/www/cyber-pizza/all/assets/settings/debug-temp.txt
 touch $debug_temp
 echo "Debug log for:" >> $debug_temp

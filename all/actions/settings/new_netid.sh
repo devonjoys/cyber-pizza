@@ -1,4 +1,8 @@
 #!/bin/bash
+
+#This script tests whether the user has input a valid netID and outputs errors or changes it accordingly
+#This script takes in $1 as netID
+
 login_errors="/www/cyber-pizza/all/assets/settings"
 login_line=3
 touch $login_errors/login_errors_temp.txt

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This script reads whether or not the network has been frozen in order to modify firewall settings and block or allow internet connection from all network devices
+
 while IFS= read -r line
 do
 	stat=$line
