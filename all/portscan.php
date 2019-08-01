@@ -1,7 +1,3 @@
-<?php 
-	ob_start();
-	?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,7 +16,6 @@
 			  margin-bottom: 5px;
 			  text-align: center;
 			} 	
-
 			tr{
 			  background: #B5B5B5;
 			  border-spacing: 5px;
@@ -29,7 +24,6 @@
 			  margin-bottom: 5px;
 			  width: 50px;
 			}
-
 			tr:nth-child(even){
 		      background: #e8e8e8;
 			  border-spacing: 5px;
@@ -37,7 +31,6 @@
 			  margin-top: 10px;
 			  margin-bottom: 5px;
 			  text-align: center;
-
 			}
 			th {
 			  background: #e8e8e8;
@@ -48,15 +41,16 @@
 			  text-align: center;
 			  font-weight: bold;
 			}
-
 		</style>
 
 	</head>
-		<script type="text/javascript">
-			setInterval(function() {
-                  window.location.reload();
-                }, 300000); 
-		</script>
+	
+
+	<body>
+		<p></p>
+
+<!-- 		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
+			<figcaption>This may take a few moments ... </figcaption></div></center> -->
 
 		<table style="width:100%">
 			<center>
@@ -70,7 +64,6 @@
 			  </tr>
 
 		  <?php
-
 			$scanOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh topports");
 			$topportAr = explode("\n", $scanOutput );
 			for ($i = 0; $i < count($topportAr); $i++) {
@@ -80,13 +73,10 @@
 				$topportAr[$i] = explode('/', $topportAr[$i]);
 				$topportAr[$i] = array_filter($topportAr[$i]);
 			}
-
 			$topportAr = array_filter($topportAr);
-
 			?>
 
 		    <?php
-
 			 for ($i = 0; $i < count($topportAr); $i++) {
 			 	echo "<tr>" ;
 		 		foreach($topportAr[$i] as $item) {
@@ -95,14 +85,16 @@
 		 		}
 			 	echo "</tr>" ;
 			 }
-
 			 ?>
 
 		</center>
 		</table> 
 
-		<?php
+		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
+			<figcaption>This may take a few moments ... </figcaption></div></center>
 
+
+		<?php
 		$scanDOutput = shell_exec("bash /www/cyber-pizza/all/actions/scan/device_ports_status.sh portdetail");
 		$portdetailAr = explode("\n", $scanDOutput );
 		$hostrowNum = 0;
@@ -116,7 +108,6 @@
 					if ($portrowNum > 0){
 						$portrowNum = 0;
 					}
-
 				?>
 
 					<table style="width:100%">
@@ -126,10 +117,8 @@
 					    <h6 style="font-weight:bold">Ports Open: <?php echo "{$portdetailAr[$i][1]}" ?></h6>
 
 				<?php
-
 				}else{
 					$portrowNum++;
-
 					if($portrowNum === 1){
 						?>
 
@@ -142,7 +131,6 @@
 					  	<tr>
 
 						<?php
-
 					}
 					$portdetailAr[$i] = trim($portdetailAr[$i]);
 					$portdetailAr[$i] = str_replace('/','', $portdetailAr[$i]);
@@ -154,29 +142,17 @@
 						echo "<td> {$item} </td>" ;
 					}
 					echo "</tr>";
-
 				}
 			}
 		?>
 		</center>
 		</table>
 
+		<script>
+	          document.getElementById('loadingGif').style.display = "none";
+	    </script>
+
 
 	</body>
 
-</html>
-
-<?php
-	$htmlStr=ob_get_contents();
-	shell_exec("touch /www/cyber-pizza/all/portscanoutput.html");
-	$filename='./portscanoutput.html';
-	ob_end_clean();
-	file_put_contents($filename, $htmlStr);
-	?>
-
-<script>
-	window.location ='./portscanoutput.html';
-</script>
-
-</body>
 </html>
