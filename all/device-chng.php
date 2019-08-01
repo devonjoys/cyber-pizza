@@ -12,6 +12,7 @@
 	</head>
 	<body>
 
+    <!-- Main Header -->
     <header class="row group container">
         <a href="dash.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto alt="Duke Guardian Devil Logo">
@@ -32,7 +33,7 @@
     </header>
 
     
-
+    <!-- Page to change device password -->
     <section class="options-int">
 
       <h4 class="sett-tit">Device Preferences</h4>
@@ -55,7 +56,7 @@
   </section>
 
 
-
+  <!-- Main Footer -->
     <footer class="row group container footer">
 
       <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>

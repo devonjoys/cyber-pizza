@@ -11,6 +11,7 @@
 	</head>
 	<body>
 
+    <!-- Main Header -->
     <header class="row group container">
         <a href="dash.php">
            <img class="logo" src="./assets/images/dgd.png" width="200px" height=auto>
@@ -34,6 +35,7 @@
 
     </header>
 
+      <!-- PHP to update firewall settings -->
       <?php 
       if (! empty($_POST['save'])){
         exec('rm ./assets/data/allowed-ips.txt');
@@ -66,6 +68,7 @@
 	#exec('service firewall restart);
       }
 
+      // Reading the current firewall for display
       $aname = './assets/data/allowed-ips.txt';
       $bname = './assets/data/blocked-ips.txt';
       $urlname = './assets/data/blocklists.txt';
@@ -106,7 +109,7 @@
       fclose($pf);
       ?>
 
-
+      <!-- Display for current firewall -->
       <div class="main">
       <div class="full">
 
@@ -179,12 +182,13 @@
 
         </section>
 
-
+        <!-- Link to Luci firewall settings page -->
         <a href="/cgi-bin/luci/admin/status/iptables"><h4 class="inline-link adv-link">Advanced Firewall Settings</h4></a>
 
       </div>
       </div>
 
+      <!-- Main Footer -->
       <footer class="row group container footer">
 
       <a class="footnote" href="dash.php"> <p class="footie btn">Home</p></a>
