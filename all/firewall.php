@@ -17,7 +17,9 @@
            <div class="v-line"></div>
         </a> 
         <h2 class="page">Firewall Settings</h2>
-
+	<a href='help/firewall.html' class='help-me' alt='To firewall help page'> ?
+          <span class="tiptext">Help-Firewall</span>
+        </a>
         
         <nav class="set-btns">
         <ul>
@@ -178,7 +180,7 @@
         </section>
 
 
-        <a href="https://10.42.0.1/cgi-bin/luci/admin/status/iptables"><h4 class="inline-link adv-link">Advanced Firewall Settings</h4></a>
+        <a href="/cgi-bin/luci/admin/status/iptables"><h4 class="inline-link adv-link">Advanced Firewall Settings</h4></a>
 
       </div>
       </div>

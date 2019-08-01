@@ -40,6 +40,9 @@
            <div class="v-line"></div>
         </a> 
         <h2 class="page">VPN Access</h2>
+	<a href='help/vpn.html' class='help-me' alt='To VPN help page'> ?
+          <span class="tiptext">Help-VPN</span>
+        </a>
 	
         <nav class="set-btns">
         <ul>

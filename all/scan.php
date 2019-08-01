@@ -25,6 +25,9 @@
            <div class="v-line"></div>
         </a> 
         <h2 class="page">Device Scanning</h2>
+	<a href='help/scanning.html' class='help-me' alt='To scanning help page'> ?
+          <span class="tiptext">Help-Scanning</span>
+        </a>
         <nav class="set-btns">
         <ul>
           <li>
@@ -41,9 +44,11 @@
     </head>
 
     	<script> 
-    		function hideButton() {
+    		var initiated = false;
+		function hideButton() {
 		      var x = document.getElementById("before_scan");
 		      x.style.display = "none";
+		      initiated=true;
 		    }
     	</script>
 
@@ -98,6 +103,18 @@
 		        </p>
 
 	        </div>
+
+	<!--Technique to allow iframe to eventually load-->
+		<script>
+			function changeUrl() {
+				if (initiated==true) {
+					var source = "______"; <!--___________________________________________-->
+					document.getElementById.src=source;
+				}
+			}
+			setInterval(changeUrl(), 10000);
+		</script>
+
 
       		<iframe class="myframe" name="myframe" id="myframe"></iframe> 
 

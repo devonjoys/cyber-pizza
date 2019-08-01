@@ -18,6 +18,9 @@
          </a> 
         <div class="v-line"></div>
 				<h2 class="page">Home</h2>
+		<a href='help/dashboard.html' class='help-me' alt='To dashboard help page'> ?
+          		<span class="tiptext">Help-Dashboard</span>
+        	</a>
 
 				<nav class="set-btns">
         <ul>
