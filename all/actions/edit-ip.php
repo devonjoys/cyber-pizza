@@ -5,15 +5,16 @@
 		<title>Network Performance</title>
 		<meta http-equiv="refresh" content="0;URL='../fire-change.php'" />
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
 
 		<?php  
+	//note: for reusability's sake, many of the different additions to the firewall are labeled as IP variables
     
     $aname = '../assets/data/allowed-ips.txt';
     $atemp = '../assets/data/allowed-ips-temp.txt';
@@ -24,7 +25,7 @@
     $pname = '../assets/data/blocked-ports.txt';
     $ptemp = '../assets/data/blocked-ports-temp.txt';
 
-
+	//tests whether an input is a valid IP and has not already been added to allowed IPs
     function validIPa($input) {
       $atemp = '../assets/data/allowed-ips-temp.txt';
       $aname = '../assets/data/allowed-ips.txt';
@@ -45,7 +46,8 @@
       }
       return 0;
     }
-
+	
+	//tests whether an input is a valid IP and has not already been added to blocked IPs
     function validIPb($input) {
       $btemp = '../assets/data/blocked-ips-temp.txt';
       $bname = '../assets/data/blocked-ips.txt';
@@ -67,7 +69,7 @@
       return 0;
     }
 
-
+	//tests whether a blocklist is a valid blocklist and has not already been added to a blocklist
     function validURL($input) {
       $urltemp = '../assets/data/blocklists-temp.txt';
       $urlname = '../assets/data/blocklists.txt';
@@ -91,6 +93,7 @@
       return 0;
     }
 
+	//tests whether a port is a valid port and has not already been added to blocked ports
     function validPORT($input) {
       $ptemp = '../assets/data/blocked-ports-temp.txt';
       $pname = '../assets/data/blocked-ports.txt';
@@ -121,7 +124,7 @@
       return 0;
     }
 
-
+//handles input from post
     if (validIPa($_POST['wl-ip'])) {
 
         $add_ip = $_POST['wl-ip'];
@@ -154,7 +157,7 @@
 
 
 
-
+//analyzes whether a good or bad IP has been added and records it accordingly
     $ip_type = $_POST['gorb'];
     $ip = $_POST['ip'];
 

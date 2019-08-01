@@ -10,12 +10,15 @@ else
 	verb=1
 fi
 
+#grabs location of firewall configuration file
 firewall_path='/etc/config'
 
 if [[ "$verb" == "1" ]]; then echo working; fi
 
+#looks to see if port already exists in firewall rules
 line_of_port=$(grep -n -e "option name 'port $1'" "$firewall_path/firewall" | cut -f1 -d":" | head -n 1)
 
+#if port is not in the firewall rules, add it accordingly
 if [[ -z "$line_of_port" ]]; then
 	if [[ "$verb" == "1" ]]; then echo "this IP was not already on the list"; fi
 	if [[ "$2" = "a" ]]; then
@@ -28,6 +31,7 @@ if [[ -z "$line_of_port" ]]; then
 		echo -e "config rule \n\toption name 'port $1'\n\toption dest_port '$1'\n\toption dest 'wan'\n\toption src '*'\n\toption target REJECT" >> "$firewall_path/firewall"	#verify this works
 		if [[ "$verb" == "1" ]]; then echo "I have blocked this port"; fi
 	fi
+#if the port is in the firewall rules, do nothing
 else
 	if [[ "$2" = "a" ]]; then
 		if [[ "$verb" == "1" ]]; then echo "This port was already allowed"; fi
@@ -36,6 +40,3 @@ else
 	fi
 fi
 #whenever this script is called, make sure to call uci commit firewall and service firewall restart afterwards
-#may remove this later as pieces fall into place
-#uci commit firewall
-#service firewall restart

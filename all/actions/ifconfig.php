@@ -13,9 +13,9 @@
 
 	<body>
 		<?php
-
-		$ifOutput = nl2br(shell_exec("bash /www/cyber-pizza/all/actions/settings/ifconfig.sh"));
-		echo "<pre>$ifOutput</pre>" 
+			//executes ifconfig.sh and stores the output
+			$ifOutput = nl2br(shell_exec("bash /www/cyber-pizza/all/actions/settings/ifconfig.sh"));
+			echo "<pre>$ifOutput</pre>" 
 
 		?>
 	</body>

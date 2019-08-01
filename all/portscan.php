@@ -1,3 +1,7 @@
+<?php 
+	ob_start();
+	?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -48,13 +52,11 @@
 		</style>
 
 	</head>
-	
-
-	<body>
-		<p></p>
-
-<!-- 		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
-			<figcaption>This may take a few moments ... </figcaption></div></center> -->
+		<script type="text/javascript">
+			setInterval(function() {
+                  window.location.reload();
+                }, 300000); 
+		</script>
 
 		<table style="width:100%">
 			<center>
@@ -98,10 +100,6 @@
 
 		</center>
 		</table> 
-
-		<center><div id="loadingGif" name="loadingGif"><img src="./assets/images/Loading.gif" style="width:100px;height:100px;display:block;top:50%;">
-			<figcaption>This may take a few moments ... </figcaption></div></center>
-
 
 		<?php
 
@@ -163,11 +161,22 @@
 		</center>
 		</table>
 
-		<script>
-	          document.getElementById('loadingGif').style.display = "none";
-	    </script>
-
 
 	</body>
 
+</html>
+
+<?php
+	$htmlStr=ob_get_contents();
+	shell_exec("touch /www/cyber-pizza/all/portscanoutput.html");
+	$filename='./portscanoutput.html';
+	ob_end_clean();
+	file_put_contents($filename, $htmlStr);
+	?>
+
+<script>
+	window.location ='./portscanoutput.html';
+</script>
+
+</body>
 </html>

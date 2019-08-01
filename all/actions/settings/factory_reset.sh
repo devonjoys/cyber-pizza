@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+#This scripts empties all relevant files and resets options in order to reset the device to be handed off to another user
 
 touch /www/cyber-pizza/all/assets/settings/initialized-temp.txt
 echo 0 >> /www/cyber-pizza/all/assets/settings/initialized-temp.txt
@@ -9,7 +9,6 @@ mv /www/cyber-pizza/all/assets/settings/initialized-temp.txt /www/cyber-pizza/al
 cp /etc/backups/empty /www/cyber-pizza/all/actions/scan/devicetracklog.txt
 cp /etc/backups/empty /www/cyber-pizza/all/actions/scan/devicelog.txt
 cp /etc/backups/empty /www/cyber-pizza/all/actions/scan/device_ports_status.grep
-cp /etc/backups/empty /www/cyber-pizza/all/actions/performance/summary.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/email-temp.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/settings/email.txt
 cp /etc/backups/empty /www/cyber-pizza/all/assets/data/all_speed_tests.txt

@@ -19,10 +19,12 @@
 		
 		<div>
 		<?php  
+		//function for formatting speed test output using tabs
 		function tab2nbsp($str)
 		{
 			return(str_replace("\t", '&nbsp;&nbsp;&nbsp;&nbsp', $str));
 		}
+		//runs a speed test once
 		shell_exec("/www/cyber-pizza/all/actions/performance/json_chrooter.sh 1 s");
 		shell_exec("cp /mnt/mmcblk0p3/ubuntu/etc/speedtestprocessor/last_speed_test.txt /www/cyber-pizza/all/assets/data/last_speed_test.txt");
 		$return1=shell_exec("./performance/last_test_parser.py");
@@ -33,12 +35,12 @@
 
 		<?php
 		echo "<html>";
-		
+		//handles the output based on delimitters
 		$inter=explode("@", $output);
 		
 		$out_names=explode("&", $inter[0]);
 		$out_vals=explode("&", $inter[1]);
-		
+		//format speed test output in a table
 		echo "<div class='speed-test-output'><table style='width:100%'> <tr><td>$out_names[0]</td><td>$out_vals[0]</td></tr>
 						<tr><td>$out_names[1]</td><td>$out_vals[1]</td></tr>
 						<tr><td>$out_names[2]</td><td>$out_vals[2]</td></tr>

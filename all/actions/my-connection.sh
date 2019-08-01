@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This script pings Google with a single packet to determine whether or not the network has internet connection and adds it to my-conn.txt
+
 conn=$(ping 8.8.8.8 -c 1 | grep packet | cut -f3 -d "," | cut -f2 -d " " | cut -f1 -d "%")
 
 if [[ "$conn" == "0" ]]; then
@@ -7,7 +9,7 @@ if [[ "$conn" == "0" ]]; then
 	#full packet transmission
 else
 	conn_bool=0
-	#full packet transmission
+	#full packet loss
 fi
 
 touch /www/cyber-pizza/all/assets/settings/my-conn-temp.txt

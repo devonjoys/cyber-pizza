@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#This script tests if the user's new admin password is valid, and outputs errors or changes it accordingly
+#This script takes $1 as old password, $2 as new password, and #3 as password confirmation
+
 login_errors="/www/cyber-pizza/all/assets/settings"
 login_line=2
 touch $login_errors/login_errors_temp.txt

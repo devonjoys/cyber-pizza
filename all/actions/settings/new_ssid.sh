@@ -1,4 +1,8 @@
 #!/bin/bash
+
+#This script takes in the user's new SSID and outputs errors or changes it accordingly
+#This script takes in $1 as the new SSID
+
 login_errors="/www/cyber-pizza/all/assets/settings"
 login_line=3
 touch $login_errors/login_errors_temp.txt

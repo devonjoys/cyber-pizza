@@ -14,10 +14,12 @@
 		<?php  
 		$info = $_POST["freq"];
 		echo($info);
-
+		
+		//writes the frequency to performance.txt
 		$fp = fopen("../assets/settings/performance.txt", 'w+');
 		fwrite($fp, $info);
 		fclose($fp);
+		//updates the cron
 		shell_exec("/www/cyber-pizza/all/actions/performance/perf-set-cron.sh");
 		?>
 

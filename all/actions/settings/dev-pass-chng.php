@@ -14,12 +14,14 @@
 	<body>
 
     
-
+	
    <?php
       $message = shell_exec("./new_pass.sh {$_POST['old-pass']} {$_POST['new-pass1']} {$_POST['new-pass2']}");
       echo $message;
 	shell_exec("touch /www/cyber-pizza/all/assets/{$message}");
-      if (substr(trim($message),0,4)=="Your") {
+      //checks whether admin password has been validated and changed
+	if (substr(trim($message),0,4)=="Your") {
+	//incorporates changes
 	shell_exec("/etc/init.d/uhttpd restart");
       }
    ?>

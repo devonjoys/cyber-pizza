@@ -7,28 +7,20 @@ touch /www/cyber-pizza/all/assets/data/blocklist_ips.txt
 
 blocklists='/www/cyber-pizza/all/assets/data/blocklists.txt'
 counter=0
+#reads through list of blocklist URLs to parse through
 while IFS= read -r line
 do
     all_lists+=("$line")
 done < "$blocklists"
 
+#iterates through each blocklist
 for list in ${all_lists[@]};
 do
-#    this_list=$(curl -# "${list}" 2> '/dev/null' )
+    #retrieves blocklist
     wget $list -O ./tmp_list.txt
     echo started processing for $list
-##########################################################Implementation using curl
-   # for ip in ${this_list};
-    #do
-#	valid_ip=$(php-cgi ./validate_ip.php "${ip[0]}" | tail -n 1)
-#	if [[ $valid_ip == "1" ]]; then
-#	    echo $ip >> /www/cyber-pizza/all/assets/data/blocklist_ips.txt
-#	    #echo $ip
-#	    ./firewall_editor.sh $ip b 0
-#	fi
- #   done
-##########################################################Implementation using wget
     input='./tmp_list.txt'
+    #iterates through lines of blocklist and adds all valid IPs to blocklist_ips.txt
     while IFS= read -r line
     do
 	line_short=$(echo "$line" | cut -f1 -d "/")
@@ -38,6 +30,7 @@ do
 	    #echo $line
 	    (( counter++ ))
 	    echo $line_short >> /www/cyber-pizza/all/assets/data/blocklist_ips.txt
+	    #instructs firewall_editor to parse through blocklist_ips.txt
 	    ./firewall_editor.sh $line_short b 0
 	fi
     done < "$input"

@@ -11,13 +11,14 @@
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
 	</head>
 	<body>
-    <?php
-	shell_exec("../actions/my-ssid.sh");
-	$ssid_file = '../assets/settings/my-ssid.txt';
-	$ssid_open = fopen($ssid_file, 'r');
-	$my_ssid = fread($ssid_open, filesize($ssid_file));
-	fclose($ssid_open);
-    ?>
+    	<?php
+		//Reads the current network SSID
+		shell_exec("../actions/my-ssid.sh");
+		$ssid_file = '../assets/settings/my-ssid.txt';
+		$ssid_open = fopen($ssid_file, 'r');
+		$my_ssid = fread($ssid_open, filesize($ssid_file));
+		fclose($ssid_open);
+	?>
     <header class="row group container">
         <a href="../dash.php">
            <img class="logo" src="../assets/images/dgd.png" width="200px" height=auto>

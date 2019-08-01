@@ -5,6 +5,7 @@ active_stations_array=($active_stations)
 
 deviceNum=0
 
+#gathers current information about connected devices
 info_() {
   FILE=/www/cyber-pizza/all/actions/scan/devicelog.txt
   if [[ -f $FILE ]] ; then
@@ -51,11 +52,13 @@ info_() {
   head -1 /www/cyber-pizza/all/actions/scan/devicelog.txt > /www/cyber-pizza/all/actions/scan/testdevicelog.txt
 }
 
+#echos current number of connected devices
 population_() {
   info_  >/dev/null
   echo "$deviceNum"
 }
 
+#notifies user via email of a new device being connected
 new_device_check() {
   newAm=0
   FILE=/www/cyber-pizza/all/actions/scan/devicetracklog.txt
