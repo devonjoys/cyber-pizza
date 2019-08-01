@@ -71,12 +71,8 @@
 	       <img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
          <!-- Download the performance data -->
         <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><p class="sub-canc to-edit" style="margin-bottom:50px;">Download Performance Data</p></a>
-<<<<<<< HEAD
 	       <br>
     </section>
-=======
-	<br>
-      </section>
 
    <section class="inputs">
 
@@ -111,7 +107,6 @@
 
 
     <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
->>>>>>> fa8148dcb3e9da1146e317b9a118b852873318a3
 
   
 
