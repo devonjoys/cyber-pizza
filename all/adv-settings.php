@@ -18,6 +18,9 @@
            <div class="v-line"></div>
         </a> 
         <h2 class="page">Advanced Settings</h2>
+	<a href='help/adv-settings.php' class='help-me' alt='To advanced settings help page'> ?
+          <span class="tiptext">Help-Advanced Settings</span>
+        </a>
 
         <nav class="set-btns">
         <ul>

@@ -42,8 +42,8 @@
            <div class="v-line"></div>
         </a> 
         <h2 class="page">Network Performance</h2>
-        <a href='' class='help-me' alt='To performance help page'> ?
-          <span class="tiptext">Tooltip text</span>
+        <a href='help/performance.html' class='help-me' alt='To performance help page'> ?
+          <span class="tiptext">Help-Performance</span>
         </a>
 
         
@@ -71,56 +71,15 @@
 	       <img class="graph" src="./assets/images/net_speed_plot2.png" width=90% height=auto>
          <!-- Download the performance data -->
         <a href="./assets/data/all_speed_tests.txt" download="last1000tests.txt"><p class="sub-canc to-edit" style="margin-bottom:50px;">Download Performance Data</p></a>
-<<<<<<< HEAD
-	       <br>
-    </section>
-=======
 	<br>
       </section>
-
-   <section class="inputs">
-
-          <h1 class="perf-tit" align="center">Network Speed Test</h1>
-
-
-    <div class="speed-test-div">
-
-
-         
-	<div id="before_test" name="before_test">
-		<form class="speed-output" action="./actions/speed-test.php" method="post" target="speedy">
-           		<input class="sub-canc" id='speedo' type="submit" value="Run Speed Test" style="align: center;" onclick="hideButton();">
-    </form>
-		<p class="caption">Click on the button to start your speed test.</p>
-	</div>
-	<div id="speedy_gif" name="speedy_gif" style="display:none">
-		<br><br><br><br><br><br><img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
-	</div>
-
-	<script>
-		function frameLoaded() {
-			var y = document.getElementById("speedy_gif");
-			y.style.display="none";
-
-		}
-	</script>
-
-          <iframe name="speedy" class='speed-test-output' id="speedy" onload="frameLoaded(this)"></iframe>
-
-  </div>
-
-
-    <h1 class="perf-tit" align="center">Periodic Performance Testing</h1>
->>>>>>> fa8148dcb3e9da1146e317b9a118b852873318a3
-
-  
 
     <section class="inputs">
 
 
-    <!-- Interface to run Speed Test -->
     <h1 class="perf-tit" align="center">Network Speed Test</h1>
 
+    <!-- Interface to run Speed Test -->
     <div class="speed-test-div">
       
     	<div id="before_test" name="before_test">
@@ -131,7 +90,8 @@
     	</div>
 
     	<div id="speedy_gif" name="speedy_gif" style="display:none">
-    		<img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
+    		<br><br>
+		<img src="./assets/images/Loading.gif" alt="Loading icon" style="width:100px; height:100px; height:100px; display:block:top:50%;padding-top:15px;">
     	</div>
 
     	<script>

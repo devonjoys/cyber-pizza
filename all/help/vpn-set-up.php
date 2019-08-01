@@ -11,6 +11,14 @@
 		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
 	</head>
 	<body>
+
+	<?php
+	$ipname='../assets/settings/my-lan-ip.txt';
+	$ipf=fopen($ipname, 'r');
+	$lan_ip = trim(fread($ipf, filesize($ipname)));
+	?>
+
+
     <header class="row group container">
         <a href="../dash.php">
            <img class="logo" src="../assets/images/dgd.png" width="200px" height=auto>
@@ -54,7 +62,7 @@
 					<br>exit</code></p>
 					<br><p class="answer">Make sure you are connected to Guardian Devil's network.</p>
 					<br><p class="code"<code>scp netID@vcm-#####.vm.duke.edu:/home/client1.ovpn vpnclient.conf
-					<br>scp vpnclient.conf root@10.42.0.1:/etc/openvpn/vpnclient.conf</code>   		</code>#Use the root password labeled on your device<code>
+					<br>scp vpnclient.conf root@<?php echo "$lan_ip";?>:/etc/openvpn/vpnclient.conf</code>   		</code>#Use the root password labeled on your device<code>
 					</p></section>
 		<p class="answer">Navigate to the <a class="inline-link" href="../vpn.php">VPN page</a> and enable VPN!</p>
 		<br>
