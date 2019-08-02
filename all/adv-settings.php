@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<title>Advanced Settings</title>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"> -->
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -114,7 +113,8 @@
       <p>Last Update: <?php echo $update; ?></p>
       <p>Current Version: <?php echo $version; ?></p>
 
-      <form method='post' action='actions/settings/adv-set.php'>
+      <!--<form method='post' action='actions/settings/adv-set.php'>-->
+      <form method='post' action='dash.php'>
 	<br><p>Reboot the device. You will briefly lose network access.</p>
         <input type='submit' class='form-btn' name='reboot' value='Reboot'><br>
         
