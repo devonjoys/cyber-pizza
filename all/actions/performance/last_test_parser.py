@@ -16,7 +16,7 @@ def main():
     #Grab data from last speed test
     path_to_file="/www/cyber-pizza/all/assets/data/last_speed_test.txt"
     file1 = open(path_to_file,"r")  
-      my_input = file1.read() 
+    my_input = file1.read() 
     my_input_list = my_input.split()
 	
     #Parses through each value within last_speed_test.txt
